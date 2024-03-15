@@ -23,8 +23,6 @@
   <body class="antialiased">
     <x-navbar/>
 
-    ridho nabbul
-
     <div id="table">
       <table class="table">
         <thead>
