@@ -44,18 +44,6 @@
             <th scope="row">Rabu</th>
 
           </tr>
-
-          @forelse ($dokters as $dokter)
-          <tr>
-              <td class="text-center">
-                  <h1>{{ route('dokters.show', $dokter->id) }}</h1>
-              </td>
-          </tr>
-          @empty
-              <div class="alert alert-danger">
-                  Data dokter belum Tersedia.
-              </div>
-          @endforelse
         </tbody>
       </table>
     </div>

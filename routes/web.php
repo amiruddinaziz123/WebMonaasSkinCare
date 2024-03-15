@@ -22,3 +22,5 @@ Route::get('/booking', function () {
 });
 
 Route::resource('/booking', \App\Http\Controllers\BookingController::class);
+
+Route::resource('/posts', \App\Http\Controllers\PostController::class);
