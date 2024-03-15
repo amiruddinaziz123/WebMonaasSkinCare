@@ -7,6 +7,6 @@
         <title>Laravel</title>
     </head>
     <body class="antialiased">
-        andsjdbabd
+        
     </body>
 </html>
