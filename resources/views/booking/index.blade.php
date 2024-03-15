@@ -23,7 +23,7 @@
   <body class="antialiased">
     <x-navbar/>
 
-    ridho ganteng
+    ridho nabbul
 
     <div id="table">
       <table class="table">
