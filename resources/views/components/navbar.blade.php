@@ -1,9 +1,21 @@
-<link rel="preconnect" href="https://fonts.googleapis.com">
+{{-- <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Katibeh&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ asset('css/component.css') }}" />
+<link rel="stylesheet" href="{{ asset('css/component.css') }}" /> --}}
 {{-- tambahkan ke <head> halaman yang ingin diberi component navbar --}}
+
+{{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> --}}
+{{-- tambahkan ke <body> halaman yang ingin diberi component navbar --}}
+
+
+
 
 
 <nav class="navbar navbar-expand-lg bg-body-tertiary" data-aos="fade-down">
