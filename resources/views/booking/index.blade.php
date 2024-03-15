@@ -42,7 +42,9 @@
           </tr>
           <tr>
             <th scope="row">Rabu</th>
-
+            @foreach($dokters as $dokter)
+              <td>{{ $dokter->nama_dokter }}</td>
+            @endforeach
           </tr>
         </tbody>
       </table>
