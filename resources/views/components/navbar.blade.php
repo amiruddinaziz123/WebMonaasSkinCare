@@ -6,7 +6,7 @@
 {{-- tambahkan ke <head> halaman yang ingin diberi component navbar --}}
 
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg bg-body-tertiary" data-aos="fade-down">
     <div class="container-fluid">
         <a class="navbar-brand font-katibeh" href="#" data-aos="zoom-in"><img src="{{ asset('img/MonAAS 2.png') }}" alt="logoMonaas" width="40px" class="imgLogo">Monaas</a>
         <button class="navbar-toggler" type="button" data-aos="fade-left" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,8 +20,8 @@
             </div>
         </div>
         <div>
-            <a href="#" class="icon-btn"><ion-icon class="rounded-circle" name="search"></ion-icon></a>
-            <a href="#" class="icon-btn"><ion-icon class="rounded-circle" name="person-outline"></ion-icon></a>
+            <a href="#" class="icon-btn"><ion-icon data-aos="fade-left" data-aos-offset="500" class="rounded-circle" name="search"></ion-icon></a>
+            <a href="#" class="icon-btn"><ion-icon data-aos="fade-left" data-aos-offset="500" class="rounded-circle" name="person-outline"></ion-icon></a>
         </div>
     </div>
 </nav>
