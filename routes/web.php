@@ -20,3 +20,5 @@ Route::get('/', function () {
 Route::get('/booking', function () {
     return view('booking');
 });
+
+Route::resource('/booking', \App\Http\Controllers\BookingController::class);

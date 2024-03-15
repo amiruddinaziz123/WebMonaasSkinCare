@@ -1,0 +1,8 @@
+#table{
+    margin: 40px;
+}
+
+.table, .table thead, .table thead tr th, .table tbody tr td, .table tbody tr th{
+    font-family: "Inter", sans-serif;
+    outline: 1px solid salmon;
+}
