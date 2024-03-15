@@ -7,6 +7,11 @@
         <title>Laravel</title>
     </head>
     <body class="antialiased">
-        
+        menambahkan sesuatu
+
+        untuk format message 
+
+        nama : sesuatu yang dilakukan
+        Aziz : mengedit home.blade.php
     </body>
 </html>
