@@ -1,0 +1,35 @@
+.font-katibeh{
+    color: #000;
+    font-family: Katibeh;
+    font-size: 45px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.font-poppins{
+    color: #000;
+    font-family: Poppins;
+    font-size: 23px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+.navbar-nav a{
+    margin-top: 12px;
+}
+.imgLogo{
+    margin-bottom: 12px;
+    margin-right: 5px;
+}
+.icon-btn{
+    color: black;
+    text-align: center;
+    margin: 5px;
+}
+
+.icon-btn ion-icon{
+    width: 23px;
+    height: 23px;
+    padding: 5px;
+    background-color: #ECECEC;
+}
