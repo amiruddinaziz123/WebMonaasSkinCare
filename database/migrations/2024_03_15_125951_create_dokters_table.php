@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('dokters', function (Blueprint $table) {
             $table->id();
             $table->string('nama_dokter');
+            $table->string('nama_user');
+            $table->bigInteger('no_telp');
             $table->timestamps();
         });
     }

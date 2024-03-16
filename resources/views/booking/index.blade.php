@@ -28,30 +28,21 @@
         <thead>
           <tr>
             <th scope="col">Hari</th>
-            <th scope="col" colspan="3" class="text-center">Jam Booking</th>
+            <td scope="col" class="text-end"><strong>Jam Booking</strong></td>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row" id="senin">Senin</th>
-              
-          </tr>
-          <tr>
-            <th scope="row">Selasa</th>
-
-          </tr>
-          <tr>
-            <th scope="row">Rabu</th>
-            @foreach($dokters as $dokter)
-              <td>{{ $dokter->nama_dokter }}</td>
-            @endforeach
+          <tr id="row_hari">
           </tr>
         </tbody>
       </table>
     </div>
+
     <script>
+      // mempasing data dokter ke file booking.js
       var dokterData = @json($dokters);
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
     <script src="{{ asset('js/booking.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

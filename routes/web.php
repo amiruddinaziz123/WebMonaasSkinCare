@@ -23,4 +23,5 @@ Route::get('/booking', function () {
 
 Route::resource('/booking', \App\Http\Controllers\BookingController::class);
 
+// untuk coba pake /posts
 Route::resource('/posts', \App\Http\Controllers\PostController::class);

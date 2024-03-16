@@ -16,5 +16,7 @@ class dokters extends Model
      */
     protected $fillable = [
         'nama_dokter',
+        'nama_user',
+        'no_telp'
     ];
 }
