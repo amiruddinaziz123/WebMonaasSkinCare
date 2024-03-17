@@ -24,16 +24,15 @@
     <x-navbar/>
 
     <div id="table">
-      <table class="table">
+      <table class="table bg-danger bg-opacity-75">
         <thead>
-          <tr>
-            <th scope="col">Hari</th>
-            <td scope="col" class="text-end"><strong>Jam Booking</strong></td>
+          <tr class="border-bottom">
+            <th scope="col" class="text-center bg-danger bg-opacity-10">Hari</th>
+            <td scope="col" class="text-center position-absolute start-50 translate-middle-x bg-transparent"><strong>Jam Booking</strong></td>
           </tr>
         </thead>
         <tbody>
-          <tr id="row_hari">
-          </tr>
+          <tr id="row_hari"></tr>
         </tbody>
       </table>
     </div>

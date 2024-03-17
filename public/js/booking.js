@@ -11,10 +11,21 @@ const hari = [
     "sabtu",
     "minggu"
 ];
+
 let hariUrut = _.reverse(hari);
 
 for (let i = 0; i < hari.length; i++) {
-    headHari.insertAdjacentHTML("afterend", `<th id='${hariUrut[i]}'>${_.upperFirst(hariUrut[i])}</th>`);
+    headHari.insertAdjacentHTML("afterend", `
+    <th id='${hariUrut[i]}' class="bg-danger-subtle">${_.upperFirst(hariUrut[i])}</th>
+    <td class="text-center">${_.upperFirst(hariUrut[i])}</td>
+    <td class="text-center">${_.upperFirst(hariUrut[i])}</td>
+    <td class="text-center">${_.upperFirst(hariUrut[i])}</td>
+    <td class="text-center">${_.upperFirst(hariUrut[i])}</td>
+    <td class="text-center">${_.upperFirst(hariUrut[i])}</td>
+    <td class="text-center">${_.upperFirst(hariUrut[i])}</td>
+    <td class="text-center">${_.upperFirst(hariUrut[i])}</td>
+    <td class="text-center">${_.upperFirst(hariUrut[i])}</td>
+    `);
 }
 
 let dokterSenin = [];
