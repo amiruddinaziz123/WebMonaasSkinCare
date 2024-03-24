@@ -1,78 +1,47 @@
-aziz piku
-
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<!doctype html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Booking</title>
-
-    {{-- css --}}
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/login.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ asset('css/booking.css') }}">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="{{ asset('css/component.css') }}" />
-
-    {{-- font --}}
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Katibeh&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-
   </head>
-  <body class="antialiased">
-    <x-navbar/>
+  <body>
+    
+    <div class="container d-flex justify-content-center align=items-center min-vh-100">
+      <div class="row border rounded-5 p-3 shadow box">
 
-    ridho nabbul
+        <div class="col-md-6 rounded-4 d-flex justify-content-center align=items-center flex-column left">
+          <div class="image">
+            <img src="/img/wajah.png" alt="" class="img-fluid mb-3">
+          </div>
+          <p class="text-white text">LETS GET YOUR TREATMENT NOW !!</p>
+        </div>
+        
+        <div class="col-md-6">
+          <div class="header-text text-center">Login</div>
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
 
-    <div id="table">
-      <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">Hari</th>
-            <th scope="col" colspan="3" class="text-center">Jam Booking</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row" id="senin">Senin</th>
-              
-          </tr>
-          <tr>
-            <th scope="row">Selasa</th>
-
-          </tr>
-          <tr>
-            <th scope="row">Rabu</th>
-
-          </tr>
-
-          @forelse ($dokters as $dokter)
-          <tr>
-              <td class="text-center">
-                  <h1>{{ route('dokters.show', $dokter->id) }}</h1>
-              </td>
-          </tr>
-          @empty
-              <div class="alert alert-danger">
-                  Data dokter belum Tersedia.
-              </div>
-          @endforelse
-        </tbody>
-      </table>
+      </div>
     </div>
-    <script>
-      var dokterData = @json($dokters);
-    </script>
-    <script src="{{ asset('js/booking.js') }}"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   </body>
 </html>
