@@ -22,23 +22,94 @@
   </head>
   <body class="antialiased">
     <x-navbar/>
-    <div class="table-responsive-sm">
-      <div id="table">
-        <table class="table table-striped bg-danger bg-opacity-75">
-          <thead>
-            <tr class="border-bottom">
-              <th scope="col" class="text-center bg-danger bg-opacity-10">Hari</th>
-              <td scope="col" class="text-center position-absolute start-50 translate-middle-x bg-transparent"><strong>Jam Booking</strong></td>
-            </tr>
-          </thead>
-          <tbody class="table-group-divider">
-            <tr id="row_hari"></tr>
-          </tbody>
-        </table>
+    
+    <div class="mt-5 ms-4 me-4 p-3" id="table">
+      {{-- header table --}}
+      <div class="text-center ms-2 me-2">
+        <div class="row bg-transparent">
+          <div class="table-head col-1 border-color-pink-1 d-flex align-items-center justify-content-center">
+            <table_head>Hari</table_head>
+          </div>
+          <div class="table-head col-8 border-color-pink-1 d-flex align-items-center justify-content-center">
+            <table_head>Jam Dokter</table_head>
+          </div>
+          <div class="table-head col-3 border-color-pink-1 d-flex align-items-center justify-content-center">
+            <table_head>Tindakan</table_head>
+          </div>
+        </div>
       </div>
+      {{-- header table --}}
+      {{-- ================================ --}}
+      {{-- body table --}}
+      <div class="text-center ms-2 me-2">
+        <hire id="senin"></hire>
+        {{-- <div class="row bg-transparent">
+          <div class="col-1 border-color-pink-1 d-flex align-items-center justify-content-center">
+            <table_child>Senin<table_child>
+          </div>
+          <div class="col-8 border-color-pink-1 d-flex align-items-center justify-content-center">
+            <div class="container text-center">
+              <div class="row">
+                <button class="col btn pt-2 pb-2 bg-color-pink-1 m-2 focus-ring py-1">Jam Ke 1</button>
+                <button class="col btn pt-2 pb-2 bg-color-green-1 m-2 focus-ring py-1">Jam Ke 2</button>
+                <button class="col btn pt-2 pb-2 bg-color-green-1 m-2 focus-ring py-1">Jam Ke 2</button>
+                <button class="col btn pt-2 pb-2 bg-color-green-1 m-2 focus-ring py-1">Jam Ke 2</button>
+                <button class="col btn pt-2 pb-2 bg-color-green-1 m-2 focus-ring py-1">Jam Ke 2</button>
+                <button class="col btn pt-2 pb-2 bg-color-green-1 m-2 focus-ring py-1">Jam Ke 2</button>
+                <button class="col btn pt-2 pb-2 bg-color-green-1 m-2 focus-ring py-1">Jam Ke 2</button>
+                <button class="col btn pt-2 pb-2 bg-color-green-1 m-2 focus-ring py-1">Jam Ke 2</button>
+                <button class="col btn pt-2 pb-2 bg-color-green-1 m-2 focus-ring py-1">Jam Ke 2</button>
+                <button class="col btn pt-2 pb-2 bg-color-green-1 m-2 focus-ring py-1">Jam Ke 2</button>
+                <button class="col btn pt-2 pb-2 bg-color-green-1 m-2 focus-ring py-1">Jam Ke 2</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-3 border-color-pink-1 d-flex align-items-center justify-content-center">
+            <div class="container text-center">
+              <div class="row">
+                <button class="col btn m-2 btn-success focus-ring py-1">Tambah</button>
+                <button class="col btn m-2 btn-warning focus-ring py-1">Edit</button>
+                <button class="col btn m-2 btn-danger focus-ring py-1">Hapus</button>
+              </div>
+            </div>
+          </div>
+        </div> --}}
+
+        
+
+      </div>
+      {{-- body table --}}
     </div>
 
-    <h2 class="mt-5"><u>Booking Treatment</u></h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h2 class="mt-5">Booking Treatment</h2>
+    <hr>
   
     <div class="container text-center p-5">
       <div class="row justify-content-center ms-5 me-5">

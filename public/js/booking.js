@@ -2,7 +2,7 @@ const hariSenin = document.getElementById("senin");
 const headHari = document.getElementById("row_hari");
 // dokterData = from index.blade.php
 
-const hari = [
+let hari = [
     "senin",
     "selasa",
     "rabu",
@@ -12,37 +12,49 @@ const hari = [
     "minggu"
 ];
 
-let hariUrut = _.reverse(hari);
+let reverseHari = _.reverse(hari);
 
-for (let i = 0; i < hari.length; i++) {
-    headHari.insertAdjacentHTML("afterend", `
-    <th id='${hariUrut[i]}' class="bg-danger-subtle">${_.upperFirst(hariUrut[i])}</th>
-    <td class="text-center">${_.upperFirst(hariUrut[i])}</td>
-    <td class="text-center">${_.upperFirst(hariUrut[i])}</td>
-    <td class="text-center">${_.upperFirst(hariUrut[i])}</td>
-    <td class="text-center">${_.upperFirst(hariUrut[i])}</td>
-    <td class="text-center">${_.upperFirst(hariUrut[i])}</td>
-    <td class="text-center">${_.upperFirst(hariUrut[i])}</td>
-    <td class="text-center">${_.upperFirst(hariUrut[i])}</td>
-    <td class="text-center">${_.upperFirst(hariUrut[i])}</td>
-    `);
+for (let i = 0; i < reverseHari.length; i++) {
+
+    hariSenin.insertAdjacentHTML("afterend",
+    `
+    <div class="row bg-transparent">
+        <div class="col-1 border-color-pink-1 d-flex align-items-center justify-content-center">
+        <table_child>`+ _.upperCase(reverseHari[i]) +`<table_child>
+        </div>
+        <div class="col-8 border-color-pink-1 d-flex align-items-center justify-content-center">
+        <div class="container text-center">
+            <div class="row">
+                <button class="col btn pt-2 pb-2 bg-color-pink-1 m-2 focus-ring py-1">Jam Ke 1</button>
+                <button class="col btn pt-2 pb-2 bg-color-green-1 m-2 focus-ring py-1">Jam Ke 2</button>
+                <button class="col btn pt-2 pb-2 bg-color-pink-1 m-2 focus-ring py-1">Jam Ke 1</button>
+                <button class="col btn pt-2 pb-2 bg-color-green-1 m-2 focus-ring py-1">Jam Ke 2</button>
+                <button class="col btn pt-2 pb-2 bg-color-pink-1 m-2 focus-ring py-1">Jam Ke 1</button>
+                <button class="col btn pt-2 pb-2 bg-color-green-1 m-2 focus-ring py-1">Jam Ke 2</button>
+                <button class="col btn pt-2 pb-2 bg-color-pink-1 m-2 focus-ring py-1">Jam Ke 1</button>
+                <button class="col btn pt-2 pb-2 bg-color-green-1 m-2 focus-ring py-1">Jam Ke 2</button>
+                <button class="col btn pt-2 pb-2 bg-color-pink-1 m-2 focus-ring py-1">Jam Ke 1</button>
+                <button class="col btn pt-2 pb-2 bg-color-green-1 m-2 focus-ring py-1">Jam Ke 2</button>
+                <button class="col btn pt-2 pb-2 bg-color-pink-1 m-2 focus-ring py-1">Jam Ke 1</button>
+                <button class="col btn pt-2 pb-2 bg-color-green-1 m-2 focus-ring py-1">Jam Ke 2</button>
+                <button class="col btn pt-2 pb-2 bg-color-pink-1 m-2 focus-ring py-1">Jam Ke 1</button>
+            </div>
+        </div>
+        </div>
+        <div class="col-3 border-color-pink-1 d-flex align-items-center justify-content-center">
+        <div class="container text-center">
+            <div class="row">
+                <button class="col btn m-2 btn-success focus-ring py-1">Tambah</button>
+                <button class="col btn m-2 btn-warning focus-ring py-1">Edit</button>
+                <button class="col btn m-2 btn-danger focus-ring py-1">Hapus</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    `
+    );
+
 }
 
-let dokterSenin = [];
-console.log(dokterData);
-for (let i = 0; i < dokterData.length; i++) {
-    hariSenin.insertAdjacentHTML("afterend", "<td>" + dokterData[i].nama_dokter + "</td>");
-}
 
-// Mendapatkan referensi tabel
-var table = document.getElementById("table");
-// Menghitung jumlah kolom maksimum dalam tabel
-var maxCols = 0;
-for (var i = 0, row; row = table.rows[i]; i++) {
-    maxCols = Math.max(maxCols, row.cells.length);
-}
-// Menetapkan atribut colspan untuk setiap sel di baris terakhir
-var lastRow = table.rows[table.rows.length - 1];
-for (var i = 0; i < lastRow.cells.length; i++) {
-    lastRow.cells[i].colSpan = maxCols - lastRow.cells.length + 1;
-}
+
