@@ -95,7 +95,7 @@
 
     <script>
       // mempasing data dokter ke file booking.js
-      var dokterData = @json($dokters);
+      const dokterData = @json($dokters);
     </script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
     <script src="{{ asset('js/booking.js') }}"></script>
