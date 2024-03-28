@@ -15,12 +15,11 @@ let hari = [
 let reverseHari = _.reverse(hari);
 
 for (let i = 0; i < reverseHari.length; i++) {
-
     hariSenin.insertAdjacentHTML("afterend",
     `
     <div class="row bg-transparent">
         <div class="col-1 border-color-pink-1 d-flex align-items-center justify-content-center">
-        <table_child>`+ _.upperCase(reverseHari[i]) +`<table_child>
+        <table_child>`+ _.upperFirst(reverseHari[i]) +`<table_child>
         </div>
         <div class="col-8 border-color-pink-1 d-flex align-items-center justify-content-center">
         <div class="container text-center">
@@ -31,13 +30,6 @@ for (let i = 0; i < reverseHari.length; i++) {
                 <button class="col btn pt-2 pb-2 bg-color-green-1 m-2 focus-ring py-1">Jam Ke 2</button>
                 <button class="col btn pt-2 pb-2 bg-color-pink-1 m-2 focus-ring py-1">Jam Ke 1</button>
                 <button class="col btn pt-2 pb-2 bg-color-green-1 m-2 focus-ring py-1">Jam Ke 2</button>
-                <button class="col btn pt-2 pb-2 bg-color-pink-1 m-2 focus-ring py-1">Jam Ke 1</button>
-                <button class="col btn pt-2 pb-2 bg-color-green-1 m-2 focus-ring py-1">Jam Ke 2</button>
-                <button class="col btn pt-2 pb-2 bg-color-pink-1 m-2 focus-ring py-1">Jam Ke 1</button>
-                <button class="col btn pt-2 pb-2 bg-color-green-1 m-2 focus-ring py-1">Jam Ke 2</button>
-                <button class="col btn pt-2 pb-2 bg-color-pink-1 m-2 focus-ring py-1">Jam Ke 1</button>
-                <button class="col btn pt-2 pb-2 bg-color-green-1 m-2 focus-ring py-1">Jam Ke 2</button>
-                <button class="col btn pt-2 pb-2 bg-color-pink-1 m-2 focus-ring py-1">Jam Ke 1</button>
             </div>
         </div>
         </div>
@@ -53,7 +45,6 @@ for (let i = 0; i < reverseHari.length; i++) {
     </div>
     `
     );
-
 }
 
 
