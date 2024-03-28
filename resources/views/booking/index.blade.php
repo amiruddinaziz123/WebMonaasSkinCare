@@ -43,126 +43,14 @@
       {{-- body table --}}
       <div class="text-center ms-2 me-2">
         <hire id="senin"></hire>
-        {{-- <div class="row bg-transparent">
-          <div class="col-1 border-color-pink-1 d-flex align-items-center justify-content-center">
-            <table_child>Senin<table_child>
-          </div>
-          <div class="col-8 border-color-pink-1 d-flex align-items-center justify-content-center">
-            <div class="container text-center">
-              <div class="row">
-                <button class="col btn pt-2 pb-2 bg-color-pink-1 m-2 focus-ring py-1">Jam Ke 1</button>
-                <button class="col btn pt-2 pb-2 bg-color-green-1 m-2 focus-ring py-1">Jam Ke 2</button>
-                <button class="col btn pt-2 pb-2 bg-color-green-1 m-2 focus-ring py-1">Jam Ke 2</button>
-                <button class="col btn pt-2 pb-2 bg-color-green-1 m-2 focus-ring py-1">Jam Ke 2</button>
-                <button class="col btn pt-2 pb-2 bg-color-green-1 m-2 focus-ring py-1">Jam Ke 2</button>
-                <button class="col btn pt-2 pb-2 bg-color-green-1 m-2 focus-ring py-1">Jam Ke 2</button>
-                <button class="col btn pt-2 pb-2 bg-color-green-1 m-2 focus-ring py-1">Jam Ke 2</button>
-                <button class="col btn pt-2 pb-2 bg-color-green-1 m-2 focus-ring py-1">Jam Ke 2</button>
-                <button class="col btn pt-2 pb-2 bg-color-green-1 m-2 focus-ring py-1">Jam Ke 2</button>
-                <button class="col btn pt-2 pb-2 bg-color-green-1 m-2 focus-ring py-1">Jam Ke 2</button>
-                <button class="col btn pt-2 pb-2 bg-color-green-1 m-2 focus-ring py-1">Jam Ke 2</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-3 border-color-pink-1 d-flex align-items-center justify-content-center">
-            <div class="container text-center">
-              <div class="row">
-                <button class="col btn m-2 btn-success focus-ring py-1">Tambah</button>
-                <button class="col btn m-2 btn-warning focus-ring py-1">Edit</button>
-                <button class="col btn m-2 btn-danger focus-ring py-1">Hapus</button>
-              </div>
-            </div>
-          </div>
-        </div> --}}
-
-        
-
       </div>
       {{-- body table --}}
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <h2 class="mt-5">Booking Treatment</h2>
     <hr>
-  
-    <div class="container text-center p-5">
-      <div class="row justify-content-center ms-5 me-5">
-        <div class="col-4 border p-3 w-50">
-          <div class="p-4">
-            <h5 class="text-start">Pilih Treatment</h5>
-            <div class="container">
-              <div class="row">
-                <div class="col">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Peeling" id="Peeling">
-                    <label class="form-check-label" for="Peeling">
-                      Peeling
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Sliming" id="Sliming">
-                    <label class="form-check-label" for="Sliming">
-                      Sliming
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Meso Cell" id="Meso Cell">
-                    <label class="form-check-label" for="Meso Cell">
-                      Meso Cell
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Infuso Whitening" id="Infuso Whitening">
-                    <label class="form-check-label" for="Infuso Whitening">
-                      Infuso Whitening
-                    </label>
-                  </div>
-                </div>
-                <div class="col">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="Laser" id="Laser">
-                    <label class="form-check-label" for="Laser">
-                      Laser
-                    </label>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-4 border p-3 w-50">
-          <div class="p-4">
-            <h5 class="text-start">Pilih Jam</h5>
-          </div>
-        </div>
-      </div>
-    </div>
+    
+    <x-booking_treatment/>
 
     <script>
       // mempasing data dokter ke file booking.js
