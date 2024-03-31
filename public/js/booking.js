@@ -183,3 +183,10 @@ calendar_days.addEventListener('click', (e) => {
         
     }
 });
+
+const jamBooking = document.getElementById("jam-booking");
+const jam1 = document.getElementById("jam-1");
+const jam2 = document.getElementById("jam-2");
+const jam3 = document.getElementById("jam-3");
+
+jamBooking.textContent = `${jam1} ${jam2} ${jam3}`;
