@@ -25,6 +25,10 @@ Route::get('/login', function () {
     return view('login.index');
 });
 
+Route::get('/aboutus', function () {
+    return view('aboutus.index');
+});
+
 Route::resource('/booking', \App\Http\Controllers\BookingController::class);
 
 // untuk coba pake /posts
