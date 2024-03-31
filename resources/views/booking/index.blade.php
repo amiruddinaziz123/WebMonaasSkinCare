@@ -63,41 +63,31 @@
       </div>
     </div>
 
-    <div class="container">
-      
-    </div>
-
-    <div class="offcanvas-end show" tabindex="-1">
-      <div class="offcanvas-header">
-      </div>
-      <div class="offcanvas-body">
-        <div class="hasil">
-          <h5>Buat jadwal treatment</h5>
-          <div class="container text-center">
-            <div class="row">
-              <div class="col-5 text-start">
-                Tanggal :
-              </div>
-              <div class="col-7 text-start tanggal-dipilih">
-                tanggal
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-5 text-start">
-                Bulan :
-              </div>
-              <div class="col-7 text-start bulan-dipilih">
-                bulan
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-5 text-start">
-                Tahun :
-              </div>
-              <div class="col-7 text-start tahun-dipilih">
-                tahun
-              </div>
-            </div>
+    <div class="hasil p-1">
+      <h5 class="ms-4 mt-4">Buat jadwal treatment</h5>
+      <div class="container text-center">
+        <div class="row">
+          <div class="col-5 text-start">
+            Tanggal :
+          </div>
+          <div class="col-7 text-start tanggal-dipilih">
+            tanggal
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-5 text-start">
+            Bulan :
+          </div>
+          <div class="col-7 text-start bulan-dipilih">
+            bulan
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-5 text-start">
+            Tahun :
+          </div>
+          <div class="col-7 text-start tahun-dipilih">
+            tahun
           </div>
         </div>
       </div>

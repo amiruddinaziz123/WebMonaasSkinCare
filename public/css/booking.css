@@ -309,12 +309,15 @@ animation: showtime 1s forwards;
 /* ========================= */
 /* My Code */
 
-.hasil{
-    margin: 0px;
-    height: 100vh;
-    width: max-content;
+.hasil {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 97%;
     background-color: white;
-    border-radius: 25px 0px 0px 25px;
-    overflow: hidden;
-    padding: 35px 50px 0px 50px;
+    border-top: 1px solid #ccc;
+    border-radius: 15px 15px 0px 0px; 
+    padding: 1rem;
+    box-sizing: border-box;
 }
