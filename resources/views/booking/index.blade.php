@@ -21,36 +21,48 @@
 
   </head>
   <body class="antialiased">
-    <x-navbar/>
     
-    <div class="mt-5 ms-4 me-4 p-3" id="table">
-      {{-- header table --}}
-      <div class="text-center ms-2 me-2">
-        <div class="row bg-transparent">
-          <div class="table-head col-1 border-color-pink-1 d-flex align-items-center justify-content-center">
-            <table_head>Hari</table_head>
-          </div>
-          <div class="table-head col-8 border-color-pink-1 d-flex align-items-center justify-content-center">
-            <table_head>Jam Dokter</table_head>
-          </div>
-          <div class="table-head col-3 border-color-pink-1 d-flex align-items-center justify-content-center">
-            <table_head>Tindakan</table_head>
+    <div class="contianer">
+      <div class="calendar">
+        <div class="calendar-header">
+          <span class="month-picker" id="month-picker"> May </span>
+          <div class="year-picker" id="year-picker">
+            <span class="year-change" id="pre-year">
+              <pre><</pre>
+            </span>
+            <span id="year">2020 </span>
+            <span class="year-change" id="next-year">
+              <pre>></pre>
+            </span>
           </div>
         </div>
+  
+        <div class="calendar-body">
+          <div class="calendar-week-days">
+            <div>Min</div>
+            <div>Sen</div>
+            <div>Sel</div>
+            <div>Rab</div>
+            <div>Kam</div>
+            <div>Jum</div>
+            <div>Sab</div>
+          </div>
+          <div class="calendar-days">
+          </div>
+        </div>
+        <div class="calendar-footer">
+        </div>
+        <div class="date-time-formate">
+          <div class="day-text-formate">TODAY</div>
+          <div class="date-time-value">
+            <div class="time-formate">01:41:20</div>
+            <div class="date-formate">03 - march - 2022</div>
+          </div>
+        </div>
+        <div class="month-list"></div>
       </div>
-      {{-- header table --}}
-      {{-- ================================ --}}
-      {{-- body table --}}
-      <div class="text-center ms-2 me-2">
-        <hire id="senin"></hire>
-      </div>
-      {{-- body table --}}
     </div>
-
-    <h2 class="mt-5">Booking Treatment</h2>
-    <hr>
     
-    <x-booking_treatment/>
 
     <script>
       // mempasing data dokter ke file booking.js
