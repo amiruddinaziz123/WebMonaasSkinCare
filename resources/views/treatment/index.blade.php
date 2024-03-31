@@ -18,7 +18,7 @@
     </div>
 
     <div class="carousel-item" data-bs-interval="2000">
-      <img src="{{ asset('img/gambar1.jpg') }}" class="d-block w-100" alt="...">
+      <img src="{{ asset('img/gambar2.jpg') }}" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
       </div>
     </div>
