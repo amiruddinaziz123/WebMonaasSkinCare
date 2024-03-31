@@ -154,24 +154,6 @@ setInterval(() => {
     todayShowTime.textContent = formateTimer;
 }, 1000);
 
-const hasil = document.querySelector('.hasil');
-const content = hasil.querySelector('.container');
-
-const setHasilWidth = () => {
-  const contentWidth = content.offsetWidth;
-  const hasilWidth = contentWidth + 100;
-  hasil.style.width = `${hasilWidth}px`;
-};
-
-setHasilWidth();
-
-// update the width whenever the content width changes
-const resizeObserver = new ResizeObserver(() => {
-  setHasilWidth();
-});
-
-resizeObserver.observe(content);
-
 const calendar_days = document.querySelector('.calendar-days');
 
 calendar_days.addEventListener('click', (e) => {

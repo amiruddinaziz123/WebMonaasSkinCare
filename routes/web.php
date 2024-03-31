@@ -17,10 +17,6 @@ Route::get('/', function () {
     return view('landingPage');
 });
 
-Route::get('/booking', function () {
-    return view('booking');
-});
-
 Route::get('/login', function () {
     return view('login.index');
 });

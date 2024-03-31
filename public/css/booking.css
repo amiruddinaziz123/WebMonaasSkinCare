@@ -24,6 +24,7 @@ background-color: white;
 border-radius: 25px;
 overflow: hidden;
 padding: 35px 50px 0px 50px;
+display: inline-block;
 }
 
 .calendar {
@@ -309,12 +310,35 @@ animation: showtime 1s forwards;
 /* ========================= */
 /* My Code */
 
-.hasil{
-    margin: 0px;
-    height: 100vh;
+.select-hour{
+    height: 30rem;
     width: max-content;
     background-color: white;
-    border-radius: 25px 0px 0px 25px;
+    border-radius: 25px;
     overflow: hidden;
     padding: 35px 50px 0px 50px;
+    display: inline-block;
+}
+
+.select-hour-header{
+    background: #e87cef;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 7px;
+    align-items: center;
+    font-weight: 700;
+    color: #ffffff;
+    padding: 16px;
+}
+.hasil {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 97%;
+    background-color: white;
+    border-top: 1px solid #ccc;
+    border-radius: 15px 15px 0px 0px; 
+    padding: 1rem;
+    box-sizing: border-box;
 }
