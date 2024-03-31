@@ -12,31 +12,88 @@
     <!-- ICONS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
+    <style>
+
+
+        .carousel-inner_card{
+            display: flex;
+            padding: 1em;
+
+        }
+
+        .carousel-item_card{
+            display: block;
+            margin-right: 0;
+            flex: 0 0 calc(100%/3);
+        }
+
+        .card{
+            margin: 0 .5em;
+            border-radius: 20px;
+            box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
+        }
+
+        .card .btn{
+            border-radius: 50px;
+            background-color: #E681FF;
+            color: black;
+        }
+
+        .card img { border-radius: 20px 20px 0 0; }
+
+        .navbar-brand{
+            color: white;
+        }
+
+        .bi-search{
+            color: white;
+        }
+
+        .bi-house-door{
+            color: white;
+        }
+
+    </style>
 </head>
 <body>
 
     <!-- NAVBAR -->
-    <nav class="navbar bg-body-tertiary">
-            <div class="container-fluid bg-danger">
+     <nav class="navbar p-4" style="background-color: #DF6F9E";>
+            <div class="container-fluid">
+
+                <div class="col-md-7">
                 <h1 class="navbar-brand">MONAAS TREATMENT</h1>
-                <form class="d-flex" role="search">
-                    <!--  
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                </div>
+
+                <div class="col-md-4">
+                <div class="input-group">
+                <input type="search" class="form-control" placeholder="Search" aria-label="Recipient's username">
+                <button class="btn bi bi-search" type="submit" style="background-color: black";></button>
+                </div>
+                </div>
+
+                <div class="col-md-1">
+                    <a href="#"> <i class="bi bi-house-door fa-lg"></i></a>
+                </div>
+
+
+                <!-- <form class="d-flex" role="search"> 
+         
+                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
                 <button class="btn btn-outline-primary bg-dark" type="submit"><i class="bi bi-search"></i></button>
-                <i class="bi bi-house-door"></i> -->
+                <i class="bi bi-house-door"></i>
 
-            
-                </form>
+                 </form> -->
             </div>
-
-
-        </nav>
+        </nav> 
 
         <br>
+
 
         <div class="container mt-5">
         @yield('content')
     </div>
+
 
 </body>
 </html>
