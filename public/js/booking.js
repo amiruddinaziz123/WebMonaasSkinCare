@@ -153,3 +153,51 @@ setInterval(() => {
     )}: ${`${timer.getSeconds()}`.padStart(2, '0')}`;
     todayShowTime.textContent = formateTimer;
 }, 1000);
+
+const hasil = document.querySelector('.hasil');
+const content = hasil.querySelector('.container');
+
+const setHasilWidth = () => {
+  const contentWidth = content.offsetWidth;
+  const hasilWidth = contentWidth + 100;
+  hasil.style.width = `${hasilWidth}px`;
+};
+
+setHasilWidth();
+
+// update the width whenever the content width changes
+const resizeObserver = new ResizeObserver(() => {
+  setHasilWidth();
+});
+
+resizeObserver.observe(content);
+
+const calendar_days = document.querySelector('.calendar-days');
+
+calendar_days.addEventListener('click', (e) => {
+    if (e.target.tagName.toLowerCase() === 'div') {
+        const date = new Date(currentYear.value, currentMonth.value, e.target.textContent);
+        const tomorrow = new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1);
+    
+        const tanggal = e.target.textContent;
+        const bulan = month_names[date.getMonth()];
+        const tahun = date.getFullYear();
+
+        const tanggal_dipilih = document.querySelector('.tanggal-dipilih');
+        const bulan_dipilih = document.querySelector('.bulan-dipilih');
+        const tahun_dipilih = document.querySelector('.tahun-dipilih');
+
+        if (typeof(bulan) === 'undefined' || tanggal == '') {
+            console.log(`terjadi kesalahan`);
+            tanggal_dipilih.textContent = "tanggal";
+            bulan_dipilih.textContent = "bulan";
+            tahun_dipilih.textContent = "tahun";
+        }else{
+            console.log(`Anda memilih ${tanggal} ${bulan} ${tahun}`);
+            tanggal_dipilih.textContent = tanggal;
+            bulan_dipilih.textContent = bulan;
+            tahun_dipilih.textContent = tahun;
+        }
+        
+    }
+});
