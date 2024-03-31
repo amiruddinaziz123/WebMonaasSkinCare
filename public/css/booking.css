@@ -24,6 +24,7 @@ background-color: white;
 border-radius: 25px;
 overflow: hidden;
 padding: 35px 50px 0px 50px;
+display: inline-block;
 }
 
 .calendar {
@@ -309,6 +310,26 @@ animation: showtime 1s forwards;
 /* ========================= */
 /* My Code */
 
+.select-hour{
+    height: 30rem;
+    width: max-content;
+    background-color: white;
+    border-radius: 25px;
+    overflow: hidden;
+    padding: 35px 50px 0px 50px;
+    display: inline-block;
+}
+
+.select-hour-header{
+    background: #e87cef;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 7px;
+    align-items: center;
+    font-weight: 700;
+    color: #ffffff;
+    padding: 16px;
+}
 .hasil {
     position: absolute;
     bottom: 0;

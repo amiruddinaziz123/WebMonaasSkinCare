@@ -61,7 +61,14 @@
         </div>
         <div class="month-list"></div>
       </div>
+      <div class="select-hour">
+        <div class="select-hour-header">
+          <span> Pilih Jam Untuk Treatment </span>
+        </div>
+      </div>
     </div>
+
+    
 
     <div class="hasil p-1">
       <h5 class="ms-4 mt-4">Buat jadwal treatment</h5>
