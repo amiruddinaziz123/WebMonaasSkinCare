@@ -12,19 +12,19 @@
 
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="gambar1.jpg" class="d-block w-100" alt="...">
+      <img src="{{ asset('img/gambar1.jpg') }}" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
       </div>
     </div>
 
     <div class="carousel-item" data-bs-interval="2000">
-      <img src="treatment/gambar1.jpg" class="d-block w-100" alt="...">
+      <img src="{{ asset('img/gambar1.jpg') }}" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
       </div>
     </div>
 
     <div class="carousel-item">
-      <img src="treatment/gambar1.jpg" class="d-block w-100" alt="...">
+      <img src="{{ asset('img/gambar1.jpg') }}" class="d-block w-100" alt="...">
       <div class="carousel-caption d-none d-md-block">
       </div>
     </div>
