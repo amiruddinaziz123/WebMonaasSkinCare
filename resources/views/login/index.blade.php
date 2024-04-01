@@ -3,24 +3,45 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>about us</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="/css/login.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/aboutus.css">
-</head>
+  </head>
   <body>
-    <div>
-        <div class="header text-center align-items-center justify-content-center">
-           <h1>About Us</h1>
-        </div>
+    
+    <div class="container d-flex justify-content-center align=items-center min-vh-100">
+      <div class="row border rounded-5 p-3 shadow box">
 
-        <div class="container">
-          <div class="row">
-            <h2>Hasil Maksimal, Harga Minimal</h2>
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam temporibus aspernatur modi sit, sequi voluptates quam itaque minima repellendus. Ipsam repudiandae ullam voluptate nostrum quos sit praesentium, beatae in reprehenderit adipisci? Accusantium debitis exercitationem dolorum nihil, maxime praesentium sequi eaque, accusamus commodi quaerat quisquam odit obcaecati enim illum sint dignissimos necessitatibus veniam unde. Voluptatum, sit neque quaerat nemo nulla, modi quia ipsam accusantium tempore eum sint quidem accusamus. Cumque architecto illo amet facilis voluptatibus dolorem adipisci aspernatur, sint accusantium voluptas. Placeat voluptate, praesentium laboriosam officia quia laborum facere officiis molestiae magnam rerum reiciendis, nesciunt, ut enim sequi possimus soluta quo.</p>
+        <div class="col-md-6 rounded-4 d-flex justify-content-center align=items-center flex-column left">
+          <div class="image">
+            <img src="/img/wajah.png" alt="" class="img-fluid mb-3">
           </div>
+          <p class="text-white text">LETS GET YOUR TREATMENT NOW !!</p>
         </div>
+        
+        <div class="col-md-6">
+          <div class="header-text text-center">Login</div>
+          <form>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputPassword1" class="form-label">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+
+      </div>
     </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>
