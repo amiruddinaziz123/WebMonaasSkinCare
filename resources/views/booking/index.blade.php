@@ -21,7 +21,7 @@
 
   </head>
   <body class="antialiased">
-    
+
     <div class="contianer">
       <div class="calendar">
         <div class="calendar-header">
@@ -65,10 +65,22 @@
         <div class="select-hour-header">
           <span> Pilih Jam Untuk Treatment </span>
         </div>
+        <div class="form-group">
+          <input type="checkbox" name="jam-1" id="jam-1" value="jam-1">
+          <label for="jam-1">Jam 1</label>
+        </div>
+        <div class="form-group">
+          <input type="checkbox" name="jam-2" id="jam-2" value="jam-2">
+          <label for="jam-2">Jam 2</label>
+        </div>
+        <div class="form-group">
+          <input type="checkbox" name="jam-3" id="jam-3" value="jam-3">
+          <label for="jam-3">Jam 3</label>
+        </div>
       </div>
     </div>
 
-    
+
 
     <div class="hasil p-1">
       <h5 class="ms-4 mt-4">Buat jadwal treatment</h5>
@@ -96,6 +108,9 @@
           <div class="col-7 text-start tahun-dipilih">
             tahun
           </div>
+        </div>
+        <div class="row" id="jam-booking">
+          
         </div>
       </div>
     </div>
