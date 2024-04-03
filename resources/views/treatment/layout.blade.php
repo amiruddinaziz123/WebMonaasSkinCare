@@ -11,54 +11,14 @@
 
     <!-- ICONS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-
-    <style>
-
-
-        .carousel-inner_card{
-            display: flex;
-            padding: 1em;
-
-        }
-
-        .carousel-item_card{
-            display: block;
-            margin-right: 0;
-            flex: 0 0 calc(100%/3);
-        }
-
-        .card{
-            margin: 0 .5em;
-            border-radius: 20px;
-            box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
-        }
-
-        .card .btn{
-            border-radius: 50px;
-            background-color: #E681FF;
-            color: black;
-        }
-
-        .card img { border-radius: 20px 20px 0 0; }
-
-        .navbar-brand{
-            color: white;
-        }
-
-        .bi-search{
-            color: white;
-        }
-
-        .bi-house-door{
-            color: white;
-        }
-
-    </style>
+    
+    <link rel="stylesheet" href="css/treatment.css">
+   
 </head>
 <body>
 
     <!-- NAVBAR -->
-     <nav class="navbar p-4" style="background-color: #DF6F9E";>
+     <nav class="navbar p-3" style="background-color: #DF6F9E";>
             <div class="container-fluid">
 
                 <div class="col-md-7">
@@ -67,13 +27,18 @@
 
                 <div class="col-md-4">
                 <div class="input-group">
-                <input type="search" class="form-control" placeholder="Search" aria-label="Recipient's username">
-                <button class="btn bi bi-search" type="submit" style="background-color: black";></button>
+                <input type="search" class="form-control" placeholder="Search" aria-label="Search">
+                <button class="btn bi bi-search" type="submit"></button>
                 </div>
                 </div>
 
                 <div class="col-md-1">
-                    <a href="#"> <i class="bi bi-house-door fa-lg"></i></a>
+                    <a href="#"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                    <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/>
+                    </svg>
+                
+                    </a>
                 </div>
 
 
@@ -90,7 +55,7 @@
         <br>
 
 
-        <div class="container mt-5">
+        <div class="container">
         @yield('content')
     </div>
 

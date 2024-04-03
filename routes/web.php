@@ -33,3 +33,7 @@ Route::resource('/posts', \App\Http\Controllers\PostController::class);
 Route::get('/treatment', function () {
     return view('treatment.index');
 });
+
+Route::get('/profil', function () {
+    return view('profil.index');
+});

@@ -40,7 +40,8 @@
   </button>
 </div>-->
 
-<div id="carouselExampleIndicators" class="carousel slide">
+<div class="container-fluid">
+<div id="carouselExampleIndicators" class="carousel slide col-12">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -49,15 +50,15 @@
 
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="{{ asset('img/gambar1.jpg') }}" class="d-block w-100" alt="...">
+      <img src="{{ asset('img/gambar1.jpg') }}" class="d-block" alt="...">
     </div>
 
     <div class="carousel-item">
-      <img src="{{ asset('img/gambar2.jpg') }}" class="d-block w-100" alt="...">
+      <img src="{{ asset('img/gambar2.jpg') }}" class="d-block" alt="...">
     </div>
 
     <div class="carousel-item">
-      <img src="{{ asset('img/gambar1.jpg') }}" class="d-block w-100" alt="...">
+      <img src="{{ asset('img/gambar1.jpg') }}" class="d-block" alt="...">
     </div>
   </div>
 
@@ -70,6 +71,7 @@
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="visually-hidden">Next</span>
   </button>
+</div>
 </div>
 
 <br>
