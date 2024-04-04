@@ -64,8 +64,10 @@
         <div class="select-hour-header">
           <span> Pilih Jam Untuk Treatment </span>
         </div>
-        <div class="form-group">
-          jam-booking
+        <div class="form-group" class="container">
+          <div class="row" id="daftar-jam-booking">
+
+          </div>
         </div>
       </div>
     </div>
@@ -100,7 +102,7 @@
           </div>
         </div>
         <div class="row" id="jam-booking">
-          
+          jam-booking
         </div>
       </div>
     </div>
@@ -109,6 +111,7 @@
     <script>
       // mempasing data dokter ke file booking.js
       const dokterData = @json($dokters);
+      const jamBookingData = @json($jamBookings);
     </script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
     <script src="{{ asset('js/booking.js') }}"></script>

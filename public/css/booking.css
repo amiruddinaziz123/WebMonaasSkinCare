@@ -312,7 +312,7 @@ animation: showtime 1s forwards;
 
 .select-hour{
     height: 30rem;
-    width: max-content;
+    width: 350px;
     background-color: white;
     border-radius: 25px;
     overflow: hidden;

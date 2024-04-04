@@ -185,7 +185,13 @@ calendar_days.addEventListener('click', (e) => {
 });
 
 const jamBooking = document.getElementById("jam-booking");
-const jam = document.getElementById();
+const daftarJamBooking = document.getElementById("daftar-jam-booking");
 
-let jamKe = document.createElement('div');
-jamBooking.textContent = `${jam1} ${jam2} ${jam3}`;
+for (let i = 0; i < jamBookingData.length; i++) {
+    let jk = document.createElement('div');
+    jk.classList.add('col-3', 'text-center', 'p-2');
+
+    jk.textContent = jamBookingData[i].jam_ke;
+    daftarJamBooking.append(jk);
+}
+
