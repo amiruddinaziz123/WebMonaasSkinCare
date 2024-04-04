@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('jam_bookings', function (Blueprint $table) {
             $table->id();
             $table->string("jam_ke");
-            $table->boolean("status");
+            $table->boolean("status")->nullable()->default(null);
             $table->timestamps();
         });
     }
