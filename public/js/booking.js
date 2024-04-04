@@ -189,7 +189,20 @@ const daftarJamBooking = document.getElementById("daftar-jam-booking");
 
 for (let i = 0; i < jamBookingData.length; i++) {
     let jk = document.createElement('div');
-    jk.classList.add('col-3', 'text-center', 'p-2');
+    if (jamBookingData[i].status == 1) {
+        jk.classList.add('col-2', 'text-center', 'border', 'rounded-3', 'btn', 'btn-outline-light', 'p-2', 'fs-6', 'm-1', 'text-dark');
+        jk.style.backgroundColor = "#ff7575";
+    }else{
+        jk.classList.add('col-2', 'text-center', 'border', 'rounded-3', 'btn', 'btn-outline-light', 'p-2', 'fs-6', 'm-1', 'text-dark');
+        jk.style.backgroundColor = "#a9ffa6";
+    }
+
+    jk.addEventListener('click', function() {
+        // Mendapatkan teks konten dari elemen yang diklik
+        let contentJamKe = this.textContent;
+        alert("Anda telah mengklik jam ke " + contentJamKe);
+    });
+    
 
     jk.textContent = jamBookingData[i].jam_ke;
     daftarJamBooking.append(jk);

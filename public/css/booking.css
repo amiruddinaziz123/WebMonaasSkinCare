@@ -342,3 +342,13 @@ animation: showtime 1s forwards;
     padding: 1rem;
     box-sizing: border-box;
 }
+
+#daftar-jam-booking{
+    display: flex;
+    justify-content: space-between;
+    border-radius: 7px;
+    align-items: center;
+    font-weight: 700;
+    color: #ffffff;
+    padding: 10px;
+}

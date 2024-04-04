@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\dokters;
-use App\Models\jamBooking;
 use Illuminate\View\View;
 use Illuminate\Http\Request;
+use Illuminate\Http\RedirectResponse;
+use App\Models\dokters;
+use App\Models\jamBooking;
 
 class BookingController extends Controller
 {
