@@ -25,9 +25,9 @@ Route::get('/aboutus', function () {
     return view('aboutus.index');
 });
 
-Route::resource('/booking', \App\Http\Controllers\BookingController::class);
-
 // untuk coba pake /posts
+Route::resource('/posts', \App\Http\Controllers\PostController::class);
+Route::resource('/booking', \App\Http\Controllers\BookingController::class);
 Route::resource('/posts', \App\Http\Controllers\PostController::class);
 
 Route::get('/treatment', function () {

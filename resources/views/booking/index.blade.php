@@ -21,7 +21,6 @@
 
   </head>
   <body class="antialiased">
-
     <div class="contianer">
       <div class="calendar">
         <div class="calendar-header">
@@ -36,7 +35,7 @@
             </span>
           </div>
         </div>
-  
+
         <div class="calendar-body">
           <div class="calendar-week-days">
             <div>Min</div>
@@ -66,16 +65,7 @@
           <span> Pilih Jam Untuk Treatment </span>
         </div>
         <div class="form-group">
-          <input type="checkbox" name="jam-1" id="jam-1" value="jam-1">
-          <label for="jam-1">Jam 1</label>
-        </div>
-        <div class="form-group">
-          <input type="checkbox" name="jam-2" id="jam-2" value="jam-2">
-          <label for="jam-2">Jam 2</label>
-        </div>
-        <div class="form-group">
-          <input type="checkbox" name="jam-3" id="jam-3" value="jam-3">
-          <label for="jam-3">Jam 3</label>
+          jam-booking
         </div>
       </div>
     </div>
