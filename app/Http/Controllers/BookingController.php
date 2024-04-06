@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
 use App\Models\dokters;
 use App\Models\jamBooking;
+use App\Models\Booking;
 
 class BookingController extends Controller
 {
@@ -24,5 +25,21 @@ class BookingController extends Controller
 
         //render view with posts
         return view('/booking.index', compact('dokters', 'jamBookings'));
+    }
+
+    public function store(Request $request)
+    {
+        // Validate the request...
+
+        $validatedData = $request->validate([
+            'nama_user' => 'required',
+            'no_telp' => 'required',
+            'tanggal_booking' => 'required',
+            'nama_dokter' => 'required',
+        ]);
+
+        $booking = Booking::create($validatedData);
+
+        return redirect()->route('booking.index');
     }
 }

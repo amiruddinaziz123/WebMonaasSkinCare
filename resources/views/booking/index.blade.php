@@ -69,6 +69,35 @@
 
           </div>
         </div>
+        <div>
+          <form action="{{ route('booking.store') }}" method="POST">
+            @csrf
+        
+            <div class="form-group">
+              <label for="nama_user">Name:</label>
+              <input type="text" name="nama_user" id="nama_user" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="no_telp">No Telp:</label>
+              <input type="text" name="no_telp" id="no_telp" minlength="12" maxlength="14" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label for="tanggal_booking">Tanggal Dipilih:</label>
+              <input type="date" name="tanggal_booking" id="tanggal_booking" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="nama_dokter">Doctor:</label>
+                <select name="nama_dokter" id="nama_dokter" class="form-control" required>
+                    @foreach ($dokters as $dokter)
+                        <option value="{{ $dokter->nama_dokter }}">{{ $dokter->nama_dokter }}</option>
+                    @endforeach
+                </select>
+            </div>
+        
+            <button class="btn btn-primary" type="submit">Submit</button>
+          </form>
+        </div>
       </div>
     </div>
 
@@ -112,6 +141,9 @@
       // mempasing data dokter ke file booking.js
       const dokterData = @json($dokters);
       const jamBookingData = @json($jamBookings);
+
+      console.log(dokterData);
+      console.log(jamBookingData);
     </script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
     <script src="{{ asset('js/booking.js') }}"></script>
