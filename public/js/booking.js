@@ -158,49 +158,33 @@ const calendar_days = document.querySelector('.calendar-days');
 
 calendar_days.addEventListener('click', (e) => {
     if (e.target.tagName.toLowerCase() === 'div') {
-        const date = new Date(currentYear.value, currentMonth.value, e.target.textContent);
-        const tomorrow = new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1);
-    
-        const tanggal = e.target.textContent;
-        const bulan = month_names[date.getMonth()];
-        const tahun = date.getFullYear();
-
+        const date = new Date(currentYear.value, currentMonth.value, _.toString(_.parseInt(e.target.textContent) + 1));
+        const formattedDate = date.toISOString().slice(0, 10); // Format tanggal YYYY-MM-DD
         const tanggal_dipilih = document.querySelector('.tanggal-dipilih');
-        const bulan_dipilih = document.querySelector('.bulan-dipilih');
-        const tahun_dipilih = document.querySelector('.tahun-dipilih');
 
-        if (typeof(bulan) === 'undefined' || tanggal == '') {
-            console.log(`terjadi kesalahan`);
-            tanggal_dipilih.textContent = "tanggal";
-            bulan_dipilih.textContent = "bulan";
-            tahun_dipilih.textContent = "tahun";
-        }else{
-            console.log(`Anda memilih ${tanggal} ${bulan} ${tahun}`);
-            tanggal_dipilih.textContent = tanggal;
-            bulan_dipilih.textContent = bulan;
-            tahun_dipilih.textContent = tahun;
-        }
-        
+        tanggal_dipilih.value = formattedDate;
     }
 });
+
 
 const jamBooking = document.getElementById("jam-booking");
 const daftarJamBooking = document.getElementById("daftar-jam-booking");
 
 for (let i = 0; i < jamBookingData.length; i++) {
-    let jk = document.createElement('div');
+    let jk = document.createElement('button');
+
     if (jamBookingData[i].status == 1) {
-        jk.classList.add('col-2', 'text-center', 'border', 'rounded-3', 'btn', 'btn-outline-light', 'p-2', 'fs-6', 'm-1', 'text-dark');
+        jk.classList.add(i + 1, 'col-2', 'text-center', 'border', 'rounded-3', 'btn', 'btn-outline-light', 'p-2', 'fs-6', 'm-1', 'text-dark');
         jk.style.backgroundColor = "#ff7575";
     }else{
-        jk.classList.add('col-2', 'text-center', 'border', 'rounded-3', 'btn', 'btn-outline-light', 'p-2', 'fs-6', 'm-1', 'text-dark');
+        jk.classList.add(i + 1, 'col-2', 'text-center', 'border', 'rounded-3', 'btn', 'btn-outline-light', 'p-2', 'fs-6', 'm-1', 'text-dark');
         jk.style.backgroundColor = "#a9ffa6";
     }
 
     jk.addEventListener('click', function() {
         // Mendapatkan teks konten dari elemen yang diklik
         let contentJamKe = this.textContent;
-        alert("Anda telah mengklik jam ke " + contentJamKe);
+        // alert("Anda telah mengklik jam ke " + contentJamKe);
     });
     
 

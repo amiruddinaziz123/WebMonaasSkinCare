@@ -21,7 +21,8 @@
 
   </head>
   <body class="antialiased">
-    <div class="contianer">
+    <x-navbar/>
+    <div class="contianer ps-5 pe-5 pt-4">
       <div class="calendar">
         <div class="calendar-header">
           <span class="month-picker" id="month-picker"> May </span>
@@ -62,31 +63,44 @@
       </div>
       <div class="select-hour">
         <div class="select-hour-header">
-          <span> Pilih Jam Untuk Treatment </span>
+          Pilih Jam Untuk Treatment
         </div>
         <div class="form-group" class="container">
           <div class="row" id="daftar-jam-booking">
 
           </div>
         </div>
-        <div>
-          <form action="{{ route('booking.store') }}" method="POST">
+        
+      </div>
+    </div>
+
+
+
+
+    <div class="hasil p-1">
+      <h5 class="ms-4 mt-4">Buat jadwal treatment</h5>
+        <div class="container">
+          <form action="{{ route('booking.store') }}" method="POST" class="row">
             @csrf
         
-            <div class="form-group">
+            <div class="form-group col-3">
               <label for="nama_user">Name:</label>
               <input type="text" name="nama_user" id="nama_user" class="form-control" required>
             </div>
-            <div class="form-group">
+            <div class="form-group col-3">
               <label for="no_telp">No Telp:</label>
               <input type="text" name="no_telp" id="no_telp" minlength="12" maxlength="14" class="form-control" required>
             </div>
-            <div class="form-group">
+            <div class="form-group col-2">
               <label for="tanggal_booking">Tanggal Dipilih:</label>
-              <input type="date" name="tanggal_booking" id="tanggal_booking" class="form-control" required>
+              <input type="date" name="tanggal_booking" id="tanggal_booking" disabled class="form-control tanggal-dipilih" required>
+            </div>
+            <div class="form-group col-2">
+              <label for="jam_booking">Tanggal Dipilih:</label>
+              <input type="time" name="jam_booking" id="jam_booking" class="form-control tanggal-dipilih" required>
             </div>
             
-            <div class="form-group">
+            <div class="form-group col-3">
                 <label for="nama_dokter">Doctor:</label>
                 <select name="nama_dokter" id="nama_dokter" class="form-control" required>
                     @foreach ($dokters as $dokter)
@@ -94,44 +108,10 @@
                     @endforeach
                 </select>
             </div>
-        
-            <button class="btn btn-primary" type="submit">Submit</button>
+            <div class="form-group col-12 mt-2 nav justify-content-center">
+              <button class="btn btn-primary col-2" type="submit">Submit</button>
+            </div>
           </form>
-        </div>
-      </div>
-    </div>
-
-
-
-    <div class="hasil p-1">
-      <h5 class="ms-4 mt-4">Buat jadwal treatment</h5>
-      <div class="container text-center">
-        <div class="row">
-          <div class="col-5 text-start">
-            Tanggal :
-          </div>
-          <div class="col-7 text-start tanggal-dipilih">
-            tanggal
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-5 text-start">
-            Bulan :
-          </div>
-          <div class="col-7 text-start bulan-dipilih">
-            bulan
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-5 text-start">
-            Tahun :
-          </div>
-          <div class="col-7 text-start tahun-dipilih">
-            tahun
-          </div>
-        </div>
-        <div class="row" id="jam-booking">
-          jam-booking
         </div>
       </div>
     </div>

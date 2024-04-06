@@ -6,25 +6,23 @@ box-sizing: border-box;
 }
 
 body {
-display: flex;
 margin: 0px;
-height: 100vh;
 width: 100%;
 justify-content: center;
 align-items: center;
 place-items: center;
 background: linear-gradient(to bottom, #e87cef, #eff1ff);
-overflow: hidden;
+overflow-y: auto;
 }
 
 .calendar {
-height: 30rem;
+height: max-content;
 width: max-content;
 background-color: white;
 border-radius: 25px;
 overflow: hidden;
 padding: 35px 50px 0px 50px;
-display: inline-block;
+display: inline grid;
 }
 
 .calendar {
@@ -311,27 +309,27 @@ animation: showtime 1s forwards;
 /* My Code */
 
 .select-hour{
-    height: 30rem;
+    height: max-content;
     width: 350px;
     background-color: white;
     border-radius: 25px;
-    overflow: hidden;
+    overflow: auto;
     padding: 35px 50px 0px 50px;
-    display: inline-block;
+    display: inline grid;
+
 }
 
 .select-hour-header{
     background: #e87cef;
-    display: flex;
-    justify-content: space-between;
+    display: flow-root;
     border-radius: 7px;
-    align-items: center;
     font-weight: 700;
     color: #ffffff;
-    padding: 16px;
+    padding: 10px;
+    text-align: center;
 }
 .hasil {
-    position: absolute;
+    position: relative;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
