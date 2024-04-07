@@ -61,11 +61,11 @@
         </div>
         <div class="month-list"></div>
       </div>
-      <div class="select-hour">
-        <div class="select-hour-header">
+      <div class="select-hour row">
+        <div class="select-hour-header col-12">
           Pilih Jam Untuk Treatment
         </div>
-        <div class="form-group" class="container">
+        <div class="form-group container col-12">
           <div class="row" id="daftar-jam-booking">
 
           </div>
@@ -78,35 +78,35 @@
 
 
     <div class="hasil p-1">
-      <h5 class="ms-4 mt-4">Buat jadwal treatment</h5>
         <div class="container">
+          <h5 class="ms-4 mt-4 nav justify-content-center">Buat jadwal treatment</h5>
           <form action="{{ route('booking.store') }}" method="POST" class="row">
             @csrf
         
-            <div class="form-group col-3">
-              <label for="nama_user">Name:</label>
-              <input type="text" name="nama_user" id="nama_user" class="form-control" required>
+            <div class="form-floating col-3">
+              <input type="text" name="nama_user" id="nama_user" class="form-control" placeholder="Nama" required>
+              <label for="nama_user" class="ms-3">Nama:</label>
             </div>
-            <div class="form-group col-3">
-              <label for="no_telp">No Telp:</label>
-              <input type="text" name="no_telp" id="no_telp" minlength="12" maxlength="14" class="form-control" required>
+            <div class="form-floating col-3">
+              <input type="text" name="no_telp" id="no_telp" minlength="12" maxlength="14" class="form-control" placeholder="No Telp" required>
+              <label for="no_telp" class="ms-3">No Telp:</label>
             </div>
-            <div class="form-group col-2">
-              <label for="tanggal_booking">Tanggal Dipilih:</label>
-              <input type="date" name="tanggal_booking" id="tanggal_booking" disabled class="form-control tanggal-dipilih" required>
+            <div class="form-floating col-2">
+              <input type="date" name="tanggal_booking" id="tanggal_booking" class="form-control tanggal-dipilih" required>
+              <label for="tanggal_booking" class="ms-3">Tanggal Dipilih:</label>
             </div>
-            <div class="form-group col-2">
-              <label for="jam_booking">Tanggal Dipilih:</label>
+            <div class="form-floating col-2">
               <input type="time" name="jam_booking" id="jam_booking" class="form-control tanggal-dipilih" required>
+              <label for="jam_booking" class="ms-3">Jam Dipilih:</label>
             </div>
             
-            <div class="form-group col-3">
-                <label for="nama_dokter">Doctor:</label>
+            <div class="form-floating col-3">
                 <select name="nama_dokter" id="nama_dokter" class="form-control" required>
                     @foreach ($dokters as $dokter)
                         <option value="{{ $dokter->nama_dokter }}">{{ $dokter->nama_dokter }}</option>
                     @endforeach
                 </select>
+                <label for="nama_dokter" class="ms-3">Doctor:</label>
             </div>
             <div class="form-group col-12 mt-2 nav justify-content-center">
               <button class="btn btn-primary col-2" type="submit">Submit</button>

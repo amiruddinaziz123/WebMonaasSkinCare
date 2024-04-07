@@ -16,7 +16,7 @@ overflow-y: auto;
 }
 
 .calendar {
-height: max-content;
+height: 30rem;
 width: max-content;
 background-color: white;
 border-radius: 25px;
@@ -309,19 +309,19 @@ animation: showtime 1s forwards;
 /* My Code */
 
 .select-hour{
-    height: max-content;
+    height: 30rem;
     width: 350px;
     background-color: white;
     border-radius: 25px;
     overflow: auto;
     padding: 35px 50px 0px 50px;
-    display: inline grid;
+    display: inline flex;
 
 }
 
 .select-hour-header{
     background: #e87cef;
-    display: flow-root;
+    height: 50px;
     border-radius: 7px;
     font-weight: 700;
     color: #ffffff;
@@ -343,10 +343,11 @@ animation: showtime 1s forwards;
 
 #daftar-jam-booking{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     border-radius: 7px;
     align-items: center;
     font-weight: 700;
     color: #ffffff;
     padding: 10px;
+    margin-top: -130px;
 }

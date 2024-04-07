@@ -13,52 +13,65 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     
     <link rel="stylesheet" href="css/treatment.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Katibeh&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/component.css') }}" />
    
 </head>
 <body>
 
-    <!-- NAVBAR -->
-     <nav class="navbar p-3" style="background-color: #DF6F9E";>
-            <div class="container-fluid">
+     <!-- NAVBAR -->
+    {{-- <nav class="navbar p-3" style="background-color: #DF6F9E";>
+        <div class="container-fluid">
 
-                <div class="col-md-7">
-                <h1 class="navbar-brand">MONAAS TREATMENT</h1>
-                </div>
-
-                <div class="col-md-4">
-                <div class="input-group">
-                <input type="search" class="form-control" placeholder="Search" aria-label="Search">
-                <button class="btn bi bi-search" type="submit"></button>
-                </div>
-                </div>
-
-                <div class="col-md-1">
-                    <a href="#"> 
-                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
-                    <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/>
-                    </svg>
-                
-                    </a>
-                </div>
-
-
-                <!-- <form class="d-flex" role="search"> 
-         
-                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-primary bg-dark" type="submit"><i class="bi bi-search"></i></button>
-                <i class="bi bi-house-door"></i>
-
-                 </form> -->
+            <div class="col-md-7">
+            <h1 class="navbar-brand">MONAAS TREATMENT</h1>
             </div>
-        </nav> 
 
-        <br>
+            <div class="col-md-4">
+            <div class="input-group">
+            <input type="search" class="form-control" placeholder="Search" aria-label="Search">
+            <button class="btn bi bi-search" type="submit"></button>
+            </div>
+            </div>
+
+            <div class="col-md-1">
+                <a href="#"> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-house-door" viewBox="0 0 16 16">
+                <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/>
+                </svg>
+            
+                </a>
+            </div>
 
 
-        <div class="container">
+            <!-- <form class="d-flex" role="search"> 
+        
+            <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary bg-dark" type="submit"><i class="bi bi-search"></i></button>
+            <i class="bi bi-house-door"></i>
+
+                </form> -->
+        </div>
+    </nav>  --}}
+
+    <x-navbar/>
+
+    <br>
+
+
+    <div class="container">
         @yield('content')
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
 </body>
 </html>

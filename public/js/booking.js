@@ -92,15 +92,15 @@ month_names.forEach((e, index) => {
 
     month_list.append(month);
     month.onclick = () => {
-    currentMonth.value = index;
-    generateCalendar(currentMonth.value, currentYear.value);
-    month_list.classList.replace('show', 'hide');
-    dayTextFormate.classList.remove('hideTime');
-    dayTextFormate.classList.add('showtime');
-    timeFormate.classList.remove('hideTime');
-    timeFormate.classList.add('showtime');
-    dateFormate.classList.remove('hideTime');
-    dateFormate.classList.add('showtime');
+        currentMonth.value = index;
+        generateCalendar(currentMonth.value, currentYear.value);
+        month_list.classList.replace('show', 'hide');
+        dayTextFormate.classList.remove('hideTime');
+        dayTextFormate.classList.add('showtime');
+        timeFormate.classList.remove('hideTime');
+        timeFormate.classList.add('showtime');
+        dateFormate.classList.remove('hideTime');
+        dateFormate.classList.add('showtime');
     };
 });
 
@@ -169,26 +169,38 @@ calendar_days.addEventListener('click', (e) => {
 
 const jamBooking = document.getElementById("jam-booking");
 const daftarJamBooking = document.getElementById("daftar-jam-booking");
+const jamDipilih = document.querySelector("#jam_booking");
 
 for (let i = 0; i < jamBookingData.length; i++) {
     let jk = document.createElement('button');
 
     if (jamBookingData[i].status == 1) {
-        jk.classList.add(i + 1, 'col-2', 'text-center', 'border', 'rounded-3', 'btn', 'btn-outline-light', 'p-2', 'fs-6', 'm-1', 'text-dark');
+        jk.classList.add(i + 1, 'col-5', 'text-center', 'border', 'rounded-3', 'btn', 'btn-outline-light', 'p-2', 'fs-6', 'm-1', 'text-dark');
         jk.style.backgroundColor = "#ff7575";
     }else{
-        jk.classList.add(i + 1, 'col-2', 'text-center', 'border', 'rounded-3', 'btn', 'btn-outline-light', 'p-2', 'fs-6', 'm-1', 'text-dark');
+        jk.classList.add(i + 1, 'col-5', 'text-center', 'border', 'rounded-3', 'btn', 'btn-outline-light', 'p-2', 'fs-6', 'm-1', 'text-dark');
         jk.style.backgroundColor = "#a9ffa6";
     }
+
+    jk.addEventListener('mouseover', function() {
+        this.style.backgroundColor = "#da82e9";
+    });
+
+    jk.textContent = jamBookingData[i].jam_ke.slice(0, 5);
+    daftarJamBooking.append(jk);
+
+    jk.addEventListener('mouseout', function() {
+        if (jamBookingData[i].status == 1) {
+            this.style.backgroundColor = "#ff7575"; // Kembalikan warna latar belakang menjadi merah muda jika status adalah 1
+        } else {
+            this.style.backgroundColor = "#a9ffa6"; // Kembalikan warna latar belakang menjadi hijau jika status bukan 1
+        }
+    });
 
     jk.addEventListener('click', function() {
         // Mendapatkan teks konten dari elemen yang diklik
         let contentJamKe = this.textContent;
-        // alert("Anda telah mengklik jam ke " + contentJamKe);
+        jamDipilih.value = contentJamKe;
     });
-    
-
-    jk.textContent = jamBookingData[i].jam_ke;
-    daftarJamBooking.append(jk);
 }
 
