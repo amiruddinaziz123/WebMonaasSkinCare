@@ -11,16 +11,16 @@ width: 100%;
 justify-content: center;
 align-items: center;
 place-items: center;
-background: linear-gradient(to bottom, #e87cef, #eff1ff);
+/* background: linear-gradient(to bottom, #e87cef, #eff1ff); */
 overflow-y: auto;
 }
 
 .calendar {
-height: 30rem;
+height: max-content;
 width: max-content;
 background-color: white;
 border-radius: 25px;
-overflow: hidden;
+overflow: auto;
 padding: 35px 50px 0px 50px;
 display: inline grid;
 }
@@ -315,8 +315,9 @@ animation: showtime 1s forwards;
     border-radius: 25px;
     overflow: auto;
     padding: 35px 50px 0px 50px;
-    display: inline flex;
-
+    display: inline grid;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    margin-left: 20px;
 }
 
 .select-hour-header{
@@ -349,5 +350,6 @@ animation: showtime 1s forwards;
     font-weight: 700;
     color: #ffffff;
     padding: 10px;
-    margin-top: -130px;
+    /* margin-top: -130px; */
+    margin-bottom: 25%;
 }

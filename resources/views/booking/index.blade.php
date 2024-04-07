@@ -22,7 +22,7 @@
   </head>
   <body class="antialiased">
     <x-navbar/>
-    <div class="contianer ps-5 pe-5 pt-4">
+    <div class="contianer ps-5 pe-5 pt-4 mb-5">
       <div class="calendar">
         <div class="calendar-header">
           <span class="month-picker" id="month-picker"> May </span>
@@ -62,22 +62,21 @@
         <div class="month-list"></div>
       </div>
       <div class="select-hour row">
-        <div class="select-hour-header col-12">
+        <div class="select-hour-header col-12 sticky-top">
           Pilih Jam Untuk Treatment
         </div>
-        <div class="form-group container col-12">
+        <div class="form-group container border border-bottom-0 border-2 rounded col-12">
           <div class="row" id="daftar-jam-booking">
 
           </div>
         </div>
-        
       </div>
     </div>
 
 
 
 
-    <div class="hasil p-1">
+    <div class="hasil p-1 border border-2">
         <div class="container">
           <h5 class="ms-4 mt-4 nav justify-content-center">Buat jadwal treatment</h5>
           <form action="{{ route('booking.store') }}" method="POST" class="row">
@@ -106,7 +105,7 @@
                         <option value="{{ $dokter->nama_dokter }}">{{ $dokter->nama_dokter }}</option>
                     @endforeach
                 </select>
-                <label for="nama_dokter" class="ms-3">Doctor:</label>
+                <label for="nama_dokter" class="ms-3">Dokter:</label>
             </div>
             <div class="form-group col-12 mt-2 nav justify-content-center">
               <button class="btn btn-primary col-2" type="submit">Submit</button>
