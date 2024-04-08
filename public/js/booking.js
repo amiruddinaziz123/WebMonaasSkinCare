@@ -175,10 +175,10 @@ for (let i = 0; i < jamBookingData.length; i++) {
     let jk = document.createElement('button');
 
     if (jamBookingData[i].status == 1) {
-        jk.classList.add(i + 1, 'col-5', 'text-center', 'border', 'rounded-3', 'btn', 'btn-outline-light', 'p-2', 'fs-6', 'm-1', 'text-dark');
+        jk.classList.add(i + 1, 'col-5', 'text-center', 'border', 'btn', 'p-2', 'fs-6', 'm-1');
         jk.style.backgroundColor = "#ff7575";
     }else{
-        jk.classList.add(i + 1, 'col-5', 'text-center', 'border', 'rounded-3', 'btn', 'btn-outline-light', 'p-2', 'fs-6', 'm-1', 'text-dark');
+        jk.classList.add(i + 1, 'col-5', 'text-center', 'border', 'btn', 'p-2', 'fs-6', 'm-1');
         jk.style.backgroundColor = "#a9ffa6";
     }
 
@@ -203,4 +203,11 @@ for (let i = 0; i < jamBookingData.length; i++) {
         jamDipilih.value = contentJamKe;
     });
 }
+
+const selectCalendar = document.querySelector(".calendar");
+const followWidthFromCalendar = document.querySelector(".width-same-calendar");
+
+
+followWidthFromCalendar.style.width = getComputedStyle(selectCalendar).width;
+followWidthFromCalendar.style.height = getComputedStyle(selectCalendar).height;
 

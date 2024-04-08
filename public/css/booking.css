@@ -11,18 +11,20 @@ width: 100%;
 justify-content: center;
 align-items: center;
 place-items: center;
-/* background: linear-gradient(to bottom, #e87cef, #eff1ff); */
+background: linear-gradient(to bottom, #f890ff, #eff1ff);
 overflow-y: auto;
+overflow-x: hidden;
 }
 
 .calendar {
-height: max-content;
-width: max-content;
+height: 500px;
+width: 420px;
 background-color: white;
 border-radius: 25px;
-overflow: auto;
+overflow: hidden;
 padding: 35px 50px 0px 50px;
 display: inline grid;
+margin: 30px;
 }
 
 .calendar {
@@ -38,6 +40,9 @@ align-items: center;
 font-weight: 700;
 color: #ffffff;
 padding: 10px;
+/* width: 95%; */
+margin-left: 20px;
+margin-right: 20px;
 }
 
 .calendar-body {
@@ -310,14 +315,13 @@ animation: showtime 1s forwards;
 
 .select-hour{
     height: 30rem;
-    width: 350px;
     background-color: white;
     border-radius: 25px;
     overflow: auto;
     padding: 35px 50px 0px 50px;
     display: inline grid;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    margin-left: 20px;
+    margin: 30px;
 }
 
 .select-hour-header{
@@ -348,8 +352,70 @@ animation: showtime 1s forwards;
     border-radius: 7px;
     align-items: center;
     font-weight: 700;
-    color: #ffffff;
+    color: #000000;
     padding: 10px;
     /* margin-top: -130px; */
     margin-bottom: 25%;
+}
+
+.form-control:focus{
+    color: var(--bs-body-color);
+    background-color: var(--bs-body-bg);
+    border-color: #fc86fe;
+    outline: 0;
+    box-shadow: 0 0 0 2px rgba(229, 13, 253, 0.25);
+    animation-duration: 2s;
+    animation-name: up-down;
+}
+
+@keyframes up-down {
+    0%{
+        transform: translateY(0px);
+        border-top-left-radius: 20px;
+    }
+    50%{
+        transform: translateY(-3px);
+        border-bottom-right-radius: 20px;
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.btn:hover{
+    animation-duration: 1s;
+    animation-name: bergelembung;
+    color: white;
+}
+
+@keyframes bergelembung {
+	0% {
+		border-top-right-radius: 15px;
+		text-shadow: 2px 2px 5px burlywood;
+	}
+	15% {
+		transform: translateY(5px);
+		transform: rotateZ(5deg);
+	}
+	25% {
+		border-top-left-radius: 30px;
+	}
+	35% {
+		transform: translateX(5px);
+		transform: rotateZ(-5deg);
+	}
+	50% {
+		border-bottom-right-radius: 30px;
+	}
+	65% {
+		transform: translateY(-5px);
+		transform: rotateZ(5deg);
+	}
+	75% {
+		border-bottom-left-radius: 30px;
+	}
+	85% {
+		transform: translateX(-5px);
+		transform: rotateZ(-5deg);
+	}
 }

@@ -31,9 +31,9 @@
             <a data-aos="fade-right" data-aos-offset="500" class="nav-link active" aria-current="page" style="font-family: Poppins;" href="/booking">Booking</a>
             </div>
         </div>
-        <div>
-            <a href="#" class="icon-btn"><ion-icon data-aos="fade-left" data-aos-offset="500" class="rounded-circle" name="search"></ion-icon></a>
-            <a href="#" class="icon-btn"><ion-icon data-aos="fade-left" data-aos-offset="500" class="rounded-circle" name="person-outline"></ion-icon></a>
-        </div>
     </div>
+    {{-- <div class="row hiden">
+        <div class="col-6"><a href="#" class="icon-btn"><ion-icon data-aos="fade-left" data-aos-offset="500" class="rounded-circle" name="search"></ion-icon></a></div>
+        <div class="col-6"><a href="#" class="icon-btn"><ion-icon data-aos="fade-left" data-aos-offset="500" class="rounded-circle" name="person-outline"></ion-icon></a></div>
+    </div> --}}
 </nav>

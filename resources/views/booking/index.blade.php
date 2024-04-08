@@ -22,8 +22,8 @@
   </head>
   <body class="antialiased">
     <x-navbar/>
-    <div class="contianer ps-5 pe-5 pt-4 mb-5">
-      <div class="calendar">
+    <div class="nav justify-content-center">
+      <div class="calendar nav justify-content-center">
         <div class="calendar-header">
           <span class="month-picker" id="month-picker"> May </span>
           <div class="year-picker" id="year-picker">
@@ -61,17 +61,18 @@
         </div>
         <div class="month-list"></div>
       </div>
-      <div class="select-hour row">
+      <div class="width-same-calendar select-hour row nav justify-content-center">
         <div class="select-hour-header col-12 sticky-top">
           Pilih Jam Untuk Treatment
         </div>
-        <div class="form-group container border border-bottom-0 border-2 rounded col-12">
+        <div class="form-group container rounded col-12">
           <div class="row" id="daftar-jam-booking">
 
           </div>
         </div>
       </div>
     </div>
+    
 
 
 
@@ -86,7 +87,7 @@
               <input type="text" name="nama_user" id="nama_user" class="form-control" placeholder="Nama" required>
               <label for="nama_user" class="ms-3">Nama:</label>
             </div>
-            <div class="form-floating col-3">
+            <div class="form-floating col-2">
               <input type="text" name="no_telp" id="no_telp" minlength="12" maxlength="14" class="form-control" placeholder="No Telp" required>
               <label for="no_telp" class="ms-3">No Telp:</label>
             </div>
@@ -108,7 +109,7 @@
                 <label for="nama_dokter" class="ms-3">Dokter:</label>
             </div>
             <div class="form-group col-12 mt-2 nav justify-content-center">
-              <button class="btn btn-primary col-2" type="submit">Submit</button>
+              <button class="btn col-2" type="submit" style="background-color: #e87cef; color: white;">Pesan</button>
             </div>
           </form>
         </div>
