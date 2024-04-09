@@ -22,10 +22,16 @@ class BookingController extends Controller
         //get posts
         $dokters = dokters::all();
         $jamBookings = jamBooking::all();
-
+    
+        // Iterate through each jamBooking object and extract the substring
+        foreach ($jamBookings as $jamBooking) {
+            $jamBooking->jam_ke = substr($jamBooking->jam_ke, 0, 5);
+        }
+    
         //render view with posts
         return view('/booking.index', compact('dokters', 'jamBookings'));
     }
+    
 
     public function store(Request $request)
     {

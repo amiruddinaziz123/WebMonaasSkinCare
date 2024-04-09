@@ -21,15 +21,29 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary" data-aos="fade-down">
     <div class="container-fluid">
         <a class="navbar-brand font-katibeh" href="#" data-aos="zoom-in"><img src="{{ asset('img/MonAAS 2.png') }}" alt="logoMonaas" width="40px" class="imgLogo">Monaas</a>
-        <button class="navbar-toggler" type="button" data-aos="fade-left" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-aos="fade-left" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLightNavbar" aria-controls="offcanvasLightNavbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse font-poppins position-absolute top-50 start-50 translate-middle" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-            <a data-aos="fade-right" data-aos-offset="500" class="nav-link active" aria-current="page" style="font-family: Poppins;" href="/product">Product</a>
-            <a data-aos="fade-right" data-aos-offset="500" class="nav-link active" aria-current="page" style="font-family: Poppins;" href="/treatment">Treatment</a>
-            <a data-aos="fade-right" data-aos-offset="500" class="nav-link active" aria-current="page" style="font-family: Poppins;" href="/booking">Booking</a>
+        <div class="offcanvas offcanvas-end text-bg-Light w-40" tabindex="-1" id="offcanvasLightNavbar" aria-labelledby="offcanvasLightNavbarLabel">
+            <div class="offcanvas-header">
+                <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
+            <div class="offcanvas-body row">
+                <div class="navbar-nav text-end col-12 col-md-6 d-md-none">
+                    <div class="justify-content-center row me-1">
+                        <a data-aos="fade-right" data-aos-offset="500" class="nav-link active" aria-current="page" style="font-family: Poppins;" href="/product">Product</a>
+                        <a data-aos="fade-right" data-aos-offset="500" class="nav-link active" aria-current="page" style="font-family: Poppins;" href="/treatment">Treatment</a>
+                        <a data-aos="fade-right" data-aos-offset="500" class="nav-link active" aria-current="page" style="font-family: Poppins;" href="/booking">Booking</a>
+                    </div>
+                </div>
+                <div class="navbar-nav text-end col-md-12 d-none d-md-block">
+                    <div class="justify-content-center row d-inline-block">
+                        <a data-aos="fade-right" data-aos-offset="500" class="nav-link active" aria-current="page" style="font-family: Poppins;" href="/product">Product</a>
+                        <a data-aos="fade-right" data-aos-offset="500" class="nav-link active" aria-current="page" style="font-family: Poppins;" href="/treatment">Treatment</a>
+                        <a data-aos="fade-right" data-aos-offset="500" class="nav-link active" aria-current="page" style="font-family: Poppins;" href="/booking">Booking</a>
+                    </div>
+                </div>
+            </div>            
         </div>
     </div>
     {{-- <div class="row hiden">

@@ -72,47 +72,51 @@
         </div>
       </div>
     </div>
-    
-
 
 
 
     <div class="hasil p-1 border border-2">
-        <div class="container">
-          <h5 class="ms-4 mt-4 nav justify-content-center">Buat jadwal treatment</h5>
-          <form action="{{ route('booking.store') }}" method="POST" class="row">
-            @csrf
-        
-            <div class="form-floating col-3">
-              <input type="text" name="nama_user" id="nama_user" class="form-control" placeholder="Nama" required>
-              <label for="nama_user" class="ms-3">Nama:</label>
-            </div>
-            <div class="form-floating col-2">
-              <input type="text" name="no_telp" id="no_telp" minlength="12" maxlength="14" class="form-control" placeholder="No Telp" required>
-              <label for="no_telp" class="ms-3">No Telp:</label>
-            </div>
-            <div class="form-floating col-2">
-              <input type="date" name="tanggal_booking" id="tanggal_booking" class="form-control tanggal-dipilih" required>
-              <label for="tanggal_booking" class="ms-3">Tanggal Dipilih:</label>
-            </div>
-            <div class="form-floating col-2">
-              <input type="time" name="jam_booking" id="jam_booking" class="form-control tanggal-dipilih" required>
-              <label for="jam_booking" class="ms-3">Jam Dipilih:</label>
-            </div>
-            
-            <div class="form-floating col-3">
-                <select name="nama_dokter" id="nama_dokter" class="form-control" required>
-                    @foreach ($dokters as $dokter)
-                        <option value="{{ $dokter->nama_dokter }}">{{ $dokter->nama_dokter }}</option>
-                    @endforeach
-                </select>
-                <label for="nama_dokter" class="ms-3">Dokter:</label>
-            </div>
-            <div class="form-group col-12 mt-2 nav justify-content-center">
-              <button class="btn col-2" type="submit" style="background-color: #e87cef; color: white;">Pesan</button>
-            </div>
-          </form>
-        </div>
+      <div class="form-group col-12 mt-2 nav justify-content-center">
+        <button class="btn col-4" type="submit" style="background-color: #e87cef; color: white;" id="btnBuatJadwalTreatment">Buat jadwal</button>
+      </div>
+      <div class="form-group col-12 mt-2 nav justify-content-end">
+        <button class="btn col-1" type="submit" style="background-color: #e87cef; color: white;" id="btnTutupJadwalTreatment">X</button>
+      </div>
+      <div class="container overflow-hidden" id="buatJadwalTreatment">
+        <h5 class="mt-4 nav justify-content-center">Buat jadwal treatment</h5>
+        <hr>
+        <form action="{{ route('booking.store') }}" method="POST" class="row">
+          @csrf
+      
+          <div class="form-floating col-12">
+            <input type="text" name="nama_user" id="nama_user" class="form-control" placeholder="Nama" required>
+            <label for="nama_user" class="ms-3">Nama:</label>
+          </div>
+          <div class="form-floating col-12">
+            <input type="text" name="no_telp" id="no_telp" minlength="12" maxlength="14" class="form-control" placeholder="No Telp" required>
+            <label for="no_telp" class="ms-3">No Telp:</label>
+          </div>
+          <div class="form-floating col-12">
+            <input type="date" name="tanggal_booking" id="tanggal_booking" class="form-control tanggal-dipilih" required>
+            <label for="tanggal_booking" class="ms-3">Tanggal Dipilih:</label>
+          </div>
+          <div class="form-floating col-12">
+            <input type="time" name="jam_booking" id="jam_booking" class="form-control tanggal-dipilih" required>
+            <label for="jam_booking" class="ms-3">Jam Dipilih:</label>
+          </div>
+          
+          <div class="form-floating col-12">
+              <select name="nama_dokter" id="nama_dokter" class="form-control" required>
+                  @foreach ($dokters as $dokter)
+                      <option value="{{ $dokter->nama_dokter }}">{{ $dokter->nama_dokter }}</option>
+                  @endforeach
+              </select>
+              <label for="nama_dokter" class="ms-3">Dokter:</label>
+          </div>
+          <div class="form-group col-12 mt-2 nav justify-content-center">
+            <button class="btn col-12" type="submit" style="background-color: #e87cef; color: white; animation-name: none;">Pesan</button>
+          </div>
+        </form>
       </div>
     </div>
     

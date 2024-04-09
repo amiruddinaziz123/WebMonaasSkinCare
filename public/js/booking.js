@@ -173,34 +173,49 @@ const jamDipilih = document.querySelector("#jam_booking");
 
 for (let i = 0; i < jamBookingData.length; i++) {
     let jk = document.createElement('button');
-
-    if (jamBookingData[i].status == 1) {
-        jk.classList.add(i + 1, 'col-5', 'text-center', 'border', 'btn', 'p-2', 'fs-6', 'm-1');
-        jk.style.backgroundColor = "#ff7575";
-    }else{
-        jk.classList.add(i + 1, 'col-5', 'text-center', 'border', 'btn', 'p-2', 'fs-6', 'm-1');
-        jk.style.backgroundColor = "#a9ffa6";
-    }
-
-    jk.addEventListener('mouseover', function() {
-        this.style.backgroundColor = "#da82e9";
-    });
-
     jk.textContent = jamBookingData[i].jam_ke.slice(0, 5);
     daftarJamBooking.append(jk);
 
+    function disabledClick() {
+        jk.style.animationName = 'cantBeClcik';
+        jk.style.animationDuration = '1s';
+    }
+
+    if (jamBookingData[i].status == 1) {
+        // jika sudah ada yang memesan
+        jk.classList.add(i + 1, 'col-5', 'text-center', 'border', 'btn', 'p-2', 'fs-6', 'm-1');
+        jk.style.backgroundColor = 'rgb(218 218 218)';
+        jk.style.boxShadow = 'rgba(122, 122, 122, 0.2) 0px 5px 5px 0px';
+    }else{
+        jk.classList.add(i + 1, 'col-5', 'text-center', 'border', 'btn', 'p-2', 'fs-6', 'm-1');
+        jk.style.backgroundColor = 'var(--bs-body-bg)';
+        jk.style.boxShadow = 'rgba(100, 100, 111, 0.2) 0px 5px 5px 0px';
+    }
+
+    jk.addEventListener('mouseover', function() {
+        if (jamBookingData[i].status == 0) {
+            this.style.backgroundColor = "#da82e9";
+        }
+    });
+
     jk.addEventListener('mouseout', function() {
         if (jamBookingData[i].status == 1) {
-            this.style.backgroundColor = "#ff7575"; // Kembalikan warna latar belakang menjadi merah muda jika status adalah 1
+            this.style.backgroundColor = "rgb(218 218 218)"; // Kembalikan warna latar belakang menjadi merah muda jika status adalah 1
         } else {
-            this.style.backgroundColor = "#a9ffa6"; // Kembalikan warna latar belakang menjadi hijau jika status bukan 1
+            this.style.backgroundColor = "var(--bs-body-bg)"; // Kembalikan warna latar belakang menjadi hijau jika status bukan 1
         }
     });
 
     jk.addEventListener('click', function() {
         // Mendapatkan teks konten dari elemen yang diklik
-        let contentJamKe = this.textContent;
-        jamDipilih.value = contentJamKe;
+        if (jamBookingData[i].status == 1) {
+            jk.style.backgroundColor = '#ff0000ab';
+            disabledClick();
+        }else{
+            let contentJamKe = this.textContent;
+            jamDipilih.value = contentJamKe;
+            this.style.backgroundColor = "#da82e9";
+        }
     });
 }
 
@@ -211,3 +226,28 @@ const followWidthFromCalendar = document.querySelector(".width-same-calendar");
 followWidthFromCalendar.style.width = getComputedStyle(selectCalendar).width;
 followWidthFromCalendar.style.height = getComputedStyle(selectCalendar).height;
 
+const buatJadwalTreatment = document.getElementById('buatJadwalTreatment');
+const btnBuatJadwalTreatment = document.getElementById('btnBuatJadwalTreatment');
+const btnTutupJadwalTreatment = document.getElementById('btnTutupJadwalTreatment');
+
+buatJadwalTreatment.parentElement.style.position = 'fixed';
+
+buatJadwalTreatment.style.display = 'none';
+btnTutupJadwalTreatment.style.display = 'none';
+
+btnBuatJadwalTreatment.addEventListener('click', function() {
+    buatJadwalTreatment.style.display = 'block';
+
+    btnTutupJadwalTreatment.style.display = 'block';
+
+    this.style.display = 'none';
+});
+
+btnTutupJadwalTreatment.addEventListener('click', function() {
+    buatJadwalTreatment.style.display = 'none';
+    
+
+    btnBuatJadwalTreatment.style.display = 'block';
+
+    this.style.display = 'none';
+});
