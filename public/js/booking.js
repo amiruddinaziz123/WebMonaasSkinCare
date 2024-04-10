@@ -181,6 +181,13 @@ for (let i = 0; i < jamBookingData.length; i++) {
         jk.style.animationDuration = '1s';
     }
 
+    function selectThisHour() {
+        if (contentJamKe == jamDipilih.value) {
+            jk.style.backgroundColor = "#b9ffd0";
+            jk.style.color = "black";
+        }
+    }
+
     if (jamBookingData[i].status == 1) {
         // jika sudah ada yang memesan
         jk.classList.add(i + 1, 'col-5', 'text-center', 'border', 'btn', 'p-2', 'fs-6', 'm-1');
@@ -200,21 +207,23 @@ for (let i = 0; i < jamBookingData.length; i++) {
 
     jk.addEventListener('mouseout', function() {
         if (jamBookingData[i].status == 1) {
-            this.style.backgroundColor = "rgb(218 218 218)"; // Kembalikan warna latar belakang menjadi merah muda jika status adalah 1
-        } else {
-            this.style.backgroundColor = "var(--bs-body-bg)"; // Kembalikan warna latar belakang menjadi hijau jika status bukan 1
+            this.style.backgroundColor = "rgb(218 218 218)";
+        }
+        else {
+            this.style.backgroundColor = "var(--bs-body-bg)"; 
         }
     });
 
+    let contentJamKe = jk.textContent;
+
     jk.addEventListener('click', function() {
-        // Mendapatkan teks konten dari elemen yang diklik
         if (jamBookingData[i].status == 1) {
             jk.style.backgroundColor = '#ff0000ab';
             disabledClick();
         }else{
-            let contentJamKe = this.textContent;
             jamDipilih.value = contentJamKe;
             this.style.backgroundColor = "#da82e9";
+            selectThisHour()
         }
     });
 }

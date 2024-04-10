@@ -349,6 +349,10 @@ animation: showtime 1s forwards;
     box-sizing: border-box;
 }
 
+#buatJadwalTreatment div{
+    margin: 5px;
+}
+
 #buatJadwalTreatment h5{
     background-color: #e87cef;
     color: white;
@@ -405,28 +409,28 @@ animation: showtime 1s forwards;
 	}
 	15% {
 		transform: translateY(5px);
-		transform: rotateZ(5deg);
+		transform: rotateZ(1.2deg);
 	}
 	25% {
 		border-top-left-radius: 30px;
 	}
 	35% {
 		transform: translateX(5px);
-		transform: rotateZ(-5deg);
+		transform: rotateZ(-1.2deg);
 	}
 	50% {
 		border-bottom-right-radius: 30px;
 	}
 	65% {
 		transform: translateY(-5px);
-		transform: rotateZ(5deg);
+		transform: rotateZ(1.2deg);
 	}
 	75% {
 		border-bottom-left-radius: 30px;
 	}
 	85% {
 		transform: translateX(-5px);
-		transform: rotateZ(-5deg);
+		transform: rotateZ(-1.2deg);
 	}
 }
 
