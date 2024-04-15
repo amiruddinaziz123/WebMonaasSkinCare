@@ -10,7 +10,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ asset('css/booking.css') }}">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="{{ asset('css/component.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}" />
 
     {{-- font --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,9 +22,9 @@
 
   </head>
   <body class="antialiased">
-
-    <div class="contianer">
-      <div class="calendar">
+    <x-navbar/>
+    <div class="nav justify-content-center">
+      <div class="calendar nav justify-content-center">
         <div class="calendar-header">
           <span class="month-picker" id="month-picker"> May </span>
           <div class="year-picker" id="year-picker">
@@ -36,7 +37,7 @@
             </span>
           </div>
         </div>
-  
+
         <div class="calendar-body">
           <div class="calendar-week-days">
             <div>Min</div>
@@ -61,67 +62,79 @@
         </div>
         <div class="month-list"></div>
       </div>
-      <div class="select-hour">
-        <div class="select-hour-header">
-          <span> Pilih Jam Untuk Treatment </span>
+      <div class="width-same-calendar select-hour row nav justify-content-center">
+        <div class="select-hour-header col-12 sticky-top">
+          Pilih Jam Untuk Treatment
         </div>
-        <div class="form-group">
-          <input type="checkbox" name="jam-1" id="jam-1" value="jam-1">
-          <label for="jam-1">Jam 1</label>
-        </div>
-        <div class="form-group">
-          <input type="checkbox" name="jam-2" id="jam-2" value="jam-2">
-          <label for="jam-2">Jam 2</label>
-        </div>
-        <div class="form-group">
-          <input type="checkbox" name="jam-3" id="jam-3" value="jam-3">
-          <label for="jam-3">Jam 3</label>
+        <div class="form-group container rounded col-12">
+          <div class="row" id="daftar-jam-booking">
+
+          </div>
         </div>
       </div>
     </div>
 
 
 
-    <div class="hasil p-1">
-      <h5 class="ms-4 mt-4">Buat jadwal treatment</h5>
-      <div class="container text-center">
-        <div class="row">
-          <div class="col-5 text-start">
-            Tanggal :
+    <div class="hasil p-1 border border-2">
+      <div class="form-group col-12 mt-2 nav justify-content-center">
+        <button class="btn col-4" type="submit" style="background-color: #e87cef; color: white;" id="btnBuatJadwalTreatment">Buat jadwal</button>
+      </div>
+      <div class="form-group col-12 mt-2 nav justify-content-end">
+        <button class="btn col-1" type="submit" style="background-color: #e87cef; color: white;" id="btnTutupJadwalTreatment">X</button>
+      </div>
+      <div class="container overflow-hidden" id="buatJadwalTreatment">
+        <h5 class="mt-4 nav justify-content-center">Buat jadwal treatment</h5>
+        <hr>
+        <form action="{{ route('booking.store') }}" method="POST" class="row">
+          @csrf
+      
+          <div class="form-floating col-12">
+            <input type="text" name="nama_user" id="nama_user" class="form-control" placeholder="Nama" required>
+            <label for="nama_user" class="ms-3">Nama:</label>
           </div>
-          <div class="col-7 text-start tanggal-dipilih">
-            tanggal
+          <div class="form-floating col-12">
+            <input type="text" name="no_telp" id="no_telp" minlength="12" maxlength="14" class="form-control" placeholder="No Telp" required>
+            <label for="no_telp" class="ms-3">No Telp:</label>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-5 text-start">
-            Bulan :
+          <div class="form-floating col-12">
+            <input type="date" name="tanggal_booking" id="tanggal_booking" class="form-control tanggal-dipilih" required>
+            <label for="tanggal_booking" class="ms-3">Tanggal Dipilih:</label>
           </div>
-          <div class="col-7 text-start bulan-dipilih">
-            bulan
+          <div class="form-floating col-12">
+            <input type="time" name="jam_booking" id="jam_booking" class="form-control tanggal-dipilih" required>
+            <label for="jam_booking" class="ms-3">Jam Dipilih:</label>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-5 text-start">
-            Tahun :
-          </div>
-          <div class="col-7 text-start tahun-dipilih">
-            tahun
-          </div>
-        </div>
-        <div class="row" id="jam-booking">
           
-        </div>
+          <div class="form-floating col-12">
+              <select name="nama_dokter" id="nama_dokter" class="form-control" required>
+                  @foreach ($dokters as $dokter)
+                      <option value="{{ $dokter->nama_dokter }}">{{ $dokter->nama_dokter }}</option>
+                  @endforeach
+              </select>
+              <label for="nama_dokter" class="ms-3">Dokter:</label>
+          </div>
+          <div class="form-group col-12 mt-2 nav justify-content-center">
+            <button class="btn col-12" type="submit" style="background-color: #e87cef; color: white; animation-name: none;">Pesan</button>
+          </div>
+        </form>
       </div>
     </div>
+
+    <x-footer/>
     
 
     <script>
       // mempasing data dokter ke file booking.js
       const dokterData = @json($dokters);
+      const jamBookingData = @json($jamBookings);
+
+      console.log(dokterData);
+      console.log(jamBookingData);
     </script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
     <script src="{{ asset('js/booking.js') }}"></script>
+    <script src="{{ asset('js/footer.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>AOS.init();</script>

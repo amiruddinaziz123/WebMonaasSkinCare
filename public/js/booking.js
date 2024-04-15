@@ -92,15 +92,15 @@ month_names.forEach((e, index) => {
 
     month_list.append(month);
     month.onclick = () => {
-    currentMonth.value = index;
-    generateCalendar(currentMonth.value, currentYear.value);
-    month_list.classList.replace('show', 'hide');
-    dayTextFormate.classList.remove('hideTime');
-    dayTextFormate.classList.add('showtime');
-    timeFormate.classList.remove('hideTime');
-    timeFormate.classList.add('showtime');
-    dateFormate.classList.remove('hideTime');
-    dateFormate.classList.add('showtime');
+        currentMonth.value = index;
+        generateCalendar(currentMonth.value, currentYear.value);
+        month_list.classList.replace('show', 'hide');
+        dayTextFormate.classList.remove('hideTime');
+        dayTextFormate.classList.add('showtime');
+        timeFormate.classList.remove('hideTime');
+        timeFormate.classList.add('showtime');
+        dateFormate.classList.remove('hideTime');
+        dateFormate.classList.add('showtime');
     };
 });
 
@@ -158,35 +158,105 @@ const calendar_days = document.querySelector('.calendar-days');
 
 calendar_days.addEventListener('click', (e) => {
     if (e.target.tagName.toLowerCase() === 'div') {
-        const date = new Date(currentYear.value, currentMonth.value, e.target.textContent);
-        const tomorrow = new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1);
-    
-        const tanggal = e.target.textContent;
-        const bulan = month_names[date.getMonth()];
-        const tahun = date.getFullYear();
-
+        const date = new Date(currentYear.value, currentMonth.value, _.toString(_.parseInt(e.target.textContent) + 1));
+        const formattedDate = date.toISOString().slice(0, 10); // Format tanggal YYYY-MM-DD
         const tanggal_dipilih = document.querySelector('.tanggal-dipilih');
-        const bulan_dipilih = document.querySelector('.bulan-dipilih');
-        const tahun_dipilih = document.querySelector('.tahun-dipilih');
 
-        if (typeof(bulan) === 'undefined' || tanggal == '') {
-            console.log(`terjadi kesalahan`);
-            tanggal_dipilih.textContent = "tanggal";
-            bulan_dipilih.textContent = "bulan";
-            tahun_dipilih.textContent = "tahun";
-        }else{
-            console.log(`Anda memilih ${tanggal} ${bulan} ${tahun}`);
-            tanggal_dipilih.textContent = tanggal;
-            bulan_dipilih.textContent = bulan;
-            tahun_dipilih.textContent = tahun;
-        }
-        
+        tanggal_dipilih.value = formattedDate;
     }
 });
 
-const jamBooking = document.getElementById("jam-booking");
-const jam1 = document.getElementById("jam-1");
-const jam2 = document.getElementById("jam-2");
-const jam3 = document.getElementById("jam-3");
 
-jamBooking.textContent = `${jam1} ${jam2} ${jam3}`;
+const jamBooking = document.getElementById("jam-booking");
+const daftarJamBooking = document.getElementById("daftar-jam-booking");
+const jamDipilih = document.querySelector("#jam_booking");
+
+for (let i = 0; i < jamBookingData.length; i++) {
+    let jk = document.createElement('button');
+    jk.textContent = jamBookingData[i].jam_ke.slice(0, 5);
+    daftarJamBooking.append(jk);
+
+    function disabledClick() {
+        jk.style.animationName = 'cantBeClcik';
+        jk.style.animationDuration = '1s';
+    }
+
+    function selectThisHour() {
+        if (contentJamKe == jamDipilih.value) {
+            jk.style.backgroundColor = "#b9ffd0";
+            jk.style.color = "black";
+        }
+    }
+
+    if (jamBookingData[i].status == 1) {
+        // jika sudah ada yang memesan
+        jk.classList.add(i + 1, 'col-5', 'text-center', 'border', 'btn', 'p-2', 'fs-6', 'm-1');
+        jk.style.backgroundColor = 'rgb(218 218 218)';
+        jk.style.boxShadow = 'rgba(122, 122, 122, 0.2) 0px 5px 5px 0px';
+    }else{
+        jk.classList.add(i + 1, 'col-5', 'text-center', 'border', 'btn', 'p-2', 'fs-6', 'm-1');
+        jk.style.backgroundColor = 'var(--bs-body-bg)';
+        jk.style.boxShadow = 'rgba(100, 100, 111, 0.2) 0px 5px 5px 0px';
+    }
+
+    jk.addEventListener('mouseover', function() {
+        if (jamBookingData[i].status == 0) {
+            this.style.backgroundColor = "#da82e9";
+        }
+    });
+
+    jk.addEventListener('mouseout', function() {
+        if (jamBookingData[i].status == 1) {
+            this.style.backgroundColor = "rgb(218 218 218)";
+        }
+        else {
+            this.style.backgroundColor = "var(--bs-body-bg)"; 
+        }
+    });
+
+    let contentJamKe = jk.textContent;
+
+    jk.addEventListener('click', function() {
+        if (jamBookingData[i].status == 1) {
+            jk.style.backgroundColor = '#ff0000ab';
+            disabledClick();
+        }else{
+            jamDipilih.value = contentJamKe;
+            this.style.backgroundColor = "#da82e9";
+            selectThisHour()
+        }
+    });
+}
+
+const selectCalendar = document.querySelector(".calendar");
+const followWidthFromCalendar = document.querySelector(".width-same-calendar");
+
+
+followWidthFromCalendar.style.width = getComputedStyle(selectCalendar).width;
+followWidthFromCalendar.style.height = getComputedStyle(selectCalendar).height;
+
+const buatJadwalTreatment = document.getElementById('buatJadwalTreatment');
+const btnBuatJadwalTreatment = document.getElementById('btnBuatJadwalTreatment');
+const btnTutupJadwalTreatment = document.getElementById('btnTutupJadwalTreatment');
+
+buatJadwalTreatment.parentElement.style.position = 'fixed';
+
+buatJadwalTreatment.style.display = 'none';
+btnTutupJadwalTreatment.style.display = 'none';
+
+btnBuatJadwalTreatment.addEventListener('click', function() {
+    buatJadwalTreatment.style.display = 'block';
+
+    btnTutupJadwalTreatment.style.display = 'block';
+
+    this.style.display = 'none';
+});
+
+btnTutupJadwalTreatment.addEventListener('click', function() {
+    buatJadwalTreatment.style.display = 'none';
+    
+
+    btnBuatJadwalTreatment.style.display = 'block';
+
+    this.style.display = 'none';
+});
