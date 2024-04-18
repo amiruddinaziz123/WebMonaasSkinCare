@@ -36,7 +36,7 @@
               <small>Don't have an account yet? <a href="" class="text-decoration-none">Sign Up</a></small>
             </div> --}}
             <div class="input-group mb-3">
-              <button class="btn btn-lg w-100 fs-6 btn-primary rounded rounded-5">Masuk</button>
+              <button class="btn btn-lg w-100 fs-6 btn-primary rounded rounded-5" style="background-color: #D9005B;">Masuk</button>
             </div>
             <div class="input-group mb-5 d-flex justify-content-between">
               <div class="text-small">
@@ -44,7 +44,7 @@
               </div>
               <div class="signup">
                 <small>
-                  <a href="" class="text-decoration-none">Sign Up</a>
+                  <a href="" class="text-decoration-none" style="color: #D9005B">Sign Up</a>
                 </small>
               </div>
             </div>
