@@ -21,30 +21,36 @@
         
         <div class="col-md-6">
           <div class="header-text">
-            <h1>Login</h1>
+            <h1>Sign Up</h1>
             {{-- <p class="ms-3 mt-4">Please enter your details</p> --}}
           </div>
           
           <form>
+            <div class="input-group mb-3">
+                <input type="text" name="" id="" class="form-control form-control-lg bg-light fs-6" placeholder="Username" >
+              </div>
             <div class="input-group mb-3">
               <input type="email" name="" id="" class="form-control form-control-lg bg-light fs-6" placeholder="Email" >
             </div>
             <div class="input-group mb-3">
               <input type="password" name="" id="" class="form-control form-control-lg bg-light fs-6" placeholder="Password" >
             </div>
+            <div class="input-group mb-3">
+                <input type="number" name="" id="" class="form-control form-control-lg bg-light fs-6" placeholder="No. Telepon" >
+            </div>
             {{-- <div class="signup">
               <small>Don't have an account yet? <a href="" class="text-decoration-none">Sign Up</a></small>
             </div> --}}
             <div class="input-group mb-3">
-              <button class="btn btn-lg w-100 fs-6 btn-primary rounded rounded-5">Masuk</button>
+              <button class="btn btn-lg w-100 fs-6 btn-primary rounded rounded-5">Daftar</button>
             </div>
             <div class="input-group mb-5 d-flex justify-content-between">
               <div class="text-small">
-                <small>Don't have an account yet?</small>
+                <small>Already have an account yet?</small>
               </div>
-              <div class="signup">
+              <div class="login">
                 <small>
-                  <a href="" class="text-decoration-none">Sign Up</a>
+                  <a href="" class="text-decoration-none">Login</a>
                 </small>
               </div>
             </div>
