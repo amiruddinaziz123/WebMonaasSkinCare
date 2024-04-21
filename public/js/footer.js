@@ -1,4 +1,4 @@
-const spaceForBottom = document.querySelector("#spaceForBottom");
+const spaceForBottom = document.getElementById("spaceForBottom");
 const hasil = document.querySelector(".hasil");
 
 const tinggiHasil = getComputedStyle(hasil);
@@ -8,10 +8,8 @@ spaceForBottom.style.height = kurangiKetinggian;
 
 const garis = document.querySelector(".garis");
 
-if (window.innerWidth <= 600) {
-    garis.style.display = none;
+if (screen.innerWidth <= 600) {
+    garis.style.display = "none";
 }else{
-    garis.style.display = block;
+    garis.style.display = "block";
 }
-
-console.log(garis);

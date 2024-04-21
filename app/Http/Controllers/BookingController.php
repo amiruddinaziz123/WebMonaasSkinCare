@@ -2,50 +2,53 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\View\View;
 use Illuminate\Http\Request;
-use Illuminate\Http\RedirectResponse;
-use App\Models\dokters;
-use App\Models\jamBooking;
+use Illuminate\Support\Facades\Redirect;
+
+use App\Models\JamBooking;
 use App\Models\Booking;
+use App\Models\dokters;
 
 class BookingController extends Controller
 {
-    /**
-     * index
-     *
-     * @return View
-     */
-
-    public function index(): View
+    public function index()
     {
-        //get posts
         $dokters = dokters::all();
-        $jamBookings = jamBooking::all();
+        $jamBookings = JamBooking::all();
     
-        // Iterate through each jamBooking object and extract the substring
         foreach ($jamBookings as $jamBooking) {
             $jamBooking->jam_ke = substr($jamBooking->jam_ke, 0, 5);
         }
     
-        //render view with posts
-        return view('/booking.index', compact('dokters', 'jamBookings'));
+        return view('booking.index', compact('dokters', 'jamBookings'));
     }
     
 
     public function store(Request $request)
     {
-        // Validate the request...
-
         $validatedData = $request->validate([
             'nama_user' => 'required',
             'no_telp' => 'required',
             'tanggal_booking' => 'required',
+            'jam_booking' => 'required',
             'nama_dokter' => 'required',
+        ], [
+            'nama_user.required' => 'Nama user harus diisi',
+            'no_telp.required' => 'Nomor telepon harus diisi',
+            'tanggal_booking.required' => 'Tanggal booking harus diisi',
+            'jam_booking.required' => 'Jam booking harus diisi',
+            'nama_dokter.required' => 'Nama dokter harus diisi',
         ]);
 
-        $booking = Booking::create($validatedData);
+        // Send email
+        $userEmail = "siapaakuwhoami83@gmail.com";
+        $namaUser = $request->nama_user;
+        $noTelp = $request->no_telp;
 
-        return redirect()->route('booking.index');
+
+        Booking::create($validatedData);
+        
+
+        return Redirect::route('booking.index');
     }
 }
