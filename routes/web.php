@@ -34,6 +34,7 @@ Route::get('/aboutus', function () {
 Route::resource('/posts', \App\Http\Controllers\PostController::class);
 
 Route::resource('/booking', \App\Http\Controllers\BookingController::class);
+Route::resource('/navbarAdmin', \App\Http\Controllers\navbarAdminController::class);
 
 Route::get('/treatment', function () {
     return view('treatment.index');
