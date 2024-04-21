@@ -83,13 +83,13 @@
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="{{ asset('img/gambar1.jpg') }}" class="d-block w-100" alt="...">
+                    <img src="{{ asset('img/gambar1.jpg') }}" class="d-block" alt="...">
                   </div>
                   <div class="carousel-item">
-                    <img src="{{ asset('img/gambar1.jpg') }}" class="d-block w-100" alt="...">
+                    <img src="{{ asset('img/gambar1.jpg') }}" class="d-block" alt="...">
                   </div>
                   <div class="carousel-item">
-                    <img src="{{ asset('img/gambar1.jpg') }}" class="d-block w-100" alt="...">
+                    <img src="{{ asset('img/gambar1.jpg') }}" class="d-block" alt="...">
                   </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -110,137 +110,117 @@
 
 <h3>Facial Treatment</h3>
 
-<div id="carouselExample" class="carousel slide">
-  <div class="carousel-inner_card">
-    <div class="carousel-item_card active">
-      <!-- CARD 1 -->
-        <div class="card">
-      <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Laser Treatment</h5>
-        <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
-        <a href="#" class="btn">Booking</a>
-      </div>
-    </div>
-    </div>
+<div class="row">
+            <div class="col">
+            <div class="card my-3">
+                <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Laser Treatment</h5>
+                    <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
+                    <a href="#" class="btn">Booking</a>
+                </div>
+            </div>
+        </div>
+            
+            <div class="col">
+                <div class="card my-3">
+                    <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Laser Treatment</h5>
+                        <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
+                        <a href="#" class="btn">Booking</a>
+                    </div>
+                </div>
+                </div>
 
-    <!-- CARD 2 -->
-    <div class="carousel-item_card">
-            <div class="card">
-      <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Laser Treatment</h5>
-        <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
-        <a href="#" class="btn">Booking</a>
-      </div>
-    </div>
-    </div>
 
-    <!-- CARD 3 -->
-    <div class="carousel-item_card">
-            <div class="card">
-      <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Laser Treatment</h5>
-        <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
-        <a href="#" class="btn">Booking</a>
-      </div>
-    </div>
-    </div>
-  </div>
+                <div class="col">
+                    <div class="card my-3">
+                        <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Laser Treatment</h5>
+                            <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
+                            <a href="#" class="btn">Booking</a>
+                        </div>
+                    </div>
+                    </div>
 </div>
 
-
-<br>
-
+<br><br>
 
 <h3>Facial Treatment</h3>
+<div class="row">
+            <div class="col">
+            <div class="card my-3">
+                <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Laser Treatment</h5>
+                    <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
+                    <a href="#" class="btn">Booking</a>
+                </div>
+            </div>
+        </div>
+            
+            <div class="col">
+                <div class="card my-3">
+                    <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Laser Treatment</h5>
+                        <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
+                        <a href="#" class="btn">Booking</a>
+                    </div>
+                </div>
+                </div>
 
-<div id="carouselExample" class="carousel slide">
-  <div class="carousel-inner_card">
-    <div class="carousel-item_card active">
-      <!-- CARD 1 -->
-        <div class="card">
-      <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Laser Treatment</h5>
-        <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
-        <a href="#" class="btn">Booking</a>
-      </div>
-    </div>
-    </div>
 
-    <!-- CARD 2 -->
-    <div class="carousel-item_card">
-            <div class="card">
-      <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Laser Treatment</h5>
-        <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
-        <a href="#" class="btn">Booking</a>
-      </div>
-    </div>
-    </div>
-
-    <!-- CARD 3 -->
-    <div class="carousel-item_card">
-            <div class="card">
-      <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Laser Treatment</h5>
-        <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
-        <a href="#" class="btn">Booking</a>
-      </div>
-    </div>
-    </div>
-  </div>
+                <div class="col">
+                    <div class="card my-3">
+                        <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Laser Treatment</h5>
+                            <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
+                            <a href="#" class="btn">Booking</a>
+                        </div>
+                    </div>
+                    </div>
 </div>
-
-
-<br>
-
 
 <h3>Facial Treatment</h3>
+<div class="row">
+            <div class="col">
+            <div class="card my-3">
+                <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Laser Treatment</h5>
+                    <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
+                    <a href="#" class="btn">Booking</a>
+                </div>
+            </div>
+        </div>
+            
+            <div class="col">
+                <div class="card my-3">
+                    <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Laser Treatment</h5>
+                        <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
+                        <a href="#" class="btn">Booking</a>
+                    </div>
+                </div>
+                </div>
 
-<div id="carouselExample" class="carousel slide">
-  <div class="carousel-inner_card">
-    <div class="carousel-item_card active">
-      <!-- CARD 1 -->
-        <div class="card">
-      <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Laser Treatment</h5>
-        <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
-        <a href="#" class="btn">Booking</a>
-      </div>
-    </div>
-    </div>
 
-    <!-- CARD 2 -->
-    <div class="carousel-item_card">
-            <div class="card">
-      <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Laser Treatment</h5>
-        <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
-        <a href="#" class="btn">Booking</a>
-      </div>
-    </div>
-    </div>
-
-   
-    <!-- CARD 3 -->
-    <div class="carousel-item_card">
-            <div class="card">
-      <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Laser Treatment</h5>
-        <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
-        <a href="#" class="btn">Booking</a>
-      </div>
-    </div>
-    </div>
-  </div>
+                <div class="col">
+                    <div class="card my-3">
+                        <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">Laser Treatment</h5>
+                            <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
+                            <a href="#" class="btn">Booking</a>
+                        </div>
+                    </div>
+                    </div>
 </div>
+
 
 @endsection
