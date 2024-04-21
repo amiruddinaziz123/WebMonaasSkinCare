@@ -29,3 +29,10 @@ body{
     font-weight: 400;
     text-align: center;
 }
+
+/* Menghilangkan tombol scroll up dan down di input number */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
