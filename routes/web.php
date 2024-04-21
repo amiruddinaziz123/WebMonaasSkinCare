@@ -26,6 +26,7 @@ Route::get('/signup', function () {
     return view('signup.index');
 });
 
+
 Route::get('/aboutus', function () {
     return view('aboutus.index');
 });
@@ -33,6 +34,7 @@ Route::get('/aboutus', function () {
 // untuk coba pake /posts
 Route::resource('/posts', \App\Http\Controllers\PostController::class);
 
+Route::resource('/logsignAdmin', \App\Http\Controllers\LogsignController::class);
 Route::resource('/booking', \App\Http\Controllers\BookingController::class);
 Route::resource('/navbarAdmin', \App\Http\Controllers\navbarAdminController::class);
 

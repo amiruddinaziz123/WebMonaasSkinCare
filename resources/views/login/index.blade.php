@@ -36,7 +36,8 @@
               <small>Don't have an account yet? <a href="" class="text-decoration-none">Sign Up</a></small>
             </div> --}}
             <div class="input-group mb-3">
-              <button class="btn btn-lg w-100 fs-6 btn-primary rounded rounded-5" style="background-color: #D9005B;">Masuk</button>
+              <button class="btn btn-lg w-100 rounded rounded-5" style="background-color: #D9005B; color: #FFF;
+              font-family: Poppins; font-size: 16px; font-weight: 600;">Masuk</button>
             </div>
             <div class="input-group mb-5 d-flex justify-content-between">
               <div class="text-small">
