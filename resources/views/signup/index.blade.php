@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login</title>
+    <title>Sign Up</title>
     <link rel="stylesheet" href="/css/login.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
@@ -21,30 +21,36 @@
         
         <div class="col-md-6">
           <div class="header-text">
-            <h1>Login</h1>
+            <h1>Sign Up</h1>
             {{-- <p class="ms-3 mt-4">Please enter your details</p> --}}
           </div>
           
           <form>
+            <div class="input-group mb-3">
+                <input type="text" name="" id="" class="form-control form-control-lg bg-light fs-6" placeholder="Username" >
+              </div>
             <div class="input-group mb-3">
               <input type="email" name="" id="" class="form-control form-control-lg bg-light fs-6" placeholder="Email" >
             </div>
             <div class="input-group mb-3">
               <input type="password" name="" id="" class="form-control form-control-lg bg-light fs-6" placeholder="Password" >
             </div>
+            <div class="input-group mb-3">
+                <input type="number" name="" id="" class="form-control form-control-lg bg-light fs-6" placeholder="No. Telepon" >
+            </div>
             {{-- <div class="signup">
               <small>Don't have an account yet? <a href="" class="text-decoration-none">Sign Up</a></small>
             </div> --}}
             <div class="input-group mb-3">
-              <button class="btn btn-lg w-100 fs-6 btn-primary rounded rounded-5" style="background-color: #D9005B;">Masuk</button>
+              <button class="btn btn-lg w-100 text-white fs-6 rounded rounded-5" style="background-color: #D9005B;">Daftar</button>
             </div>
             <div class="input-group mb-5 d-flex justify-content-between">
               <div class="text-small">
-                <small>Don't have an account yet?</small>
+                <small>Already have an account yet?</small>
               </div>
-              <div class="signup">
+              <div class="login">
                 <small>
-                  <a href="" class="text-decoration-none" style="color: #D9005B">Sign Up</a>
+                  <a href="" class="text-decoration-none" style="color: #D9005B">Login</a>
                 </small>
               </div>
             </div>

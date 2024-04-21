@@ -11,17 +11,17 @@
             <div class="col-sm-12 col-md-5 col-lg-5" data-aos="fade-left" data-aos-anchor-placement="bottom-bottom">
                 <h1 class="text-white font-katibeh">Monaas Skincare</h1>
                 <div class="d-flex flex-column font-poppins row" style="font-size: 15px">
-                    <div class="row mt-1">
+                    <div class="row mt-2">
                         <div class="col-md-1 col-sm-2">
                             <img src="{{ asset('img/fb_logo.png') }}" width="30px"/>
                         </div>
-                        <div class="text-white col-md-11 col-sm-10 mt-2"><a href="#">monaasskincare</a></div>
+                        <div class="text-white col-md-11 col-sm-10 mt-2" style="display: contents"><a href="#">monaasskincare</a></div>
                     </div>
                     <div class="row mt-2">
                         <div class="col-md-1 col-sm-2">
                             <img src="{{ asset('img/ig_logo.png') }}" width="30px"/>
                         </div>
-                        <div class="text-white col-md-11 col-sm-10 mt-2"><a href="#">monaasskincare</a></div>
+                        <div class="text-white col-md-11 col-sm-10 mt-2" style="display: contents"><a href="#">monaasskincare</a></div>
                     </div>
                 </div>
                 
@@ -29,13 +29,13 @@
             <div class="col-sm-12 col-md-6 col-lg-6" data-aos="fade-down" data-aos-anchor-placement="bottom-bottom">
                 <div class="d-flex flex-column">
                     <div class="d-flex justify-content-between text-light row-sm">
-                        <a href="/aboutus col-12" class="nav-link active" style="font-family: Poppins;">About Us</a>
+                        <a href="/aboutus" class="nav-link active" style="font-family: Poppins;">About Us</a>
                         <div class="garis">|</div>
-                        <a href="/product col-12" class="nav-link active" style="font-family: Poppins;">Product</a>
+                        <a href="/product" class="nav-link active" style="font-family: Poppins;">Product</a>
                         <div class="garis">|</div>
-                        <a href="/treatment col-12" class="nav-link active" style="font-family: Poppins;">Treatment</a>
+                        <a href="/treatment" class="nav-link active" style="font-family: Poppins;">Treatment</a>
                         <div class="garis">|</div>
-                        <a href="/booking col-12" class="nav-link active" style="font-family: Poppins;">Booking</a>
+                        <a href="/booking" class="nav-link active" style="font-family: Poppins;">Booking</a>
                     </div>
                 </div>
             </div>

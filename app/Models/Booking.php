@@ -18,6 +18,7 @@ class Booking extends Model
         'nama_user',
         'no_telp',
         'tanggal_booking',
+        'jam_booking',
         'nama_dokter'
     ];
 }
