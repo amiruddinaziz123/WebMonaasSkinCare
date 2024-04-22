@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Login</title>
-    <link rel="stylesheet" href="/css/login.css">
+    <link rel="stylesheet" href="{{ asset('css/login.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   </head>
   <body>
@@ -36,7 +36,8 @@
               <small>Don't have an account yet? <a href="" class="text-decoration-none">Sign Up</a></small>
             </div> --}}
             <div class="input-group mb-3">
-              <button class="btn btn-lg w-100 fs-6 btn-primary rounded rounded-5" style="background-color: #D9005B;">Masuk</button>
+              <button class="btn btn-lg w-100 rounded rounded-5" style="background-color: #D9005B; color: #FFF;
+              font-family: Poppins; font-size: 16px; font-weight: 600;">Masuk</button>
             </div>
             <div class="input-group mb-5 d-flex justify-content-between">
               <div class="text-small">
