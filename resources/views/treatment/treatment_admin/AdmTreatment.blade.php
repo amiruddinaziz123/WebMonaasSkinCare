@@ -2,13 +2,6 @@
 
 @section('content')
 
-<div class="col-12">
-    <a href="{{ route('Admin.admin') }}" class="btn btn-success btn-sm">Produk</a> >>
-    <a href="{{ route('Admin.history') }}" class="btn btn-dark btn-sm">History</a>
-</div>
-<div class="col-12 mt-4">
-    <a href="{{ route('Admin.create') }}" class="btn btn-primary btn-sm"><i class="bi bi-square-plus"></i></i> Tambah</a>
-    </div>
 
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
@@ -38,6 +31,15 @@
               </div>
 
 <br>
+
+<div class="col-12">
+    <a href="{{ route('treatment_admin.admin') }}" class="btn btn-success btn-sm">Produk</a> >>
+    {{-- <a href="{{ route('treatment_admin.history') }}" class="btn btn-dark btn-sm">History</a> --}}
+</div>
+<div class="col-12 mt-4">
+    <a href="{{ route('treatment_admin.create') }}" class="btn btn-primary btn-sm"><i class="bi bi-square-plus"></i></i> Tambah</a>
+    </div>
+
 <br>
 <br>
 
@@ -46,18 +48,20 @@
 <h3>Facial Treatment</h3>
 
 <div class="row">
-            <div class="col">
+    @foreach ($treatments as $treat )
+            <div class="col-4">
             <div class="card my-3">
                 <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Laser Treatment</h5>
-                    <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
+                    <h5 class="card-title">{{ $treat->nama_treatment }}</h5>
+                    <p class="card-text">{{ $treat->description_treatment }} </p>
                     <a href="#" class="btn">Booking</a>
                 </div>
             </div>
         </div>
+    @endforeach
 
-            <div class="col">
+            {{-- <div class="col">
                 <div class="card my-3">
                     <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
                     <div class="card-body">
@@ -66,10 +70,10 @@
                         <a href="#" class="btn">Booking</a>
                     </div>
                 </div>
-                </div>
+            </div> --}}
 
 
-                <div class="col">
+                {{-- <div class="col">
                     <div class="card my-3">
                         <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -78,84 +82,12 @@
                             <a href="#" class="btn">Booking</a>
                         </div>
                     </div>
-                    </div>
+                </div> --}}
 </div>
 
 <br><br>
 
-<h3>Facial Treatment</h3>
-<div class="row">
-            <div class="col">
-            <div class="card my-3">
-                <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Laser Treatment</h5>
-                    <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
-                    <a href="#" class="btn">Booking</a>
-                </div>
-            </div>
-        </div>
 
-            <div class="col">
-                <div class="card my-3">
-                    <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Laser Treatment</h5>
-                        <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
-                        <a href="#" class="btn">Booking</a>
-                    </div>
-                </div>
-                </div>
-
-
-                <div class="col">
-                    <div class="card my-3">
-                        <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Laser Treatment</h5>
-                            <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
-                            <a href="#" class="btn">Booking</a>
-                        </div>
-                    </div>
-                    </div>
-</div>
-
-<h3>Facial Treatment</h3>
-<div class="row">
-            <div class="col">
-            <div class="card my-3">
-                <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Laser Treatment</h5>
-                    <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
-                    <a href="#" class="btn">Booking</a>
-                </div>
-            </div>
-        </div>
-
-            <div class="col">
-                <div class="card my-3">
-                    <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Laser Treatment</h5>
-                        <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
-                        <a href="#" class="btn">Booking</a>
-                    </div>
-                </div>
-                </div>
-
-
-                <div class="col">
-                    <div class="card my-3">
-                        <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Laser Treatment</h5>
-                            <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
-                            <a href="#" class="btn">Booking</a>
-                        </div>
-                    </div>
-                    </div>
-</div>
 
 
 @endsection

@@ -48,7 +48,7 @@ class TreatmentController extends Controller
 
         $treatments->save();
 
-        return redirect()->route('Admin.admin')->with(['success' => 'Berhasil menambahkan treatment !']);
+        return redirect()->route('treatment_admin.admin')->with(['success' => 'Berhasil menambahkan treatment !']);
     }
 
 }
