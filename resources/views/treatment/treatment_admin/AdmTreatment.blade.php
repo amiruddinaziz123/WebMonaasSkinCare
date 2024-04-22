@@ -31,14 +31,17 @@
               </div>
 
 <br>
+<br>
 
-<div class="col-12">
-    <a href="{{ route('treatment_admin.admin') }}" class="btn btn-success btn-sm">Produk</a> >>
+<div class="button_db row text-center">
+<div class="col-4">
+    <a href="{{ route('treatment_admin.admin') }}" class="btn btn-success btn-lg">Treatment</a>
     {{-- <a href="{{ route('treatment_admin.history') }}" class="btn btn-dark btn-sm">History</a> --}}
 </div>
-<div class="col-12 mt-4">
-    <a href="{{ route('treatment_admin.create') }}" class="btn btn-primary btn-sm"><i class="bi bi-square-plus"></i></i> Tambah</a>
-    </div>
+<div class="col-4">
+    <a href="{{ route('treatment_admin.create') }}" class="btn btn-primary btn-lg"><i class="bi bi-square-plus"></i></i> Tambah</a>
+</div>
+</div>
 
 <br>
 <br>
