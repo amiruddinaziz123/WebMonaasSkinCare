@@ -1,10 +1,9 @@
-@extends('Treatment/layout')
+@extends('treatment/layout')
 
 @section('content')
 
 
 <div class="container">
-    <div class="container">
 
         {{-- <div class="col-10">
             <a href="{{ route('Admin.admin') }}" class="btn btn-success btn-sm"> Produk</a> >>
@@ -27,7 +26,7 @@
                 </div>
             </div>
             <div class="mb-3 row mt-3">
-                <label for="nmTreatment" class="col-sm-2 col-form-label">Nama Trement</label>
+                <label for="nmTreatment" class="col-sm-2 col-form-label">Nama Treatment</label>
                 <div class="col-sm-10">
                     <input required type="text" name="nama_treatment" class="form-control @error('nama_treatment') is-invalid @enderror" id="nmTreatment" placeholder="ex: Laser" value="">
                     @error('nama_treatment')
@@ -49,7 +48,7 @@
                 </div>
             </div>
 
-            
+
             <div class="form-group mb-3 row">
                 <label for="status" class="font-weight-bold col-sm-2 col-form-label">Status Publish</label>
                 <div class="col-sm-10">
@@ -71,12 +70,13 @@
                         {{-- <button type="submit" name="aksi" value="edit" class="btn btn-success"><i class="bi bi-save"></i> Simpan</button> --}}
                         <button type="submit" name="aksi" value="add" class="btn btn-primary"><i class="bi bi-plus-square"></i> Tambah</button>
                         <button type="reset" name="aksi" value="reset" class="btn btn-secondary"><i class="bi bi-repeat"></i> Reset</button>
-                        <a href=" {{ route('Admin.admin') }} " type="button" class="btn btn-danger"><i class="bi bi-arrow-left-square"></i> Batal</a>
+                        <a href=" {{ route('treatment_admin.admin') }} " type="button" class="btn btn-danger"><i class="bi bi-arrow-left-square"></i> Batal</a>
                 </div>
             </div>
 
         </form>
 
 
-    </div>
 </div>
+
+@endsection
