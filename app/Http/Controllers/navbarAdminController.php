@@ -14,6 +14,6 @@ class navbarAdminController extends Controller
     {
         $navbars = navbar::all();
 
-        return view('navbarAdmin.index', compact('navbars'));
+        return view('components.navbar', compact('navbars'));
     }
 }

@@ -8,7 +8,7 @@ use App\Models\logsign;
 
 use Illuminate\View\View;
 
-class navbarAdminController extends Controller
+class LogsignController extends Controller
 {
     public function index(): View
     {
