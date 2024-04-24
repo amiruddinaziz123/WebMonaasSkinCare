@@ -4,6 +4,7 @@ use App\Http\Controllers\BookingController;
 use App\Http\Controllers\TreatmentController;
 use Illuminate\Support\Facades\Route;
 
+use App\Models\navbar;
 
 /*
 |--------------------------------------------------------------------------

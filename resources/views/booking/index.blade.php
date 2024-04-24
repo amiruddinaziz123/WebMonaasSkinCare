@@ -126,14 +126,36 @@
 
     <script>
       // mempasing data dokter ke file booking.js
+      // mempasing data jamBookings
+      // mempasing data dataNavbar  
       const dokterData = @json($dokters);
       const jamBookingData = @json($jamBookings);
-
-      console.log(dokterData);
-      console.log(jamBookingData);
+      const dataNavbar = @json($navbars);
+    
+      const beforeJudul = document.getElementById('Judul');
+      let dataTerakir = 0;
+      for (let item = 0; item < dataNavbar.length; item++) {
+          if (item > dataTerakir) {
+              dataTerakir = item;
+          }
+      }
+      beforeJudul.innerHTML = beforeJudul.innerHTML + dataNavbar[dataTerakir].judul;
+  
+      const icon = document.getElementById('icon');
+      let iconName = dataNavbar[dataTerakir].image;
+  
+      console.log(iconName);
+      let assetUrl = `{{ asset('img/${iconName}') }}`;
+  
+      icon.setAttribute('src', assetUrl);
+  
+      const dataBackground = document.getElementById('data-background');
+  
+      dataBackground.style.backgroundColor = dataNavbar[dataTerakir].background_color;
     </script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
     <script src="{{ asset('js/booking.js') }}"></script>
+    <script src="{{ asset('js/navbar.js') }}"></script>
     <script src="{{ asset('js/footer.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>

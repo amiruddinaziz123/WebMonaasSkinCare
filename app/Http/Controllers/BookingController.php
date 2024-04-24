@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Redirect;
 use App\Models\JamBooking;
 use App\Models\Booking;
 use App\Models\dokters;
+use App\Models\navbar;
 
 class BookingController extends Controller
 {
@@ -15,12 +16,13 @@ class BookingController extends Controller
     {
         $dokters = dokters::all();
         $jamBookings = JamBooking::all();
+        $navbars = navbar::all();
     
         foreach ($jamBookings as $jamBooking) {
             $jamBooking->jam_ke = substr($jamBooking->jam_ke, 0, 5);
         }
     
-        return view('booking.index', compact('dokters', 'jamBookings'));
+        return view('booking.index', compact('dokters', 'jamBookings', 'navbars'));
     }
     
 
@@ -39,11 +41,6 @@ class BookingController extends Controller
             'jam_booking.required' => 'Jam booking harus diisi',
             'nama_dokter.required' => 'Nama dokter harus diisi',
         ]);
-
-        // Send email
-        $userEmail = "siapaakuwhoami83@gmail.com";
-        $namaUser = $request->nama_user;
-        $noTelp = $request->no_telp;
 
 
         Booking::create($validatedData);

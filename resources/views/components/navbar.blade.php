@@ -56,29 +56,3 @@
         </div>
     </div>
 </nav>
-<script>
-    // mempasing data 
-    const dataNavbar = @json($navbars);
-    console.log(dataNavbar);
-
-    const beforeJudul = document.getElementById('Judul');
-    let dataTerakir = 0;
-    for (let item = 0; item < dataNavbar.length; item++) {
-        if (item > dataTerakir) {
-            dataTerakir = item;
-        }
-    }
-    beforeJudul.innerHTML = beforeJudul.innerHTML + dataNavbar[dataTerakir].judul;
-
-    const icon = document.getElementById('icon');
-    let iconName = dataNavbar[dataTerakir].image;
-
-    console.log(iconName);
-    let assetUrl = `{{ asset('img/${iconName}') }}`;
-
-    icon.setAttribute('src', assetUrl);
-
-    const dataBackground = document.getElementById('data-background');
-
-    dataBackground.style.backgroundColor = dataNavbar[dataTerakir].background_color;
-</script>

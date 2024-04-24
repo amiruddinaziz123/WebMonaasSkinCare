@@ -23,7 +23,7 @@
 <body class="antialiased">
     <div style="margin-top: 10vh;">
         <h3 class="ms-3">before</h3>
-        <nav class="navbar navbar-expand-lg" data-aos="fade-down"id="data-background">
+        <nav class="navbar navbar-expand-lg" data-aos="fade-down" id="data-background">
             <div class="container-fluid">
                 <a class="navbar-brand font-katibeh" href="/aboutus" data-aos="zoom-in" id="Judul"><img src="{{ asset('img/MonAAS 2.png') }}" id="icon" alt="logoMonaas" width="40px" class="imgLogo"></a>
                 <button class="navbar-toggler" type="button" data-aos="fade-left" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLightNavbar" aria-controls="offcanvasLightNavbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -73,9 +73,10 @@
 
     <div style="margin-top: none;">
         <h3 class="ms-3">after</h3>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary" data-aos="fade-down">
+        <nav class="navbar navbar-expand-lg gantiWarnaBG" data-aos="fade-down">
             <div class="container-fluid">
-                <a class="navbar-brand font-katibeh" id="preview-judul" href="/aboutus" data-aos="zoom-in"><img src="" id="file-preview" width="40px" class="imgLogo">Monaas</a>
+                <img src="" id="file-preview" width="40px" class="imgLogo">
+                <a class="navbar-brand font-katibeh" id="preview-judul" href="/aboutus" data-aos="zoom-in"></a>
                 <button class="navbar-toggler" type="button" data-aos="fade-left" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLightNavbar" aria-controls="offcanvasLightNavbar" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -117,7 +118,8 @@
         </nav>
     </div>
 
-    <form action="{{ route('booking.store') }}" method="POST">
+    <form action="{{ route('navbarAdmin.store') }}" method="POST" enctype="multipart/form-data">
+        @csrf
         <div class="border p-4" id="div-form">
             <div class="row g-3">
                 <h5 style="text-align: center;">Edit Navbar</h5>
@@ -126,7 +128,7 @@
                         <label for="file-input" class="w-100 text-md-end text-sm-start">Logo : </label>
                     </div>
                     <div class="col-sm-6">
-                        <input type="file" id="file-input" class="form-control" placeholder="Gambar" aria-label="Gambar">
+                        <input type="file" name="image" id="file-input" class="form-control" placeholder="Gambar" aria-label="Gambar">
                     </div>
                 </div>
                 <div class="row">
@@ -134,7 +136,7 @@
                         <label for="judul" class="w-100 text-md-end text-sm-start">Judul : </label>
                     </div>
                     <div class="col-sm-6">
-                        <input type="text" class="form-control" id="judul" placeholder="Judul" aria-label="Judul">
+                        <input type="text" name="judul" class="form-control" id="judul" placeholder="Judul" aria-label="Judul">
                     </div>
                 </div>
                 <div class="row">
@@ -142,12 +144,14 @@
                         <label for="background" class="w-100 text-md-end text-sm-start">Background : </label>
                     </div>
                     <div class="col-sm-6">
-                        <input type="color" class="form-control" id="background" placeholder="Background" aria-label="Background">
+                        <input type="color" name="background_color" class="form-control" id="background" placeholder="Background" aria-label="Background">
                     </div>
                 </div>
+                <button type="submit" class="btn btn-primary">Simpan</button>
             </div>
         </div>
     </form>
+    
 
     <x-menu-admin/>
     
