@@ -16,7 +16,7 @@
 
 <nav class="navbar navbar-expand-lg" data-aos="fade-down"id="data-background">
     <div class="container-fluid">
-        <a class="navbar-brand font-katibeh" href="/aboutus" data-aos="zoom-in" id="Judul"><img src="{{ asset('img/MonAAS 2.png') }}" id="icon" alt="logoMonaas" width="40px" class="imgLogo"></a>
+        <a class="navbar-brand font-katibeh" href="/aboutus" data-aos="zoom-in" id="Judul"><img src="{{ asset('img/aku.png') }}" id="icon" alt="logoMonaas" width="40px" class="imgLogo"></a>
         <button class="navbar-toggler" type="button" data-aos="fade-left" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLightNavbar" aria-controls="offcanvasLightNavbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
