@@ -88,7 +88,6 @@
         <hr>
         <form action="{{ route('booking.store') }}" method="POST" class="row">
           @csrf
-      
           <div class="form-floating col-12">
             <input type="text" name="nama_user" id="nama_user" class="form-control" placeholder="Nama" required>
             <label for="nama_user" class="ms-3">Nama:</label>
