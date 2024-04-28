@@ -173,14 +173,14 @@
 
         const icon = document.getElementById('icon');
         let iconName = dataNavbar[dataTerakir].image;
-
+    
         console.log(iconName);
-        let assetUrl = `{{ asset('img/${iconName}') }}`;
-
+        let assetUrl = `{{ asset('storage/img/${iconName}') }}`;
+    
         icon.setAttribute('src', assetUrl);
-
+    
         const dataBackground = document.getElementById('data-background');
-
+    
         dataBackground.style.backgroundColor = dataNavbar[dataTerakir].background_color;
     </script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
