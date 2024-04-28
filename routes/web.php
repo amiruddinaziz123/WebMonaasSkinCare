@@ -39,13 +39,19 @@ Route::get('/aboutus', function () {
 // untuk coba pake /posts
 Route::resource('/posts', \App\Http\Controllers\PostController::class);
 
-Route::controller(LogsignController::class)->group(function () {
-    Route::get('/logsignAdmin/edit','edit')->name('logsignAdmin.edit');
-    Route::put('/logsignAdmin/update', 'update')->name('logsignAdmin.update');
-});
+// Route::controller(LogsignController::class)->group(function () {
+//     Route::get('/logsignAdmin/edit','edit')->name('logsignAdmin.edit');
+//     Route::put('/logsignAdmin/update', 'update')->name('logsignAdmin.update');
+// });
 
 Route::resource('/booking', \App\Http\Controllers\BookingController::class);
 Route::resource('/navbarAdmin', \App\Http\Controllers\navbarAdminController::class);
+Route::resource('/logsignAdmin', \App\Http\Controllers\LogsignController::class);
+// Untuk menampilkan form penyuntingan
+Route::get('/logsignAdmin/{logsignAdmin}/edit', [LogsignController::class, 'edit'])->name('logsign.edit');
+
+// Untuk menyimpan perubahan yang dilakukan pada form penyuntingan
+Route::put('/logsignAdmin/{logsignAdmin}/update', [LogsignController::class, 'update'])->name('logsign.update');
 
 
 

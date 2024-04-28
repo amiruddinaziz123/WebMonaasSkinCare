@@ -13,7 +13,7 @@ class LogsignController extends Controller
     public function index(): View
     {
         // Mengambil data terakhir
-        $logsigns = Logsign::latest()->first();
+        $logsigns = logsign::latest()->first();
         return view('logsignAdmin.index', compact('logsigns'));
     }
     
@@ -33,7 +33,7 @@ class LogsignController extends Controller
         ]);
 
         // Mengambil data terakhir
-        $logsign = Logsign::latest()->first();
+        $logsign = logsign::latest()->first();
 
         // Simpan file gambar
         $imagePath = $request->file('image')->store('public/img');
@@ -44,6 +44,6 @@ class LogsignController extends Controller
             'text' => $request->text,
         ]);
 
-        return redirect()->route('logsign.index')->with('success', 'Data logsign berhasil diperbarui.');
+        return redirect()->route('logsignAdmin.index');
     }
 }

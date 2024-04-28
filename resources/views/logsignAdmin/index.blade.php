@@ -60,9 +60,8 @@
           <img src="/img/{{ $logsigns->image }}" alt="" class="img-fluid mb-3 w-75 ms-5">
         </div>
         <p class="text-white text ms-5">{{ $logsigns->text }}</p>
-        <form action="{{ route('logsignAdmin.update') }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('logsignAdmin.update', ['logsignAdmin' => $logsigns->id]) }}" method="POST" enctype="multipart/form-data">
           @csrf
-          @method('PUT')
       
           <div class="form-group">
               <label for="image">Image</label>
@@ -71,7 +70,7 @@
       
           <div class="form-group">
               <label for="text">Text</label>
-              <textarea class="form-control" id="text" name="text" rows="3">{{ $logsign->text }}</textarea>
+              <textarea class="form-control" id="text" name="text" rows="3">{{ $logsigns->text }}</textarea>
           </div>
       
           <button type="submit" class="btn btn-primary">Submit</button>
