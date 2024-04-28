@@ -13,7 +13,6 @@ class LogsignController extends Controller
     public function index(): View
     {
         $logsigns = logsign::all();
-
-        return view('navbarAdmin.index', compact('logsigns'));
+        return view('logsignAdmin.index', compact('logsigns'));
     }
 }
