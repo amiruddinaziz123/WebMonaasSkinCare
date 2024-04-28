@@ -59,7 +59,7 @@
         <div class="image">
           <img src="/img/{{ $logsigns->image }}" alt="" class="img-fluid mb-3 w-75 ms-5">
         </div>
-        <p class="text-white text ms-5">LETS GET YOUR TREATMENT NOW !!</p>
+        <p class="text-white text ms-5">{{ $logsigns->text }}</p>
         <div>
           <h1><a href="">Edit</a></h1>
         </div>

@@ -12,7 +12,7 @@ class LogsignController extends Controller
 {
     public function index(): View
     {
-        $logsigns = logsign::first();
+        $logsigns = logsign::latest()->first();
         return view('logsignAdmin.index', compact('logsigns'));
     }
 }
