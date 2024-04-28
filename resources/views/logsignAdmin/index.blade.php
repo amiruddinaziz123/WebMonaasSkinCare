@@ -57,7 +57,7 @@
 
       <div class=" rounded-4 d-flex justify-content-center align-items-center flex-column left">
         <div class="image">
-          <img src="/img/{{ $logsigns->image[0] }}" alt="" class="img-fluid mb-3 w-75 ms-5">
+          <img src="/img/{{ $logsigns->image }}" alt="" class="img-fluid mb-3 w-75 ms-5">
         </div>
         <p class="text-white text ms-5">LETS GET YOUR TREATMENT NOW !!</p>
         <div>
