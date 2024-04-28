@@ -60,9 +60,22 @@
           <img src="/img/{{ $logsigns->image }}" alt="" class="img-fluid mb-3 w-75 ms-5">
         </div>
         <p class="text-white text ms-5">{{ $logsigns->text }}</p>
-        <div>
-          <h1><a href="">Edit</a></h1>
-        </div>
+        <form action="{{ route('logsignAdmin.update') }}" method="POST" enctype="multipart/form-data">
+          @csrf
+          @method('PUT')
+      
+          <div class="form-group">
+              <label for="image">Image</label>
+              <input type="file" class="form-control" id="image" name="image">
+          </div>
+      
+          <div class="form-group">
+              <label for="text">Text</label>
+              <textarea class="form-control" id="text" name="text" rows="3">{{ $logsign->text }}</textarea>
+          </div>
+      
+          <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
       </div>
 
     </div>
