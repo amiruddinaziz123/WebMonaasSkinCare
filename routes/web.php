@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\TreatmentController;
+use App\Http\Controllers\LogsignController;
 use Illuminate\Support\Facades\Route;
 
+use App\Models\navbar;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,12 +35,25 @@ Route::get('/aboutus', function () {
     return view('aboutus.index');
 });
 
+
 // untuk coba pake /posts
 Route::resource('/posts', \App\Http\Controllers\PostController::class);
 
-Route::resource('/logsignAdmin', \App\Http\Controllers\LogsignController::class);
+// Route::controller(LogsignController::class)->group(function () {
+//     Route::get('/logsignAdmin/edit','edit')->name('logsignAdmin.edit');
+//     Route::put('/logsignAdmin/update', 'update')->name('logsignAdmin.update');
+// });
+
 Route::resource('/booking', \App\Http\Controllers\BookingController::class);
 Route::resource('/navbarAdmin', \App\Http\Controllers\navbarAdminController::class);
+Route::resource('/logsignAdmin', \App\Http\Controllers\LogsignController::class);
+// Untuk menampilkan form penyuntingan
+Route::get('/logsignAdmin/{logsignAdmin}/edit', [LogsignController::class, 'edit'])->name('logsign.edit');
+
+// Untuk menyimpan perubahan yang dilakukan pada form penyuntingan
+Route::put('/logsignAdmin/{logsignAdmin}/update', [LogsignController::class, 'update'])->name('logsign.update');
+
+
 
 Route::get('/treatment', function () {
     return view('treatment.index');

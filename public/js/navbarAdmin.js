@@ -19,3 +19,16 @@ const previewPhoto = () => {
 inputImage.addEventListener("change", previewPhoto);
 
 
+const judulInput = document.getElementById('judul');
+const navbarBrand = document.getElementById('preview-judul');
+
+judulInput.addEventListener('input', function() {
+    navbarBrand.innerHTML = this.value;
+});
+
+const backgroundColorInput = document.getElementById('background');
+const navbar = document.querySelector('.gantiWarnaBG');
+
+backgroundColorInput.addEventListener('input', function() {
+    navbar.style.backgroundColor = this.value;
+});

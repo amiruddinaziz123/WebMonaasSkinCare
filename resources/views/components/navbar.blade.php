@@ -14,9 +14,9 @@
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> --}}
 {{-- tambahkan ke <body> halaman yang ingin diberi component navbar --}}
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary" data-aos="fade-down">
+<nav class="navbar navbar-expand-lg" data-aos="fade-down"id="data-background">
     <div class="container-fluid">
-        <a class="navbar-brand font-katibeh" href="/aboutus" data-aos="zoom-in"><img src="{{ asset('img/MonAAS 2.png') }}" alt="logoMonaas" width="40px" class="imgLogo">Monaas</a>
+        <a class="navbar-brand font-katibeh" href="/aboutus" data-aos="zoom-in" id="Judul"><img src="{{ asset('storage/img/aku.png') }}" id="icon" alt="logoMonaas" width="40px" class="imgLogo"></a>
         <button class="navbar-toggler" type="button" data-aos="fade-left" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLightNavbar" aria-controls="offcanvasLightNavbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -48,9 +48,9 @@
 
                 {{-- Tampilan untuk perangkat laptop --}}
                 <div class="navbar-nav text-center col-12 col-md-12 d-none d-md-none d-xl-block">
-                    <a data-aos="fade-right" data-aos-offset="500" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/product">Product</a>
-                    <a data-aos="fade-right" data-aos-offset="500" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/treatment">Treatment</a>
-                    <a data-aos="fade-right" data-aos-offset="500" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/booking">Booking</a>
+                    <a data-aos="fade-right" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/product">Product</a>
+                    <a data-aos="fade-right" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/treatment">Treatment</a>
+                    <a data-aos="fade-right" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/booking">Booking</a>
                 </div>
             </div>            
         </div>

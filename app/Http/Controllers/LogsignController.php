@@ -8,12 +8,42 @@ use App\Models\logsign;
 
 use Illuminate\View\View;
 
-class navbarAdminController extends Controller
+class LogsignController extends Controller
 {
     public function index(): View
     {
-        $logsigns = logsign::all();
+        // Mengambil data terakhir
+        $logsigns = logsign::latest()->first();
+        return view('logsignAdmin.index', compact('logsigns'));
+    }
+    
+    public function edit(): View
+    {
+        // Mengambil data terakhir
+        $logsigns = Logsign::latest()->first();
+        return view('logsignAdmin.edit', compact('logsigns'));
+    }
 
-        return view('navbarAdmin.index', compact('logsigns'));
+    public function update(Request $request)
+    {
+        // Validasi input
+        $request->validate([
+            'image' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+            'text' => 'required',
+        ]);
+
+        // Mengambil data terakhir
+        $logsign = logsign::latest()->first();
+
+        // Simpan file gambar
+        $imagePath = $request->file('image')->store('public/img');
+
+        // Update data pada model
+        $logsign->update([
+            'image' => $imagePath,
+            'text' => $request->text,
+        ]);
+
+        return redirect()->route('logsignAdmin.index');
     }
 }
