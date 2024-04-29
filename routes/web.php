@@ -54,8 +54,8 @@ Route::controller(TreatmentController::class)->group(function () {
     // Route::get('/treatment_admin/history', 'history')->name('treatment_adminn.history');
     Route::get('/treatment_admin/create', 'create')->name('treatment_admin.create');
     Route::post('/treatment_admin/kirim', 'store')->name('treatment_admin.store');
-    // Route::get('/treatment_admin/edit/{slug_link}', 'edit')->name('treatment_admin.edit');
-    // Route::put('/treatment_admin/update/{slug_link}', 'update')->name('treatment_admin.update');
+    Route::get('/treatment_admin/edit/{slug_link}', 'edit')->name('treatment_admin.edit');
+    Route::put('/treatment_admin/update/{slug_link}', 'update')->name('treatment_admin.update');
     // Route::get('/treatment_admin/hapus/{slug_link}', 'hapus')->name('treatment_admin.hapus');
     // Route::put('/treatment_admin/softdelete/{slug_link}', 'softdelete')->name('treatment_admin.softdelete');
 });

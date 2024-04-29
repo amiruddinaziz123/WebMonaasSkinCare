@@ -54,38 +54,20 @@
     @foreach ($treatments as $treat )
             <div class="col-4">
             <div class="card my-3">
-                <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
+                <img src="{{ asset('storage/images/' . $treat->foto_treatment)}}" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">{{ $treat->nama_treatment }}</h5>
                     <p class="card-text">{{ $treat->description_treatment }} </p>
-                    <a href="#" class="btn">Booking</a>
+                    <a href="#" class="btn b">Booking</a>
+                    <a href="{{route('treatment_admin.edit', $treat->slug_link)}}" class="btn btn-success"><i class="bi bi-pencil-square"></i></a>
+                    {{-- <a href="{{route('treatment_admin.hapus', $treat->slug_link)}}" class="btn btn-danger"><i class="bi bi-trash"></i></a> --}}
+
                 </div>
             </div>
         </div>
     @endforeach
 
-            {{-- <div class="col">
-                <div class="card my-3">
-                    <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Laser Treatment</h5>
-                        <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
-                        <a href="#" class="btn">Booking</a>
-                    </div>
-                </div>
-            </div> --}}
 
-
-                {{-- <div class="col">
-                    <div class="card my-3">
-                        <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Laser Treatment</h5>
-                            <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
-                            <a href="#" class="btn">Booking</a>
-                        </div>
-                    </div>
-                </div> --}}
 </div>
 
 <br><br>

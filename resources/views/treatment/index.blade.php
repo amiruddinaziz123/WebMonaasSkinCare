@@ -44,7 +44,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Laser Treatment</h5>
                     <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
-                    <a href="#" class="btn">Booking</a>
+                    <a href="#" class="btn b">Booking</a>
                 </div>
             </div>
         </div>
@@ -55,7 +55,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Laser Treatment</h5>
                         <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
-                        <a href="#" class="btn">Booking</a>
+                        <a href="#" class="btn b">Booking</a>
                     </div>
                 </div>
                 </div>
@@ -67,7 +67,7 @@
                         <div class="card-body">
                             <h5 class="card-title">Laser Treatment</h5>
                             <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
-                            <a href="#" class="btn">Booking</a>
+                            <a href="#" class="btn b">Booking</a>
                         </div>
                     </div>
                     </div>
