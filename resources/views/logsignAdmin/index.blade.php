@@ -60,9 +60,8 @@
           <img src="/img/{{ $logsigns->image }}" alt="" class="img-fluid mb-3 w-75 ms-5">
         </div>
         <p class="text-white text ms-5">{{ $logsigns->text }}</p>
-        <form action="{{ route('logsignAdmin.update', ['logsignAdmin' => $logsigns->id]) }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('logsignAdmin.store') }}" method="POST" enctype="multipart/form-data">
           @csrf
-      
           <div class="form-group">
               <label for="image">Image</label>
               <input type="file" class="form-control" id="image" name="image">
