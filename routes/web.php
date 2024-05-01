@@ -22,6 +22,10 @@ Route::get('/', function () {
     return view('landingPage');
 });
 
+Route::get('/aboutusAdmin', function () {
+    return view('aboutusAdmin.index');
+});
+
 Route::get('/login', function () {
     return view('login.index');
 });

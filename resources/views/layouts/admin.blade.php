@@ -199,7 +199,7 @@
                with font-awesome or any other icon font library -->
           
             <li class="nav-item">
-                <a href="/data_alumni" class="nav-link">
+                <a href="/logsignAdmin" class="nav-link">
                     <i class="nav-icon fas fa-user"></i>
                     <p>
                         Login Signup
@@ -208,7 +208,7 @@
             </li>
           
             <li class="nav-item">
-                <a href="/master_data" class="nav-link">
+                <a href="/aboutusAdmin" class="nav-link">
                     <i class="nav-icon fas fa-plus"></i>
                     <p>
                         About Us

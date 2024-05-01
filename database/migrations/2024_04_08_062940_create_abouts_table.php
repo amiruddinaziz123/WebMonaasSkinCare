@@ -25,6 +25,8 @@ return new class extends Migration
             $table->string('icon3');
             $table->string('tittle_icon3');
             $table->string('isi_icon3');
+            $table->string('image');
+
         });
     }
 
