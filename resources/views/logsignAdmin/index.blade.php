@@ -56,7 +56,7 @@
     <div class="row border rounded-5 p-3 shadow box">
 
       <div class=" rounded-4 d-flex justify-content-center align-items-center flex-column left">
-        <div class="image">
+        <div class="image mt-5">
           <img src="/img/{{ $logsigns->image }}" alt="" class="img-fluid mb-3 w-75 ms-5">
         </div>
         <p class="text-white text ms-5">{{ $logsigns->text }}</p>
@@ -72,7 +72,7 @@
               <textarea class="form-control" id="text" name="text" rows="3">{{ $logsigns->text }}</textarea>
           </div>
       
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary mb-4">Submit</button>
       </form>
       </div>
 

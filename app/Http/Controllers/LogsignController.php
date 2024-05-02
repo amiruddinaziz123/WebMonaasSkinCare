@@ -12,40 +12,69 @@ class LogsignController extends Controller
 {
     public function index(): View
     {
-        // Mengambil data terakhir
         $logsigns = logsign::latest()->first();
         return view('logsignAdmin.index', compact('logsigns'));
     }
 
-    public function store(Request $request)
+    public function store(request $request)
     {
-        $validatedData = $request->validate([
-            'image' => 'required', // Hanya menerima format JPEG, PNG, dan JPG
-            'text' => 'required',
-            'background_color' => 'required',
-        ], [
-            'image.required' => 'Gambar harus diunggah',
-            'image.required' => 'File harus berupa gambar',
-            'text.required' => 'Text harus diisi!',
-        ]);
+        $this->validate($request,[
+        'image' =>'required',
+        'text'  =>'required'
+    ]);
 
-        // Simpan file yang diunggah ke storage dengan nama yang unik
-        $image = $request->file('image');
-        $imageName = $image->getClientOriginalName(); // Ambil nama file asli
-        $image->storeAs('public/img', $imageName); // Simpan file dengan nama asli
+    $image = $request->file('image');
+    $imageName = $image->getClientOriginalName(); // Ambil nama file asli
+    $image->move(public_path('img'), $imageName); // Simpan file di dalam direktori public/img
 
-        // Buat data untuk disimpan ke database
-        $data = [
-            'image' => $imageName, // Simpan nama file ke dalam basis data
-            'text' => $validatedData['text'],
-            'created_at' => NOW(),
-        ];
+    logsign::create ([
+        'image'             =>$imageName,
+        'text'              =>$request->text,
+        'created_at'        =>NOW()
+    ]);
 
-        // Simpan data ke database
-        logsign::create($data); // Pastikan model navbar disesuaikan dengan penamaan tabel Anda
-
-        return redirect()->route('logsignAdmin.index');
+    return redirect()->route('logsignAdmin.index')->with(
+        ['success'=> 'Data Berhasil Ditambah!'] 
+    ); 
     }
+
+
+    // public function index(): View
+    // {
+    //     // Mengambil data terakhir
+    //     $logsigns = logsign::latest()->first();
+    //     return view('logsignAdmin.index', compact('logsigns'));
+    // }
+
+    // public function store(Request $request)
+    // {
+    //     $validatedData = $request->validate([
+    //         'image' => 'required', // Hanya menerima format JPEG, PNG, dan JPG
+    //         'text' => 'required',
+    //         'background_color' => 'required',
+    //     ], [
+    //         'image.required' => 'Gambar harus diunggah',
+    //         'image.required' => 'File harus berupa gambar',
+    //         'text.required' => 'Text harus diisi!',
+    //     ]);
+
+    //     // Simpan file yang diunggah ke storage dengan nama yang unik
+    //     $image = $request->file('image');
+    //     $imageName = $image->getClientOriginalName(); // Ambil nama file asli
+    //     $image->storeAs('public/img', $imageName); // Simpan file dengan nama asli
+
+    //     // Buat data untuk disimpan ke database
+    //     $data = [
+    //         'image' => $imageName, // Simpan nama file ke dalam basis data
+    //         'text' => $validatedData['text'],
+    //         'created_at' => NOW(),
+    //     ];
+
+    //     // Simpan data ke database
+    //     logsign::create($data); // Pastikan model navbar disesuaikan dengan penamaan tabel Anda
+
+    //     return redirect()->route('logsignAdmin.index');
+    // }
     
     // public function edit(): View
     // {

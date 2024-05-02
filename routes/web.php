@@ -50,12 +50,17 @@ Route::resource('/posts', \App\Http\Controllers\PostController::class);
 
 Route::resource('/booking', \App\Http\Controllers\BookingController::class);
 Route::resource('/navbarAdmin', \App\Http\Controllers\navbarAdminController::class);
-Route::resource('/logsignAdmin', \App\Http\Controllers\LogsignController::class);
-// Untuk menampilkan form penyuntingan
-Route::get('/logsignAdmin/{logsignAdmin}/edit', [LogsignController::class, 'edit'])->name('logsign.edit');
+// Route::resource('/logsignAdmin', \App\Http\Controllers\LogsignController::class);
+// // Untuk menampilkan form penyuntingan
+// Route::get('/logsignAdmin/{logsignAdmin}/edit', [LogsignController::class, 'edit'])->name('logsign.edit');
 
-// Untuk menyimpan perubahan yang dilakukan pada form penyuntingan
-Route::put('/logsignAdmin/{logsignAdmin}/update', [LogsignController::class, 'update'])->name('logsign.update');
+// // Untuk menyimpan perubahan yang dilakukan pada form penyuntingan
+// Route::put('/logsignAdmin/{logsignAdmin}/update', [LogsignController::class, 'update'])->name('logsign.update');
+
+Route::controller(LogsignController::class)->group(function () {
+    Route::get('/logsignAdmin', 'index')->name('logsignAdmin.index');
+    Route::post('/logsignAdmin/edit', 'store')->name('logsignAdmin.store');
+});
 
 
 
