@@ -13,12 +13,14 @@ body{
     background: #D9005B;
 }
 
+
 .text{
     font-family: Poppins;
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    margin-left: 50px;
 }
 
 .header-text{
@@ -41,3 +43,16 @@ input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
+
+/* handphone */
+@media (max-width:576px) {
+    .text{
+        font-size: 20px;
+        margin-left: 0;
+    }
+
+    .img-hero{
+        margin-top: 20px;
+    }
+}
+

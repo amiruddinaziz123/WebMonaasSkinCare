@@ -14,9 +14,9 @@
 
         <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left">
           <div class="image">
-            <img src="/img/wajah.png" alt="" class="img-fluid mb-3 w-75 ms-5">
+            <img src="/img/{{ $logsigns->image }}" alt="" class="img-fluid mb-3 w-75 ms-5 img-hero">
           </div>
-          <p class="text-white text ms-5">LETS GET YOUR TREATMENT NOW !!</p>
+          <p class="text-white text">{{ $logsigns->text }}</p>
         </div>
         
         <div class="col-md-6">

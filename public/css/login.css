@@ -43,4 +43,8 @@ body{
         font-size: 20px;
         margin-left: 0;
     }
+
+    .img-hero{
+        margin-top: 20px;
+    }
 }
