@@ -57,7 +57,7 @@
 
       <div class=" rounded-4 d-flex justify-content-center align-items-center flex-column left">
         <div class="image mt-5">
-          <img src="/img/{{ $logsigns->image }}" alt="" class="img-fluid mb-3 w-75 ms-5">
+          <img src="/img/{{ $logsigns->image }}" alt="" class="img-fluid mb-3 ms-5" style="max-width: 200px">
         </div>
         <p class="text-white text ms-5">{{ $logsigns->text }}</p>
         <form action="{{ route('logsignAdmin.store') }}" method="POST" enctype="multipart/form-data">

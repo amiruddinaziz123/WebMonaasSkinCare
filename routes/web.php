@@ -26,15 +26,6 @@ Route::get('/aboutusAdmin', function () {
     return view('aboutusAdmin.index');
 });
 
-Route::get('/login', function () {
-    return view('login.index');
-});
-
-Route::get('/signup', function () {
-    return view('signup.index');
-});
-
-
 Route::get('/aboutus', function () {
     return view('aboutus.index');
 });
@@ -50,15 +41,12 @@ Route::resource('/posts', \App\Http\Controllers\PostController::class);
 
 Route::resource('/booking', \App\Http\Controllers\BookingController::class);
 Route::resource('/navbarAdmin', \App\Http\Controllers\navbarAdminController::class);
-// Route::resource('/logsignAdmin', \App\Http\Controllers\LogsignController::class);
-// // Untuk menampilkan form penyuntingan
-// Route::get('/logsignAdmin/{logsignAdmin}/edit', [LogsignController::class, 'edit'])->name('logsign.edit');
 
-// // Untuk menyimpan perubahan yang dilakukan pada form penyuntingan
-// Route::put('/logsignAdmin/{logsignAdmin}/update', [LogsignController::class, 'update'])->name('logsign.update');
-
+// ROUTE UNTUK LOGIN SIGNUP DAN ADMINNYA
 Route::controller(LogsignController::class)->group(function () {
     Route::get('/logsignAdmin', 'index')->name('logsignAdmin.index');
+    Route::get('/login', 'indexLogin')->name('logsignAdmin.index');
+    Route::get('/signup', 'indexSignup')->name('logsignAdmin.index');
     Route::post('/logsignAdmin/edit', 'store')->name('logsignAdmin.store');
 });
 

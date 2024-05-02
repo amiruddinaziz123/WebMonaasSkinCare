@@ -16,13 +16,26 @@ class LogsignController extends Controller
         return view('logsignAdmin.index', compact('logsigns'));
     }
 
+    public function indexLogin(): View
+    {
+        $logsigns = logsign::latest()->first();
+        return view('login.index', compact('logsigns'));
+    }
+
+    public function indexSignup(): View
+    {
+        $logsigns = logsign::latest()->first();
+        return view('signup.index', compact('logsigns'));
+    }
+
     public function store(request $request)
     {
         $this->validate($request,[
-        'image' =>'required',
+        'image' =>'required|file|mimes:jpeg,png,jpg',
         'text'  =>'required'
     ]);
 
+    // Simpan file yang diunggah ke storage dengan nama yang unik
     $image = $request->file('image');
     $imageName = $image->getClientOriginalName(); // Ambil nama file asli
     $image->move(public_path('img'), $imageName); // Simpan file di dalam direktori public/img
