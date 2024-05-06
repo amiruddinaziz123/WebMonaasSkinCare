@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutusController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\TreatmentController;
 use App\Http\Controllers\LogsignController;
@@ -23,9 +24,6 @@ Route::get('/', function () {
     return view('landingPage');
 });
 
-Route::get('/aboutusAdmin', function () {
-    return view('aboutusAdmin.index');
-});
 
 Route::get('/aboutus', function () {
     return view('aboutus.index');
@@ -55,6 +53,11 @@ Route::controller(LogsignController::class)->group(function () {
 Route::controller(MasterController::class)->group(function () {
     Route::get('/masterAdmin', 'index')->name('masterAdmin.index');
     Route::post('/masterAdmin/add', 'store')->name('masterAdmin.store');
+});
+
+// ROUTE UNTUK ABOUT US DAN ADMINNYA
+Route::controller(AboutusController::class)->group(function () {
+    Route::get('/aboutus', 'index')->name('aboutus.index');
 });
 
 
