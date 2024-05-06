@@ -21,13 +21,13 @@ class MasterController extends Controller
     public function store(request $request)
     {
         $this->validate($request,[
-        'email_user' =>'required|min:8|unique:latihans',
+        'email_user' =>'required|min:8|unique:accounts',
         'password_user'  =>'required',
         'username_user'  =>'required',
         'no_telp_user'  =>'required',
     ]);
 
-    $slug = str::slug($request->kategori, '-');
+    $slug = str::slug($request->username_user, '-');
 
     account::create ([
         'email_user'             =>$request->email_user,

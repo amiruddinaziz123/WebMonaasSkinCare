@@ -23,34 +23,34 @@
     <div class="card">
       <div class="card-body">
          
-         <form action="/master_data" method="POST" autocomplete="off" class="needs-validation" novalidate>
+         <form action="{{ route('masterAdmin.store') }}" method="POST" autocomplete="off" class="needs-validation" novalidate>
              @csrf
             
             <div class="mb-3 row">
                <label for="nama" class="col-sm-2 col-form-label">Username</label>
                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="nama" name="nama" placeholder="Isi Username" required>
+                  <input type="text" class="form-control" id="nama" name="username_user" placeholder="Isi Username" required>
                </div>
             </div>
 
             <div class="mb-3 row">
                <label for="email" class="col-sm-2 col-form-label">Email</label>
                <div class="col-sm-10">
-                  <input type="email" class="form-control" id="email" name="email" placeholder="Isi Email" required>
+                  <input type="email" class="form-control" id="email" name="email_user" placeholder="Isi Email" required>
                </div>
             </div>
 
             <div class="mb-3 row">
                <label for="nisn" class="col-sm-2 col-form-label">Password</label>
                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="nisn" name="nisn" placeholder="Isi Password" required> 
+                  <input type="text" class="form-control" id="nisn" name="password_user" placeholder="Isi Password" required> 
                </div>
             </div>
 
             <div class="mb-3 row">
                 <label for="telepon" class="col-sm-2 col-form-label">No. Telepon</label>
                 <div class="col-sm-10">
-                    <input type="tel" class="form-control" id="telepon" name="nis" placeholder="Isi Nomor" required>
+                    <input type="text" class="form-control" id="telepon" name="no_telp_user" placeholder="Isi Nomor" required>
                 </div>
             </div>
 
@@ -145,4 +145,11 @@ form.addEventListener('submit', event => {
         }
     });
   </script>
+
+<script>
+    document.getElementById("telepon").addEventListener("input", function() {
+        // Menghilangkan karakter non-numeric, kecuali '+' untuk awalan
+        this.value = this.value.replace(/[^0-9+]/g, '');
+    });
+</script>
 @endsection
