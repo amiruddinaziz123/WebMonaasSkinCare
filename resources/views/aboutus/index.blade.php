@@ -24,18 +24,18 @@
             </div>
             <hr style="margin-top: 70px"> 
 
-            <div class="col-6 mt-5 mb-5">
+            <div class="col-md-6 mt-5 mb-5">
               <h2>Mengapa Harus Monaas</h2>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis enim voluptatem porro non optio? Architecto, officiis. Eius assumenda aliquid eos recusandae ut animi fuga dicta! Aliquam quidem itaque similique totam!
               </p>
             </div>
 
-            <div class="col-6 mt-5 mb-5">
+            <div class="col-md-6 mt-5 mb-5">
               <img src="/img/kekeye.png" alt="" class="w-100"> 
             </div>
 
-            <div class="col-4 mt-5 mb-5 text-center align-items-center">
+            <div class="col-md-4 mt-5 mb-5 text-center align-items-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="46" height="45" viewBox="0 0 46 45" fill="none">
                 <g clip-path="url(#clip0_322_185)">
                   <path d="M13 27.5C13 27.5 16.75 32.5 23 32.5C29.25 32.5 33 27.5 33 27.5" stroke="#D9005B" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
@@ -53,7 +53,7 @@
               <P> Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis repellendus quam distinctio maxime. Quae nemo, sint fuga voluptate rerum eum modi voluptatibus tenetur reprehenderit temporibus maiores corrupti nam, asperiores voluptatum.</P>
             </div>
 
-            <div class="col-4 mt-5 mb-5 text-center align-items-center">
+            <div class="col-md-4 mt-5 mb-5 text-center align-items-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="54" height="58" viewBox="0 0 54 58" fill="none">
                 <path d="M42.4583 48.3333H11.5417L7.125 19.3333L19.2708 30.2083L27 16.9166L34.7292 30.2083L46.875 19.3333L42.4583 48.3333Z" stroke="#D9005B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M50.1875 15.7083C50.1875 17.7103 48.7044 19.3333 46.875 19.3333C45.0456 19.3333 43.5625 17.7103 43.5625 15.7083C43.5625 13.7062 45.0456 12.0833 46.875 12.0833C48.7044 12.0833 50.1875 13.7062 50.1875 15.7083Z" stroke="#D9005B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
@@ -64,7 +64,7 @@
               <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem modi maxime, numquam voluptatum eius nihil hic nulla quis tenetur possimus vero molestiae molestias recusandae sint error nemo, excepturi omnis in.</p>
             </div>
 
-            <div class="col-4 mt-5 mb-5 text-center align-items-center">
+            <div class="col-md-4 mt-5 mb-5 text-center align-items-center">
               <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
                 <path d="M41.0289 23.2417L26.3403 37.9302L20.0452 31.6351" stroke="#D9005B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
                 <path d="M30.5574 52.3091C43.0156 52.3091 53.1148 42.3903 53.1148 30.1546C53.1148 17.9189 43.0156 8 30.5574 8C18.0993 8 8 17.9189 8 30.1546C8 42.3903 18.0993 52.3091 30.5574 52.3091Z" stroke="#D9005B" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
