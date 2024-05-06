@@ -17,7 +17,7 @@
           <div class="row" style="margin-top: 90px">
             
             <div class="text-center align-items-center justify-content-center">
-              <h2>Hasil Maksimal, Harga Minimal</h2>
+              <h2>Hasil <span>Maksimal</span>, Harga <span>Minimal</span></h2>
               <p class="mt-4">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam temporibus aspernatur modi sit, sequi voluptates quam itaque minima repellendus. Ipsam repudiandae ullam voluptate nostrum quos sit praesentium, beatae in reprehenderit adipisci? Accusantium debitis exercitationem dolorum nihil, maxime praesentium sequi eaque, accusamus commodi quaerat quisquam odit obcaecati enim illum sint dignissimos necessitatibus veniam unde. Voluptatum, sit neque quaerat nemo nulla, modi quia ipsam accusantium tempore eum sint quidem accusamus. Cumque architecto illo amet facilis voluptatibus dolorem adipisci aspernatur, sint accusantium voluptas. Placeat voluptate, praesentium laboriosam officia quia laborum facere officiis molestiae magnam rerum reiciendis, nesciunt, ut enim sequi possimus soluta quo.
               </p>
@@ -25,7 +25,7 @@
             <hr style="margin-top: 70px"> 
 
             <div class="col-md-6 mt-5 mb-5">
-              <h2>Mengapa Harus Monaas</h2>
+              <h2>Mengapa Harus <span>Monaas</span></h2>
               <p>
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis enim voluptatem porro non optio? Architecto, officiis. Eius assumenda aliquid eos recusandae ut animi fuga dicta! Aliquam quidem itaque similique totam!
               </p>

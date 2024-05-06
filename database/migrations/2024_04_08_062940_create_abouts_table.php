@@ -14,17 +14,17 @@ return new class extends Migration
         Schema::create('abouts', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('intro');
-            $table->string('reason');
+            $table->text('intro');
+            $table->text('reason');
             $table->string('icon1');
-            $table->string('tittle_icon1');
-            $table->string('isi_icon1');
+            $table->text('tittle_icon1');
+            $table->text('isi_icon1');
             $table->string('icon2');
-            $table->string('tittle_icon2');
-            $table->string('isi_icon2');
+            $table->text('tittle_icon2');
+            $table->text('isi_icon2');
             $table->string('icon3');
-            $table->string('tittle_icon3');
-            $table->string('isi_icon3');
+            $table->text('tittle_icon3');
+            $table->text('isi_icon3');
             $table->string('image');
 
         });
