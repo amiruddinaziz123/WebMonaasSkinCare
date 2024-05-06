@@ -199,7 +199,7 @@
                with font-awesome or any other icon font library -->
 
             <li class="nav-item">
-                <a href="/aboutusAdmin" class="nav-link">
+                <a href="/masterAdmin" class="nav-link">
                     <i class="nav-icon fas fa-plus"></i>
                     <p>
                         Tambah User
