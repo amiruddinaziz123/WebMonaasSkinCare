@@ -3,6 +3,7 @@
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\TreatmentController;
 use App\Http\Controllers\LogsignController;
+use App\Http\Controllers\MasterController;
 use Illuminate\Support\Facades\Route;
 
 use App\Models\navbar;
@@ -48,6 +49,14 @@ Route::controller(LogsignController::class)->group(function () {
     Route::get('/login', 'indexLogin')->name('logsignAdmin.index');
     Route::get('/signup', 'indexSignup')->name('logsignAdmin.index');
     Route::post('/logsignAdmin/edit', 'store')->name('logsignAdmin.store');
+});
+
+// ROUTE UNTUK MASTER ADMIN
+Route::controller(MasterController::class)->group(function () {
+    Route::get('/masterAdmin', 'index')->name('masterAdmin.index');
+    // Route::get('/login', 'indexLogin')->name('logsignAdmin.index');
+    // Route::get('/signup', 'indexSignup')->name('logsignAdmin.index');
+    // Route::post('/logsignAdmin/edit', 'store')->name('logsignAdmin.store');
 });
 
 
