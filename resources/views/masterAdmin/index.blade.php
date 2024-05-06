@@ -144,12 +144,6 @@ form.addEventListener('submit', event => {
             this.value = this.value.slice(0, 15);
         }
     });
-  </script>
-
-<script>
-    document.getElementById("telepon").addEventListener("input", function() {
-        // Menghilangkan karakter non-numeric, kecuali '+' untuk awalan
-        this.value = this.value.replace(/[^0-9+]/g, '');
-    });
 </script>
+
 @endsection
