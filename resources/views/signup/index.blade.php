@@ -51,7 +51,7 @@
               </div>
               <div class="login">
                 <small>
-                  <a href="" class="text-decoration-none" style="color: #D9005B">Login</a>
+                  <a href="/login" class="text-decoration-none" style="color: #D9005B">Login</a>
                 </small>
               </div>
             </div>
