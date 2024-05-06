@@ -36,8 +36,8 @@
               <input type="password" name="" id="" class="form-control form-control-lg bg-light fs-6" placeholder="Password" >
             </div>
             <div class="input-group mb-3">
-                <input type="number"  name="" id="telepon" class="form-control form-control-lg bg-light fs-6" placeholder="No. Telepon" >
-            </div>
+              <input type="tel" class="form-control" id="telepon" placeholder="No. Telepon" required>
+          </div>
             {{-- <div class="signup">
               <small>Don't have an account yet? <a href="" class="text-decoration-none">Sign Up</a></small>
             </div> --}}
@@ -63,13 +63,11 @@
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
-      $(document).ready(function(){
-      $('#telepon').on('input', function(){
-        if($(this).val().length > 15){
-          $(this).val($(this).val().slice(0, 15));
-          }
-        });
-      });
+      document.getElementById("telepon").addEventListener("input", function() {
+        if (this.value.length > 15) {
+            this.value = this.value.slice(0, 15);
+        }
+    });
     </script>
   </body>
 </html>

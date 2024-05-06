@@ -29,7 +29,7 @@
             <div class="mb-3 row">
                <label for="nama" class="col-sm-2 col-form-label">Username</label>
                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="nama" name="nama" placeholder="Isi Nama Lengkap" required>
+                  <input type="text" class="form-control" id="nama" name="nama" placeholder="Isi Username" required>
                </div>
             </div>
 
@@ -43,15 +43,15 @@
             <div class="mb-3 row">
                <label for="nisn" class="col-sm-2 col-form-label">Password</label>
                <div class="col-sm-10">
-                  <input type="text" class="form-control" id="nisn" name="nisn" placeholder="Isi NISN" required> 
+                  <input type="text" class="form-control" id="nisn" name="nisn" placeholder="Isi Password" required> 
                </div>
             </div>
 
             <div class="mb-3 row">
-               <label for="nis" class="col-sm-2 col-form-label">No. Telepon</label>
-               <div class="col-sm-10">
-                  <input type="text" class="form-control" id="nis" name="nis" placeholder="Isi Nama Lengkap" required>
-               </div>
+                <label for="telepon" class="col-sm-2 col-form-label">No. Telepon</label>
+                <div class="col-sm-10">
+                    <input type="tel" class="form-control" id="telepon" name="nis" placeholder="Isi Nomor" required>
+                </div>
             </div>
 
 
@@ -85,7 +85,7 @@
             </div> --}}
 
             <div class="col-12">
-               <input type="submit" name="simpan" value="Simpan Data" class="btn btn-primary">
+               <input type="submit" name="simpan" value="Tambah" class="btn btn-primary">
             </div>
 
          </form>
@@ -106,6 +106,13 @@ margin-top: 20px;
 
 .card{
 margin-top:10px;
+}
+
+/* Menghilangkan tombol scroll up dan down di input number */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
 }
 </style>
 
@@ -130,4 +137,12 @@ form.addEventListener('submit', event => {
 })
 })()
 </script>
+
+<script>
+    document.getElementById("telepon").addEventListener("input", function() {
+        if (this.value.length > 15) {
+            this.value = this.value.slice(0, 15);
+        }
+    });
+  </script>
 @endsection
