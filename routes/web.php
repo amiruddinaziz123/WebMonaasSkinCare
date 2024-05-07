@@ -29,6 +29,10 @@ Route::get('/aboutus', function () {
     return view('aboutus.index');
 });
 
+Route::get('/aboutusAdmin', function () {
+    return view('aboutusAdmin.index');
+});
+
 
 // untuk coba pake /posts
 Route::resource('/posts', \App\Http\Controllers\PostController::class);
@@ -52,6 +56,7 @@ Route::controller(LogsignController::class)->group(function () {
 // ROUTE UNTUK MASTER ADMIN
 Route::controller(MasterController::class)->group(function () {
     Route::get('/masterAdmin', 'index')->name('masterAdmin.index');
+    Route::get('/customerAdmin', 'indexCustomer')->name('customerAdmin.index');
     Route::post('/masterAdmin/add', 'store')->name('masterAdmin.store');
 });
 
@@ -79,5 +84,5 @@ Route::controller(TreatmentController::class)->group(function () {
     Route::get('/treatment_admin/edit/{slug_link}', 'edit')->name('treatment_admin.edit');
     Route::put('/treatment_admin/update/{slug_link}', 'update')->name('treatment_admin.update');
     // Route::get('/treatment_admin/hapus/{slug_link}', 'hapus')->name('treatment_admin.hapus');
-    // Route::put('/treatment_admin/softdelete/{slug_link}', 'softdelete')->name('treatment_admin.softdelete');
+    Route::put('/treatment_admin/softdelete/{slug_link}', 'softdelete')->name('treatment_admin.softdelete');
 });

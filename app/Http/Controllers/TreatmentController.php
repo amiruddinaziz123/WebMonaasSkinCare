@@ -65,7 +65,6 @@ class TreatmentController extends Controller
         ]);
 
 
-//   IMG JANGAN LUPA YHHH
             $imageName = time().'.'.$request->foto_treatment->extension();
             $request->foto_treatment->move(public_path('storage/images/'), $imageName);
 
@@ -80,7 +79,9 @@ class TreatmentController extends Controller
             'slug_link' => $slug,
         ]);
 
-        return redirect()->route('treatment_admin.admin')->with(['success' => 'Berhasil mengedit produk !'])->with('image',$imageName);
+        return redirect()->route('treatment_admin.admin')->with(['success' => 'Berhasil mengedit treatment !'])->with('image',$imageName);
     }
+
+   
 
 }

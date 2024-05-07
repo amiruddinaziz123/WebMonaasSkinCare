@@ -18,6 +18,12 @@ class MasterController extends Controller
         return view('masterAdmin.index', compact('masters'));
     }
 
+    public function indexCustomer(): View
+    {
+        $customers = account::all();
+        return view('customerAdmin.index', compact('customers'));
+    }
+
     public function store(request $request)
     {
         $this->validate($request,[

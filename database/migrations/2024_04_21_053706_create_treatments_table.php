@@ -6,9 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
+
     public function up(): void
     {
         Schema::create('treatments', function (Blueprint $table) {
@@ -20,6 +18,10 @@ return new class extends Migration
             $table->string('slug_link');
             $table->timestamps();
         });
+
+        Schema::table('treatments', function (Blueprint $table) {
+            $table->softDeletes();
+        });
     }
 
     /**
@@ -28,5 +30,9 @@ return new class extends Migration
     public function down(): void
     {
         Schema::dropIfExists('treatments');
+
+        Schema::table('treatments', function (Blueprint $table) {
+            $table->dropSoftDeletes();
+        });
     }
 };

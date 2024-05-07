@@ -60,7 +60,7 @@
                     <p class="card-text">{{ $treat->description_treatment }} </p>
                     <a href="#" class="btn b">Booking</a>
                     <a href="{{route('treatment_admin.edit', $treat->slug_link)}}" class="btn btn-success"><i class="bi bi-pencil-square"></i></a>
-                    {{-- <a href="{{route('treatment_admin.hapus', $treat->slug_link)}}" class="btn btn-danger"><i class="bi bi-trash"></i></a> --}}
+                    <a href="{{route('treatment_admin.softdelete', $treat->slug_link)}}" class="btn btn-danger"><i class="bi bi-trash"></i></a>
 
                 </div>
             </div>
