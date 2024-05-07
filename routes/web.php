@@ -72,5 +72,5 @@ Route::controller(TreatmentController::class)->group(function () {
     Route::get('/treatment_admin/edit/{slug_link}', 'edit')->name('treatment_admin.edit');
     Route::put('/treatment_admin/update/{slug_link}', 'update')->name('treatment_admin.update');
     // Route::get('/treatment_admin/hapus/{slug_link}', 'hapus')->name('treatment_admin.hapus');
-    // Route::put('/treatment_admin/softdelete/{slug_link}', 'softdelete')->name('treatment_admin.softdelete');
+    Route::put('/treatment_admin/softdelete/{slug_link}', 'softdelete')->name('treatment_admin.softdelete');
 });
