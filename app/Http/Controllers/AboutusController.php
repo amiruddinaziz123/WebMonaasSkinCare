@@ -15,4 +15,10 @@ class AboutusController extends Controller
         $abouts = about::latest()->first();
         return view('aboutus.index', compact('abouts'));
     }
+
+    public function indexAdmin(): View
+    {
+        $abouts = about::latest()->first();
+        return view('aboutusAdmin.index', compact('abouts'));
+    }
 }
