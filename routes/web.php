@@ -78,9 +78,6 @@ Route::get('/treatment', function () {
     return view('treatment.index');
 });
 
-Route::get('/profil', function () {
-    return view('profil.index');
-});
 
 
 Route::controller(TreatmentController::class)->group(function () {
