@@ -29,6 +29,10 @@ Route::get('/aboutus', function () {
     return view('aboutus.index');
 });
 
+Route::get('/aboutusAdmin', function () {
+    return view('aboutusAdmin.index');
+});
+
 
 // untuk coba pake /posts
 Route::resource('/posts', \App\Http\Controllers\PostController::class);
