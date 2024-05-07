@@ -56,6 +56,7 @@ Route::controller(LogsignController::class)->group(function () {
 // ROUTE UNTUK MASTER ADMIN
 Route::controller(MasterController::class)->group(function () {
     Route::get('/masterAdmin', 'index')->name('masterAdmin.index');
+    Route::get('/customerAdmin', 'indexCustomer')->name('customerAdmin.index');
     Route::post('/masterAdmin/add', 'store')->name('masterAdmin.store');
 });
 
