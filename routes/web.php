@@ -5,6 +5,7 @@ use App\Http\Controllers\BookingController;
 use App\Http\Controllers\TreatmentController;
 use App\Http\Controllers\LogsignController;
 use App\Http\Controllers\MasterController;
+use App\Http\Controllers\ProfilController;
 use Illuminate\Support\Facades\Route;
 
 use App\Models\navbar;
@@ -63,6 +64,11 @@ Route::controller(MasterController::class)->group(function () {
 // ROUTE UNTUK ABOUT US DAN ADMINNYA
 Route::controller(AboutusController::class)->group(function () {
     Route::get('/aboutus', 'index')->name('aboutus.index');
+});
+
+// ROUTE UNTUK PROFIL DAN ADMINNYA
+Route::controller(ProfilController::class)->group(function () {
+    Route::get('/profil', 'index')->name('profil.index');
 });
 
 
