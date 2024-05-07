@@ -206,7 +206,7 @@
                     </p>
                 </a>
             </li>
-          
+
             <li class="nav-item">
                 <a href="/logsignAdmin" class="nav-link">
                     <i class="nav-icon fas fa-user"></i>
@@ -215,7 +215,7 @@
                     </p>
                 </a>
             </li>
-          
+
             <li class="nav-item">
                 <a href="/aboutusAdmin" class="nav-link">
                     <i class="nav-icon fas fa-plus"></i>
@@ -226,7 +226,7 @@
             </li>
 
             <li class="nav-item">
-              <a href="/foto" class="nav-link">
+              <a href="/treatment_admin" class="nav-link">
                   <i class="nav-icon fas fa-image"></i>
                   <p>
                     Treatment
@@ -234,8 +234,8 @@
               </a>
             </li>
 
-          
-          
+
+
           {{-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-copy"></i>
