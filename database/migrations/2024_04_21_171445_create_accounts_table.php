@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('username_user');
             $table->string('password_user');
             $table->string('email_user');
-            $table->bigInteger('no_telp_user');
+            $table->string('no_telp_user');
             $table->string('slug_link');
             $table->timestamps();
         });

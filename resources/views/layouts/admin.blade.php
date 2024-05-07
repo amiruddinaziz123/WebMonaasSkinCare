@@ -197,9 +197,18 @@
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
+
+            <li class="nav-item">
+                <a href="/masterAdmin" class="nav-link">
+                    <i class="nav-icon fas fa-plus"></i>
+                    <p>
+                        Tambah User
+                    </p>
+                </a>
+            </li>
           
             <li class="nav-item">
-                <a href="/data_alumni" class="nav-link">
+                <a href="/logsignAdmin" class="nav-link">
                     <i class="nav-icon fas fa-user"></i>
                     <p>
                         Login Signup
@@ -208,7 +217,7 @@
             </li>
           
             <li class="nav-item">
-                <a href="/master_data" class="nav-link">
+                <a href="/aboutusAdmin" class="nav-link">
                     <i class="nav-icon fas fa-plus"></i>
                     <p>
                         About Us

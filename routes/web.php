@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\AboutusController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\TreatmentController;
 use App\Http\Controllers\LogsignController;
+use App\Http\Controllers\MasterController;
 use Illuminate\Support\Facades\Route;
 
 use App\Models\navbar;
@@ -22,17 +24,13 @@ Route::get('/', function () {
     return view('landingPage');
 });
 
-Route::get('/login', function () {
-    return view('login.index');
-});
-
-Route::get('/signup', function () {
-    return view('signup.index');
-});
-
 
 Route::get('/aboutus', function () {
     return view('aboutus.index');
+});
+
+Route::get('/aboutusAdmin', function () {
+    return view('aboutusAdmin.index');
 });
 
 
@@ -46,12 +44,25 @@ Route::resource('/posts', \App\Http\Controllers\PostController::class);
 
 Route::resource('/booking', \App\Http\Controllers\BookingController::class);
 Route::resource('/navbarAdmin', \App\Http\Controllers\navbarAdminController::class);
-Route::resource('/logsignAdmin', \App\Http\Controllers\LogsignController::class);
-// Untuk menampilkan form penyuntingan
-Route::get('/logsignAdmin/{logsignAdmin}/edit', [LogsignController::class, 'edit'])->name('logsign.edit');
 
-// Untuk menyimpan perubahan yang dilakukan pada form penyuntingan
-Route::put('/logsignAdmin/{logsignAdmin}/update', [LogsignController::class, 'update'])->name('logsign.update');
+// ROUTE UNTUK LOGIN SIGNUP DAN ADMINNYA
+Route::controller(LogsignController::class)->group(function () {
+    Route::get('/logsignAdmin', 'index')->name('logsignAdmin.index');
+    Route::get('/login', 'indexLogin')->name('logsignAdmin.index');
+    Route::get('/signup', 'indexSignup')->name('logsignAdmin.index');
+    Route::post('/logsignAdmin/edit', 'store')->name('logsignAdmin.store');
+});
+
+// ROUTE UNTUK MASTER ADMIN
+Route::controller(MasterController::class)->group(function () {
+    Route::get('/masterAdmin', 'index')->name('masterAdmin.index');
+    Route::post('/masterAdmin/add', 'store')->name('masterAdmin.store');
+});
+
+// ROUTE UNTUK ABOUT US DAN ADMINNYA
+Route::controller(AboutusController::class)->group(function () {
+    Route::get('/aboutus', 'index')->name('aboutus.index');
+});
 
 
 

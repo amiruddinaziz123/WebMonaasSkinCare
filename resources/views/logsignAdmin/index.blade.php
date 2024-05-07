@@ -41,7 +41,7 @@
               <!-- /.row --> --}}
           
           <!-- /.row -->
-          <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -56,13 +56,12 @@
     <div class="row border rounded-5 p-3 shadow box">
 
       <div class=" rounded-4 d-flex justify-content-center align-items-center flex-column left">
-        <div class="image">
-          <img src="/img/{{ $logsigns->image }}" alt="" class="img-fluid mb-3 w-75 ms-5">
+        <div class="image mt-5">
+          <img src="/img/{{ $logsigns->image }}" alt="" class="img-fluid mb-3 ms-5" style="width: 300px">
         </div>
         <p class="text-white text ms-5">{{ $logsigns->text }}</p>
-        <form action="{{ route('logsignAdmin.update', ['logsignAdmin' => $logsigns->id]) }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ route('logsignAdmin.store') }}" method="POST" enctype="multipart/form-data">
           @csrf
-      
           <div class="form-group">
               <label for="image">Image</label>
               <input type="file" class="form-control" id="image" name="image">
@@ -73,7 +72,7 @@
               <textarea class="form-control" id="text" name="text" rows="3">{{ $logsigns->text }}</textarea>
           </div>
       
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <button type="submit" class="btn btn-primary mb-4">Submit</button>
       </form>
       </div>
 
