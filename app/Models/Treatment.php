@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Treatment extends Model
 {
@@ -12,6 +13,7 @@ class Treatment extends Model
     protected $casts = [
         'created_at' => 'datetime',
         'updated_at' => 'datetime',
+
     ];
 
     protected $fillable = [
@@ -21,4 +23,6 @@ class Treatment extends Model
         'status_publish',
         'slug_link',
     ];
+
+    use SoftDeletes;
 }
