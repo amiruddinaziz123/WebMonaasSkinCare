@@ -5,7 +5,12 @@
 
 <div class="container">
 
-        <form method="POST" action="{{ route('treatment_admin.update', $treatments->slug_link) }}" enctype="multipart/form-data">
+        {{-- <div class="col-10">
+            <a href="{{ route('Admin.admin') }}" class="btn btn-success btn-sm"> Produk</a> >>
+            <a href="{{ route('Admin.history') }}" class="btn btn-dark btn-sm"> History</a>
+        </div> --}}
+
+        <form method="POST" action="{{ route('treatment_admin.softdelete', $treatments->slug_link) }}" enctype="multipart/form-data">
             @csrf
             @method('PUT')
             <div class="mb-3 row mt-5">
@@ -15,7 +20,8 @@
                         <img src="{{ asset('storage/images/' . $treatments->foto_treatment)}}" alt="Monaas Skincare" class="img-fluid" style="width: 500px; margin-bottom: 15px;">
                     @else
                         <p>Tidak ada gambar yang tersedia</p>
-                 @endif
+                    @endif
+
                     <input required type="file" name="foto_treatment" class="form-control @error('foto_treatment') is-invalid @enderror" id="foto"  value="{{ asset('storage/images/' . $treatments->foto_treatment)}}">
                     @error('foto_treatment')
                     <div class="alert alert-danger mt-2">
@@ -66,9 +72,8 @@
 
             <div class="row mb-3 mt-5">
                 <div class="col">
-                        <button type="submit" name="aksi" value="edit" class="btn btn-success"><i class="bi bi-save"></i> Simpan</button>
-                        <button type="reset" name="aksi" value="reset" class="btn btn-secondary"><i class="bi bi-repeat"></i> Reset </button>
-                        <a href=" {{ route('treatment_admin.admin') }} " type="button" class="btn btn-danger"><i class="bi bi-arrow-left-square"></i> Batal </a>
+                        <button type="submit" name="aksi" value="hapus" class="btn btn-info"><i class="bi bi-save"></i>Hapus</button>
+                        <a href=" {{ route('treatment_admin.admin') }} " type="button" class="btn btn-danger">Batal </a>
                 </div>
             </div>
 

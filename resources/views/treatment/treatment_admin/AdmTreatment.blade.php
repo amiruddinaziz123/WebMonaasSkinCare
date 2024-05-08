@@ -1,9 +1,9 @@
-@extends('treatment/layout')
+@extends('layouts.admin')
 
 @section('content')
 
 
-<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+{{-- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                   <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
@@ -28,47 +28,47 @@
                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
                   <span class="visually-hidden">Next</span>
                 </button>
-              </div>
+              </div> --}}
 
 <br>
 <br>
-
-<div class="button_db row text-center">
-<div class="col-4">
-    <a href="{{ route('treatment_admin.admin') }}" class="btn btn-success btn-lg">Treatment</a>
-    {{-- <a href="{{ route('treatment_admin.history') }}" class="btn btn-dark btn-sm">History</a> --}}
-</div>
-<div class="col-4">
-    <a href="{{ route('treatment_admin.create') }}" class="btn btn-primary btn-lg"><i class="bi bi-square-plus"></i></i> Tambah</a>
-</div>
-</div>
-
 <br>
 <br>
 
-<!-- CARD -->
 
-<h3>Facial Treatment</h3>
+    <div class="button_db row text-center">
+    <div class="col-4">
+        <a href="{{ route('treatment_admin.admin') }}" class="btn btn-success btn-lg">Treatment</a>
+        {{-- <a href="{{ route('treatment_admin.history') }}" class="btn btn-dark btn-sm">History</a> --}}
+    </div>
+    <div class="col-4">
+        <a href="{{ route('treatment_admin.create') }}" class="btn btn-primary btn-lg"><i class="bi bi-square-plus"></i></i> Tambah</a>
+    </div>
+    </div>
 
-<div class="row">
-    @foreach ($treatments as $treat )
-            <div class="col-4">
-            <div class="card my-3">
-                <img src="{{ asset('storage/images/' . $treat->foto_treatment)}}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">{{ $treat->nama_treatment }}</h5>
-                    <p class="card-text">{{ $treat->description_treatment }} </p>
-                    <a href="#" class="btn b">Booking</a>
-                    <a href="{{route('treatment_admin.edit', $treat->slug_link)}}" class="btn btn-success"><i class="bi bi-pencil-square"></i></a>
-                    <a href="{{route('treatment_admin.softdelete', $treat->slug_link)}}" class="btn btn-danger"><i class="bi bi-trash"></i></a>
+    <br>
+    <br>
 
+    <!-- CARD -->
+
+    <h3>Facial Treatment</h3>
+
+    <div class="row">
+        @foreach ($treatments as $treat )
+                <div class="col-4">
+                <div class="card my-3">
+                    <img src="{{ asset('storage/images/' . $treat->foto_treatment)}}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $treat->nama_treatment }}</h5>
+                        <p class="card-text">{{ $treat->description_treatment }} </p>
+                        <a href="{{route('treatment_admin.edit', $treat->slug_link)}}" class="btn btn-success"><i class="bi bi-pencil-square"></i></a>
+                        <a href="{{route('treatment_admin.softdelete', $treat->slug_link)}}" class="btn btn-danger"><i class="bi bi-trash"></i></a>
+
+                    </div>
                 </div>
-            </div>
-        </div>
-    @endforeach
-
-
-</div>
+                </div>
+        @endforeach
+    </div>
 
 <br><br>
 

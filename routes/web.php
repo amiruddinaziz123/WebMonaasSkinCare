@@ -67,22 +67,29 @@ Route::controller(AboutusController::class)->group(function () {
 
 
 
-Route::get('/treatment', function () {
-    return view('treatment.index');
-});
+
+
+
 
 Route::get('/profil', function () {
     return view('profil.index');
 });
 
 
+//ROUTE UNTUK TREATMENT DAN ADMINNYA
+Route::get('/treatment', function () {
+    return view('treatment.index');
+});
+
 Route::controller(TreatmentController::class)->group(function () {
     Route::get('/treatment_admin', 'admin')->name('treatment_admin.admin');
-    // Route::get('/treatment_admin/history', 'history')->name('treatment_adminn.history');
+    Route::get('/treatment_admin/history', 'history')->name('treatment_adminn.history');
     Route::get('/treatment_admin/create', 'create')->name('treatment_admin.create');
     Route::post('/treatment_admin/kirim', 'store')->name('treatment_admin.store');
     Route::get('/treatment_admin/edit/{slug_link}', 'edit')->name('treatment_admin.edit');
     Route::put('/treatment_admin/update/{slug_link}', 'update')->name('treatment_admin.update');
-    // Route::get('/treatment_admin/hapus/{slug_link}', 'hapus')->name('treatment_admin.hapus');
+    Route::get('/treatment_admin/hapus/{slug_link}', 'hapus')->name('treatment_admin.hapus');
     Route::put('/treatment_admin/softdelete/{slug_link}', 'softdelete')->name('treatment_admin.softdelete');
+    Route::post('/treatment_admin/restore/{slug_link}', 'restore')->name('treatment_admin.restore');
+    Route::delete('/treatment_admin/permanent-delete/{id}', 'deletePermanent')->name('treatment_admin.deletePermanent');
 });

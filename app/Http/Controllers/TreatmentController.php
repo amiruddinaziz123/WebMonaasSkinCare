@@ -82,6 +82,43 @@ class TreatmentController extends Controller
         return redirect()->route('treatment_admin.admin')->with(['success' => 'Berhasil mengedit treatment !'])->with('image',$imageName);
     }
 
-   
+
+    //SOFTDELETE
+    public function hapus(string $slug_link) {
+        $treatments = Treatment::where('slug_link', '=', $slug_link)->withTrashed()->firstOrFail();
+        return view('treatment/treatment_admin/HapusTreatment', compact('treatments'));
+     }
+
+        public function softdelete(Request $request, $slug_link) {
+            $treatments = Treatment::where('slug_link', $slug_link)->withTrashed()->firstOrFail();
+            $treatments->delete();
+
+        return redirect()->route('treatment_admin.admin')->with(['success' => 'Berhasil menghapus treatment !']);
+     }
+
+        public function restore(Request $request, $slug_link) {
+            // Temukan produk yang telah dihapus
+            $treatments = Treatment::onlyTrashed()->where('slug_link', $slug_link)->firstOrFail();
+            // Memulihkan produk
+            $treatments->restore();
+
+            // Redirect ke halaman history dengan pesan sukses
+            return redirect()->route('treatment_admin.admin')->with(['success' => 'Berhasil memulihkan treatment !']);
+     }
+
+
+
+     //HAPUS PERMANENT
+        public function history() {
+            $treatments = Treatment::onlyTrashed()->get();
+            return view('treatment/treatment_admin/HistoryAdmin', compact('treatments'));
+     }
+
+        public function deletePermanent($id) : RedirectResponse {
+            $treatments = Product::withTrashed()->findOrFail($id);
+            $treatments->forceDelete();
+
+            return redirect()->route('treatment_admin.admin')->with(['success' => 'Berhasil menghapus treatment secara permanen!']);
+    }
 
 }
