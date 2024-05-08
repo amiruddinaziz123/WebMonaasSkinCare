@@ -49,8 +49,8 @@ Route::resource('/navbarAdmin', \App\Http\Controllers\navbarAdminController::cla
 // ROUTE UNTUK LOGIN SIGNUP DAN ADMINNYA
 Route::controller(LogsignController::class)->group(function () {
     Route::get('/logsignAdmin', 'index')->name('logsignAdmin.index');
-    Route::get('/login', 'indexLogin')->name('logsignAdmin.index');
-    Route::get('/signup', 'indexSignup')->name('logsignAdmin.index');
+    Route::get('/login', 'indexLogin')->name('login.index');
+    Route::get('/signup', 'indexSignup')->name('signupAdmin.index');
     Route::post('/logsignAdmin/edit', 'store')->name('logsignAdmin.store');
 });
 
@@ -73,6 +73,9 @@ Route::controller(ProfilController::class)->group(function () {
 });
 
 
+Route::get('/profilAdmin', function () {
+    return view('profilAdmin.index');
+});
 
 
 
