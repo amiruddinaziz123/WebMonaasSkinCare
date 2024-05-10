@@ -65,6 +65,7 @@ Route::controller(MasterController::class)->group(function () {
 Route::controller(AboutusController::class)->group(function () {
     Route::get('/aboutus', 'index')->name('aboutus.index');
     Route::get('/aboutusAdmin', 'indexAdmin')->name('aboutusAdmin.index');
+    Route::post('/aboutusAdmin/edit', 'store')->name('aboutusAdmin.store');
 });
 
 // ROUTE UNTUK PROFIL DAN ADMINNYA
