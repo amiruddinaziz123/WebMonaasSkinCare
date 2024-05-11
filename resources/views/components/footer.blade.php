@@ -1,7 +1,7 @@
 {{-- <link rel="stylesheet" href="{{ asset('css/footer.css') }}" /> --}}
 {{-- tambahkan ke <head> halaman yang ingin diberi component footer --}}
 
-    <div class="container-fluid p-5 overflow-hidden" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" style="background-color: #FF73D4">
+    <div class="container-fluid p-5 overflow-hidden" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" style="background-color: #D9005B">
         <div class="row">
             <div class="col-sm-12 col-md-1 col-lg-1 pe-0" data-aos="fade-right" data-aos-anchor-placement="bottom-bottom">
                 <div class="nav justify-content-end">
@@ -15,13 +15,13 @@
                         <div class="col-md-1 col-sm-2">
                             <img src="{{ asset('img/fb_logo.png') }}" width="30px"/>
                         </div>
-                        <div class="text-white col-md-11 col-sm-10 mt-2" style="display: contents"><a href="#">monaasskincare</a></div>
+                        <div class="text-white col-md-11 col-sm-10 mt-2" style="display: contents;"><a href="#">monaasskincare</a></div>
                     </div>
                     <div class="row mt-2">
                         <div class="col-md-1 col-sm-2">
                             <img src="{{ asset('img/ig_logo.png') }}" width="30px"/>
                         </div>
-                        <div class="text-white col-md-11 col-sm-10 mt-2" style="display: contents"><a href="#">monaasskincare</a></div>
+                        <div class="text-white col-md-11 col-sm-10 mt-2" style="display: contents;"><a href="#">monaasskincare</a></div>
                     </div>
                 </div>
                 
@@ -42,5 +42,5 @@
         </div>
         <div class="text-center text-white" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">© 2023 Monaas Skincare. Powered by Monaas Skincare</div>
     </div>
-    <div class="container-fluid overflow-hidden" id="spaceForBottom" style="background-color: #FF73D4">
+    <div class="container-fluid overflow-hidden" id="spaceForBottom" style="background-color: #A6003F ">
     </div>
