@@ -6,7 +6,11 @@ use Illuminate\Http\Request;
 
 use App\Models\logsign;
 
+use App\Models\account;
+
 use Illuminate\View\View;
+
+use Illuminate\Support\Str;
 
 class LogsignController extends Controller
 {
@@ -50,6 +54,37 @@ class LogsignController extends Controller
         ['success'=> 'Data Berhasil Ditambah!'] 
     ); 
     }
+
+    public function storeSignup(Request $request)
+{
+    $this->validate($request, [
+        'email_user' =>'required|min:8|unique:accounts,email_user', // Memeriksa keunikan di tabel akun untuk kolom email_user
+        'password_user' =>'required',
+        'username_user' =>'required',
+        'no_telp_user' =>'required',
+    ], [
+        'email_user.unique' => 'Email sudah terdaftar!!!', // Pesan kesalahan kustom untuk aturan keunikan
+    ]);
+
+    // Periksa apakah email sudah ada
+    $existingEmail = Account::where('email_user', $request->email_user)->exists();
+    if ($existingEmail) {
+        return redirect()->back()->withInput()->withErrors(['email_user' => 'Email sudah terdaftar!!!']);
+    }
+
+    $slug = Str::slug($request->username_user, '-');
+
+    Account::create([
+        'email_user' => $request->email_user,
+        'password_user' => $request->password_user,
+        'username_user' => $request->username_user,
+        'no_telp_user' => $request->no_telp_user,
+        'slug_link' => $slug,
+        'created_at' => now(),
+    ]);
+
+    return redirect('/')->with(['success' => 'Data Berhasil Ditambah!']);
+}
 
 
     // public function index(): View

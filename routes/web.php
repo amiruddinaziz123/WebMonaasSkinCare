@@ -55,6 +55,7 @@ Route::controller(LogsignController::class)->group(function () {
     Route::get('/login', 'indexLogin')->name('login.index');
     Route::get('/signup', 'indexSignup')->name('signupAdmin.index');
     Route::post('/logsignAdmin/edit', 'store')->name('logsignAdmin.store');
+    Route::post('/signup/add', 'storeSignup')->name('signup.store');
 });
 
 // ROUTE UNTUK MASTER ADMIN
