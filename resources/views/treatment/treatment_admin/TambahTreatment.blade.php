@@ -14,6 +14,7 @@
         <form method="POST" action="{{ route('treatment_admin.store') }}" enctype="multipart/form-data">
             @csrf
 
+            <br><br>
             <div class="mb-3 row mt-5">
                 <label for="foto" class="col-sm-2 col-form-label">Foto Treatment</label>
                 <div class="col-sm-10">

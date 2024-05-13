@@ -104,21 +104,21 @@ class TreatmentController extends Controller
 
             // Redirect ke halaman history dengan pesan sukses
             return redirect()->route('treatment_admin.admin')->with(['success' => 'Berhasil memulihkan treatment !']);
-     }
+      }
 
 
 
      //HAPUS PERMANENT
         public function history() {
             $treatments = Treatment::onlyTrashed()->get();
-            return view('treatment/treatment_admin/HistoryAdmin', compact('treatments'));
+            return view('treatment/treatment_admin/HistoryTreatment', compact('treatments'));
      }
 
         public function deletePermanent($id) : RedirectResponse {
             $treatments = Product::withTrashed()->findOrFail($id);
             $treatments->forceDelete();
 
-            return redirect()->route('treatment_admin.admin')->with(['success' => 'Berhasil menghapus treatment secara permanen!']);
+            return redirect()->route('treatment_admin.history')->with(['success' => 'Berhasil menghapus treatment secara permanen!']);
     }
 
 }

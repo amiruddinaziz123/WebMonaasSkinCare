@@ -22,7 +22,7 @@
                         <p>Tidak ada gambar yang tersedia</p>
                     @endif
 
-                    <input required type="file" name="foto_treatment" class="form-control @error('foto_treatment') is-invalid @enderror" id="foto"  value="{{ asset('storage/images/' . $treatments->foto_treatment)}}">
+                    {{-- <input required type="file" name="foto_treatment" class="form-control @error('foto_treatment') is-invalid @enderror" id="foto"  value="{{ asset('storage/images/' . $treatments->foto_treatment)}}"> --}}
                     @error('foto_treatment')
                     <div class="alert alert-danger mt-2">
                         {{ $message }}
@@ -72,7 +72,7 @@
 
             <div class="row mb-3 mt-5">
                 <div class="col">
-                        <button type="submit" name="aksi" value="hapus" class="btn btn-info"><i class="bi bi-save"></i>Hapus</button>
+                        <button type="submit" name="aksi" value="hapus" class="btn btn-info"> Hapus</button>
                         <a href=" {{ route('treatment_admin.admin') }} " type="button" class="btn btn-danger">Batal </a>
                 </div>
             </div>
