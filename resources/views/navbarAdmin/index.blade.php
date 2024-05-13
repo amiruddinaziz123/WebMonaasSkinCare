@@ -1,3 +1,6 @@
+@extends('layouts.admin')
+
+@section('content')
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -21,7 +24,8 @@
 
 </head>
 <body class="antialiased">
-    <div style="margin-top: 10vh;">
+    
+    <div style="margin-top: 10vh; margin-left: 260px;">
         <h3 class="ms-3">before</h3>
         <nav class="navbar navbar-expand-lg" data-aos="fade-down" id="data-background">
             <div class="container-fluid">
@@ -67,11 +71,11 @@
         </nav>
     </div>
 
-    <div class="d-flex justify-content-center">
+    <div class="d-flex justify-content-center" style="margin-left: 260px;">
         <img src="{{ asset('img/arrow-down.png') }}" alt="logoMonaas" width="40px" class="m-3">
     </div>
 
-    <div style="margin-top: none;">
+    <div style="margin-top: none; margin-left: 260px;">
         <h3 class="ms-3">after</h3>
         <nav class="navbar navbar-expand-lg gantiWarnaBG" data-aos="fade-down">
             <div class="container-fluid">
@@ -118,7 +122,7 @@
         </nav>
     </div>
 
-    <form action="{{ route('navbarAdmin.store') }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('navbarAdmin.store') }}" method="POST" enctype="multipart/form-data" style="margin-left: 260px;">
         @csrf
         <div class="border p-4" id="div-form">
             <div class="row g-3">
@@ -153,7 +157,7 @@
     </form>
     
 
-    <x-menu-admin/>
+    {{-- <x-menu-admin/> --}}
     
     
     
@@ -192,3 +196,4 @@
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
+@endsection

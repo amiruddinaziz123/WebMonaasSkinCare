@@ -201,7 +201,7 @@ for (let i = 0; i < jamBookingData.length; i++) {
 
     jk.addEventListener('mouseover', function() {
         if (jamBookingData[i].status == 0) {
-            this.style.backgroundColor = "#da82e9";
+            this.style.backgroundColor = "#FF1493";
         }
     });
 
@@ -218,11 +218,11 @@ for (let i = 0; i < jamBookingData.length; i++) {
 
     jk.addEventListener('click', function() {
         if (jamBookingData[i].status == 1) {
-            jk.style.backgroundColor = '#ff0000ab';
+            jk.style.backgroundColor = '#FF69B4';
             disabledClick();
         }else{
             jamDipilih.value = contentJamKe;
-            this.style.backgroundColor = "#da82e9";
+            this.style.backgroundColor = "#FF69B4";
             selectThisHour()
         }
     });

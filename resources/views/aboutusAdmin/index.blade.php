@@ -49,6 +49,7 @@
                 {{ $abouts->intro }}
               </p>
             </div>
+
             <hr style="margin-top: 70px"> 
 
             <div class="col-md-6 mt-5 mb-5">
@@ -85,6 +86,86 @@
 
         </div>
     </div>
+
+    <div class="col-sm-6 mt-5">
+      <h1 class="m-0 h2">Edit Tampilan</h1>
+    </div>
+    <form action="{{ route('aboutusAdmin.store') }}" method="POST"  enctype="multipart/form-data">
+      @csrf
+      <div class="form-group mt-4">
+        <label for="text">Intro</label>
+        <textarea class="form-control" id="text" name="intro" rows="3">{{ $abouts->intro }}</textarea>
+     </div>
+  
+     <div class="form-group mt-4">
+      <label for="text">Reason</label>
+      <textarea class="form-control" id="text" name="reason" rows="3">{{ $abouts->intro }}</textarea>
+   </div>
+  
+   <div class="form-group mt-4">
+    <label for="text" class="form-label d-block">Image</label>
+    <label for="formFile" class="form-label mb-3"><img src="/img/{{ $abouts->image }}" alt="" style="width: 200px"></label>
+    <input class="form-control" type="file" id="formFile" name="image">
+  </div>
+  
+   <div class="form-group mt-4">
+    <label for="text" class="form-label d-block">Icon 1</label>
+    <label for="formFile" class="form-label mb-3"><img src="/img/{{ $abouts->icon1 }}" alt="" style="width: 50px"></label>
+    <input class="form-control" type="file" id="formFile" name="icon1">
+  </div>
+  
+  <div class="form-group mt-4">
+    <label for="exampleFormControlInput1" class="form-label">Tittle 1</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" value="{{ $abouts->tittle_icon1 }}" name="tittle_icon1">
+  </div>
+  
+  <div class="form-group mt-4">
+    <label for="text">Isi 1</label>
+    <textarea class="form-control" id="text" name="isi_icon1" rows="3">{{ $abouts->isi_icon1 }}</textarea>
+  </div>
+  
+  <div class="form-group mt-4">
+    <label for="text" class="form-label d-block">Icon 2</label>
+    <label for="formFile" class="form-label mb-3"><img src="/img/{{ $abouts->icon2 }}" alt="" style="width: 50px"></label>
+    <input class="form-control" type="file" id="formFile" name="icon2">
+  </div>
+  
+  <div class="form-group mt-4">
+    <label for="exampleFormControlInput1" class="form-label">Tittle 2</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" value="{{ $abouts->tittle_icon2 }}" name="tittle_icon2">
+  </div>
+  
+  <div class="form-group mt-4">
+    <label for="text">Isi 2</label>
+    <textarea class="form-control" id="text" name="isi_icon2" rows="3">{{ $abouts->isi_icon2 }}</textarea>
+  </div>
+  
+  <div class="form-group mt-4">
+    <label for="text" class="form-label d-block">Icon 3</label>
+    <label for="formFile" class="form-label mb-3"><img src="/img/{{ $abouts->icon3 }}" alt="" style="width: 50px"></label>
+    <input class="form-control" type="file" id="formFile" name="icon3">
+  </div>
+  
+  <div class="form-group mt-4">
+    <label for="exampleFormControlInput1" class="form-label">Tittle 3</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" value="{{ $abouts->tittle_icon3 }}" name="tittle_icon3">
+  </div>
+  
+  <div class="form-group mt-4">
+    <label for="text">Isi 3</label>
+    <textarea class="form-control" id="text" name="isi_icon3" rows="3">{{ $abouts->isi_icon3 }}</textarea>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class="col-lg-6 text-center">
+      <button class="btn-primary btn-lg mb-5 text-center" type="submit" style="width: 120px;">Edit</button>
+    </div>
+  </div>
+    
+    </form>
+    
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>
 </html>

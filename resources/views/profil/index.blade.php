@@ -27,11 +27,12 @@
             </div>
             <div class="user-card-info">
               <h2>{{ $accounts->username_user }}</h2>
-              <p><span>Username:</span></p>
-              <p><span>Email:</span></p>
-              <p><span>No. Telp:</span> Web Developer</p>
+              <p><span>Email:</span>{{ $accounts->email_user }}</p>
+              <p><span>No. Telp:</span>{{ $accounts->no_telp_user }}</p>
+              <p><span>____________________________________________________</span></p>
             </div>
         </div>
+        
     </div>
 
 

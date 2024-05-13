@@ -34,6 +34,9 @@ Route::get('/aboutusAdmin', function () {
     return view('aboutusAdmin.index');
 });
 
+Route::get('/product', function () {
+    return view('product.index');
+});
 
 // untuk coba pake /posts
 Route::resource('/posts', \App\Http\Controllers\PostController::class);
@@ -49,9 +52,10 @@ Route::resource('/navbarAdmin', \App\Http\Controllers\navbarAdminController::cla
 // ROUTE UNTUK LOGIN SIGNUP DAN ADMINNYA
 Route::controller(LogsignController::class)->group(function () {
     Route::get('/logsignAdmin', 'index')->name('logsignAdmin.index');
-    Route::get('/login', 'indexLogin')->name('logsignAdmin.index');
-    Route::get('/signup', 'indexSignup')->name('logsignAdmin.index');
+    Route::get('/login', 'indexLogin')->name('login.index');
+    Route::get('/signup', 'indexSignup')->name('signupAdmin.index');
     Route::post('/logsignAdmin/edit', 'store')->name('logsignAdmin.store');
+    Route::post('/signup/add', 'storeSignup')->name('signup.store');
 });
 
 // ROUTE UNTUK MASTER ADMIN
@@ -65,6 +69,7 @@ Route::controller(MasterController::class)->group(function () {
 Route::controller(AboutusController::class)->group(function () {
     Route::get('/aboutus', 'index')->name('aboutus.index');
     Route::get('/aboutusAdmin', 'indexAdmin')->name('aboutusAdmin.index');
+    Route::post('/aboutusAdmin/edit', 'store')->name('aboutusAdmin.store');
 });
 
 // ROUTE UNTUK PROFIL DAN ADMINNYA
@@ -90,3 +95,6 @@ Route::controller(TreatmentController::class)->group(function () {
     Route::post('/treatment_admin/restore/{slug_link}', 'restore')->name('treatment_admin.restore');
     Route::delete('/treatment_admin/permanent-delete/{id}', 'deletePermanent')->name('treatment_admin.deletePermanent');
 });
+
+
+

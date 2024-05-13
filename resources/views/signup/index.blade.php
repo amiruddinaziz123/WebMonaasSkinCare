@@ -25,18 +25,25 @@
             {{-- <p class="ms-3 mt-4">Please enter your details</p> --}}
           </div>
           
-          <form>
+          <form action="{{ route('signup.store') }}" method="POST" class="needs-validation" novalidate>
+          @csrf
+          @error('email_user')
+          <div class="alert alert-danger" role="alert">
+            {{ $message }}
+          </div>
+          @enderror
+            
             <div class="input-group mb-3">
-                <input type="text" name="" id="" class="form-control form-control-lg bg-light fs-6" placeholder="Username" >
-              </div>
-            <div class="input-group mb-3">
-              <input type="email" name="" id="" class="form-control form-control-lg bg-light fs-6" placeholder="Email" >
+                <input type="text" name="username_user" id="" class="form-control form-control-lg bg-light fs-6" placeholder="Username" required>
             </div>
             <div class="input-group mb-3">
-              <input type="password" name="" id="" class="form-control form-control-lg bg-light fs-6" placeholder="Password" >
+              <input type="email" name="email_user" id="" class="form-control form-control-lg bg-light fs-6" placeholder="Email" required>
+          </div>
+            <div class="input-group mb-3">
+              <input type="password" name="password_user" id="" class="form-control form-control-lg bg-light fs-6" placeholder="Password" required>
             </div>
             <div class="input-group mb-3">
-              <input type="tel" class="form-control" id="telepon" placeholder="No. Telepon" required>
+              <input type="text" class="form-control" id="telepon" name="no_telp_user" placeholder="Nomor Telepon" required>
           </div>
             {{-- <div class="signup">
               <small>Don't have an account yet? <a href="" class="text-decoration-none">Sign Up</a></small>
@@ -64,10 +71,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
       document.getElementById("telepon").addEventListener("input", function() {
-        if (this.value.length > 15) {
-            this.value = this.value.slice(0, 15);
-        }
-    });
+          if (this.value.length > 15) {
+              this.value = this.value.slice(0, 15);
+          }
+      });
+  </script>
     </script>
   </body>
 </html>
