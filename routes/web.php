@@ -34,6 +34,9 @@ Route::get('/aboutusAdmin', function () {
     return view('aboutusAdmin.index');
 });
 
+Route::get('/product', function () {
+    return view('product.index');
+});
 
 // untuk coba pake /posts
 Route::resource('/posts', \App\Http\Controllers\PostController::class);
@@ -101,3 +104,6 @@ Route::controller(TreatmentController::class)->group(function () {
     Route::post('/treatment_admin/restore/{slug_link}', 'restore')->name('treatment_admin.restore');
     Route::delete('/treatment_admin/permanent-delete/{id}', 'deletePermanent')->name('treatment_admin.deletePermanent');
 });
+
+
+
