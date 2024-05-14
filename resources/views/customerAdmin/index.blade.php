@@ -39,8 +39,15 @@
                 <!-- /.col -->
               </div>
               <!-- /.row --> --}}
+
               <div class="col-12">
-                <table id="example"  class="table table-light" style="width: 100%;">
+                <a href="{{ route('masterAdmin.index') }}" class="btn btn-primary"> 
+                    <i class="bi bi-building-add"></i> Tambah Customer
+                </a>
+            </div>
+
+              <div class="col-12">
+                <table id="example"  class="table table-dark" style="width: 100%;">
                  <thead>
                      <tr>
                          <th data-priority="1">

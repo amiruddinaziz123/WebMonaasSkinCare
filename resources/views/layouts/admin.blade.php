@@ -200,13 +200,13 @@
                with font-awesome or any other icon font library -->
 
             <li class="nav-item">
-                <a href="/masterAdmin" class="nav-link">
-                    <i class="nav-icon fas fa-plus"></i>
-                    <p>
-                        Tambah User
-                    </p>
-                </a>
-            </li>
+              <a href="/customerAdmin" class="nav-link">
+                  <i class="nav-icon fas fa-user"></i>
+                  <p>
+                      Data Customer
+                  </p>
+              </a>
+          </li>
 
             <li class="nav-item">
                 <a href="/logsignAdmin" class="nav-link">

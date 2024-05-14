@@ -44,7 +44,7 @@ class MasterController extends Controller
         'created_at'             =>NOW()
     ]);
 
-    return redirect()->route('masterAdmin.index')->with(
+    return redirect()->route('customerAdmin.index')->with(
         ['success'=> 'Data Berhasil Ditambah!'] 
     ); 
     }
