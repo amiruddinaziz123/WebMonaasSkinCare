@@ -9,6 +9,7 @@ use Illuminate\View\View;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
 use App\Models\Treatment;
+use Illuminate\Http\RedirectResponse;
 
 class TreatmentController extends Controller
 {
@@ -115,7 +116,7 @@ class TreatmentController extends Controller
      }
 
         public function deletePermanent($id) : RedirectResponse {
-            $treatments = Product::withTrashed()->findOrFail($id);
+            $treatments = Treatment::withTrashed()->findOrFail($id);
             $treatments->forceDelete();
 
             return redirect()->route('treatment_admin.history')->with(['success' => 'Berhasil menghapus treatment secara permanen!']);

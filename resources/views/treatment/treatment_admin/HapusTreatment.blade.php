@@ -53,7 +53,7 @@
                 </div>
             </div>
 
-
+{{--
             <div class="form-group mb-3 row">
                 <label for="status" class="font-weight-bold col-sm-2 col-form-label">Status Publish</label>
                 <div class="col-sm-10">
@@ -68,10 +68,10 @@
                     </div>
                     @enderror
                 </div>
-            </div>
+            </div> --}}
 
             <div class="row mb-3 mt-5">
-                <div class="col">
+                <div class="col pinggir">
                         <button type="submit" name="aksi" value="hapus" class="btn btn-info"> Hapus</button>
                         <a href=" {{ route('treatment_admin.admin') }} " type="button" class="btn btn-danger">Batal </a>
                 </div>
@@ -83,5 +83,11 @@
 
 
 </div>
+
+<style>
+    .pinggir{
+        text-align: right;
+    }
+</style>
 
 @endsection

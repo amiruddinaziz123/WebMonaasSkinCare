@@ -65,7 +65,7 @@
             </div>
 
             <div class="row mb-3 mt-5">
-                <div class="col">
+                <div class="col pinggir">
                         <button type="submit" name="aksi" value="edit" class="btn btn-success"><i class="bi bi-save"></i> Simpan</button>
                         <button type="reset" name="aksi" value="reset" class="btn btn-secondary"><i class="bi bi-repeat"></i> Reset </button>
                         <a href=" {{ route('treatment_admin.admin') }} " type="button" class="btn btn-danger"><i class="bi bi-arrow-left-square"></i> Batal </a>
@@ -78,5 +78,11 @@
 
 
 </div>
+
+<style>
+    .pinggir {
+        text-align: right;
+    }
+</style>
 
 @endsection
