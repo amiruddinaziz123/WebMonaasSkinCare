@@ -25,7 +25,7 @@
             {{-- <p class="ms-3 mt-4">Please enter your details</p> --}}
           </div>
           
-          <form action="{{ route('signup.store') }}" method="POST" class="needs-validation" novalidate>
+          <form action="{{ route('signup.store') }}" method="POST" class="needs-validation" autocomplete="off" novalidate>
           @csrf
           @error('email_user')
           <div class="alert alert-danger" role="alert">
@@ -43,8 +43,8 @@
               <input type="password" name="password_user" id="" class="form-control form-control-lg bg-light fs-6" placeholder="Password" required>
             </div>
             <div class="input-group mb-3">
-              <input type="text" class="form-control" id="telepon" name="no_telp_user" placeholder="Nomor Telepon" required>
-          </div>
+              <input type="number" class="form-control" id="telepon" name="no_telp_user" placeholder="Nomor Telepon" required>
+            </div>
             {{-- <div class="signup">
               <small>Don't have an account yet? <a href="" class="text-decoration-none">Sign Up</a></small>
             </div> --}}

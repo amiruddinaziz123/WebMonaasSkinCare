@@ -24,6 +24,12 @@ class MasterController extends Controller
         return view('customerAdmin.index', compact('customers'));
     }
 
+    public function indexEdit(string $slug_link): View
+    {
+        $customers = account::where('slug_link','=', $slug_link)->firstorfail();
+        return view('customerAdmin.edit', compact('customers'));
+    }
+
     public function store(request $request)
     {
         $this->validate($request,[
@@ -48,4 +54,26 @@ class MasterController extends Controller
         ['success'=> 'Data Berhasil Ditambah!'] 
     ); 
     }
+
+    public function destroy($slug)
+    {
+    // Mencari akun berdasarkan slug
+    $account = account::where('slug_link', $slug)->first();
+
+    // Jika akun tidak ditemukan, tampilkan pesan error
+    if (!$account) {
+        return redirect()->route('customerAdmin.index')->with(
+            ['error' => 'Data tidak ditemukan!']
+        );
+    }
+
+    // Menghapus akun
+    $account->delete();
+
+    // Mengarahkan kembali ke halaman index dengan pesan sukses
+    return redirect()->route('customerAdmin.index')->with(
+        ['success' => 'Data Berhasil Dihapus!']
+    );
+    }
+
 }
