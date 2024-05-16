@@ -16,7 +16,7 @@
                     @else
                         <p>Tidak ada gambar yang tersedia</p>
                  @endif
-                    <input required type="file" name="foto_treatment" class="form-control @error('foto_treatment') is-invalid @enderror" id="foto"  value="{{ asset('storage/images/' . $treatments->foto_treatment)}}">
+                    <input required type="file" name="foto_treatment" class="form-control @error('foto_treatment') is-invalid @enderror" id="foto"  value="{{$treatments->foto_treatment}}">
                     @error('foto_treatment')
                     <div class="alert alert-danger mt-2">
                         {{ $message }}
@@ -48,11 +48,11 @@
             </div>
 
 
-            {{-- <div class="form-group mb-3 row">
+            <div class="form-group mb-3 row">
                 <label for="status" class="font-weight-bold col-sm-2 col-form-label">Status Publish</label>
                 <div class="col-sm-10">
                     <select required name="status_publish" id="status" class="form-control @error('status_publish') is-invalid @enderror">
-                        <option value=""></option>
+                        <option selected>{{$treatments->status_publish}}</option>
                         <option value="Draft">Draft</option>
                         <option value="Publish">Publish</option>
                     </select>
@@ -62,7 +62,7 @@
                     </div>
                     @enderror
                 </div>
-            </div> --}}
+            </div>
 
             <div class="row mb-3 mt-5">
                 <div class="col pinggir">
