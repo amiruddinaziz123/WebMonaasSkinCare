@@ -23,9 +23,9 @@
     <div class="card">
       <div class="card-body">
          
-         <form action="{{ route('masterAdmin.store') }}" method="POST" autocomplete="off" class="needs-validation" novalidate>
+         <form action="{{ route('customerAdmin.update', $customers->slug_link) }}" method="POST" autocomplete="off" class="needs-validation" novalidate>
              @csrf
-            
+             @method('PUT')
             <div class="mb-3 row">
                <label for="nama" class="col-sm-2 col-form-label">Username</label>
                <div class="col-sm-10">
