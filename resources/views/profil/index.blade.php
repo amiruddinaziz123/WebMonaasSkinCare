@@ -35,7 +35,32 @@
         
     </div>
 
+    <script>
+      // mempasing data 
+      const dataNavbar = @json($navbars);
+      console.log(dataNavbar);
 
+      const beforeJudul = document.getElementById('Judul');
+      let dataTerakir = 0;
+      for (let item = 0; item < dataNavbar.length; item++) {
+          if (item > dataTerakir) {
+              dataTerakir = item;
+          }
+      }
+      beforeJudul.innerHTML = beforeJudul.innerHTML + dataNavbar[dataTerakir].judul;
+
+      const icon = document.getElementById('icon');
+      let iconName = dataNavbar[dataTerakir].image;
+  
+      console.log(iconName);
+      let assetUrl = `{{ asset('storage/img/${iconName}') }}`;
+  
+      icon.setAttribute('src', assetUrl);
+  
+      const dataBackground = document.getElementById('data-background');
+  
+      dataBackground.style.backgroundColor = dataNavbar[dataTerakir].background_color;
+  </script>
     {{-- script --}}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
@@ -45,6 +70,7 @@
 <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
 
 </body>
 </html>
