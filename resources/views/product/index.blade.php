@@ -11,57 +11,58 @@
     <link href="https://fonts.googleapis.com/css2?family=Katibeh&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}" />
-    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
-    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <style>
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Katibeh&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
-#custom-search-input {
-    margin-top: 10px;
-    padding: 0;
+body{
+    overflow-x: hidden;
 }
 
-.input-group {
-    margin: auto; /* Menengahkan secara horizontal */
-    max-width: 400px; /* Sesuaikan dengan lebar yang Anda inginkan */
-}
-
-
- 
-    #custom-search-input .search-query {
-        padding-right: 3px;
-        padding-right: 4px \9;
-        padding-left: 3px;
-        padding-left: 4px \9;
-        /* IE7-8 doesn't have border-radius, so don't indent the padding */
- 
-        margin-bottom: 0;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        border-radius: 3px;
+.searchbar{
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 60px;
+    background: var(--ungu, #E681FF);
+    border-radius: 30px;
+    padding: 10px;
     }
- 
-    #custom-search-input button {
-        border: 0;
-        background: none;
-        /** belows styles are working good */
-        padding: 2px 5px;
-        margin-top: 2px;
-        position: relative;
-        left: -28px;
-        /* IE7-8 doesn't have border-radius, so don't indent the padding */
-        margin-bottom: 0;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        border-radius: 3px;
-        color:#d90f5c;
+
+    .search_input{
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color:transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
     }
- 
-    .search-query:focus + button {
-        z-index: 3;   
+
+    .searchbar:hover > .search_input{
+    padding: 0 10px;
+    width: 450px;
+    caret-color:#ED1E78;
+    transition: width 0.4s linear;
+    }
+
+    .searchbar:hover > .search_icon{
+    background: #ED1E78;
+    color: #ED1E78c;
+    }
+
+    .search_icon{
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:white;
+    text-decoration:none;
     }
 
     /*GAMBAR*/
@@ -85,7 +86,7 @@
 }
 
 .card{
-    margin: 0 .5em;
+    margin: 1em;
     border-radius: 20px;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.3);
 }
@@ -100,7 +101,7 @@
 .card img { border-radius: 20px 20px 0 0; }
 
 /*TEXT*/
-h3 {
+h2 {
     font-family: Katibeh;
     font-size: 35px;
 }
@@ -162,24 +163,19 @@ p {
   
 
    {{-- search --}}
-  <div class="container">
-    <div class="row mb-5 text-center align-items-center justify-content-center">
-             <div id="custom-search-input">
-                              <div class="input-group col-md-4">
-                                  <input type="text" class="  search-query form-control" placeholder="Search" />
-                                  <span class="input-group-btn">
-                                      <button class="btn btn-danger" type="button">
-                                          <span class=" glyphicon glyphicon-search"></span>
-                                      </button>
-                                  </span>
-                              </div>
-                          </div>
+   <div class="container h-100">
+    <div class="d-flex justify-content-center h-100">
+      <div class="searchbar">
+        <input class="search_input" type="text" name="" placeholder="Search...">
+        <a href="#" class="search_icon"><i class="fas fa-search"></i></a>
+      </div>
     </div>
   </div>
   {{-- end search --}}
 
   {{-- card --}}
-  <h3>Product</h3>
+
+  <h2 style="margin-left: 40px;">Product</h2>
 
   <div class="row">
               <div class="col">
@@ -216,7 +212,9 @@ p {
                             </div>
                             <div class="buy">
                                 <small>
-                                    <button class="btn btn-primary rounded">Buy</button>
+                                    <button class="btn btn-primary rounded" style="border-radius: 25px;
+                                    border: 1.5px solid #000;
+                                    background: var(--ungu, #E681FF);">Buy</button>
 
                                 </small>
                             </div>
@@ -238,7 +236,9 @@ p {
                                 </div>
                                 <div class="buy">
                                     <small>
-                                        <button class="btn btn-primary rounded">Buy</button>
+                                        <button class="btn btn-primary rounded" style="border-radius: 25px;
+                                        border: 1.5px solid #000;
+                                        background: var(--ungu, #E681FF);">Buy</button>
 
                                     </small>
                                 </div>
