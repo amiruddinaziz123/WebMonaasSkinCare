@@ -13,6 +13,10 @@ use Illuminate\Http\RedirectResponse;
 
 class TreatmentController extends Controller
 {
+    public function index() {
+        $treatments = Treatment::all();
+        return view('treatment/index', compact('treatments'));
+    }
     public function admin() {
         $treatments = Treatment::all();
         return view('treatment/treatment_admin/AdmTreatment', compact('treatments'));

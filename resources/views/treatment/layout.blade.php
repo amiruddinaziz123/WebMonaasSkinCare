@@ -70,14 +70,6 @@
                     </a>
                 </div>
 
-
-                <!-- <form class="d-flex" role="search">
-
-                <input class="form-control" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-primary bg-dark" type="submit"><i class="bi bi-search"></i></button>
-                <i class="bi bi-house-door"></i>
-
-                 </form> -->
             </div>
         </nav>
 

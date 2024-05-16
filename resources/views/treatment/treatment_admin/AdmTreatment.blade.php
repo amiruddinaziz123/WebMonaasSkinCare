@@ -3,7 +3,7 @@
 @section('content')
 
 
-    <div class="col-12"><h3>Facial Treatment</h3></div>
+    <div class="col-12 tulisan"><h3>Facial Treatment</h3></div>
 
     {{-- BUTTON --}}
     <div class="row mb-3 mt-5">
@@ -16,7 +16,7 @@
 
     <!-- CARD -->
 
-    <div class="row">
+    <div class="row kartu">
         @foreach ($treatments as $treat )
                 <div class="col-4">
                 <div class="card my-3 jarak" id="jarakslice">
@@ -46,7 +46,7 @@
         transition: all 0.3s;
     }
 
-    .row{
+    .row.kartu{
         margin-left: 5%;
     }
 
@@ -64,7 +64,7 @@
         margin-top: 2%;
     }
 
-    h3{
+    .tulisan h3{
         margin-top: 6%;
         margin-bottom: 5%;
         text-align: center;
@@ -83,6 +83,25 @@
     .pinggir{
         text-align: right;
     }
+
+
+    @media only screen and (max-width: 990px) {
+        .row {
+            display: block;
+            width: 75%;
+            margin: auto;
+        }
+        .row .card:hover {
+            scale: unset;
+        }
+        .row .col-4 {
+            width: 100%;
+        }
+        .container-fluid .img img, .container-fluid .icon {
+            margin-right: 0;
+        }
+    }
+
 </style>
 
 

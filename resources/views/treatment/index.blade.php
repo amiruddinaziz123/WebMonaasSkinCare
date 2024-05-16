@@ -37,44 +37,67 @@
 <h3 class="subjudul">Facial Treatment</h3>
 
 <div class="row">
-            <div class="col">
-            <div class="card my-3">
-                <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
+    @foreach ($treatments as $treat)
+        <div class="col-4">
+            <div class="card my-3 jarak" id="jarakslice">
+                <img src="{{ asset('storage/images/' . $treat->foto_treatment)}}" class="card-img-top" alt="...">
                 <div class="card-body">
-                    <h5 class="card-title">Laser Treatment</h5>
-                    <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
+                    <h5 class="card-title" style="font-size: 25px;">{{ $treat->nama_treatment }}</h5>
+                    <p class="card-text">{{ $treat->description_treatment }} </p>
                     <a href="#" class="btn b">Booking</a>
                 </div>
             </div>
         </div>
-
-            <div class="col">
-                <div class="card my-3">
-                    <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Laser Treatment</h5>
-                        <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
-                        <a href="#" class="btn b">Booking</a>
-                    </div>
-                </div>
-                </div>
-
-
-                <div class="col">
-                    <div class="card my-3">
-                        <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Laser Treatment</h5>
-                            <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
-                            <a href="#" class="btn b">Booking</a>
-                        </div>
-                    </div>
-                    </div>
-</div>
+    @endforeach
 
 <br><br>
 
+<style>
+    #content {
+        width: 100%;
+        padding: 20px;
+        min-height: 100vh;
+        transition: all 0.3s;
+    }
 
+    .row{
+        margin-left: 5%;
+    }
+
+    .card{
+        height: 530px;
+        border-radius: 20px;
+    }
+
+    .card-img-top{
+        height: 300px;
+        object-fit: cover;
+    }
+
+    .button_db{
+        margin-top: 2%;
+    }
+
+    h3{
+        margin-top: 4%;
+        margin-bottom: 3%;
+        text-align: center;
+    }
+
+    .card-title{
+        height: 40px;
+    }
+
+    .card-text {
+        height: 93px;
+        text-align: center;
+        align-content: center;
+    }
+
+    .pinggir{
+        text-align: right;
+    }
+</style>
 
 
 
