@@ -45,7 +45,7 @@ class navbarAdminController extends Controller
         // Simpan data ke database
         Navbar::create($data); // Pastikan model navbar disesuaikan dengan penamaan tabel Anda
 
-        return redirect()->route('navbarAdmin.index');
+        return redirect()->route('navbarAdmin.index', 'profil.index');
     }
 
 }
