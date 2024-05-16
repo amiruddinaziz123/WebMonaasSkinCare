@@ -53,7 +53,8 @@
       let iconName = dataNavbar[dataTerakir].image;
   
       console.log(iconName);
-      let assetUrl = `{{ asset('storage/img/${iconName}') }}`;
+      let assetUrl = `/img/${iconName}`;
+      
   
       icon.setAttribute('src', assetUrl);
   
