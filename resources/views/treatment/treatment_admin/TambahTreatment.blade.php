@@ -67,7 +67,7 @@
             </div>
 
             <div class="row mb-3 mt-5">
-                <div class="col">
+                <div class="col pinggir">
                         {{-- <button type="submit" name="aksi" value="edit" class="btn btn-success"><i class="bi bi-save"></i> Simpan</button> --}}
                         <button type="submit" name="aksi" value="add" class="btn btn-primary"><i class="bi bi-plus-square"></i> Tambah</button>
                         <button type="reset" name="aksi" value="reset" class="btn btn-secondary"><i class="bi bi-repeat"></i> Reset</button>
@@ -79,5 +79,11 @@
 
 
 </div>
+
+<style>
+    .pinggir{
+        text-align: right;
+    }
+</style>
 
 @endsection

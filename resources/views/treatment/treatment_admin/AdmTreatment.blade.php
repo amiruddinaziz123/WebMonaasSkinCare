@@ -3,25 +3,18 @@
 @section('content')
 
 
+    <div class="col-12"><h3>Facial Treatment</h3></div>
 
-    <div class="button_db row text-center">
-    <div class="col-4">
-        <a href="{{ route('treatment_admin.admin') }}" class="btn btn-success btn-lg">Treatment</a>
+    {{-- BUTTON --}}
+    <div class="row mb-3 mt-5">
+        <div class="col pinggir">
+            <a href="{{ route('treatment_admin.admin') }}" class="btn btn-success btn-lg">Treatment</a>
+            <a href="{{ route('treatment_admin.create') }}" class="btn btn-primary btn-lg"> Tambah</a>
+            <a href="{{ route('treatment_admin.history') }}" class="btn btn-warning btn-lg">History</a>
+        </div>
     </div>
-    <div class="col-4">
-        <a href="{{ route('treatment_admin.create') }}" class="btn btn-primary btn-lg"><i class="bi bi-square-plus"></i></i> Tambah</a>
-    </div>
-    <div class="col-4">
-        <a href="{{ route('treatment_admin.history') }}" class="btn btn-warning btn-lg">History</a>
-    </div>
-    </div>
-
-    <br>
-    <br>
 
     <!-- CARD -->
-
-    <h3>Facial Treatment</h3>
 
     <div class="row">
         @foreach ($treatments as $treat )
@@ -59,6 +52,7 @@
 
     .card{
         height: 530px;
+        border-radius: 20px;
     }
 
     .card-img-top{
@@ -67,11 +61,11 @@
     }
 
     .button_db{
-        margin-top: 8%;
+        margin-top: 2%;
     }
 
     h3{
-        margin-top: 2%;
+        margin-top: 6%;
         margin-bottom: 5%;
         text-align: center;
     }
@@ -86,6 +80,9 @@
         align-content: center;
     }
 
+    .pinggir{
+        text-align: right;
+    }
 </style>
 
 

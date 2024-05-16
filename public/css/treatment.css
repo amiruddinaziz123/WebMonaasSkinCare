@@ -7,7 +7,7 @@
     margin-left: 40px;
 }
 
-.navbar-brand{
+H1.navbar-brand{
     color: white;
     font-family: Katibeh;
     font-size: 50px;
@@ -52,17 +52,23 @@
 }
 
 
-.b {
+.b.btn {
     border-radius: 50px;
-    background-color: #E681FF;
+    background-color: #FFC2D1;
     color: black;
     font-family: Poppins;
 }
 
 .card img { border-radius: 20px 20px 0 0; }
 
+.card.my-3{
+    border-radius: 20px;
+}
+
+/* .col {border-radius: 20px;} */
+
 /*TEXT*/
-h3 {
+h3.subjudul {
     font-family: Katibeh;
     font-size: 35px;
 }

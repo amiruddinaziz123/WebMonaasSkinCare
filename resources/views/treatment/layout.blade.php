@@ -47,7 +47,7 @@
 <body>
 
     <!-- NAVBAR -->
-     <nav class="navbar p-3" style="background-color: #DF6F9E";>
+     <nav class="navbar p-3" style="background-color: #FEACC4";>
             <div class="container-fluid">
 
             <div class="col-md-7">

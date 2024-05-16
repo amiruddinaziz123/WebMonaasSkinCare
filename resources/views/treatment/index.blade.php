@@ -31,11 +31,10 @@
 
 <br>
 <br>
-<br>
 
 <!-- CARD -->
 
-<h3>Facial Treatment</h3>
+<h3 class="subjudul">Facial Treatment</h3>
 
 <div class="row">
             <div class="col">
@@ -75,79 +74,9 @@
 
 <br><br>
 
-<h3>Facial Treatment</h3>
-<div class="row">
-            <div class="col">
-            <div class="card my-3">
-                <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Laser Treatment</h5>
-                    <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
-                    <a href="#" class="btn">Booking</a>
-                </div>
-            </div>
-        </div>
-
-            <div class="col">
-                <div class="card my-3">
-                    <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Laser Treatment</h5>
-                        <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
-                        <a href="#" class="btn">Booking</a>
-                    </div>
-                </div>
-                </div>
 
 
-                <div class="col">
-                    <div class="card my-3">
-                        <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Laser Treatment</h5>
-                            <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
-                            <a href="#" class="btn">Booking</a>
-                        </div>
-                    </div>
-                    </div>
-</div>
 
-<h3>Facial Treatment</h3>
-<div class="row">
-            <div class="col">
-            <div class="card my-3">
-                <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Laser Treatment</h5>
-                    <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
-                    <a href="#" class="btn">Booking</a>
-                </div>
-            </div>
-        </div>
-
-            <div class="col">
-                <div class="card my-3">
-                    <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Laser Treatment</h5>
-                        <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
-                        <a href="#" class="btn">Booking</a>
-                    </div>
-                </div>
-                </div>
-
-
-                <div class="col">
-                    <div class="card my-3">
-                        <img src="{{ asset('img/gambar1.jpg') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Laser Treatment</h5>
-                            <p class="card-text">Perawatan untuk mengencangkan kulit wajah dan mengurangi keriput di wajah.</p>
-                            <a href="#" class="btn">Booking</a>
-                        </div>
-                    </div>
-                    </div>
-</div>
 
 
 @endsection
