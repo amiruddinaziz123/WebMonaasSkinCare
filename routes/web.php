@@ -62,8 +62,8 @@ Route::controller(LogsignController::class)->group(function () {
 Route::controller(MasterController::class)->group(function () {
     Route::get('/masterAdmin', 'index')->name('masterAdmin.index');
     Route::get('/customerAdmin', 'indexCustomer')->name('customerAdmin.index');
-    Route::get('/customerAdmin/edit{slug_link}', 'indexEdit')->name('customerAdmin.edit');
-    Route::put('/customerAdmin/edit{slug_link}', 'update')->name('customerAdmin.update');
+    Route::get('/customerAdmin/edit/{slug_link}', 'indexEdit')->name('customerAdmin.edit');
+    Route::put('/customerAdmin/edit/{slug_link}', 'update')->name('customerAdmin.update');
     Route::post('/masterAdmin/add', 'store')->name('masterAdmin.store');
     Route::delete('/customerAdmin/{slug}', 'destroy')->name('customerAdmin.destroy');
 });

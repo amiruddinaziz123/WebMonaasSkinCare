@@ -24,71 +24,50 @@
       <div class="card-body">
          
          <form action="{{ route('customerAdmin.update', $customers->slug_link) }}" method="POST" autocomplete="off" class="needs-validation" novalidate>
-             @csrf
-             @method('PUT')
+            @csrf
+            @method('PUT')
+            <!-- Field Form -->
             <div class="mb-3 row">
-               <label for="nama" class="col-sm-2 col-form-label">Username</label>
-               <div class="col-sm-10">
-                  <input type="text" class="form-control" id="nama" name="username_user" value="{{ $customers->username_user }}" required>
-               </div>
+                <label for="nama" class="col-sm-2 col-form-label">Username</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control @error('username_user') is-invalid @enderror" id="nama" name="username_user" value="{{ old('username_user', $customers->username_user) }}" required>
+                    @error('username_user')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
             </div>
-
             <div class="mb-3 row">
-               <label for="email" class="col-sm-2 col-form-label">Email</label>
-               <div class="col-sm-10">
-                  <input type="email" class="form-control" id="email" name="email_user" value="{{ $customers->email_user }}" required>
-               </div>
+                <label for="email" class="col-sm-2 col-form-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control @error('email_user') is-invalid @enderror" id="email" name="email_user" value="{{ old('email_user', $customers->email_user) }}" required>
+                    @error('email_user')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
             </div>
-
             <div class="mb-3 row">
-               <label for="nisn" class="col-sm-2 col-form-label">Password</label>
-               <div class="col-sm-10">
-                  <input type="text" class="form-control" id="nisn" name="password_user" value="{{ $customers->password_user }}" required> 
-               </div>
+                <label for="nisn" class="col-sm-2 col-form-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control @error('password_user') is-invalid @enderror" id="nisn" name="password_user" value="{{ old('password_user', $customers->password_user) }}" required>
+                    @error('password_user')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
+                </div>
             </div>
-
             <div class="mb-3 row">
                 <label for="telepon" class="col-sm-2 col-form-label">No. Telepon</label>
                 <div class="col-sm-10">
-                    <input type="number" class="form-control" id="telepon" name="no_telp_user" value="{{ $customers->no_telp_user }}" required>
+                    <input type="number" class="form-control @error('no_telp_user') is-invalid @enderror" id="telepon" name="no_telp_user" value="{{ old('no_telp_user', $customers->no_telp_user) }}" required>
+                    @error('no_telp_user')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror
                 </div>
             </div>
-
-
-            {{-- <div class="mb-3 row">
-               <label for="angkatan" class="col-sm-2 col-form-label">Tahun Angkatan</label>
-               <div class="col-sm-10">
-                 <select class="form-control" name="angkatan" id="jurusan" required>
-                     <option>Pilih Angkatan</option>
-                     @foreach ($tahun_angkatan as $ta)
-                         <option value="{{ $ta->tahun_angkatan }}">
-                             {{ $ta->tahun_angkatan }}
-                         </option>
-                     @endforeach
-                  </select>
-                 </select>
-               </div>
-            </div>
-
-            <div class="mb-3 row">
-               <label for="jurusan" class="col-sm-2 col-form-label">Jurusan</label>
-               <div class="col-sm-10">
-                  <select class="form-control" name="jurusan" id="jurusan" required>
-                  <option>Pilih Jurusan</option>
-                     @foreach ($kode_jurusan as $kj)
-                         <option value="{{ $kj->kode_jurusan }}">
-                             {{ $kj->kode_jurusan }}
-                         </option>
-                     @endforeach
-                  </select>
-               </div>
-            </div> --}}
-
             <div class="col-12">
-               <input type="submit" name="simpan" value="Edit" class="btn btn-primary">
+                <input type="submit" name="simpan" value="Edit" class="btn btn-primary">
             </div>
-
-         </form>
+        </form>
+        
 </div>
 
 <style>
