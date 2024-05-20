@@ -55,29 +55,31 @@ class MasterController extends Controller
     ); 
     }
 
-    public function update(request $request, string $slug_link)
-    {
-        $this->validate($request,[
-        'email_user' =>'required|min:8|unique:accounts',
-        'password_user'  =>'required',
-        'username_user'  =>'required',
-        'no_telp_user'  =>'required',
-    ]);
-    $slug = str::slug($request->kategori, '-');
-    $customers = account::where('slug_link', $slug_link)->firstorfail();
-    $customers->update ([
-        'email_user'        =>$request->email_user,
-        'password_user'     =>$request->password_user,
-        'username_user'     =>$request->username_user,
-        'no_telp_user'      =>$request->no_telp_user,
-        'slug_link'         =>$slug,
-        'updated_at'        =>NOW()
+    public function update(Request $request, string $slug_link)
+{
+    $customers = account::where('slug_link', $slug_link)->firstOrFail();
+
+    $this->validate($request, [
+        'email_user' => 'required|min:8|unique:accounts,email_user,' . $customers->id,
+        'password_user' => 'required',
+        'username_user' => 'required',
+        'no_telp_user' => 'required',
     ]);
 
-    return redirect()->route('customerAdmin.index')->with(
-        ['success'=> 'Data Berhasil Ditambah!'] 
-    ); 
-    }
+    $slug = Str::slug($request->username_user, '-');
+
+    $customers->update([    
+        'email_user' => $request->email_user,
+        'password_user' => $request->password_user,
+        'username_user' => $request->username_user,
+        'no_telp_user' => $request->no_telp_user,
+        'slug_link' => $slug,
+        'updated_at' => now()
+    ]);
+
+    return redirect()->route('customerAdmin.index')->with('success', 'Data Berhasil Diubah!');
+}
+
 
     public function destroy($slug)
     {
