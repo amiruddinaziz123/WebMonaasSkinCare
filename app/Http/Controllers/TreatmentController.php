@@ -31,6 +31,7 @@ class TreatmentController extends Controller
         // Validasi data
         $request->validate([
             'foto_treatment' => 'image|mimes:jpeg,png,jpg',
+            'harga_treatment' => 'numeric',
             'slug_link' => 'unique:products,slug_link',
         ]);
 
@@ -44,6 +45,7 @@ class TreatmentController extends Controller
             'foto_treatment' => $imageName,
             'nama_treatment' => $request->input('nama_treatment'),
             'description_treatment' => $request->input('description_treatment'),
+            'harga_treatment' => $request->harga_treatment,
             'status_publish' => $request->input('status_publish'),
             'slug_link' => $slug,
         ]);
@@ -66,6 +68,7 @@ class TreatmentController extends Controller
         // validate form
         $request->validate( [
                 'foto_treatment' => 'image|mimes:jpeg,png,jpg',
+                'harga_treatment' => 'numeric',
                 'slug_link' => 'unique:products,slug_link',
         ]);
 
@@ -80,6 +83,7 @@ class TreatmentController extends Controller
             'foto_treatment' => $imageName,
             'nama_treatment' => $request->input('nama_treatment'),
             'description_treatment' => $request->input('description_treatment'),
+            'harga_treatment' => $request->harga_treatment,
             'status_publish' => $request->input('status_publish'),
             'slug_link' => $slug,
         ]);

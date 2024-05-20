@@ -44,6 +44,7 @@
                 <div class="card-body">
                     <h5 class="card-title" style="font-size: 25px;">{{ $treat->nama_treatment }}</h5>
                     <p class="card-text">{{ $treat->description_treatment }} </p>
+                    <p class="card-harga"><b>Rp.  </b>{{ $treat->harga_treatment}}</p>
                     <a href="#" class="btn b">Booking</a>
                 </div>
             </div>
@@ -65,7 +66,7 @@
     }
 
     .card{
-        height: 530px;
+        height: 550px;
         border-radius: 20px;
     }
 
@@ -85,11 +86,12 @@
     }
 
     .card-title{
-        height: 40px;
+        height: 25px;
+        margin-bottom: 5%;
     }
 
-    .card-text {
-        height: 93px;
+    p.card-text {
+        height: 80px;
         text-align: center;
         align-content: center;
     }

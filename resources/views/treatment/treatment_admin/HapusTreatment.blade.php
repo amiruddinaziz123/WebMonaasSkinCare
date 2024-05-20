@@ -53,6 +53,19 @@
                 </div>
             </div>
 
+
+        <div class="form-group mb-3 row">
+            <label for="harga" class="font-weight-bold col-sm-2 col-form-label">Harga</label>
+            <div class="col-sm-10">
+                <input type="number" class="form-control @error('harga_treatment') is-invalid @enderror" name="harga_treatment" value="{{$treatments->harga_treatment}}" placeholder="Contoh: 100">
+                @error('harga_treatment')
+                <div class="alert alert-danger mt-2">
+                {{ $message }}
+                </div>
+            @enderror
+            </div>
+        </div>
+
 {{--
             <div class="form-group mb-3 row">
                 <label for="status" class="font-weight-bold col-sm-2 col-form-label">Status Publish</label>

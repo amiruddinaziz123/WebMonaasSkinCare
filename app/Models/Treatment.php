@@ -20,6 +20,7 @@ class Treatment extends Model
         'foto_treatment',
         'nama_treatment',
         'description_treatment',
+        'harga_treatment',
         'status_publish',
         'slug_link',
     ];

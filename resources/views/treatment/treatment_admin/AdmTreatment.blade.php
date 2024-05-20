@@ -24,7 +24,7 @@
                     <div class="card-body">
                         <h5 class="card-title" style="font-size: 25px;">{{ $treat->nama_treatment }}</h5>
                         <p class="card-text">{{ $treat->description_treatment }} </p>
-
+                        <p class="card-harga">{{$treat->harga_treatment}}</p>
                         <div class="tengah" style="text-align: center;">
                         <a href="{{route('treatment_admin.edit', $treat->slug_link)}}" class="btn btn-success" style="margin-right: 20px;"><i class="bi bi-pencil-square"></i></a>
                         <a href="{{route('treatment_admin.hapus', $treat->slug_link)}}" class="btn btn-danger"><i class="bi bi-trash"></i></a>
@@ -83,6 +83,8 @@
     .pinggir{
         text-align: right;
     }
+
+    p.card-harga{text-align: center;}
 
 
     @media only screen and (max-width: 990px) {
