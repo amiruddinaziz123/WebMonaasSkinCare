@@ -25,12 +25,13 @@
             {{-- <p class="ms-3 mt-4">Please enter your details</p> --}}
           </div>
           
-          <form>
+          <form action="{{ route('login.store') }}" method="POST" autocomplete="off">
+            @csrf
             <div class="input-group mb-3">
-              <input type="email" name="" id="" class="form-control form-control-lg bg-light fs-6" placeholder="Email" >
+              <input type="email" name="email_user" id="" class="form-control form-control-lg bg-light fs-6" placeholder="Email" >
             </div>
             <div class="input-group mb-3">
-              <input type="password" name="" id="" class="form-control form-control-lg bg-light fs-6" placeholder="Password" >
+              <input type="password" name="password_user" id="" class="form-control form-control-lg bg-light fs-6" placeholder="Password" >
             </div>
             {{-- <div class="signup">
               <small>Don't have an account yet? <a href="" class="text-decoration-none">Sign Up</a></small>

@@ -53,6 +53,7 @@ Route::resource('/navbarAdmin', \App\Http\Controllers\navbarAdminController::cla
 Route::controller(LogsignController::class)->group(function () {
     Route::get('/logsignAdmin', 'index')->name('logsignAdmin.index');
     Route::get('/login', 'indexLogin')->name('login.index');
+    Route::post('/prosesLogin', 'prosesLogin')->name('login.store');
     Route::get('/signup', 'indexSignup')->name('signupAdmin.index');
     Route::post('/logsignAdmin/edit', 'store')->name('logsignAdmin.store');
     Route::post('/signup/add', 'storeSignup')->name('signup.store');
