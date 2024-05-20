@@ -14,6 +14,7 @@ return new class extends Migration
             $table->string('foto_treatment')->nullable();
             $table->string('nama_treatment');
             $table->text('description_treatment');
+            $table->decimal('harga_treatment', 10,3);
             $table->enum('status_publish', ['publish', 'draft']);
             $table->string('slug_link');
             $table->timestamps();

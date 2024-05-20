@@ -68,7 +68,7 @@ class MasterController extends Controller
 
     $slug = Str::slug($request->username_user, '-');
 
-    $customers->update([
+    $customers->update([    
         'email_user' => $request->email_user,
         'password_user' => $request->password_user,
         'username_user' => $request->username_user,

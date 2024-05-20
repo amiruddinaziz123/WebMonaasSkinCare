@@ -15,6 +15,7 @@
                     <th>Foto Treatment</th>
                     <th data-priority="1">Nama Treatment</th>
                     <th data-priority="1">Deskripsi</th>
+                    <th data-priority="1">Harga</th>
                     <th data-priority="1">Aksi</th>
                 </tr>
             </thead>
@@ -27,6 +28,7 @@
                     <td> <img src="{{ asset('storage/images/' . $treat->foto_treatment)}}" class="card-img-top" alt="..." style="width: 160px;"> </td>
                     <td> {{ $treat->nama_treatment}} </td>
                     <td> {{ $treat->description_treatment }} </td>
+                    <td> {{ $treat->harga_treatment}}</td>
 
                     <td>
                         <form onsubmit="return confirm('Yakin ingin mempublish ini ?');" action="{{ route('treatment_admin.restore', ['slug_link' => $treat->slug_link]) }}" method="POST">

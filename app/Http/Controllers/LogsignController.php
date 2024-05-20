@@ -8,6 +8,8 @@ use App\Models\logsign;
 
 use App\Models\account;
 
+use Illuminate\Support\Facades\Auth;
+
 use Illuminate\View\View;
 
 use Illuminate\Support\Str;
@@ -24,6 +26,25 @@ class LogsignController extends Controller
     {
         $logsigns = logsign::latest()->first();
         return view('login.index', compact('logsigns'));
+    }
+
+    public function prosesLogin(Request $request)
+    {
+        $request->validate([
+            'email_user' => 'required',
+            'password_user' => 'required'
+        ]);
+
+        $data = [
+            'email_user' => $request->email_user,
+            'password_user' => $request->password_user
+        ];
+
+        if(Auth::attempt($data)){
+            return redirect('/booking');
+        } else{
+            return redirect()->route('login.index')->with('failed', 'Email atau Password salah!');
+        }
     }
 
     public function indexSignup(): View
