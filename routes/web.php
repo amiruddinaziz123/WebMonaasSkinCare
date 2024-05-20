@@ -61,7 +61,7 @@ Route::controller(LogsignController::class)->group(function () {
 
 // ROUTE UNTUK BOOKING DAN ADMINNYA
 Route::controller(BookingController::class)->group(function () {
-    Route::get('/bookingAdmin', 'bookingAdmin')->name('bookingAdmin.bookingAdmin');
+    Route::get('/bookingAdmin', 'bookingAdmin')->name('bookingAdmin.index');
 });
 
 // ROUTE UNTUK MASTER ADMIN

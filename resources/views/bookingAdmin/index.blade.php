@@ -34,25 +34,28 @@
                         <tr>
                             <th>ID</th>
                             <th>Username</th>
-                            <th>Email</th>
-                            <th>Password</th>
-                            <th>Telepon</th>
+                            <th>No Telp</th>
+                            <th>Tanggal Booking</th>
+                            <th>Jam Booking</th>
+                            <th>Nama Dokter</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
-                        {{-- @foreach ($customers as $mtr)
+                        @foreach ($bookings as $dataBooking)
                             <tr>
-                                <td>{{ $mtr->id }}</td>
-                                <td>{{ $mtr->username_user }}</td>
-                                <td>{{ $mtr->email_user }}</td>
-                                <td>{{ $mtr->password_user }}</td>
-                                <td>{{ $mtr->no_telp_user }}</td>
+                                <td>{{ $dataBooking->id }}</td>
+                                <td>{{ $dataBooking->nama_user }}</td>
+                                <td>{{ $dataBooking->no_telp }}</td>
+                                <td>{{ $dataBooking->tanggal_booking }}</td>
+                                <td>{{ $dataBooking->jam_booking }}</td>
+                                <td>{{ $dataBooking->nama_dokter }}</td>
+
                                 <td>
-                                    <a href="{{ route('customerAdmin.edit', $mtr->slug_link) }}" class="btn btn-success btn-sm" role="button">
+                                    {{-- <a href="{{ route('customerAdmin.edit', $dataBooking->slug_link) }}" class="btn btn-success btn-sm" role="button">
                                         <i class="bi bi-pencil"></i>
-                                    </a>
-                                    <form action="{{ route('customerAdmin.destroy', $mtr->slug_link) }}" method="POST" style="display:inline;">
+                                    </a> --}}
+                                    <form action="{{ route('booking.destroy', $dataBooking->id) }}" method="POST" style="display:inline;">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger btn-sm">
@@ -62,7 +65,7 @@
                                     
                                 </td>
                             </tr>
-                        @endforeach --}}
+                        @endforeach
                     </tbody>
                     <tfoot>
                         <tr>

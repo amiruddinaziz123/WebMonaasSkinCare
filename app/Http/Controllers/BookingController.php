@@ -30,12 +30,21 @@ class BookingController extends Controller
         $dokters = dokters::all();
         $jamBookings = JamBooking::all();
         $navbars = navbar::all();
+        $bookings = Booking::all();
     
         foreach ($jamBookings as $jamBooking) {
             $jamBooking->jam_ke = substr($jamBooking->jam_ke, 0, 5);
         }
     
-        return view('bookingAdmin.index', compact('dokters', 'jamBookings', 'navbars'));
+        return view('bookingAdmin.index', compact('dokters', 'jamBookings', 'navbars', 'bookings'));
+    }
+
+    public function destroy($id)
+    {
+        $bookings = Booking::findOrFail($id);
+
+        $bookings->delete();
+        return redirect()->route('bookingAdmin.index');
     }
     
 
