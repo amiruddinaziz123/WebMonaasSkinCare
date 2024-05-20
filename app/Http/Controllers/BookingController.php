@@ -24,6 +24,19 @@ class BookingController extends Controller
     
         return view('booking.index', compact('dokters', 'jamBookings', 'navbars'));
     }
+
+    public function bookingAdmin()
+    {
+        $dokters = dokters::all();
+        $jamBookings = JamBooking::all();
+        $navbars = navbar::all();
+    
+        foreach ($jamBookings as $jamBooking) {
+            $jamBooking->jam_ke = substr($jamBooking->jam_ke, 0, 5);
+        }
+    
+        return view('bookingAdmin.index', compact('dokters', 'jamBookings', 'navbars'));
+    }
     
 
     public function store(Request $request)

@@ -20,9 +20,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 
+
   </head>
   <body class="antialiased">
     <x-navbar/>
+
+    
+    
     <div class="nav justify-content-center">
       <div class="calendar nav justify-content-center">
         <div class="calendar-header">

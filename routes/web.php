@@ -58,6 +58,11 @@ Route::controller(LogsignController::class)->group(function () {
     Route::post('/signup/add', 'storeSignup')->name('signup.store');
 });
 
+// ROUTE UNTUK BOOKING DAN ADMINNYA
+Route::controller(BookingController::class)->group(function () {
+    Route::get('/bookingAdmin', 'bookingAdmin')->name('bookingAdmin.bookingAdmin');
+});
+
 // ROUTE UNTUK MASTER ADMIN
 Route::controller(MasterController::class)->group(function () {
     Route::get('/masterAdmin', 'index')->name('masterAdmin.index');
