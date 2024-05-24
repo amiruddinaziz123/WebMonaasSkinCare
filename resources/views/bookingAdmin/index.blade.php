@@ -52,9 +52,9 @@
                                 <td>{{ $dataBooking->nama_dokter }}</td>
 
                                 <td>
-                                    {{-- <a href="{{ route('customerAdmin.edit', $dataBooking->slug_link) }}" class="btn btn-success btn-sm" role="button">
+                                    <a href="{{ route('bookingAdmin.edit', $dataBooking->id) }}" class="btn btn-success btn-sm" role="button">
                                         <i class="bi bi-pencil"></i>
-                                    </a> --}}
+                                    </a>
                                     <form action="{{ route('booking.destroy', $dataBooking->id) }}" method="POST" style="display:inline;">
                                         @csrf
                                         @method('DELETE')

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Http\RedirectResponse;
+use Illuminate\View\View;
 
 use App\Models\JamBooking;
 use App\Models\Booking;
@@ -69,5 +71,38 @@ class BookingController extends Controller
         
 
         return Redirect::route('booking.index');
+    }
+
+    public function edit($id): View
+    {
+        //get post by ID
+        $bookings = Booking::findOrFail($id);
+
+        //render view with post
+        return view('bookingAdmin.edit', compact('bookings'));
+    }
+
+
+    public function update(Request $request, $id): RedirectResponse
+    {
+        //validate form
+        $this->validate($request, [
+            'tanggal_booking'     => 'required',
+            'jam_booking'   => 'required',
+            'nama_dokter'   => 'required',
+        ]);
+
+        //get post by ID
+        $bookings = Booking::findOrFail($id);
+
+        //update post without image
+        $bookings->update([
+            'tanggal_booking'     => $request->tanggal_booking,
+            'jam_booking'   => $request->jam_booking,
+            'nama_dokter'   => $request->nama_dokter,
+        ]);
+
+        //redirect to index
+        return redirect()->route('bookingAdmin.index');
     }
 }

@@ -64,7 +64,7 @@
                 </div>
             </div>
             <div class="col-12">
-                <input type="submit" name="simpan" value="Edit" class="btn btn-primary">
+                <input type="submit" name="simpan" value="Save" class="btn btn-primary">
             </div>
         </form>
         
