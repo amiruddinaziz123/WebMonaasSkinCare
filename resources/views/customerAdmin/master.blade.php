@@ -24,7 +24,7 @@
             <div class="card card-secondary">
                 <div class="card-header">
                 </div>
-                <form action="{{ route('masterAdmin.store') }}" method="POST" autocomplete="off" class="needs-validation" novalidate>
+                <form action="{{ route('masterAdmin.store') }}" method="POST" autocomplete="off"  novalidate>
                 @csrf
                     <div class="card-body">
                         <div class="mb-3 row">
@@ -64,44 +64,50 @@
         </div>
     </section>
 
-<style>
+    <style>
+    /* Menghilangkan tombol scroll up dan down di input number */
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    </style>
 
-/* Menghilangkan tombol scroll up dan down di input number */
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
-    margin: 0;
-}
-</style>
+    <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (() => {
+        'use strict'
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll('.needs-validation')
+        // Loop over them and prevent submission
+        Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                }
+                form.classList.add('was-validated')
+            }, false)
+        })
+    })()
+    </script>
 
-<script>
-   // Example starter JavaScript for disabling form submissions if there are invalid fields
-(() => {
-'use strict'
+    <script>
+        document.getElementById("telepon").addEventListener("input", function() {
+            if (this.value.length > 15) {
+                this.value = this.value.slice(0, 15);
+            }
+        });
+    </script>
 
-// Fetch all the forms we want to apply custom Bootstrap validation styles to
-const forms = document.querySelectorAll('.needs-validation')
-
-// Loop over them and prevent submission
-Array.from(forms).forEach(form => {
-form.addEventListener('submit', event => {
- if (!form.checkValidity()) {
-   event.preventDefault()
-   event.stopPropagation()
- }
-
- form.classList.add('was-validated')
-}, false)
-})
-})()
-</script>
-
-<script>
-    document.getElementById("telepon").addEventListener("input", function() {
-        if (this.value.length > 15) {
-            this.value = this.value.slice(0, 15);
-        }
-    });
-</script>
+    @if ($errors->any())
+    <script>
+        Swal.fire({
+            icon: 'error',
+            title: 'Error!',
+            html: '<ul class="text-decoration-none list-unstyled">{!! implode("", $errors->all("<li>:message</li>")) !!}</ul>',
+        });
+    </script>
+    @endif
 
 @endsection
