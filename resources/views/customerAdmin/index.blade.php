@@ -49,6 +49,9 @@
                                 <td>{{ $mtr->password_user }}</td>
                                 <td>{{ $mtr->no_telp_user }}</td>
                                 <td>
+                                    <a href="{{ route('customerAdmin.detail', $mtr->slug_link) }}" class="btn btn-primary btn-sm" role="button">
+                                        <i class="bi bi-eye"></i>
+                                    </a>
                                     <a href="{{ route('customerAdmin.edit', $mtr->slug_link) }}" class="btn btn-success btn-sm" role="button">
                                         <i class="bi bi-pencil"></i>
                                     </a>

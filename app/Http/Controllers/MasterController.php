@@ -12,10 +12,10 @@ use Illuminate\Support\Str;
 
 class MasterController extends Controller
 {
-    public function index(): View
+    public function indexAdd(): View
     {
         $masters = account::latest()->first();
-        return view('masterAdmin.index', compact('masters'));
+        return view('customerAdmin.master', compact('masters'));
     }
 
     public function indexCustomer(): View
@@ -28,6 +28,12 @@ class MasterController extends Controller
     {
         $customers = account::where('slug_link','=', $slug_link)->firstorfail();
         return view('customerAdmin.edit', compact('customers'));
+    }
+
+    public function indexDetail(string $slug_link): View
+    {
+        $customers = account::where('slug_link','=', $slug_link)->firstorfail();
+        return view('customerAdmin.detail', compact('customers'));
     }
 
     public function store(request $request)
