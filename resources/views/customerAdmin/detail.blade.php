@@ -28,6 +28,15 @@
                 <form>
                     <div class="card-body">
                         <div class="mb-3 row">
+                            <label for="email" class="col-sm-2 col-form-label">Username</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control @error('username_user') is-invalid @enderror" id="email" name="username_user" value="{{ old('username_user', $customers->username_user) }}" disabled>
+                                @error('username_user')
+                                    <div class="invalid-feedback">{{ $message }}</div>
+                                @enderror
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
                             <label for="email" class="col-sm-2 col-form-label">Email</label>
                             <div class="col-sm-10">
                                 <input type="email" class="form-control @error('email_user') is-invalid @enderror" id="email" name="email_user" value="{{ old('email_user', $customers->email_user) }}" disabled>

@@ -40,15 +40,15 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a href="index3.html" class="nav-link">Home</a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
+      {{-- <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link text-danger">Logout</a>
-      </li>
+      </li> --}}
     </ul>
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
       <!-- Navbar Search -->
-      <li class="nav-item">
+      {{-- <li class="nav-item">
         <a class="nav-link" data-widget="navbar-search" href="#" role="button">
           <i class="fas fa-search"></i>
         </a>
@@ -67,7 +67,7 @@
             </div>
           </form>
         </div>
-      </li>
+      </li> --}}
 
       {{-- <!-- Messages Dropdown Menu -->
       <li class="nav-item dropdown">

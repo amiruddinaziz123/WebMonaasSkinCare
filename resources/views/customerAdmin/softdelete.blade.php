@@ -7,12 +7,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Edit Customer</h1>
+            <h1 class="m-0">Hapus Customer</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Edit Customer</li>
+              <li class="breadcrumb-item active">Hapus Customer</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -41,7 +41,7 @@
                         <div class="mb-3 row">
                             <label for="email" class="col-sm-2 col-form-label">Email</label>
                             <div class="col-sm-10">
-                                <input type="email" class="form-control @error('email_user') is-invalid @enderror" id="email" name="email_user" value="{{ old('email_user', $customers->email_user) }}" required>
+                                <input type="email" class="form-control @error('email_user') is-invalid @enderror" id="email" name="email_user" value="{{ old('email_user', $customers->email_user) }}" disabled>
                                 @error('email_user')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
@@ -68,7 +68,7 @@
                         
                     </div>
                     <div class="card-footer">
-                       <button type="submit" class="btn btn-success">Simpan</button>
+                       <button type="submit" class="btn btn-danger">Hapus</button>
                        <a href="{{ route('customerAdmin.index') }}" class="btn btn-primary ms-1">Kembali</a>
                     </div>
                 </form>

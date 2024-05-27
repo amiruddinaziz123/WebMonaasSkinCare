@@ -70,8 +70,10 @@ Route::controller(BookingController::class)->group(function () {
 Route::controller(MasterController::class)->group(function () {
     Route::get('/masterAdmin', 'indexAdd')->name('masterAdmin.index');
     Route::get('/customerAdmin', 'indexCustomer')->name('customerAdmin.index');
+    Route::get('/customerAdmin/histori', 'indexHistori')->name('customerAdmin.histori');
     Route::get('/customerAdmin/edit/{slug_link}', 'indexEdit')->name('customerAdmin.edit');
     Route::get('/customerAdmin/detail/{slug_link}', 'indexDetail')->name('customerAdmin.detail');
+    Route::get('/customerAdmin/softdelete/{slug_link}', 'indexSoftdelete')->name('customerAdmin.softdelete');
     Route::put('/customerAdmin/edit/{slug_link}', 'update')->name('customerAdmin.update');
     Route::post('/masterAdmin/add', 'store')->name('masterAdmin.store');
     Route::delete('/customerAdmin/{slug}', 'destroy')->name('customerAdmin.destroy');

@@ -11,26 +11,37 @@ class MasterController extends Controller
 {
     public function indexAdd(): View
     {
-        $masters = Account::latest()->first();
-        return view('customerAdmin.master', compact('masters'));
+        return view('customerAdmin.master');
     }
 
     public function indexCustomer(): View
     {
-        $customers = Account::all();
+        $customers = Account::where('status_aktif', '=', 'Aktif')->get();
         return view('customerAdmin.index', compact('customers'));
+    }
+
+    public function indexHistori(): View
+    {
+        $customers = Account::where('status_aktif', '=', 'Hapus')->get();
+        return view('customerAdmin.histori', compact('customers'));
     }
 
     public function indexEdit(string $slug_link): View
     {
-        $customer = Account::where('slug_link', $slug_link)->firstOrFail();
-        return view('customerAdmin.edit', compact('customer'));
+        $customers = Account::where('slug_link', $slug_link)->firstOrFail();
+        return view('customerAdmin.edit', compact('customers'));
+    }
+
+    public function indexSoftdelete(string $slug_link): View
+    {
+        $customers = Account::where('slug_link', $slug_link)->firstOrFail();
+        return view('customerAdmin.softdelete', compact('customers'));
     }
 
     public function indexDetail(string $slug_link): View
     {
-        $customer = Account::where('slug_link', $slug_link)->firstOrFail();
-        return view('customerAdmin.detail', compact('customer'));
+        $customers = Account::where('slug_link', $slug_link)->firstOrFail();
+        return view('customerAdmin.detail', compact('customers'));
     }
 
     public function store(Request $request)
@@ -63,6 +74,7 @@ class MasterController extends Controller
             'password_user' => $request->password_user,
             'username_user' => $request->username_user,
             'no_telp_user' => $request->no_telp_user,
+            'status_aktif'      =>$request->status_aktif,
             'slug_link' => $slug,
             'created_at' => now(),
         ]);

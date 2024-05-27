@@ -24,41 +24,43 @@
             <div class="card card-secondary">
                 <div class="card-header">
                 </div>
-                <form action="{{ route('masterAdmin.store') }}" method="POST" autocomplete="off"  novalidate>
+                <form action="{{ route('masterAdmin.store') }}" method="POST" autocomplete="off" class="needs-validation"  novalidate>
                 @csrf
                     <div class="card-body">
                         <div class="mb-3 row">
                             <label for="nama" class="col-sm-2 col-form-label">Username</label>
                             <div class="col-sm-10">
-                               <input type="text" class="form-control" id="nama" name="username_user" placeholder="Isi Username" required>
+                               <input type="text" class="form-control" id="nama" name="username_user" required>
                             </div>
                          </div>
              
                          <div class="mb-3 row">
                             <label for="email" class="col-sm-2 col-form-label">Email</label>
                             <div class="col-sm-10">
-                               <input type="email" class="form-control" id="email" name="email_user" placeholder="Isi Email" required>
+                               <input type="email" class="form-control" id="email" name="email_user" required>
                             </div>
                          </div>
              
                          <div class="mb-3 row">
                             <label for="nisn" class="col-sm-2 col-form-label">Password</label>
                             <div class="col-sm-10">
-                               <input type="text" class="form-control" id="nisn" name="password_user" placeholder="Isi Password" required> 
+                               <input type="text" class="form-control" id="nisn" name="password_user" required> 
                             </div>
                          </div>
              
                          <div class="mb-3 row">
                              <label for="telepon" class="col-sm-2 col-form-label">No. Telepon</label>
                              <div class="col-sm-10">
-                                 <input type="number" class="form-control" id="telepon" name="no_telp_user" placeholder="Isi Nomor" required>
+                                 <input type="number" class="form-control" id="telepon" name="no_telp_user" required>
                              </div>
                          </div>
                     </div>
                     <div class="card-footer">
-                       <button type="submit" class="btn btn-primary">Tambah</button>
-                       <button type="reset" class="btn btn-danger">Reset</button>
+                       <button type="submit" class="btn btn-success ms-1">Tambah</button>
+                       <button type="reset" class="btn btn-danger ms-1">Reset</button>
+                       <a href="{{ route('customerAdmin.index') }}" class="btn btn-primary ms-1">Kembali</a>
                     </div>
+                    <input name="status_aktif" value="Aktif" type="hidden">
                 </form>
             </div>
         </div>
