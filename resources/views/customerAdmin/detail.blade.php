@@ -23,7 +23,7 @@
         <div class="container-fluid">
             <div class="card card-secondary">
                 <div class="card-header">
-                    <h3 class="card-title">Detail dari <span class="text-bold">{{ old('username_user', $customers->username_user) }}</span></h3>
+                    <h3 class="card-title mt-1">Detail dari <span class="text-bold">{{ old('username_user', $customers->username_user) }}</span></h3>
                 </div>
                 <form>
                     <div class="card-body">

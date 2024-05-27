@@ -84,27 +84,51 @@ class MasterController extends Controller
 
     public function update(Request $request, string $slug_link)
     {
-        $customer = Account::where('slug_link', $slug_link)->firstOrFail();
-
         $this->validate($request, [
-            'email_user' => 'required|min:8|unique:accounts,email_user,' . $customer->id,
+            'email_user' => 'required|min:8',
             'password_user' => 'required|min:8',
             'username_user' => 'required|min:8',
             'no_telp_user' => 'required|min:12',
+        ], [
+            'email_user.required' => 'Email wajib diisi!!!',
+            'password_user.required' => 'Password wajib diisi!!!',
+            'username_user.required' => 'Username wajib diisi!!!',
+            'no_telp_user.required' => 'No. Telepon wajib diisi!!!',
+            'password_user.min' => 'Password harus lebih dari 8 karakter!!!',
+            'username_user.min' => 'Username harus lebih dari 8 karakter!!!',
+            'no_telp_user.min' => 'No. Telepon harus lebih dari 12 karakter!!!',
         ]);
 
         $slug = Str::slug($request->username_user, '-');
-
+        $customer = Account::where('slug_link', $slug_link)->firstOrFail();
         $customer->update([
             'email_user' => $request->email_user,
             'password_user' => $request->password_user,
             'username_user' => $request->username_user,
             'no_telp_user' => $request->no_telp_user,
+            'status_aktif' => $request->status_aktif,
             'slug_link' => $slug,
             'updated_at' => now(),
         ]);
 
         return redirect()->route('customerAdmin.index')->with('success', 'Data Berhasil Diubah!');
+    }
+
+    public function softdelete(request $request, string $slug_link)
+    {
+        $slug = Str::slug($request->username_user, '-');
+        $customer = Account::where('slug_link', $slug_link)->firstOrFail();
+        $customer->update([
+            'email_user' => $request->email_user,
+            'password_user' => $request->password_user,
+            'username_user' => $request->username_user,
+            'no_telp_user' => $request->no_telp_user,
+            'status_aktif' => $request->status_aktif,
+            'slug_link' => $slug,
+            'deleted_at' => now(),
+        ]);
+
+        return redirect()->route('customerAdmin.index')->with('success', 'Data Berhasil Dihapus!');
     }
 
     public function destroy($slug)

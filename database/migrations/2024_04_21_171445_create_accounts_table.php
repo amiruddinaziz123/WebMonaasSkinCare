@@ -20,6 +20,7 @@ return new class extends Migration
             $table->string('slug_link');
             $table->enum('status_publish', ['Publish', 'Draft']);
             $table->enum('status_aktif', ['Aktif', 'Hapus']);
+            $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
         });
     }
