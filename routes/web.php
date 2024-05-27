@@ -6,6 +6,7 @@ use App\Http\Controllers\TreatmentController;
 use App\Http\Controllers\LogsignController;
 use App\Http\Controllers\MasterController;
 use App\Http\Controllers\ProfilController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 use App\Models\navbar;
@@ -25,17 +26,8 @@ Route::get('/', function () {
     return view('landingPage');
 });
 
-
-Route::get('/aboutus', function () {
-    return view('aboutus.index');
-});
-
 Route::get('/aboutusAdmin', function () {
     return view('aboutusAdmin.index');
-});
-
-Route::get('/product', function () {
-    return view('product.index');
 });
 
 // untuk coba pake /posts
@@ -108,6 +100,11 @@ Route::controller(TreatmentController::class)->group(function () {
     Route::put('/treatment_admin/softdelete/{slug_link}', 'softdelete')->name('treatment_admin.softdelete');
     Route::post('/treatment_admin/restore/{slug_link}', 'restore')->name('treatment_admin.restore');
     Route::delete('/treatment_admin/permanent-delete/{id}', 'deletePermanent')->name('treatment_admin.deletePermanent');
+});
+
+// ROUTE UNTUK PRODUCT DAN ADMINNYA
+Route::controller(ProductController::class)->group(function () {
+    Route::get('/product', 'indexProduct')->name('product.index');
 });
 
 

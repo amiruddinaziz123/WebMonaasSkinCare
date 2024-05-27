@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Katibeh&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    overflow-x: hidden;
+}
+
+/* corousel */
+.c-item {
+    height: 550px;
+  }
+  
+  .c-img {
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+  }
+/* end carousel */
+.searchbar{
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 60px;
+    background: var(--ungu, #E681FF);
+    border-radius: 30px;
+    padding: 10px;
+    }
+
+    .search_input{
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color:transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+    }
+
+    .searchbar:hover > .search_input{
+    padding: 0 10px;
+    width: 450px;
+    caret-color:#ED1E78;
+    transition: width 0.4s linear;
+    }
+
+    .searchbar:hover > .search_icon{
+    background: #ED1E78;
+    color: #fffcfd;
+    }
+
+    .search_icon{
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color:white;
+    text-decoration:none;
+    }
+
+/*TEXT*/
+h1 {
+    font-family: Katibeh;
+    text-align: center;
+}
+
+P{
+    font-family: poppins;
+}
+
+h5{
+    font-family: poppins;
+}
+
+/* card */
+.card{
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    margin-right: 25px;
+}
+.card-body{
+    padding: 25px;
+    margin-top: -15px;
+}
+.btn-primary{
+    width: 120px;
+}
+
+h3{
+    color: rgb(0, 91, 228);
+}
+
+/* end of card */
+
+
+@media only screen and (max-width: 425px) {
+    .c-item {
+        height: 452px;
+      } 
+
+      .searchbar:hover > .search_input{
+        padding: 0 10px;
+        width: 270px;
+        caret-color:#ED1E78;
+        transition: width 0.4s linear;
+        }
+
+        .card{
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+            margin-right: 0;
+        }
+    
+}
