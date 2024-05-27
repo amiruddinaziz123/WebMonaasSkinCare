@@ -66,6 +66,8 @@ Route::controller(MasterController::class)->group(function () {
     Route::get('/customerAdmin/edit/{slug_link}', 'indexEdit')->name('customerAdmin.edit');
     Route::get('/customerAdmin/detail/{slug_link}', 'indexDetail')->name('customerAdmin.detail');
     Route::get('/customerAdmin/softdelete/{slug_link}', 'indexSoftdelete')->name('customerAdmin.softdelete');
+    Route::get('/customerAdmin/restore/{slug_link}', 'indexRestore')->name('customerAdmin.restore');
+    Route::get('/customerAdmin/delete/{slug_link}', 'indexDelete')->name('customerAdmin.delete');
     Route::put('/customerAdmin/softdelete/{slug_link}', 'softdelete')->name('customerAdmin.softdeleted');
     Route::put('/customerAdmin/edit/{slug_link}', 'update')->name('customerAdmin.update');
     Route::post('/masterAdmin/add', 'store')->name('masterAdmin.store');

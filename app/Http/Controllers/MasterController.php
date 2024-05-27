@@ -38,6 +38,18 @@ class MasterController extends Controller
         return view('customerAdmin.softdelete', compact('customers'));
     }
 
+    public function indexDelete(string $slug_link): View
+    {
+        $customers = Account::where('slug_link', $slug_link)->firstOrFail();
+        return view('customerAdmin.delete', compact('customers'));
+    }
+
+    public function indexRestore(string $slug_link): View
+    {
+        $customers = Account::where('slug_link', $slug_link)->firstOrFail();
+        return view('customerAdmin.restore', compact('customers'));
+    }
+
     public function indexDetail(string $slug_link): View
     {
         $customers = Account::where('slug_link', $slug_link)->firstOrFail();

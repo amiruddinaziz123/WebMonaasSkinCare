@@ -24,10 +24,10 @@
         <div class="container-fluid">
             <div class="col-12">
                 <a href="{{ route('masterAdmin.index') }}" class="btn btn-primary">
-                    <i class="bi bi-building-add"></i> Tambah
+                    <i class="bi bi-person-add"></i> Tambah
                 </a>
                 <a href="{{ route('customerAdmin.histori') }}" class="btn btn-danger ms-1">
-                    <i class="bi bi-trash3"></i> Histori
+                    <i class="bi bi-archive"></i> Histori
                 </a>
             </div>
 

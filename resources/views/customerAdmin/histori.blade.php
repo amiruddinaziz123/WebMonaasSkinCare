@@ -57,13 +57,19 @@
                                     <a href="{{ route('customerAdmin.edit', $mtr->slug_link) }}" class="btn btn-success btn-sm" role="button">
                                         <i class="bi bi-pencil"></i>
                                     </a>
-                                    <form action="{{ route('customerAdmin.destroy', $mtr->slug_link) }}" method="POST" style="display:inline;">
+                                    <a href="{{ route('customerAdmin.restore', $mtr->slug_link) }}" class="btn btn-warning text-white btn-sm" role="button">
+                                        <i class="bi bi-box-arrow-up"></i>
+                                    </a>
+                                    <a href="{{ route('customerAdmin.delete', $mtr->slug_link) }}" class="btn btn-danger btn-sm" role="button">
+                                        <i class="bi bi-trash3"></i>
+                                    </a>
+                                    {{-- <form action="{{ route('customerAdmin.destroy', $mtr->slug_link) }}" method="POST" style="display:inline;">
                                         @csrf
                                         @method('DELETE')
                                         <button type="submit" class="btn btn-danger btn-sm">
                                             <i class="bi bi-trash3"></i>
                                         </button>
-                                    </form>
+                                    </form> --}}
                                     
                                 </td>
                             </tr>
