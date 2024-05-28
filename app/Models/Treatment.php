@@ -21,7 +21,7 @@ class Treatment extends Model
         'nama_treatment',
         'description_treatment',
         'harga_treatment',
-        'status_publish',
+        // 'status_publish',
         'slug_link',
     ];
 

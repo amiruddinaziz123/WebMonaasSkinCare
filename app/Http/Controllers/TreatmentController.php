@@ -46,7 +46,7 @@ class TreatmentController extends Controller
             'nama_treatment' => $request->input('nama_treatment'),
             'description_treatment' => $request->input('description_treatment'),
             'harga_treatment' => $request->harga_treatment,
-            'status_publish' => $request->input('status_publish'),
+            // 'status_publish' => $request->input('status_publish'),
             'slug_link' => $slug,
         ]);
 
@@ -84,7 +84,7 @@ class TreatmentController extends Controller
             'nama_treatment' => $request->input('nama_treatment'),
             'description_treatment' => $request->input('description_treatment'),
             'harga_treatment' => $request->harga_treatment,
-            'status_publish' => $request->input('status_publish'),
+            // 'status_publish' => $request->input('status_publish'),
             'slug_link' => $slug,
         ]);
 
