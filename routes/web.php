@@ -26,6 +26,10 @@ Route::get('/', function () {
     return view('landingPage');
 });
 
+Route::get('/landingcobaumar', function () {
+    return view('landingTry');
+});
+
 Route::get('/aboutusAdmin', function () {
     return view('aboutusAdmin.index');
 });
