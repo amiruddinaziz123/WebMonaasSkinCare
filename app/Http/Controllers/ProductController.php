@@ -15,4 +15,16 @@ class ProductController extends Controller
         $products = product::where('status_aktif', '=', 'aktif')->get();
         return view('product.index', compact('products'));
     }
+
+    public function indexAdmin(): View
+    {
+        $products = product::where('status_aktif', '=', 'aktif')->get();
+        return view('productAdmin.index', compact('products'));
+    }
+
+    public function indexHistori(): View
+    {
+        $products = product::where('status_aktif', '=', 'hapus')->get();
+        return view('productAdmin.histori', compact('products'));
+    }
 }

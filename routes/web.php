@@ -30,10 +30,6 @@ Route::get('/landingcobaumar', function () {
     return view('landingTry');
 });
 
-Route::get('/aboutusAdmin', function () {
-    return view('aboutusAdmin.index');
-});
-
 // untuk coba pake /posts
 Route::resource('/posts', \App\Http\Controllers\PostController::class);
 
@@ -111,6 +107,8 @@ Route::controller(TreatmentController::class)->group(function () {
 // ROUTE UNTUK PRODUCT DAN ADMINNYA
 Route::controller(ProductController::class)->group(function () {
     Route::get('/product', 'indexProduct')->name('product.index');
+    Route::get('/productAdmin', 'indexAdmin')->name('productAdmin.index');
+    Route::get('/productAdmin/histori', 'indexHistori')->name('productAdmin.histori');
 });
 
 

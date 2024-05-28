@@ -242,6 +242,15 @@
                   </p>
               </a>
             </li>
+
+            <li class="nav-item">
+              <a href="/productAdmin" class="nav-link">
+                  <i class="nav-icon fas fa-image"></i>
+                  <p>
+                    Product
+                  </p>
+              </a>
+            </li>
             
             
             <li class="nav-item">
