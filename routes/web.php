@@ -6,6 +6,7 @@ use App\Http\Controllers\TreatmentController;
 use App\Http\Controllers\LogsignController;
 use App\Http\Controllers\MasterController;
 use App\Http\Controllers\ProfilController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 use App\Models\navbar;
@@ -25,17 +26,8 @@ Route::get('/', function () {
     return view('landingPage');
 });
 
-
-Route::get('/aboutus', function () {
-    return view('aboutus.index');
-});
-
 Route::get('/aboutusAdmin', function () {
     return view('aboutusAdmin.index');
-});
-
-Route::get('/product', function () {
-    return view('product.index');
 });
 
 // untuk coba pake /posts
@@ -70,8 +62,13 @@ Route::controller(BookingController::class)->group(function () {
 Route::controller(MasterController::class)->group(function () {
     Route::get('/masterAdmin', 'indexAdd')->name('masterAdmin.index');
     Route::get('/customerAdmin', 'indexCustomer')->name('customerAdmin.index');
+    Route::get('/customerAdmin/histori', 'indexHistori')->name('customerAdmin.histori');
     Route::get('/customerAdmin/edit/{slug_link}', 'indexEdit')->name('customerAdmin.edit');
     Route::get('/customerAdmin/detail/{slug_link}', 'indexDetail')->name('customerAdmin.detail');
+    Route::get('/customerAdmin/softdelete/{slug_link}', 'indexSoftdelete')->name('customerAdmin.softdelete');
+    Route::get('/customerAdmin/restore/{slug_link}', 'indexRestore')->name('customerAdmin.restore');
+    Route::get('/customerAdmin/delete/{slug_link}', 'indexDelete')->name('customerAdmin.delete');
+    Route::put('/customerAdmin/softdelete/{slug_link}', 'softdelete')->name('customerAdmin.softdeleted');
     Route::put('/customerAdmin/edit/{slug_link}', 'update')->name('customerAdmin.update');
     Route::post('/masterAdmin/add', 'store')->name('masterAdmin.store');
     Route::delete('/customerAdmin/{slug}', 'destroy')->name('customerAdmin.destroy');
@@ -105,6 +102,11 @@ Route::controller(TreatmentController::class)->group(function () {
     Route::put('/treatment_admin/softdelete/{slug_link}', 'softdelete')->name('treatment_admin.softdelete');
     Route::post('/treatment_admin/restore/{slug_link}', 'restore')->name('treatment_admin.restore');
     Route::delete('/treatment_admin/permanent-delete/{id}', 'deletePermanent')->name('treatment_admin.deletePermanent');
+});
+
+// ROUTE UNTUK PRODUCT DAN ADMINNYA
+Route::controller(ProductController::class)->group(function () {
+    Route::get('/product', 'indexProduct')->name('product.index');
 });
 
 

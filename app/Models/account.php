@@ -19,6 +19,7 @@ class account extends Model
         'password_user',
         'no_telp_user',
         'slug_link',
+        'status_aktif',
         'created_at',
         'updated_at',
     ];

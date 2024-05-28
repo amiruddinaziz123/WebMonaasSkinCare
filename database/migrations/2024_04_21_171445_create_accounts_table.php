@@ -18,6 +18,9 @@ return new class extends Migration
             $table->string('email_user');
             $table->string('no_telp_user');
             $table->string('slug_link');
+            $table->enum('status_publish', ['Publish', 'Draft']);
+            $table->enum('status_aktif', ['Aktif', 'Hapus']);
+            $table->timestamp('deleted_at')->nullable();
             $table->timestamps();
         });
     }

@@ -23,7 +23,7 @@
         <div class="container-fluid">
             <div class="card card-secondary">
                 <div class="card-header">
-                    <h3 class="card-title">Edit dari <span class="text-bold">{{ old('username_user', $customers->username_user) }}</span></h3>
+                    <h3 class="card-title mt-1">Edit dari <span class="text-bold">{{ old('username_user', $customers->username_user) }}</span></h3>
                 </div>
                 <form action="{{ route('customerAdmin.update', $customers->slug_link) }}" method="POST" autocomplete="off" class="needs-validation" novalidate>
                 @csrf
@@ -41,7 +41,7 @@
                         <div class="mb-3 row">
                             <label for="email" class="col-sm-2 col-form-label">Email</label>
                             <div class="col-sm-10">
-                                <input type="email" class="form-control @error('email_user') is-invalid @enderror" id="email" name="email_user" value="{{ old('email_user', $customers->email_user) }}" required>
+                                <input readonly type="email" class="form-control @error('email_user') is-invalid @enderror" id="email" name="email_user" value="{{ old('email_user', $customers->email_user) }}" required>
                                 @error('email_user')
                                     <div class="invalid-feedback">{{ $message }}</div>
                                 @enderror
@@ -68,9 +68,10 @@
                         
                     </div>
                     <div class="card-footer">
-                       <button type="submit" class="btn btn-primary">Simpan</button>
-                       <a href="{{ route('customerAdmin.index') }}" class="btn btn-primary ms-2">Kembali</a>
+                       <button type="submit" class="btn btn-success">Simpan</button>
+                       <a href="{{ route('customerAdmin.index') }}" class="btn btn-primary ms-1">Kembali</a>
                     </div>
+                    <input name="status_aktif" value="Aktif" type="hidden">
                 </form>
             </div>
         </div>
