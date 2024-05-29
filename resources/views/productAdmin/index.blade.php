@@ -23,13 +23,45 @@
     <section class="content">
         <div class="container-fluid">
             <div class="col-12">
-                <a href="{{ route('masterAdmin.index') }}" class="btn btn-primary">
+                <a href="{{ route('productAdmin.tambah') }}" class="btn btn-primary">
                     <i class="bi bi-person-add"></i> Tambah
                 </a>
                 <a href="{{ route('customerAdmin.histori') }}" class="btn btn-danger ms-1">
                     <i class="bi bi-archive"></i> Histori
                 </a>
             </div>
+
+            @foreach ($products as $pro)
+            <div class="col-4 mt-3">
+        <div class="card">
+            <img src="/img/{{ $pro->foto_product }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title mt-3">{{ $pro->nama_product }}</h5>
+                <p class="card-text">{{ $pro->description_product }}</p>
+                <h3>{{ $pro->harga_product }}</h3>
+            </div>
+            
+            <div class="row mb-3 ml-2">
+                <div class="col-4" style="margin-right: -70px">
+                <a href="{{ route('customerAdmin.detail', $pro->slug_link) }}" class="btn btn-primary btn-sm" role="button">
+                <i class="bi bi-eye"></i>
+            </a>
+            </div>
+            <div class="col-4">
+                <a href="{{ route('customerAdmin.edit', $pro->slug_link) }}" class="btn btn-success btn-sm" role="button">
+                <i class="bi bi-pencil"></i>
+            </a>
+        </div>
+            <div class="col-4" style="margin-left: -70px">
+                <a href="{{ route('customerAdmin.softdelete', $pro->slug_link) }}" class="btn btn-danger btn-sm" role="button">
+                <i class="bi bi-trash3"></i>
+            </a>
+        </div>
+            </div>
+            
+        </div>
+        </div>
+        @endforeach
 
             {{-- <div class="col-12">
                 <table id="example" class="table table-dark" style="width: 100%;">
@@ -84,5 +116,30 @@
         </div>
     </section>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var cardTexts = document.querySelectorAll(".card-text");
+
+        cardTexts.forEach(function(cardText) {
+            var originalText = cardText.textContent;
+            var limitedText = originalText.slice(0, 150);
+
+            if (originalText.length > 150) {
+                limitedText += "...";
+            }
+
+            cardText.textContent = limitedText;
+
+            cardText.addEventListener("click", function() {
+                if (cardText.textContent === limitedText) {
+                    cardText.textContent = originalText;
+                } else {
+                    cardText.textContent = limitedText;
+                }
+            });
+        });
+    });
+</script>
 
 @endsection

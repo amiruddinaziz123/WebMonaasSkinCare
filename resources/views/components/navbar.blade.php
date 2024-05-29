@@ -27,13 +27,18 @@
             <div class="offcanvas-body row">
                 {{-- Tampilan untuk perangkat mobile --}}
                 <div class="navbar-nav text-center col-12 d-md-none d-xl-none">
+                    <a href="/profil" data-aos="fade-right" data-aos-offset="500" class="nav-link active" aria-current="page"><img src="{{ asset('storage/img/aku.png') }}" width="20%" class="rounded-circle" alt=""></a>
                     <a data-aos="fade-right" data-aos-offset="500" class="nav-link active" aria-current="page" style="font-family: Poppins;" href="/product">Product</a>
                     <a data-aos="fade-right" data-aos-offset="500" class="nav-link active" aria-current="page" style="font-family: Poppins;" href="/treatment">Treatment</a>
                     <a data-aos="fade-right" data-aos-offset="500" class="nav-link active" aria-current="page" style="font-family: Poppins;" href="/booking">Booking</a>
                 </div>
                 {{-- Tampilan untuk perangkat tablet --}}
+                
                 <div class="navbar-nav text-center col-12 col-md-12 d-none d-md-block d-xl-none">
                     <div class="row">
+                        <div class="col-12">
+                            <a href="/profil"><img src="{{ asset('storage/img/aku.png') }}" width="10%" class="rounded-circle" alt=""></a>
+                        </div>
                         <div class="col-12">
                             <a data-aos="fade-right" data-aos-offset="500" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/product">Product</a>
                         </div>
@@ -45,14 +50,18 @@
                         </div>
                     </div>
                 </div>
+                
 
                 {{-- Tampilan untuk perangkat laptop --}}
-                <div class="navbar-nav text-center col-12 col-md-12 d-none d-md-none d-xl-block">
+                <div class="navbar-nav text-center col-10 col-md-10 d-none d-md-none d-xl-block">
                     <a data-aos="fade-right" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/product">Product</a>
                     <a data-aos="fade-right" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/treatment">Treatment</a>
                     <a data-aos="fade-right" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/booking">Booking</a>
                 </div>
-            </div>            
+                <div class="navbar-nav text-end col-2 col-md-2 d-none d-md-none d-xl-block">
+                    <a href="/profil"><img src="{{ asset('storage/img/aku.png') }}" width="20%" class="rounded-circle" alt=""></a>
+                </div>
+            </div>     
         </div>
     </div>
 </nav>
