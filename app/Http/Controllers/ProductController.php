@@ -10,6 +10,11 @@ use Illuminate\View\View;
 
 class ProductController extends Controller
 {
+    public function indexAdd(): View
+    {
+        return view('productAdmin.tambah');
+    }
+
     public function indexProduct(): View
     {
         $products = product::where('status_aktif', '=', 'aktif')->get();
