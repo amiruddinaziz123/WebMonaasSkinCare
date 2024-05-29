@@ -22,6 +22,8 @@ H1.navbar-brand{
 .carousel-item img {
     margin: 0;
     width: 100%;
+    height: 650px;
+    object-position: center;
 }
 
 /*GAMBAR SLIDER*/
