@@ -82,7 +82,7 @@
             </div>
             <div class="mb-5 d-flex justify-content-around">
                 <h3>{{ $pro->harga_product }}</h3>
-                <button class="btn btn-primary" style="border-radius: 20px">Buy Now</button>
+                <a href="https://wa.me/0882003366832?text=pesan product pada nomor 0882003366832"><button class="btn btn-primary" style="border-radius: 20px">Buy Now</button></a>
             </div>
         </div>
         </div>

@@ -110,6 +110,8 @@ Route::controller(ProductController::class)->group(function () {
     Route::get('/product', 'indexProduct')->name('product.index');
     Route::get('/productAdmin', 'indexAdmin')->name('productAdmin.index');
     Route::get('/productAdmin/histori', 'indexHistori')->name('productAdmin.histori');
+    Route::get('/productAdmin/tambah', 'indexTambah')->name('productAdmin.tambah');
+    Route::post('/productAdmin/tambahProduct', 'tambah')->name('productAdmin.tambahProduct');
 });
 
 

@@ -23,7 +23,7 @@
     <section class="content">
         <div class="container-fluid">
             <div class="col-12">
-                <a href="{{ route('masterAdmin.index') }}" class="btn btn-primary">
+                <a href="{{ route('productAdmin.tambah') }}" class="btn btn-primary">
                     <i class="bi bi-person-add"></i> Tambah
                 </a>
                 <a href="{{ route('customerAdmin.histori') }}" class="btn btn-danger ms-1">

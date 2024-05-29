@@ -115,12 +115,12 @@
   </div>
   
   <div class="form-group mt-4">
-    <label for="exampleFormControlInput1" class="form-label">Tittle 1</label>
+    <label for="exampleFormControlInput1" class="form-label">Judul Icon 1</label>
     <input type="text" class="form-control" id="exampleFormControlInput1" value="{{ $abouts->tittle_icon1 }}" name="tittle_icon1">
   </div>
   
   <div class="form-group mt-4">
-    <label for="text">Isi 1</label>
+    <label for="text">Deskripsi Icon 1</label>
     <textarea class="form-control" id="text" name="isi_icon1" rows="3">{{ $abouts->isi_icon1 }}</textarea>
   </div>
   
@@ -131,12 +131,12 @@
   </div>
   
   <div class="form-group mt-4">
-    <label for="exampleFormControlInput1" class="form-label">Tittle 2</label>
+    <label for="exampleFormControlInput1" class="form-label">Judul Icon 2</label>
     <input type="text" class="form-control" id="exampleFormControlInput1" value="{{ $abouts->tittle_icon2 }}" name="tittle_icon2">
   </div>
   
   <div class="form-group mt-4">
-    <label for="text">Isi 2</label>
+    <label for="text">Deskripsi Icon 2</label>
     <textarea class="form-control" id="text" name="isi_icon2" rows="3">{{ $abouts->isi_icon2 }}</textarea>
   </div>
   
@@ -147,12 +147,12 @@
   </div>
   
   <div class="form-group mt-4">
-    <label for="exampleFormControlInput1" class="form-label">Tittle 3</label>
+    <label for="exampleFormControlInput1" class="form-label">Judul icon 3</label>
     <input type="text" class="form-control" id="exampleFormControlInput1" value="{{ $abouts->tittle_icon3 }}" name="tittle_icon3">
   </div>
   
   <div class="form-group mt-4">
-    <label for="text">Isi 3</label>
+    <label for="text">Deskripsi icon 3</label>
     <textarea class="form-control" id="text" name="isi_icon3" rows="3">{{ $abouts->isi_icon3 }}</textarea>
   </div>
 
@@ -175,5 +175,13 @@
         </div><!-- /.container-fluid -->
       </section>
 </div>
-    
+@if ($errors->any())
+<script>
+    Swal.fire({
+        icon: 'error',
+        title: 'Error!',
+        html: '<ul class="text-decoration-none list-unstyled">{!! implode("", $errors->all("<li>:message</li>")) !!}</ul>',
+    });
+</script>
+@endif
 @endsection

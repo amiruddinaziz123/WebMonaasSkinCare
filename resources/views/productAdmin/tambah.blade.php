@@ -24,7 +24,7 @@
             <div class="card card-secondary">
                 <div class="card-header">
                 </div>
-                <form action="{{ route('masterAdmin.store') }}" method="POST" autocomplete="off" class="needs-validation"  novalidate>
+                <form action="{{ route('productAdmin.tambahProduct') }}" method="POST" autocomplete="off" class="needs-validation"  novalidate>
                 @csrf
                     <div class="card-body">
                         <div class="mb-3 row">
@@ -58,7 +58,7 @@
                     <div class="card-footer">
                        <button type="submit" class="btn btn-success ms-1">Tambah</button>
                        <button type="reset" class="btn btn-danger ms-1">Reset</button>
-                       <a href="{{ route('customerAdmin.index') }}" class="btn btn-primary ms-1">Kembali</a>
+                       <a href="{{ route('productAdmin.index') }}" class="btn btn-primary ms-1">Kembali</a>
                     </div>
                     <input name="status_aktif" value="Aktif" type="hidden">
                 </form>
