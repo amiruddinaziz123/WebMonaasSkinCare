@@ -59,7 +59,7 @@
                     <a data-aos="fade-right" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/booking">Booking</a>
                 </div>
                 <div class="navbar-nav text-end col-2 col-md-2 d-none d-md-none d-xl-block">
-                    <a href="/profil"><img src="{{ asset('storage/img/aku.png') }}" width="20%" class="rounded-circle" alt=""></a>
+                    <a href="/profil"><img src="\img\Rectangle.png" width="20%" class="rounded-circle" alt=""></a>
                 </div>
             </div>     
         </div>
