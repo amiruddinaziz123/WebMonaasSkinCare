@@ -1,9 +1,25 @@
 @extends('layouts/admin')
 
 @section('content')
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0">Tambah User</h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Tambah User</li>
+            </ol>
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
 
-
-<div class="container">
+    <div class="container">
 
         {{-- <div class="col-10">
             <a href="{{ route('Admin.admin') }}" class="btn btn-success btn-sm"> Produk</a> >>
@@ -15,7 +31,7 @@
             @csrf
 
             <br><br>
-            <div class="mb-3 row mt-5">
+            <div class="mb-3 row">
                 <label for="foto" class="col-sm-2 col-form-label">Foto Treatment</label>
                 <div class="col-sm-10">
                     <input required type="file" name="foto_treatment" class="form-control @error('foto_treatment') is-invalid @enderror" id="foto"  value="">
@@ -83,5 +99,13 @@
         text-align: right;
     }
 </style>
+
+@endsection
+
+
+@section('content')
+
+
+
 
 @endsection

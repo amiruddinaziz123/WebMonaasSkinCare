@@ -2,41 +2,63 @@
 
 @section('content')
 
+{{-- DIV PEMBUNGKUS AGAR RESPONSIF --}}
+<div class="content-wrapper">
 
-    <div class="col-12 tulisan"><h3>Facial Treatment</h3></div>
-
-    {{-- BUTTON --}}
-    <div class="row mb-3 mt-5">
-        <div class="col pinggir">
-            <a href="{{ route('treatment_admin.admin') }}" class="btn btn-success btn-lg">Treatment</a>
-            <a href="{{ route('treatment_admin.create') }}" class="btn btn-primary btn-lg"> Tambah</a>
-            <a href="{{ route('treatment_admin.history') }}" class="btn btn-warning btn-lg">History</a>
+    <!-- HEADER DONTENT -->
+    <div class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1 class="m-0">Treatment</h1>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="breadcrumb float-sm-right">
+                        <li class="breadcrumb-item"><a href="#">Home</a></li>
+                        <li class="breadcrumb-item active">Treatment</li> </ol>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- CARD -->
+    {{-- ISI KONTEN --}}
+    <section class="content">
+        <div class="container-fluid">
 
-    <div class="row kartu">
-        @foreach ($treatments as $treat )
-                <div class="col-4">
-                <div class="card my-3 jarak" id="jarakslice">
-                    <img src="{{ asset('storage/images/' . $treat->foto_treatment)}}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title" style="font-size: 25px;">{{ $treat->nama_treatment }}</h5>
-                        <p class="card-text">{{ $treat->description_treatment }} </p>
-                        <p class="card-harga">{{$treat->harga_treatment}}</p>
-                        <div class="tengah" style="text-align: center;">
-                        <a href="{{route('treatment_admin.edit', $treat->slug_link)}}" class="btn btn-success" style="margin-right: 20px;"><i class="bi bi-pencil-square"></i></a>
-                        <a href="{{route('treatment_admin.hapus', $treat->slug_link)}}" class="btn btn-danger"><i class="bi bi-trash"></i></a>
+            {{-- BUTTON --}}
+            <div class="col-12">
+                <a href="{{ route('treatment_admin.create') }}" class="btn btn-primary">
+                    <i class="bi bi-person-add"></i> Tambah
+                </a>
+                <a href="{{ route('treatment_admin.history') }}" class="btn btn-danger ms-1">
+                    <i class="bi bi-archive"></i> Histori
+                </a>
+            </div>
+
+            {{-- CARD --}}
+            <div class="row kartu">
+                @foreach ($treatments as $treat )
+                        <div class="col-4">
+                        <div class="card my-3 jarak" id="jarakslice">
+                            <img src="{{ asset('storage/images/' . $treat->foto_treatment)}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title" style="font-size: 25px;">{{ $treat->nama_treatment }}</h5>
+                                <p class="card-text">{{ $treat->description_treatment }} </p>
+                                <p class="card-harga">{{$treat->harga_treatment}}</p>
+                                <div class="tengah" style="text-align: center;">
+                                <a href="{{route('treatment_admin.edit', $treat->slug_link)}}" class="btn btn-success" style="margin-right: 20px;"><i class="bi bi-pencil-square"></i></a>
+                                <a href="{{route('treatment_admin.hapus', $treat->slug_link)}}" class="btn btn-danger"><i class="bi bi-trash"></i></a>
+                                </div>
+        
+                            </div>
                         </div>
+                        </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+</div>
 
-                    </div>
-                </div>
-                </div>
-        @endforeach
-    </div>
-
-<br><br>
 
 <style>
     #content {

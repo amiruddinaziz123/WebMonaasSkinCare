@@ -26,8 +26,8 @@ Route::get('/', function () {
     return view('landingPage');
 });
 
-Route::get('/aboutusAdmin', function () {
-    return view('aboutusAdmin.index');
+Route::get('/landingcobaumar', function () {
+    return view('landingTry');
 });
 
 // untuk coba pake /posts
@@ -108,6 +108,8 @@ Route::controller(TreatmentController::class)->group(function () {
 // ROUTE UNTUK PRODUCT DAN ADMINNYA
 Route::controller(ProductController::class)->group(function () {
     Route::get('/product', 'indexProduct')->name('product.index');
+    Route::get('/productAdmin', 'indexAdmin')->name('productAdmin.index');
+    Route::get('/productAdmin/histori', 'indexHistori')->name('productAdmin.histori');
 });
 
 
