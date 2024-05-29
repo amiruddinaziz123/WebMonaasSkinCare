@@ -101,6 +101,14 @@
             <label for="no_telp" class="ms-3">No Telp:</label>
           </div>
           <div class="form-floating col-12">
+            <select name="nama_dokter" id="nama_dokter" class="form-control" required>
+                @foreach ($dokters as $dokter)
+                    <option value="{{ $dokter->nama_dokter }}">{{ $dokter->nama_dokter }}</option>
+                @endforeach
+            </select>
+            <label for="nama_dokter" class="ms-3">Dokter:</label>
+          </div>
+          <div class="form-floating col-12">
             <input type="date" name="tanggal_booking" id="tanggal_booking" class="form-control tanggal-dipilih" required>
             <label for="tanggal_booking" class="ms-3">Tanggal Dipilih:</label>
           </div>
@@ -109,14 +117,7 @@
             <label for="jam_booking" class="ms-3">Jam Dipilih:</label>
           </div>
           
-          <div class="form-floating col-12">
-              <select name="nama_dokter" id="nama_dokter" class="form-control" required>
-                  @foreach ($dokters as $dokter)
-                      <option value="{{ $dokter->nama_dokter }}">{{ $dokter->nama_dokter }}</option>
-                  @endforeach
-              </select>
-              <label for="nama_dokter" class="ms-3">Dokter:</label>
-          </div>
+          
           <div class="form-group col-12 mt-2 nav justify-content-center">
             <button class="btn col-12" type="submit" style="background-color: #D9005B; color: white; animation-name: none;">Pesan</button>
           </div>
