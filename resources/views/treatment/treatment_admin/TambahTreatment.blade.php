@@ -52,22 +52,6 @@
             </div>
         </div>
 
-            {{-- <div class="form-group mb-3 row">
-                <label for="status" class="font-weight-bold col-sm-2 col-form-label">Status Publish</label>
-                <div class="col-sm-10">
-                    <select required name="status_publish" id="status" class="form-control @error('status_publish') is-invalid @enderror">
-                        <option value=""></option>
-                        <option value="Draft">Draft</option>
-                        <option value="Publish">Publish</option>
-                    </select>
-                    @error('status_publish')
-                    <div class="alert alert-danger mt-2">
-                        {{ $message }}
-                    </div>
-                    @enderror
-                </div>
-            </div> --}}
-
             <div class="mb-3 row">
                 <label for="deskripsi" class="col-sm-2 col-form-label">Deskripsi</label>
                 <div data-mdb-input-init class="col-sm-10 form-outline">
@@ -79,18 +63,6 @@
                     @enderror
                 </div>
             </div>
-
-            {{-- <div class="mb-3 row">
-                <label for="deskripsi" class="col-sm-2 col-form-label">Deskripsi</label>
-                <div class="col-sm-10">
-                    <input required type="text" name="description_treatment" class="form-control @error('description_treatment') is-invalid @enderror" id="deskripsi" value="">
-                    @error('description_treatment')
-                    <div class="alert alert-danger mt-2">
-                        {{ $message }}
-                    </div>
-                    @enderror
-                </div>
-            </div> --}}
 
             <div class="row mb-3 mt-5">
                 <div class="col pinggir">

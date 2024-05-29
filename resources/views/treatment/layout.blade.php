@@ -54,11 +54,16 @@
             <h1 class="navbar-brand">MONAAS TREATMENT</h1>
             </div>
 
+            {{-- <form action="{{ route('search') }} " class="d-flex" role="search" method="GET">
+                <input class="form-control me-2" type="text" name="query" placeholder="Search" aria-label="Search" value="{{ request('query') }}">
+                <button class="btn btn-outline-dark" type="submit"><i class="bi bi-search"></i></button>
+            </form> --}}
+
             <div class="col-md-4">
-            <div class="input-group">
-            <input type="search" class="form-control" placeholder="Search" aria-label="Search">
-            <button class="btn bi bi-search" type="submit"></button>
-            </div>
+            <form action="{{ route('search') }} " class="d-flex" role="search" method="GET">
+                <input class="form-control me-2" type="text" name="query" placeholder="Search" aria-label="Search" value="{{ request('query') }}">
+                <button class="btn btn-outline-dark" type="submit"><i class="bi bi-search"></i></button>
+            </form>
             </div>
 
                 <div class="col-md-1">

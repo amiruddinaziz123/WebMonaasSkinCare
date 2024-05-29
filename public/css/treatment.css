@@ -13,13 +13,6 @@ H1.navbar-brand{
     font-size: 50px;
 }
 
-/* .input-group .btn {
-    background-color: black;
-} */
-
-/* .bi-search{
-    color: white;
-} */
 
 .bi-house-door{
     color: black;
@@ -57,12 +50,24 @@ H1.navbar-brand{
     object-fit: cover;
 }
 
-
-.b.btn {
+.card-body a {
+    text-decoration: none;
+}
+.card-body .btnn {
+    transition: 0.5s ease;
     border-radius: 50px;
-    background-color: #FFC2D1;
-    color: black;
+    background-color: #D9005B;
+    color: white;
     font-family: Poppins;
+    padding: 10px 20px;
+}
+.card-body .btnn:hover {
+    transition: 0.5s ease;
+    scale: 1.1;
+    border-radius: 50px;
+    color: white;
+    font-family: Poppins;
+    box-shadow: 0px 3px 8px black;
 }
 
 .card img { border-radius: 20px 20px 0 0; height: 300px; object-fit: cover; }
@@ -85,13 +90,7 @@ p {
     font-family: Poppins;
 }
 
-
-
-/* .card-title{
-    height: 40px;
-} */
-
- p.card-text {
+p.card-text {
     height: 93px;
     text-align: center;
     align-content: center;

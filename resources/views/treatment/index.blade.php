@@ -34,7 +34,7 @@
 
 <!-- CARD -->
 
-<h3 class="subjudul">Facial Treatment</h3>
+<h3 class="subjudul">Monaas Treatment</h3>
 
 <div class="row">
     @foreach ($treatments as $treat)
@@ -45,7 +45,7 @@
                     <h5 class="card-title" style="font-size: 25px;">{{ $treat->nama_treatment }}</h5>
                     <p class="card-text">{{ $treat->description_treatment }} </p>
                     <p class="card-harga"><b>Rp.  </b>{{ $treat->harga_treatment}}</p>
-                    <a href="#" class="btn b">Booking</a>
+                    <a href="/booking" class="btnn">Booking</a>
                 </div>
             </div>
         </div>

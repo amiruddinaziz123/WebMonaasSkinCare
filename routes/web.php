@@ -91,6 +91,7 @@ Route::controller(ProfilController::class)->group(function () {
 //ROUTE UNTUK TREATMENT DAN ADMINNYA
 Route::controller(TreatmentController::class)->group(function () {
     Route::get('/treatment', 'index')->name('treatment.index');
+    Route::get('/search', 'search')->name('search');
     // ADMIN TREATMENT
     Route::get('/treatment_admin', 'admin')->name('treatment_admin.admin');
     Route::get('/treatment_admin/history', 'history')->name('treatment_admin.history');

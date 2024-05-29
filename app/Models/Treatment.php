@@ -21,9 +21,14 @@ class Treatment extends Model
         'nama_treatment',
         'description_treatment',
         'harga_treatment',
-        // 'status_publish',
         'slug_link',
     ];
 
     use SoftDeletes;
+
+    public function scopeSearch($query, $term)
+    {
+        return $query->where('nama_treatment', 'LIKE', "%{$term}%")
+                     ->orWhere('description_treatment', 'LIKE', "%{$term}%");
+    }
 }

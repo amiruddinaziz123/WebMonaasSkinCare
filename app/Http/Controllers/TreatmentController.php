@@ -130,4 +130,14 @@ class TreatmentController extends Controller
             return redirect()->route('treatment_admin.history')->with(['success' => 'Berhasil menghapus treatment secara permanen!']);
     }
 
+    // SEARCH
+    public function search(Request $request) {
+        $query = $request->input('query');
+        $treatments = Treatment::where('nama_treatment', 'LIKE', "%{$query}%")
+                     ->orWhere('description_treatment', 'LIKE', "%{$query}%")
+                     ->get();
+
+        return view('treatment/index', compact('treatments'));
+    }
+
 }
