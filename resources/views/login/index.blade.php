@@ -47,7 +47,7 @@
               </div>
               <div class="signup">
                 <small>
-                  <a href="/signup" class="text-decoration-none" style="color: #D9005B">Register</a>
+                  <a href="/register" class="text-decoration-none" style="color: #D9005B">Register</a>
                 </small>
               </div>
             </div>

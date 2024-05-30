@@ -22,7 +22,7 @@
         
         <div class="col-md-6">
           <div class="header-text">
-            <h1>Sign Up</h1>
+            <h1>Register</h1>
             {{-- <p class="ms-3 mt-4">Please enter your details</p> --}}
           </div>
           

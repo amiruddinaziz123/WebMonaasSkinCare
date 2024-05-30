@@ -32,7 +32,7 @@
                         <div class="mb-3 row">
                             <label for="foto" class="col-sm-2 col-form-label">Foto Product</label>
                             <div class="col-sm-10">
-                                <input readonly type="hidden" class="form-control" id="nama" name="foto_product" value="{{ old('foto_product', $products->foto_product) }}" required>
+                                <input readonly type="file" class="form-control" id="nama" name="foto_product" value="{{ old('foto_product', $products->foto_product) }}" style="display: none" required>
                                 <img src="/img/{{ $products->foto_product }}" alt="Monaas Skincare" class="img-fluid" style="width: 500px; margin-bottom: 15px;">
                                 @error('foto_product')
                                     <div class="invalid-feedback">{{ $message }}</div>
