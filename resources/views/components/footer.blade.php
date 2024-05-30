@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-sm-12 col-md-1 col-lg-1 pe-0" data-aos="fade-right" data-aos-anchor-placement="bottom-bottom">
                 <div class="nav justify-content-end">
-                    <img loading="lazy" class="m-3 me-0" src="{{ asset('img/MonAAS 2.png') }} " width="120px"/>
+                    <img loading="lazy" class="m-3 me-0" src="{{ asset('img/logoMonaas.png') }} " width="120px"/>
                 </div>
             </div>
             <div class="col-sm-12 col-md-5 col-lg-5" data-aos="fade-left" data-aos-anchor-placement="bottom-bottom">
