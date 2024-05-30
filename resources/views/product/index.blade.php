@@ -82,6 +82,7 @@
             </div>
             <div class="mb-5 d-flex justify-content-around">
                 <h3>{{ $pro->harga_product }}</h3>
+                {{-- <a onclick="sendwhatsapp();"><button class="btn btn-primary" style="border-radius: 20px">Buy Now</button></a> --}}
                 <a href="https://wa.me/0882003366832?text=pesan product pada nomor 0882003366832"><button class="btn btn-primary" style="border-radius: 20px">Buy Now</button></a>
             </div>
         </div>
@@ -117,6 +118,22 @@
             });
         });
     });
+</script>
+
+<script>
+  function sendwhatsapp(){
+   var phonenumber = "+6285101556689";
+
+   var url = "https://wa.me/" + phonenumber + "?text="
+   +"*Name :* "+name+"%0a"
+   +"*Email :* "+email+"%0a"
+   +"*Country:* "+country+"%0a"
+   +"*Message :* "+message
+   +"%0a%0a"
+   +"This is an example of send HTML form data to WhatsApp";
+
+   window.open(url, '_blank').focus();
+ }
 </script>
 
 </body>
