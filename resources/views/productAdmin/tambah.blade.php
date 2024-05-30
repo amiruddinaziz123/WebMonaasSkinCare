@@ -60,7 +60,7 @@
                        <button type="reset" class="btn btn-danger ms-1">Reset</button>
                        <a href="{{ route('productAdmin.index') }}" class="btn btn-primary ms-1">Kembali</a>
                     </div>
-                    <input name="status_aktif" value="Aktif" type="hidden">
+                    <input name="status_aktif" value="aktif" type="hidden">
                 </form>
             </div>
         </div>

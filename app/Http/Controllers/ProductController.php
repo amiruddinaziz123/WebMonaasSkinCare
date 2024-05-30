@@ -56,6 +56,7 @@ class ProductController extends Controller
         'nama_product'           =>$request->nama_product,
         'description_product'    =>$request->description_product,
         'harga_product'          =>$request->harga_product,
+        'status_aktif'           =>$request->status_aktif,
         'slug_link'              => $slug,
         'created_at'             =>NOW()
     ]);
@@ -107,16 +108,13 @@ class ProductController extends Controller
 
     public function softdelete(request $request, string $slug_link)
     { // Simpan file yang diunggah ke storage dengan nama yang unik
-        $image = $request->file('foto_product');
-        $imageName = $image->getClientOriginalName(); // Ambil nama file asli
-        $image->move(public_path('img'), $imageName); // Simpan file di dalam direktori public/img
         $slug = Str::slug($request->nama_product, '-');
         $products = product::where('slug_link', $slug_link)->firstOrFail();
         $products->update([
-            'foto_product'           =>$imageName,
             'nama_product'           =>$request->nama_product,
             'description_product'    =>$request->description_product,
             'harga_product'          =>$request->harga_product,
+            'status_aktif'           =>$request->status_aktif,
             'slug_link'              => $slug,
         ]);
 

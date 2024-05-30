@@ -25,7 +25,7 @@
                 <div class="card-header">
                     <h3 class="card-title mt-1">Hapus Product <span class="text-bold">{{ old('foto_product', $products->nama_product) }}?</span></h3>
                 </div>
-                <form action="{{ route('productAdmin.editProduct', $products->slug_link) }}" method="POST" autocomplete="off" class="needs-validation" enctype="multipart/form-data" novalidate>
+                <form action="{{ route('productAdmin.softdeleted', $products->slug_link) }}" method="POST" autocomplete="off" class="needs-validation" enctype="multipart/form-data" novalidate>
                     @csrf
                     @method('PUT')
                     <div class="card-body">
