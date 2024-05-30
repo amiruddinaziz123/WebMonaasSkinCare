@@ -24,7 +24,7 @@
             <div class="card card-secondary">
                 <div class="card-header">
                 </div>
-                <form action="{{ route('productAdmin.tambahProduct') }}" method="POST" autocomplete="off" class="needs-validation"  novalidate>
+                <form action="{{ route('productAdmin.tambahProduct') }}" method="POST" autocomplete="off" enctype="multipart/form-data" class="needs-validation"  novalidate>
                 @csrf
                     <div class="card-body">
                         <div class="mb-3 row">

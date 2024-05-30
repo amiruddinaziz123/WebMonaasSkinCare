@@ -8,6 +8,8 @@ use App\Models\product;
 
 use Illuminate\View\View;
 
+use Illuminate\Support\Str;
+
 class ProductController extends Controller
 {
     public function indexTambah(): View
@@ -47,13 +49,17 @@ class ProductController extends Controller
     $imageName = $image->getClientOriginalName(); // Ambil nama file asli
     $image->move(public_path('img'), $imageName); // Simpan file di dalam direktori public/img
 
+    $slug = Str::slug($request->nama_product, '-');
+
     product::create ([
-        'foto_product'             =>$imageName,
-        'nama_product'              =>$request->nama_product,
-        'description_product'              =>$request->description_product,
-        'harga_product'              =>$request->harga_product,
-        'created_at'        =>NOW()
+        'foto_product'           =>$imageName,
+        'nama_product'           =>$request->nama_product,
+        'description_product'    =>$request->description_product,
+        'harga_product'          =>$request->harga_product,
+        'slug_link'              => $slug,
+        'created_at'             =>NOW()
     ]);
+    
 
     return redirect()->route('productAdmin.index')->with(
         ['success'=> 'Data Berhasil Ditambah!'] 

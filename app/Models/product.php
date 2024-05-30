@@ -19,6 +19,7 @@ class product extends Model
         'description_product',
         'harga_product',
         'created_at',
-        'update_at'
+        'update_at',
+        'slug_link'
     ];
 }

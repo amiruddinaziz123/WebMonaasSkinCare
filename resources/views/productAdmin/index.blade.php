@@ -30,8 +30,11 @@
                     <i class="bi bi-archive"></i> Histori
                 </a>
             </div>
-
+            <div class="row">
             @foreach ($products as $pro)
+            
+
+            
             <div class="col-4 mt-3">
         <div class="card">
             <img src="/img/{{ $pro->foto_product }}" class="card-img-top" alt="...">
@@ -62,7 +65,7 @@
         </div>
         </div>
         @endforeach
-
+    </div>
             {{-- <div class="col-12">
                 <table id="example" class="table table-dark" style="width: 100%;">
                     <thead>
