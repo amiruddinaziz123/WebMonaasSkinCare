@@ -46,9 +46,9 @@ Route::controller(LogsignController::class)->group(function () {
     Route::get('/logsignAdmin', 'index')->name('logsignAdmin.index');
     Route::get('/login', 'indexLogin')->name('login.index');
     Route::post('/prosesLogin', 'prosesLogin')->name('login.store');
-    Route::get('/signup', 'indexSignup')->name('signupAdmin.index');
+    Route::get('/register', 'indexSignup')->name('signupAdmin.index');
     Route::post('/logsignAdmin/edit', 'store')->name('logsignAdmin.store');
-    Route::post('/signup/add', 'storeSignup')->name('signup.store');
+    Route::post('/register/add', 'storeSignup')->name('signup.store');
 });
 
 // ROUTE UNTUK BOOKING DAN ADMINNYA
@@ -84,7 +84,7 @@ Route::controller(AboutusController::class)->group(function () {
 
 // ROUTE UNTUK PROFIL DAN ADMINNYA
 Route::controller(ProfilController::class)->group(function () {
-    Route::get('/profil', 'index')->name('profil.index');
+    Route::get('/profile', 'index')->name('profil.index');
 });
 
 

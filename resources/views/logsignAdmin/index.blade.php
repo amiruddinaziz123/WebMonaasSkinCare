@@ -8,12 +8,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Login Signup</h1>
+            <h1 class="m-0">Login Register</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Login Signup</li>
+              <li class="breadcrumb-item active">Login Register</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
