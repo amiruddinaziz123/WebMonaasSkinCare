@@ -22,8 +22,8 @@ use App\Models\navbar;
 |
 */
 
-Route::get('/', function () {
-    return view('landingPage');
+Route::controller(BookingController::class)->group(function () {
+    Route::get('/', 'landingPage')->name('landingPage');
 });
 
 Route::get('/landingcobaumar', function () {

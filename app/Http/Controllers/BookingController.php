@@ -26,6 +26,13 @@ class BookingController extends Controller
     
         return view('booking.index', compact('dokters', 'jamBookings', 'navbars'));
     }
+    
+    public function landingPage()
+    {
+        $navbars = navbar::all();
+    
+        return view('landingPage', compact('navbars'));
+    }
 
     public function bookingAdmin()
     {
