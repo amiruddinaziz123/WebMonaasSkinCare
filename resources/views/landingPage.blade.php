@@ -63,7 +63,7 @@
                 @for ($i = 0; $i < 4; $i++)
                     <div class="col-md-3">
                         <div class="card product-card">
-                            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Body Lotion">
+                            <img src="\img\produk.jpg" class="card-img-top" alt="Body Lotion">
                             <div class="card-body">
                                 <h5 class="card-title">Body Lotion</h5>
                                 <p class="card-text">IDR 80.000,00</p>
@@ -84,7 +84,7 @@
                 @for ($i = 0; $i < 4; $i++)
                     <div class="col-md-3">
                         <div class="card product-card">
-                            <img src="https://via.placeholder.com/150" class="card-img-top" alt="Body Lotion">
+                            <img src="\img\gambar2.jpg" class="card-img-top" alt="Body Lotion">
                             <div class="card-body">
                                 <h5 class="card-title">Body Lotion</h5>
                                 <p class="card-text">IDR 80.000,00</p>
