@@ -54,9 +54,6 @@
                                     <a href="{{ route('customerAdmin.detail', $mtr->slug_link) }}" class="btn btn-primary btn-sm" role="button">
                                         <i class="bi bi-eye"></i>
                                     </a>
-                                    <a href="{{ route('customerAdmin.edit', $mtr->slug_link) }}" class="btn btn-success btn-sm" role="button">
-                                        <i class="bi bi-pencil"></i>
-                                    </a>
                                     <a href="{{ route('customerAdmin.restore', $mtr->slug_link) }}" class="btn btn-warning text-white btn-sm" role="button">
                                         <i class="bi bi-box-arrow-up"></i>
                                     </a>

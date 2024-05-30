@@ -20,13 +20,18 @@ body{
     margin-bottom: auto;
     margin-top: auto;
     height: 60px;
-    background: var(--ungu, #E681FF);
+    background: var(--ungu, #ED1E78);
     border-radius: 30px;
     padding: 10px;
     }
 
+    .search_input::placeholder {
+        font-family: poppins;
+        color: white; /* Warna biru */
+    }
+
     .search_input{
-    color: white;
+    color: #ED1E78;
     border: 0;
     outline: 0;
     background: none;
@@ -39,13 +44,13 @@ body{
     .searchbar:hover > .search_input{
     padding: 0 10px;
     width: 450px;
-    caret-color:#ED1E78;
+    caret-color:#ffffff;
     transition: width 0.4s linear;
     }
 
     .searchbar:hover > .search_icon{
-    background: #ED1E78;
-    color: #fffcfd;
+    background: white;
+    color: #ED1E78;
     }
 
     .search_icon{
@@ -78,7 +83,15 @@ h5{
 .card{
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
     margin-right: 25px;
+    height: 530px;
+    border-radius: 20px;
 }
+
+.card-img-top{
+    height: 300px;
+    object-fit: cover;
+}
+
 .card-body{
     padding: 25px;
     margin-top: -15px;
@@ -88,7 +101,7 @@ h5{
 }
 
 h3{
-    color: rgb(0, 91, 228);
+    color:#ED1E78;
 }
 
 /* end of card */

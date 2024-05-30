@@ -112,6 +112,10 @@ Route::controller(ProductController::class)->group(function () {
     Route::get('/productAdmin/histori', 'indexHistori')->name('productAdmin.histori');
     Route::get('/productAdmin/tambah', 'indexTambah')->name('productAdmin.tambah');
     Route::post('/productAdmin/tambahProduct', 'tambah')->name('productAdmin.tambahProduct');
+    Route::get('/productAdmin/edit/{slug_link}', 'indexEdit')->name('productAdmin.edit');
+    Route::put('/productAdmin/edit/{slug_link}', 'edit')->name('productAdmin.editProduct');
+    Route::get('/productAdmin/softdelete/{slug_link}', 'indexSoftdelete')->name('productAdmin.softdelete');
+    Route::put('/productAdmin/softdelete/{slug_link}', 'softdelete')->name('productAdmin.softdeleted');
 });
 
 

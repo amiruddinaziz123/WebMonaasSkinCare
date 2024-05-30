@@ -45,18 +45,14 @@
             </div>
             
             <div class="row mb-3 ml-2">
-                <div class="col-4" style="margin-right: -70px">
-                <a href="{{ route('customerAdmin.detail', $pro->slug_link) }}" class="btn btn-primary btn-sm" role="button">
-                <i class="bi bi-eye"></i>
-            </a>
-            </div>
-            <div class="col-4">
-                <a href="{{ route('customerAdmin.edit', $pro->slug_link) }}" class="btn btn-success btn-sm" role="button">
+                
+            <div class="col-4" >
+                <a href="{{ route('productAdmin.edit', $pro->slug_link) }}" class="btn btn-success btn-sm" role="button">
                 <i class="bi bi-pencil"></i>
             </a>
         </div>
             <div class="col-4" style="margin-left: -70px">
-                <a href="{{ route('customerAdmin.softdelete', $pro->slug_link) }}" class="btn btn-danger btn-sm" role="button">
+                <a href="{{ route('productAdmin.softdelete', $pro->slug_link) }}" class="btn btn-danger btn-sm" role="button">
                 <i class="bi bi-trash3"></i>
             </a>
         </div>
@@ -119,6 +115,18 @@
         </div>
     </section>
 </div>
+
+<style>
+    .card{
+        height: 530px;
+        border-radius: 20px;
+    }
+
+    .card-img-top{
+        height: 300px;
+        object-fit: cover;
+    }
+</style>
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {

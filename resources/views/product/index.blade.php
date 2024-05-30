@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>produk</title>
+    <title>Product</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -74,16 +74,16 @@
         
         @foreach ($products as $pro)
             <div class="col">
-        <div class="card">
-            <img src="/img/{{ $pro->foto_product }}" class="card-img-top" alt="...">
+        <div class="card rounded-5" style="box-shadow: 0px 193px 54px 0px rgba(120, 120, 120, 0.01), 0px 124px 49px 0px rgba(120, 120, 120, 0.04), 0px 69px 42px 0px rgba(120, 120, 120, 0.15), 0px 31px 31px 0px rgba(120, 120, 120, 0.26), 0px 8px 17px 0px rgba(120, 120, 120, 0.29);">
+            <img src="/img/{{ $pro->foto_product }}" class="card-img-top rounded-top-5" alt="...">
             <div class="card-body">
                 <h5 class="card-title mt-3">{{ $pro->nama_product }}</h5>
                 <p class="card-text">{{ $pro->description_product }}</p>
             </div>
             <div class="mb-5 d-flex justify-content-around">
-                <h3>{{ $pro->harga_product }}</h3>
+                <h3>Rp. {{ $pro->harga_product }}</h3>
                 {{-- <a onclick="sendwhatsapp();"><button class="btn btn-primary" style="border-radius: 20px">Buy Now</button></a> --}}
-                <a href="https://wa.me/0882003366832?text=pesan product pada nomor 0882003366832"><button class="btn btn-primary" style="border-radius: 20px">Buy Now</button></a>
+                <a href="https://wa.me/0882003366832?text=pesan product pada nomor 0882003366832"><button class="btn btn-primary" style="border-radius: 20px; border-color: #ED1E78; background-color: #D9005B;">Buy Now</button></a>
             </div>
         </div>
         </div>
