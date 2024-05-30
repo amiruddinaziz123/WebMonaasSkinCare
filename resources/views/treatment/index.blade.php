@@ -1,9 +1,11 @@
-@extends('treatment/layout')
+{{-- @extends('treatment/layout')
 
 
-@section('content')
+@section('content') --}}
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Katibeh&display=swap" rel="stylesheet">
@@ -57,18 +59,18 @@
     </div>
   </div> --}}
 
-  {{-- <div class="col-md-4">
+  <div class="col-md-4">
     <form action="{{ route('search') }} " class="d-flex" role="search" method="GET">
         <input class="form-control me-2" type="text" name="query" placeholder="Search" aria-label="Search" value="{{ request('query') }}">
         <button class="btn btn-outline-dark" type="submit"><i class="bi bi-search"></i></button>
-         </form>
-    </div> --}}
+  </form>
+  </div>
 
 <!-- CARD -->
 
 <h3 class="subjudul">Monaas Treatment</h3>
 
-<div class="row">
+<div class="row col-12">
     @foreach ($treatments as $treat)
         <div class="col-4">
             <div class="card my-3 jarak" id="jarakslice">
@@ -99,7 +101,7 @@
     } */
 
     .card{
-        height: 550px;
+        height: 580px;
         border-radius: 20px;
     }
 
@@ -124,7 +126,7 @@
     }
 
     p.card-text {
-        height: 80px;
+        height: 90px;
         text-align: center;
         align-content: center;
     }
@@ -137,4 +139,4 @@
 
 
 
-@endsection
+{{-- @endsection --}}

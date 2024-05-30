@@ -24,7 +24,7 @@ H1.navbar-brand{
     color: black;
 }
 
-/*GAMBAR*/
+/*CAROUSEL*/
 .carousel-item img {
     margin: 0;
     width: 100%;
@@ -33,51 +33,11 @@ H1.navbar-brand{
 }
 
 /* SEARCH */
-.searchbar{
-    margin-bottom: auto;
-    margin-top: auto;
-    height: 60px;
-    background: var(--ungu, #E681FF);
-    border-radius: 30px;
-    padding: 10px;
-    }
+.col-md-4{
+    margin: 0 35%;
+}
 
-    .search_input{
-    color: white;
-    border: 0;
-    outline: 0;
-    background: none;
-    width: 0;
-    caret-color:transparent;
-    line-height: 40px;
-    transition: width 0.4s linear;
-    }
-
-    .searchbar:hover > .search_input{
-    padding: 0 10px;
-    width: 450px;
-    caret-color:#ED1E78;
-    transition: width 0.4s linear;
-    }
-
-    .searchbar:hover > .search_icon{
-    background: #ED1E78;
-    color: #fffcfd;
-    }
-
-    .search_icon{
-    height: 40px;
-    width: 40px;
-    float: right;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    color:white;
-    text-decoration:none;
-    }
-
-/*GAMBAR SLIDER*/
+/*CARD*/
 
 .carousel-inner_card{
     display: flex;
@@ -153,7 +113,8 @@ p.card-harga {
     text-align: center;
 }
 
-@media only screen and (max-width: 990px) {
+
+@media only screen and (max-width: 1279px) {
     .row {
         display: block;
         width: 75%;
@@ -174,6 +135,10 @@ p.card-harga {
 
     p .card-text{
         height: 150px;
+    }
+
+    .card{
+        height: 580px;
     }
 }
 
