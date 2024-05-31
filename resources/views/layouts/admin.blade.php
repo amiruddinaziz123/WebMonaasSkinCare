@@ -216,6 +216,15 @@
               </a>
           </li>
 
+          <li class="nav-item">
+            <a href="/bookingAdmin" class="nav-link">
+                <i class="nav-icon fas fa-user"></i>
+                <p>
+                  Data Booking
+                </p>
+            </a>
+          </li>
+
             <li class="nav-item">
                 <a href="/logsignAdmin" class="nav-link">
                     <i class="nav-icon fas fa-user"></i>
@@ -263,14 +272,7 @@
             </li>
 
 
-            <li class="nav-item">
-              <a href="/bookingAdmin" class="nav-link">
-                  <i class="nav-icon fas fa-user"></i>
-                  <p>
-                    Booking Admin
-                  </p>
-              </a>
-            </li>
+            
 
 
 
