@@ -121,4 +121,29 @@ class ProductController extends Controller
         return redirect()->route('productAdmin.index')->with('success', 'Data Berhasil Dihapus!');
     }
 
+    public function indexRestore(string $slug_link): View
+    {
+        $products = product::where('slug_link', $slug_link)->firstOrFail();
+        return view('productAdmin.restore', compact('products'));
+    }
+
+    public function indexDelete(string $slug_link): View
+    {
+        $products = product::where('slug_link', $slug_link)->firstOrFail();
+        return view('productAdmin.delete', compact('products'));
+    }
+
+    public function destroy($slug)
+    {
+        $products = product::where('slug_link', $slug)->first();
+
+        if (!$products) {
+            return redirect()->route('productAdmin.histori')->with(['error' => 'Data tidak ditemukan!']);
+        }
+
+        $products->delete();
+
+        return redirect()->route('productAdmin.histori')->with(['success' => 'Data Berhasil Dihapus!']);
+    }
+
 }

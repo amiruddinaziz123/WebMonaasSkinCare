@@ -71,7 +71,7 @@ Route::controller(MasterController::class)->group(function () {
     Route::put('/customerAdmin/softdelete/{slug_link}', 'softdelete')->name('customerAdmin.softdeleted');
     Route::put('/customerAdmin/edit/{slug_link}', 'update')->name('customerAdmin.update');
     Route::post('/masterAdmin/add', 'store')->name('masterAdmin.store');
-    Route::delete('/customerAdmin/{slug}', 'destroy')->name('customerAdmin.destroy');
+    Route::delete('/customerAdmin/permanentDelete/{slug}', 'destroy')->name('customerAdmin.destroy');
 });
 
 
@@ -116,6 +116,9 @@ Route::controller(ProductController::class)->group(function () {
     Route::put('/productAdmin/edit/{slug_link}', 'edit')->name('productAdmin.editProduct');
     Route::get('/productAdmin/softdelete/{slug_link}', 'indexSoftdelete')->name('productAdmin.softdelete');
     Route::put('/productAdmin/softdelete/{slug_link}', 'softdelete')->name('productAdmin.softdeleted');
+    Route::get('/productAdmin/restore/{slug_link}', 'indexRestore')->name('productAdmin.restore');
+    Route::get('/productAdmin/delete/{slug_link}', 'indexDelete')->name('productAdmin.delete');
+    Route::delete('/productAdmin/permanentDelete/{slug}', 'destroy')->name('productAdmin.destroy');
 });
 
 

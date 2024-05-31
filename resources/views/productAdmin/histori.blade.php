@@ -8,7 +8,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1 class="m-0">Histori Customer</h1>
+                    <h1 class="m-0">Histori Product</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -22,65 +22,58 @@
 
     <section class="content">
         <div class="container-fluid">
-            <div class="col-12">
-                <a href="{{ route('customerAdmin.index') }}" class="btn btn-primary">
-                    <i class="bi bi-people"></i> Data
+            <div class="col-12 mb-3">
+                <a href="{{ route('productAdmin.index') }}" class="btn btn-primary">
+                    <i class="bi bi-people"></i> Product
                 </a>
             </div>
-
             <div class="col-12">
-                <table id="example" class="table table-dark" style="width: 100%;">
+                <table id="example" class="table table-dark" style="width:100%">
                     <thead>
                         <tr>
-                            <th>foto</th>
-                            <th>nama</th>
-                            <th>deskripsi</th>
-                            <th>harga</th>
-                            <th>Status Aktif</th>
-                            <th>Aksi</th>
+                            <th data-priority="1">No</th>
+                            <th>Foto Product</th>
+                            <th data-priority="1">Nama Product</th>
+                            <th data-priority="1">Deskripsi</th>
+                            <th data-priority="1">Harga</th>
+                            <th data-priority="1">Aksi</th>
                         </tr>
                     </thead>
+        
                     <tbody>
-                        @foreach ($products as $pro)
-                            <tr>
-                                <td>{{ $pro->foto_product }}</td>
-                                <td>{{ $pro->nama_product }}</td>
-                                <td>{{ $pro->description_product }}</td>
-                                <td>{{ $pro->harga_product }}</td>
-                                <td>{{ $pro->status_aktif }}</td>
-                                <td>
-                                    <a href="{{ route('customerAdmin.detail', $mtr->slug_link) }}" class="btn btn-primary btn-sm" role="button">
-                                        <i class="bi bi-eye"></i>
-                                    </a>
-                                    <a href="{{ route('customerAdmin.edit', $mtr->slug_link) }}" class="btn btn-success btn-sm" role="button">
-                                        <i class="bi bi-pencil"></i>
-                                    </a>
-                                    <a href="{{ route('customerAdmin.restore', $mtr->slug_link) }}" class="btn btn-warning text-white btn-sm" role="button">
-                                        <i class="bi bi-box-arrow-up"></i>
-                                    </a>
-                                    <a href="{{ route('customerAdmin.delete', $mtr->slug_link) }}" class="btn btn-danger btn-sm" role="button">
-                                        <i class="bi bi-trash3"></i>
-                                    </a>
-                                    {{-- <form action="{{ route('customerAdmin.destroy', $mtr->slug_link) }}" method="POST" style="display:inline;">
-                                        @csrf
-                                        @method('DELETE')
-                                        <button type="submit" class="btn btn-danger btn-sm">
-                                            <i class="bi bi-trash3"></i>
-                                        </button>
-                                    </form> --}}
+                        @foreach ($products as $no => $pro)
+        
+                        <tr>
+                            <td>{{++$no}}</td>
+                            <td> <img src="/img/{{ $pro->foto_product }}" class="card-img-top" alt="..." style="width: 160px;"> </td>
+                            <td> {{ $pro->nama_product}} </td>
+                            <td> {{ $pro->description_product }} </td>
+                            <td> {{ $pro->harga_product}}</td>
+        
+                            <td>
+                                <a href="{{ route('productAdmin.restore', $pro->slug_link) }}" class="btn btn-primary btn-sm" role="button">
+                                    <i class="bi bi-trash3"> Restore</i>
+                                </a>
+                            
+        
                                     
-                                </td>
-                            </tr>
+                                <a href="{{ route('productAdmin.delete', $pro->slug_link) }}" class="btn btn-danger btn-sm mt-2" role="button">
+                                    <i class="bi bi-trash3"> Hapus Permanen</i>
+                                </a>
+                                
+                            </td>
+        
                         @endforeach
                     </tbody>
+        
                     <tfoot>
                         <tr>
-                            <th>foto</th>
-                            <th>nama</th>
-                            <th>deskripsi</th>
-                            <th>harga</th>
-                            <th>Status Aktif</th>
-                            <th>Aksi</th>
+                            <th data-priority="1">No</th>
+                            <th>Foto Product</th>
+                            <th data-priority="1">Nama Product</th>
+                            <th data-priority="1">Deskripsi</th>
+                            <th data-priority="1">Harga</th>
+                            <th data-priority="1">Aksi</th>
                         </tr>
                     </tfoot>
                 </table>
