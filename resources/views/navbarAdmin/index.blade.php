@@ -1,6 +1,4 @@
-@extends('layouts.admin')
 
-@section('content')
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -24,7 +22,8 @@
 
 </head>
 <body class="antialiased">
-    
+    @extends('layouts.admin')
+    @section('content')
     <div style="margin-top: 10vh; margin-left: 260px;">
         <h3 class="ms-3">before</h3>
         <nav class="navbar navbar-expand-lg" data-aos="fade-down" id="data-background">
@@ -194,6 +193,6 @@
     <script>AOS.init();</script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    @endsection
 </body>
 </html>
-@endsection
