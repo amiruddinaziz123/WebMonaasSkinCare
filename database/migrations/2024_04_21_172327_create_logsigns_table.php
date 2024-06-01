@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('logsigns', function (Blueprint $table) {
             $table->id();
-            $table->string('image');
-            $table->string('text');
+            $table->string('image')->nullable();
+            $table->string('text')->nullable();
             $table->timestamps();
         });
     }
