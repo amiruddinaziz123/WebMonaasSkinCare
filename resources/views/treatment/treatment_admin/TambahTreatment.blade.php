@@ -102,10 +102,3 @@
 
 @endsection
 
-
-@section('content')
-
-
-
-
-@endsection

@@ -44,7 +44,7 @@
                          <div class="mb-3 row">
                             <label for="des" class="col-sm-2 col-form-label">Description</label>
                             <div class="col-sm-10">
-                               <input type="text" class="form-control" id="des" name="description_product" required> 
+                                <textarea class="form-control" id="des" name="description_product" rows="3"></textarea>
                             </div>
                          </div>
              

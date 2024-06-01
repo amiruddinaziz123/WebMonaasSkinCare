@@ -51,7 +51,7 @@
                             <td> {{ $pro->harga_product}}</td>
         
                             <td>
-                                <a href="{{ route('productAdmin.restore', $pro->slug_link) }}" class="btn btn-primary btn-sm" role="button">
+                                <a href="{{ route('productAdmin.restore', $pro->slug_link) }}" class="btn btn-primary btn-sm mt-2" role="button">
                                     <i class="bi bi-trash3"> Restore</i>
                                 </a>
                             
