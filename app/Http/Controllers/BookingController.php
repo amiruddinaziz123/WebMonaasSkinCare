@@ -11,6 +11,7 @@ use App\Models\JamBooking;
 use App\Models\Booking;
 use App\Models\dokters;
 use App\Models\navbar;
+use App\Models\account;
 
 class BookingController extends Controller
 {
@@ -19,12 +20,13 @@ class BookingController extends Controller
         $dokters = dokters::all();
         $jamBookings = JamBooking::all();
         $navbars = navbar::all();
+        $accounts = account::all();
     
         foreach ($jamBookings as $jamBooking) {
             $jamBooking->jam_ke = substr($jamBooking->jam_ke, 0, 5);
         }
     
-        return view('booking.index', compact('dokters', 'jamBookings', 'navbars'));
+        return view('booking.index', compact('dokters', 'jamBookings', 'navbars', 'accounts'));
     }
     
     public function landingPage()

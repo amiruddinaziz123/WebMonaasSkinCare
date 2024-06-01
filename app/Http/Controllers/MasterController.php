@@ -16,7 +16,8 @@ class MasterController extends Controller
 
     public function indexCustomer(): View
     {
-        $customers = Account::where('status_aktif', '=', 'Aktif')->get();
+        // $customers = Account::where('status_aktif', '=', 'Aktif')->get();
+        $customers = Account::all();
         return view('customerAdmin.index', compact('customers'));
     }
 

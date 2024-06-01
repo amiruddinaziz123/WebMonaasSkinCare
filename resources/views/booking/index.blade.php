@@ -92,9 +92,17 @@
         <hr>
         <form action="{{ route('booking.store') }}" method="POST" class="row">
           @csrf
-          <div class="form-floating col-12">
+          {{-- <div class="form-floating col-12">
             <input type="text" name="nama_user" id="nama_user" class="form-control" placeholder="Nama" required>
             <label for="nama_user" class="ms-3">Nama:</label>
+          </div> --}}
+          <div class="form-floating col-12">
+            <select name="nama_dokter" id="nama_dokter" class="form-control" required>
+                @foreach ($accounts as $account)
+                    <option value="{{ $account->nama_dokter }}">{{ $account->nama_dokter }}</option>
+                @endforeach
+            </select>
+            <label for="nama_dokter" class="ms-3">Nama:</label>
           </div>
           <div class="form-floating col-12">
             <input type="text" name="no_telp" id="no_telp" minlength="12" maxlength="14" class="form-control" placeholder="No Telp" required>

@@ -84,7 +84,7 @@ Route::controller(AboutusController::class)->group(function () {
 
 // ROUTE UNTUK PROFIL DAN ADMINNYA
 Route::controller(ProfilController::class)->group(function () {
-    Route::get('/profile', 'index')->name('profil.index');
+    Route::get('/profil', 'index')->name('profil.index');
 });
 
 

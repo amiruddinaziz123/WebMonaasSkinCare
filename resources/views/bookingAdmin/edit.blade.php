@@ -36,7 +36,7 @@
             <div class="mb-3 row">
                 <label for="jam_booking" class="col-sm-2 col-form-label">Jam Booking</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control @error('jam_booking') is-invalid @enderror" id="jam_booking" name="jam_booking" value="{{ old('jam_booking', $bookings->jam_booking) }}" required>
+                    <input type="time" class="form-control @error('jam_booking') is-invalid @enderror" id="jam_booking" name="jam_booking" value="{{ old('jam_booking', $bookings->jam_booking) }}" required>
                 </div>
             </div>
             <div class="mb-3 row">
