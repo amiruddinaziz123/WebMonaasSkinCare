@@ -17,10 +17,10 @@
     <section id="about-us" class="hero-section text-center py-5">
         <div class="container">
             <div class="row">
-                <div class="col-6 text-start">
-                    <div class="mt-2 mb-4">
-                        <h1>Rawat <span class="highlight">kulitmu</span>,</h1>
-                        <h1>rawat <span class="highlight">kecantikanmu</span></h1>
+                <div class="col-lg-6 col-sm-12 text-start">
+                    <div class="mt-2 mb-4 font-poppins">
+                        <h1 class="fw-bold">Rawat <span class="highlight">kulitmu</span>,</h1>
+                        <h1 class="fw-bold">rawat <span class="highlight">kecantikanmu</span></h1>
                     </div>
                     <p class="mb-4">Kami memberikan layanan dan produk yang berkualitas serta bermanfaat bagi semua orang.</p>
                     {{-- image --}}
@@ -32,22 +32,22 @@
                             <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" class="rounded-circle" aria-label="Slide 3"></button>
                         </div>
 
-                        <div class="carousel-inner">
+                        <div class="carousel-inner fw-bold">
                             <div class="carousel-item active c-item">
-                                <strong>Special Birthday Discount</strong>
+                                <strong>Special Birthday Discount<i class="fa fa-percent"></i></strong>
                             </div>
                             <div class="carousel-item c-item">
-                                <strong>Special Birthday Discount</strong>
+                                <strong>Special Birthday Discount<i class="fa fa-percent"></i></strong>
                             </div>
                             <div class="carousel-item c-item">
-                                <strong>Special Birthday Discount</strong>
+                                <strong>Special Birthday Discount<i class="fa fa-percent"></i></strong>
                             </div>
                         </div>
                     </div> 
 
                     {{-- end of image --}}
                 </div>
-                <div class="col-6">
+                <div class="col-lg-6 col-sm-12">
                     <img src="{{ asset('img/Group 6.png') }}" id="gambar-depan" alt="">
                 </div>
             </div>
@@ -57,16 +57,16 @@
     <!-- Products Section -->
     <section id="products" class="products-section py-5">
         <div class="container">
-            <h2 class="section-title">Produk Kami</h2>
+            <h2 class="section-title font-katibeh">Produk Kami</h2>
             <div class="row">
                 <!-- Product Item -->
                 @for ($i = 0; $i < 4; $i++)
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-sm-6 mb-sm-4">
                         <div class="card product-card">
                             <img src="\img\produk.jpg" class="card-img-top" alt="Body Lotion">
-                            <div class="card-body">
-                                <h5 class="card-title">Body Lotion</h5>
-                                <p class="card-text">IDR 80.000,00</p>
+                            <div class="card-body p-4 ps-5">
+                                <h5 class="card-title fs-6 fw-bold text-start">Body Lotion</h5>
+                                <p class="card-text fs-6 fw-bold text-start">IDR 80.000,00</p>
                             </div>
                         </div>
                     </div>
@@ -78,16 +78,16 @@
     <!-- Treatments Section -->
     <section id="treatments" class="treatments-section py-5">
         <div class="container">
-            <h2 class="section-title">Treatment Kami</h2>
+            <h2 class="section-title font-katibeh"><hr>Treatment Kami</h2>
             <div class="row">
                 <!-- Treatment Item -->
                 @for ($i = 0; $i < 4; $i++)
-                    <div class="col-md-3">
+                    <div class="col-md-3 col-sm-6 mb-sm-4">
                         <div class="card product-card">
                             <img src="\img\gambar2.jpg" class="card-img-top" alt="Body Lotion">
-                            <div class="card-body">
-                                <h5 class="card-title">Body Lotion</h5>
-                                <p class="card-text">IDR 80.000,00</p>
+                            <div class="card-body p-4 ps-5">
+                                <h5 class="card-title fs-6 fw-bold text-start">Body Lotion</h5>
+                                <p class="card-text fs-6 fw-bold text-start">IDR 80.000,00</p>
                             </div>
                         </div>
                     </div>
@@ -99,7 +99,7 @@
     <!-- Contact Section -->
     <section id="contact" class="contact-section py-5">
         <div class="container">
-            <h2 class="section-title">Hubungi Kami</h2>
+            <h2 class="section-title font-katibeh"><hr>Hubungi Kami</h2>
             <div class="row">
                 <div class="col-md-6">
                     <h5>Alamat Toko</h5>
@@ -124,7 +124,7 @@
 
     <script>
         const dataNavbar = @json($navbars);
-      
+
         const beforeJudul = document.getElementById('Judul');
         let dataTerakir = 0;
         for (let item = 0; item < dataNavbar.length; item++) {
@@ -145,7 +145,7 @@
         const dataBackground = document.getElementById('data-background');
     
         dataBackground.style.backgroundColor = dataNavbar[dataTerakir].background_color;
-      </script>
+    </script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
