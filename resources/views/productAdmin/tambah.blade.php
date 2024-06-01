@@ -48,12 +48,11 @@
                             </div>
                          </div>
              
-                         <div class="mb-3 row">
-                             <label for="harga" class="col-sm-2 col-form-label">Harga</label>
-                             <div class="col-sm-10">
-                                 <input type="number" class="form-control" id="harga" name="harga_product" required>
-                             </div>
-                         </div>
+                         <div class="input-group">
+                            <label for="harga" class="col-sm-2 col-form-label">Harga</label>
+                            <input type="number" class="form-control" id="harga" name="harga_product" required>
+                            <span class="input-group-text">.000</span>
+                          </div>
                     </div>
                     <div class="card-footer">
                        <button type="submit" class="btn btn-success ms-1">Tambah</button>
@@ -74,6 +73,14 @@
         margin: 0;
     }
     </style>
+
+<script>
+    document.getElementById("harga").addEventListener("input", function() {
+        if (this.value.length > 7) {
+            this.value = this.value.slice(0, 7);
+        }
+    });
+</script>
 
     <script>
     // Example starter JavaScript for disabling form submissions if there are invalid fields

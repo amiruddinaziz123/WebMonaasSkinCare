@@ -23,7 +23,7 @@
         <div class="container-fluid">
             <div class="card card-secondary">
                 <div class="card-header">
-                    <h3 class="card-title mt-1">Edit Product <span class="text-bold">{{ old('nama_product', $products->nama_product) }}</span></h3>
+                    <h3 class="card-title mt-1">Edit Product <span class="text-bold">{{ $products->nama_product }}</span></h3>
                 </div>
                 <form action="{{ route('productAdmin.editProduct', $products->slug_link) }}" method="POST" autocomplete="off" class="needs-validation" enctype="multipart/form-data" novalidate>
                     @csrf
@@ -32,6 +32,7 @@
                         <div class="mb-3 row">
                             <label for="foto" class="col-sm-2 col-form-label">Foto Product</label>
                             <div class="col-sm-10">
+                                <img src="/img/{{ old('foto_product', $products->foto_product) }}" alt="" class="img-fluid mb-3" style="width: 500px; ">
                                 <input type="file" class="form-control @error('foto_product') is-invalid @enderror" id="foto" name="foto_product" value="{{ old('foto_product', $products->foto_product) }}" required>
                                 @error('foto_product')
                                     <div class="invalid-feedback">{{ $message }}</div>

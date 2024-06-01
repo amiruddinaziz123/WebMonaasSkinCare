@@ -25,6 +25,15 @@
 <body class="hold-transition dark-mode sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">
 
+  <style>
+    /* Menghilangkan tombol scroll up dan down di input number */
+    input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+  </style>
+
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
     <img class="animation__wobble" src="{{ asset('template/dist/img/MonAAS 2.png') }}" alt="AdminLTELogo" height="60" width="60">

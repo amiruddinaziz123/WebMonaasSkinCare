@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('foto_product')->nullable();
             $table->text('nama_product');
             $table->text('description_product');
-            $table->bigInteger('harga_product');
+            $table->decimal('harga_product', 10,3);
             $table->enum('status_aktif', ['aktif', 'hapus']);
             $table->text('slug_link');
 
