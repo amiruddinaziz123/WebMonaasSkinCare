@@ -98,21 +98,21 @@
           </div> --}}
           <div class="form-floating col-12">
             <select name="nama_dokter" id="nama_dokter" class="form-control" required>
-                @foreach ($accounts as $account)
-                    <option value="{{ $account->nama_dokter }}">{{ $account->nama_dokter }}</option>
-                @endforeach
+              @foreach ($accounts as $account)
+                <option value="{{ $account->username_user }}" data-no-telp="{{ $account->no_telp_user }}">{{ $account->username_user }}</option>
+              @endforeach
             </select>
             <label for="nama_dokter" class="ms-3">Nama:</label>
           </div>
           <div class="form-floating col-12">
             <input type="text" name="no_telp" id="no_telp" minlength="12" maxlength="14" class="form-control" placeholder="No Telp" required>
             <label for="no_telp" class="ms-3">No Telp:</label>
-          </div>
+          </div>        
           <div class="form-floating col-12">
             <select name="nama_dokter" id="nama_dokter" class="form-control" required>
-                @foreach ($dokters as $dokter)
-                    <option value="{{ $dokter->nama_dokter }}">{{ $dokter->nama_dokter }}</option>
-                @endforeach
+              @foreach ($dokters as $dokter)
+                <option value="{{ $dokter->nama_dokter }}">{{ $dokter->nama_dokter }}</option>
+              @endforeach
             </select>
             <label for="nama_dokter" class="ms-3">Dokter:</label>
           </div>
@@ -164,6 +164,21 @@
       const dataBackground = document.getElementById('data-background');
   
       dataBackground.style.backgroundColor = dataNavbar[dataTerakir].background_color;
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    const namaDokterSelect = document.getElementById('nama_dokter');
+    const noTelpInput = document.getElementById('no_telp');
+
+    namaDokterSelect.addEventListener('change', function() {
+        const selectedOption = namaDokterSelect.options[namaDokterSelect.selectedIndex];
+        const noTelp = selectedOption.getAttribute('data-no-telp');
+        noTelpInput.value = noTelp;
+    });
+
+    // Trigger change event to set default value
+    namaDokterSelect.dispatchEvent(new Event('change'));
+    });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
     <script src="{{ asset('js/booking.js') }}"></script>
