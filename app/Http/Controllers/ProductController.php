@@ -9,6 +9,8 @@ use App\Models\product;
 use Illuminate\View\View;
 
 use Illuminate\Support\Str;
+use App\Models\navbar;
+
 
 class ProductController extends Controller
 {
@@ -20,7 +22,9 @@ class ProductController extends Controller
     public function indexProduct(): View
     {
         $products = product::where('status_aktif', '=', 'aktif')->get();
-        return view('product.index', compact('products'));
+        $navbars = navbar::all();
+
+        return view('product.index', compact('products', 'navbars'));
     }
 
     public function indexAdmin(): View

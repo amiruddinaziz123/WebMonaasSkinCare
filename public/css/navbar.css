@@ -1,3 +1,6 @@
+body{
+    padding-top: 100px;
+}
 .font-katibeh{
     color: #000;
     font-family: Katibeh;
@@ -18,7 +21,6 @@
     margin-top: 12px;
 }
 .imgLogo{
-    margin-bottom: 12px;
     margin-right: 5px;
 }
 .icon-btn{

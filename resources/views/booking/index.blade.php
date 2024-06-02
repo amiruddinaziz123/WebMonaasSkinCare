@@ -82,10 +82,10 @@
 
     <div class="hasil p-1 border border-2">
       <div class="form-group col-12 mt-2 nav justify-content-center">
-        <button class="btn col-4" type="submit" style="background-color: #D9005B; color: white;" id="btnBuatJadwalTreatment">Buat jadwal</button>
+        <button class="btn col-4" type="submit" style="background-color: #DF6F9E; color: white;" id="btnBuatJadwalTreatment">Buat jadwal</button>
       </div>
       <div class="form-group col-12 mt-2 nav justify-content-end">
-        <button class="btn col-1" type="submit" style="background-color: #D9005B; color: white;" id="btnTutupJadwalTreatment">X</button>
+        <button class="btn col-1" type="submit" style="background-color: #DF6F9E; color: white;" id="btnTutupJadwalTreatment">X</button>
       </div>
       <div class="container overflow-hidden" id="buatJadwalTreatment">
         <h5 class="mt-4 nav justify-content-center">Buat jadwal treatment</h5>
@@ -127,7 +127,7 @@
           
           
           <div class="form-group col-12 mt-2 nav justify-content-center">
-            <button class="btn col-12" type="submit" style="background-color: #D9005B; color: white; animation-name: none;">Pesan</button>
+            <button class="btn col-12" type="submit" style="background-color: #DF6F9E; color: white; animation-name: none;">Pesan</button>
           </div>
         </form>
       </div>

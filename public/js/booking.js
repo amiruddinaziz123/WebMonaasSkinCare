@@ -218,11 +218,11 @@ for (let i = 0; i < jamBookingData.length; i++) {
 
     jk.addEventListener('click', function() {
         if (jamBookingData[i].status == 1) {
-            jk.style.backgroundColor = '#FF69B4';
+            jk.style.backgroundColor = '#DF6F9E';
             disabledClick();
         }else{
             jamDipilih.value = contentJamKe;
-            this.style.backgroundColor = "#FF69B4";
+            this.style.backgroundColor = "#DF6F9E";
             selectThisHour()
         }
     });

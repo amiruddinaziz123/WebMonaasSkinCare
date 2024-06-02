@@ -20,6 +20,11 @@
    {{-- <script src="/js/product.js"></script> --}}
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Katibeh&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}" />
   </head>
 <body>
   <x-navbar/>  
@@ -119,6 +124,32 @@
             });
         });
     });
+</script>
+
+{{-- untuk navbar --}}
+<script>
+  const dataNavbar = @json($navbars);
+    
+  const beforeJudul = document.getElementById('Judul');
+  let dataTerakir = 0;
+  for (let item = 0; item < dataNavbar.length; item++) {
+      if (item > dataTerakir) {
+          dataTerakir = item;
+      }
+  }
+  beforeJudul.innerHTML = beforeJudul.innerHTML + dataNavbar[dataTerakir].judul;
+
+  const icon = document.getElementById('icon');
+  let iconName = dataNavbar[dataTerakir].image;
+
+  console.log(iconName);
+  let assetUrl = `/img/${iconName}`;
+
+  icon.setAttribute('src', assetUrl);
+
+  const dataBackground = document.getElementById('data-background');
+
+  dataBackground.style.backgroundColor = dataNavbar[dataTerakir].background_color;
 </script>
 
 <script>

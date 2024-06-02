@@ -149,6 +149,7 @@
             </div>
         </div>
     </section>
+    <x-footer/>
 
     <script>
         const dataNavbar = @json($navbars);

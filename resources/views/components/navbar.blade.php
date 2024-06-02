@@ -14,9 +14,9 @@
 <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> --}}
 {{-- tambahkan ke <body> halaman yang ingin diberi component navbar --}}
 
-<nav class="navbar navbar-expand-lg" data-aos="fade-down"id="data-background">
+<nav class="navbar navbar-expand-lg fixed-top" data-aos="fade-down"id="data-background">
     <div class="container-fluid">
-        <a class="navbar-brand font-katibeh" href="/" data-aos="zoom-in" id="Judul"><img src="\img\Rectangle.png" id="icon" alt="logoMonaas" width="40px" class="imgLogo"></a>
+        <a class="navbar-brand font-katibeh" href="/" data-aos="zoom-in" id="Judul"><img src="\img\Rectangle.png" id="icon" alt="#" width="40px" class="imgLogo"></a>
         <button class="navbar-toggler" type="button" data-aos="fade-left" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLightNavbar" aria-controls="offcanvasLightNavbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -58,7 +58,7 @@
                     <a data-aos="fade-right" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/treatment">Treatment</a>
                     <a data-aos="fade-right" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/booking">Booking</a>
                 </div>
-                <div class="navbar-nav text-end col-2 col-md-2 d-none d-md-none d-xl-block">
+                <div class="navbar-nav text-end col-2 col-md-2 d-none d-md-none d-xl-block mt-lg-3">
                     <a href="/profil"><img src="\img\Rectangle.png" width="20%" class="rounded-circle" alt=""></a>
                 </div>
             </div>     

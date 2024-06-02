@@ -1,7 +1,7 @@
 {{-- <link rel="stylesheet" href="{{ asset('css/footer.css') }}" /> --}}
 {{-- tambahkan ke <head> halaman yang ingin diberi component footer --}}
 
-    <div class="container-fluid p-5 overflow-hidden" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" style="background-color: #D9005B">
+    <div class="container-fluid p-5 overflow-hidden" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" style="background-color: #DF6F9E">
         <div class="row">
             <div class="col-sm-12 col-md-1 col-lg-1 pe-0" data-aos="fade-right" data-aos-anchor-placement="bottom-bottom">
                 <div class="nav justify-content-end">
@@ -42,5 +42,5 @@
         </div>
         <div class="text-center text-white" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom">© 2023 Monaas Skincare. Powered by Monaas Skincare</div>
     </div>
-    <div class="container-fluid overflow-hidden" id="spaceForBottom" style="background-color: #A6003F ">
+    <div class="container-fluid overflow-hidden" id="spaceForBottom" style="background-color: #DF6F9E ">
     </div>

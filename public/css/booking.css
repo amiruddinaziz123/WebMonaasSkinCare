@@ -11,7 +11,7 @@ width: 100%;
 justify-content: center;
 align-items: center;
 place-items: center;
-background: linear-gradient(to bottom, #D9005B, #eff1ff);
+background: linear-gradient(to bottom, #DF6F9E, #eff1ff);
 overflow-y: auto;
 overflow-x: hidden;
 height: auto;
@@ -33,7 +33,7 @@ box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .calendar-header {
-background: #D9005B;
+background: #DF6F9E;
 display: flex;
 justify-content: space-between;
 border-radius: 7px;
@@ -67,7 +67,7 @@ transition: all .2s ease-in-out;
 .calendar-week-days div {
 display: grid;
 place-items: center;
-color: #D9005B;
+color: #DF6F9E;
 height: 0px;
 }
 
@@ -112,7 +112,7 @@ cursor: pointer;
 }
 
 .year-change:hover {
-background-color: #D9005B;
+background-color: #DF6F9E;
 transition: all .2s ease-in-out;
 transform: scale(1.12);
 }
@@ -143,7 +143,7 @@ color: #f8fbff;
 
 .calendar-days div.current-date {
 color: #f8fbff;
-background-color: #D9005B;
+background-color: #DF6F9E;
 border-radius: 20%;
 }
 
@@ -173,7 +173,7 @@ cursor: pointer;
 }
 
 .month-list>div>div:hover {
-background-color: #D9005B;
+background-color: #DF6F9E;
 color: #f8fbff;
 transform: scale(0.9);
 transition: all 0.2s ease-in-out;
@@ -211,7 +211,7 @@ align-items: center;
 font-family: Microsoft JhengHei UI;
 font-size: 1.4rem;
 padding-right: 5%;
-border-right: 3px solid #D9005B;
+border-right: 3px solid #DF6F9E;
 }
 
 .date-time-value {
@@ -326,7 +326,7 @@ animation: showtime 1s forwards;
 }
 
 .select-hour-header{
-    background: #D9005B;
+    background: #DF6F9E;
     z-index: 1;
     height: 50px;
     border-radius: 7px;
@@ -354,7 +354,7 @@ animation: showtime 1s forwards;
 }
 
 #buatJadwalTreatment h5{
-    background-color: #D9005B;
+    background-color: #DF6F9E;
     color: white;
     padding: 16px;
     border-radius: 5px;
@@ -375,7 +375,7 @@ animation: showtime 1s forwards;
 .form-control:focus{
     color: var(--bs-body-color);
     background-color: var(--bs-body-bg);
-    border-color: #D9005B;
+    border-color: #DF6F9E;
     outline: 0;
     box-shadow: 0 0 0 2px #FF69B4;
     animation-duration: 2s;
