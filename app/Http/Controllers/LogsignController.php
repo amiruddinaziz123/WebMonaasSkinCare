@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Models\logsign;
 
-use App\Models\account;
+use App\Models\User;
 
 use Illuminate\Support\Facades\Auth;
 
@@ -33,11 +33,11 @@ class LogsignController extends Controller
     public function prosesLogin(Request $request)
     {
         $request->validate([
-            'email_user' => 'required',
-            'password_user' => 'required'
+            'email' => 'required',
+            'password' => 'required'
         ]);
 
-        $credentials = $request->only('email_user', 'password_user');
+        $credentials = $request->only('email', 'password');
 
         if(Auth::attempt($credentials)){
             return redirect()->intended('/')->withSuccess('Signed In');
@@ -77,32 +77,40 @@ class LogsignController extends Controller
     public function storeSignup(Request $request)
 {
     $this->validate($request, [
-        'email_user' =>'required|min:8|unique:accounts,email_user', // Memeriksa keunikan di tabel akun untuk kolom email_user
-        'password_user' =>'required',
-        'username_user' =>'required',
-        'no_telp_user' =>'required',
+        'email' => 'required|min:8|unique:users,email',
+        'password' => 'required|min:8',
+        'username' => 'required|min:8',
+        'no_telp' => 'required|min:10',
     ], [
-        'email_user.unique' => 'Email sudah terdaftar!!!', // Pesan kesalahan kustom untuk aturan keunikan
+        'email.required' => 'Email wajib diisi!!!',
+        'password.required' => 'Password wajib diisi!!!',
+        'username.required' => 'Username wajib diisi!!!',
+        'no_telp.required' => 'No. Telepon wajib diisi!!!',
+        'email.unique' => 'Email sudah terdaftar!!!',
+        'password.min' => 'Password harus lebih dari 8 karakter!!!',
+        'username.min' => 'Username harus lebih dari 8 karakter!!!',
+        'no_telp.min' => 'No. Telepon harus lebih dari 10 karakter!!!',
     ]);
 
     // Periksa apakah email sudah ada
-    $existingEmail = Account::where('email_user', $request->email_user)->exists();
+    $existingEmail = User::where('email', $request->email)->exists();
     if ($existingEmail) {
-        return redirect()->back()->withInput()->withErrors(['email_user' => 'Email sudah terdaftar!!!']);
+        return redirect()->back()->withInput()->withErrors(['email' => 'Email sudah terdaftar!!!']);
     }
 
-    $slug = Str::slug($request->username_user, '-');
+    $slug = Str::slug($request->username, '-');
 
-    Account::create([
-        'email_user' => $request->email_user,
-        'password_user' => $request->password_user,
-        'username_user' => $request->username_user,
-        'no_telp_user' => $request->no_telp_user,
+    User::create([
+        'email' => $request->email,
+        'password' => $request->password,
+        'username' => $request->username,
+        'no_telp' => $request->no_telp,
+        'status_aktif' => $request->status_aktif,
         'slug_link' => $slug,
         'created_at' => now(),
     ]);
 
-    return redirect('/')->with(['success' => 'Data Berhasil Ditambah!']);
+    return redirect('/login')->with(['success' => 'Silahkan Login dengan Email dan Password yang sudah didaftarkan!!!']);
 }
 
 }

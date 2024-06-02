@@ -6,6 +6,12 @@
     <title>Monaas Register</title>
     <link rel="icon" href="/img/logoMonaas.png" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="{{ asset('css/signup.css') }}">
+    <!-- SweetAlert2 -->
+   <link rel="stylesheet" href="{{ asset('template/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css') }}">
+   <!-- SweetAlert2 CSS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+   <!-- SweetAlert2 JS -->
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
@@ -28,22 +34,17 @@
                 </div>
                 <form action="{{ route('signup.store') }}" method="POST" class="needs-validation" autocomplete="off" novalidate>
                     @csrf
-                    @error('email_user')
-                    <div class="alert alert-danger" role="alert">
-                        {{ $message }}
-                    </div>
-                    @enderror
                     <div class="input-group mb-3">
-                        <input type="text" name="username_user" id="" class="form-control form-control-lg bg-light fs-6" placeholder="Username" required>
+                        <input type="text" name="username" id="" class="form-control form-control-lg bg-light fs-6" placeholder="Username" required>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="email" name="email_user" id="" class="form-control form-control-lg bg-light fs-6" placeholder="Email" required>
+                        <input type="email" name="email" id="" class="form-control form-control-lg bg-light fs-6" placeholder="Email" required>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="password" name="password_user" id="" class="form-control form-control-lg bg-light fs-6" placeholder="Password" required>
+                        <input type="password" name="password" id="" class="form-control form-control-lg bg-light fs-6" placeholder="Password" required>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="number" class="form-control" id="telepon" name="no_telp_user" placeholder="Nomor Telepon" required>
+                        <input type="number" class="form-control" id="telepon" name="no_telp" placeholder="Nomor Telepon" required>
                     </div>
                     {{-- <div class="signup">
                         <small>Don't have an account yet? <a href="" class="text-decoration-none">Sign Up</a></small>
@@ -61,6 +62,7 @@
                             </small>
                         </div>
                     </div>
+                    <input name="status_aktif" value="Aktif" type="hidden">
                 </form>
             </div>
         </div>
@@ -73,5 +75,14 @@
             }
         });
     </script>
+    @if ($errors->any())
+    <script>
+        Swal.fire({
+            icon: 'error',
+            title: 'Error!',
+            html: '<ul class="text-decoration-none list-unstyled">{!! implode("", $errors->all("<li>:message</li>")) !!}</ul>',
+        });
+    </script>
+    @endif
 </body>
 </html>

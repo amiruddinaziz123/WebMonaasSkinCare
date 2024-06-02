@@ -100,7 +100,7 @@ class MasterController extends Controller
             'email' => 'required|min:8',
             'password' => 'required|min:8',
             'username' => 'required|min:8',
-            'no_telp' => 'required|min:12',
+            'no_telp' => 'required|min:10',
         ], [
             'email.required' => 'Email wajib diisi!!!',
             'password.required' => 'Password wajib diisi!!!',
@@ -108,7 +108,7 @@ class MasterController extends Controller
             'no_telp.required' => 'No. Telepon wajib diisi!!!',
             'password.min' => 'Password harus lebih dari 8 karakter!!!',
             'username.min' => 'Username harus lebih dari 8 karakter!!!',
-            'no_telp.min' => 'No. Telepon harus lebih dari 12 karakter!!!',
+            'no_telp.min' => 'No. Telepon harus lebih dari 10 karakter!!!',
         ]);
 
         $slug = Str::slug($request->username, '-');
