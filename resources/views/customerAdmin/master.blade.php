@@ -30,28 +30,28 @@
                         <div class="mb-3 row">
                             <label for="nama" class="col-sm-2 col-form-label">Username</label>
                             <div class="col-sm-10">
-                               <input type="text" class="form-control" id="nama" name="username_user" required>
+                               <input type="text" class="form-control" id="nama" name="username" required>
                             </div>
                          </div>
              
                          <div class="mb-3 row">
                             <label for="email" class="col-sm-2 col-form-label">Email</label>
                             <div class="col-sm-10">
-                               <input type="email" class="form-control" id="email" name="email_user" required>
+                               <input type="email" class="form-control" id="email" name="email" required>
                             </div>
                          </div>
              
                          <div class="mb-3 row">
                             <label for="nisn" class="col-sm-2 col-form-label">Password</label>
                             <div class="col-sm-10">
-                               <input type="text" class="form-control" id="nisn" name="password_user" required> 
+                               <input type="text" class="form-control" id="nisn" name="password" required> 
                             </div>
                          </div>
              
                          <div class="mb-3 row">
                              <label for="telepon" class="col-sm-2 col-form-label">No. Telepon</label>
                              <div class="col-sm-10">
-                                 <input type="number" class="form-control" id="telepon" name="no_telp_user" required>
+                                 <input type="number" class="form-control" id="telepon" name="no_telp" required>
                              </div>
                          </div>
                     </div>

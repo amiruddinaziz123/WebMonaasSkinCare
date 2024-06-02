@@ -45,10 +45,10 @@
                         @foreach ($customers as $mtr)
                             <tr>
                                 <td>{{ $mtr->id }}</td>
-                                <td>{{ $mtr->username_user }}</td>
-                                <td>{{ $mtr->email_user }}</td>
-                                <td>{{ $mtr->password_user }}</td>
-                                <td>{{ $mtr->no_telp_user }}</td>
+                                <td>{{ $mtr->username }}</td>
+                                <td>{{ $mtr->email }}</td>
+                                <td>{{ $mtr->password }}</td>
+                                <td>{{ $mtr->no_telp }}</td>
                                 <td>{{ $mtr->status_aktif }}</td>
                                 <td>
                                     <a href="{{ route('customerAdmin.detail', $mtr->slug_link) }}" class="btn btn-primary btn-sm" role="button">
