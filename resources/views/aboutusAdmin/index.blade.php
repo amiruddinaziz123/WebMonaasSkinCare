@@ -44,7 +44,7 @@
           <div class="row" style="margin-top: 90px">
             
             <div class="text-center align-items-center justify-content-center">
-              <h2 style="color: black">Hasil <span>Maksimal</span>, Harga <span>Minimal</span></h2>
+              <h2 style="color: black">Hasil <span class="pink">Maksimal</span>, Harga <span class="pink">Minimal</span></h2>
               <p class="mt-4" style="color: black">
                 {{ $abouts->intro ?? 'Default introduction text or placeholder.' }}
               </p>
@@ -53,7 +53,7 @@
             <hr style="margin-top: 70px"> 
 
             <div class="col-md-6 mt-5 mb-5">
-              <h2 style="color: black">Mengapa Harus <span>Monaas</span></h2>
+              <h2 style="color: black">Mengapa Harus <span class="pink">Monaas</span></h2>
               <p style="color: black">
                 {{ $abouts->reason ?? 'Default reason text or placeholder.' }}  
               </p>
