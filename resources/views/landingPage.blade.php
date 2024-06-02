@@ -10,6 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Katibeh&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}" />
 </head>
 <body>
@@ -18,7 +19,10 @@
     <section id="about-us" class="hero-section text-center py-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 col-sm-12 text-start">
+                <div class="col-lg-6 col-sm-12 text-lg-start text-sm-center jarum">
+                    <a class="div btn btn-light fw-bold p-3 ps-5 pe-5 rounded-5 aboutus" href="/aboutus">
+                        <div class="div-2">About Us <i class="fa-solid fa-syringe"></i></div>
+                    </a>
                     <div class="mt-2 mb-4 font-poppins">
                         <h1 class="fw-bold">Rawat <span class="highlight">kulitmu</span>,</h1>
                         <h1 class="fw-bold">rawat <span class="highlight">kecantikanmu</span></h1>
@@ -35,13 +39,13 @@
 
                         <div class="carousel-inner fw-bold">
                             <div class="carousel-item active c-item">
-                                <strong>Special Birthday Discount<i class="fa fa-percent"></i></strong>
+                                <strong>Special Birthday Discount %</strong>
                             </div>
                             <div class="carousel-item c-item">
-                                <strong>Special Birthday Discount<i class="fa fa-percent"></i></strong>
+                                <strong>Special Birthday Discount %</strong>
                             </div>
                             <div class="carousel-item c-item">
-                                <strong>Special Birthday Discount<i class="fa fa-percent"></i></strong>
+                                <strong>Special Birthday Discount %</strong>
                             </div>
                         </div>
                     </div> 
@@ -62,7 +66,7 @@
             <div class="row">
                 <!-- Product Item -->
                 @for ($i = 0; $i < 4; $i++)
-                    <div class="col-md-3 col-sm-6 mb-sm-4">
+                    <div class="col-lg-3 mt-5">
                         <div class="card product-card">
                             <img src="\img\produk.jpg" class="card-img-top" alt="Body Lotion">
                             <div class="card-body p-4 ps-5">
@@ -83,7 +87,7 @@
             <div class="row">
                 <!-- Treatment Item -->
                 @for ($i = 0; $i < 4; $i++)
-                    <div class="col-md-3 col-sm-6 mb-sm-4">
+                    <div class="col-lg-3 mt-5">
                         <div class="card product-card">
                             <img src="\img\gambar2.jpg" class="card-img-top" alt="Body Lotion">
                             <div class="card-body p-4 ps-5">
@@ -103,18 +107,41 @@
             <h2 class="section-title font-katibeh"><hr>Hubungi Kami</h2>
             <div class="row">
                 <div class="col-md-6">
-                    <h5>Alamat Toko</h5>
-                    <p>Jl. Sapen Raya, RT.7/RW.3, Penggaron Kidul, Kec. Pedurungan, Kota Semarang, Jawa Tengah 50192.</p>
-                    <h5>Nomor Telepon</h5>
-                    <p>085779205421</p>
-                    <h5>Jam Operasional</h5>
-                    <p>Senin : 08.30 - 17.00<br>
-                       Selasa : 08.30 - 17.00<br>
-                       Rabu : 08.30 - 17.00<br>
-                       Kamis : 08.30 - 17.00<br>
-                       Jumat : 08.30 - 17.00<br>
-                       Sabtu : 08.30 - 01.00<br>
-                       Minggu : 08.30 - 17.00</p>
+                    <div class="row">
+                        <div class="col-1">
+                            <i class="fa-solid fa-location-dot text-center mt-3" style="font-size: 50px;"></i>
+                        </div>
+                        <div class="col-11">
+                            <h5>Alamat Toko</h5>
+                            <p>Jl. Sapen Raya, RT.7/RW.3, Penggaron Kidul, Kec. Pedurungan, Kota Semarang, Jawa Tengah 50192.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">
+                            <i class="fa-solid fa-phone-volume text-center mt-2" style="font-size: 35px;"></i>
+                        </div>
+                        <div class="col-11">
+                            <h5>Nomor Telepon</h5>
+                            <p>085779205421</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-1">
+                            <i class="fa-solid fa-calendar-days text-center mt-4" style="font-size: 45px;"></i>
+                        </div>
+                        <div class="col-11">
+                            <h5>Jam Operasional</h5>
+                            <div class="row">
+                                <div class="col-4 mb-0">Senin : 08.30 - 17.00</div>
+                                <div class="col-4 mb-0">Selasa : 08.30 - 17.00</div>
+                                <div class="col-4 mb-0">Rabu : 08.30 - 17.00</div>
+                                <div class="col-4 mb-0">Kamis : 08.30 - 17.00</div>
+                                <div class="col-4 mb-0">Jumat : 08.30 - 17.00</div>
+                                <div class="col-4 mb-0">Sabtu : 08.30 - 01.00</div>
+                                <div class="col-4 mb-0">Minggu : 08.30 - 17.00</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15840.174698414015!2d110.4878058!3d-7.0041401!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708d611e9e19db%3A0xd7efe6368e2f1d3!2sMONAAS%20SKINCARE%20%26%20HEALTHY!5e0!3m2!1sid!2sid!4v1717303594299!5m2!1sid!2sid" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -158,5 +185,7 @@
     </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://kit.fontawesome.com/58a88338f7.js" crossorigin="anonymous"></script>
+
 </body>
 </html>

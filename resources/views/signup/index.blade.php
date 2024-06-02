@@ -35,13 +35,13 @@
                 <form action="{{ route('signup.store') }}" method="POST" class="needs-validation" autocomplete="off" novalidate>
                     @csrf
                     <div class="input-group mb-3">
-                        <input type="text" name="username" id="" class="form-control form-control-lg bg-light fs-6" placeholder="Username" required>
+                        <input type="text" name="username" id="username" class="form-control form-control-lg bg-light fs-6" placeholder="Username" required>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="email" name="email" id="" class="form-control form-control-lg bg-light fs-6" placeholder="Email" required>
+                        <input type="email" name="email" id="email" class="form-control form-control-lg bg-light fs-6" placeholder="Email" required>
                     </div>
                     <div class="input-group mb-3">
-                        <input type="password" name="password" id="" class="form-control form-control-lg bg-light fs-6" placeholder="Password" required>
+                        <input type="password" name="password" id="password" class="form-control form-control-lg bg-light fs-6" placeholder="Password" required>
                     </div>
                     <div class="input-group mb-3">
                         <input type="number" class="form-control" id="telepon" name="no_telp" placeholder="Nomor Telepon" required>
@@ -73,6 +73,56 @@
             if (this.value.length > 15) {
                 this.value = this.value.slice(0, 15);
             }
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const userName = document.getElementById('username');
+            const email = document.getElementById('email');
+            const password = document.getElementById('password');
+            const telepon = document.getElementById('telepon');
+
+            function validateUsername() {
+                return userName.value.length >= 8;
+            }
+
+            function validateEmail() {
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailPattern.test(email.value);
+            }
+
+            function validatePassword() {
+                return password.value.length >= 8;
+            }
+
+            function validateTelepon() {
+                const teleponPattern = /^[0-9]{10,14}$/;
+                return teleponPattern.test(telepon.value);
+            }
+
+            // Watch function to check if input is correct
+            function watchInput(inputElement, validateFunction) {
+                inputElement.addEventListener('input', function() {
+                    if (validateFunction()) {
+                        inputElement.classList.remove('is-invalid');
+                        inputElement.classList.add('is-valid');
+                    } else {
+                        inputElement.classList.remove('is-valid');
+                        inputElement.classList.add('is-invalid');
+                    }
+                });
+            }
+
+            watchInput(userName, validateUsername);
+            watchInput(email, validateEmail);
+            watchInput(password, validatePassword);
+            watchInput(telepon, validateTelepon);
+
+            document.querySelector('form').addEventListener('submit', function(event) {
+                if (!validateUsername() || !validateEmail() || !validatePassword() || !validateTelepon()) {
+                    event.preventDefault();
+                    alert('Please correct the errors in the form.');
+                }
+            });
         });
     </script>
     @if ($errors->any())

@@ -1,4 +1,5 @@
-
+@extends('layouts.admin')
+@section('content')
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -21,139 +22,141 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 
 </head>
+
 <body class="antialiased">
-    @extends('layouts.admin')
-    @section('content')
-    <div style="margin-top: 10vh; margin-left: 260px;">
-        <h3 class="ms-3">before</h3>
-        <nav class="navbar navbar-expand-lg" data-aos="fade-down" id="data-background">
-            <div class="container-fluid">
-                <a class="navbar-brand font-katibeh" href="/aboutus" data-aos="zoom-in" id="Judul"><img src="{{ asset('img/MonAAS 2.png') }}" id="icon" alt="logoMonaas" width="40px" class="imgLogo"></a>
-                <button class="navbar-toggler" type="button" data-aos="fade-left" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLightNavbar" aria-controls="offcanvasLightNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="offcanvas offcanvas-end text-bg-Light w-40" tabindex="-1" id="offcanvasLightNavbar" aria-labelledby="offcanvasLightNavbarLabel">
-                    <div class="offcanvas-header">
-                        <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body row">
-                        {{-- Tampilan untuk perangkat mobile --}}
-                        <div class="navbar-nav text-center col-12 d-md-none d-xl-none">
-                            <a data-aos="fade-right" data-aos-offset="500" class="nav-link active" aria-current="page" style="font-family: Poppins;" href="/product">Product</a>
-                            <a data-aos="fade-right" data-aos-offset="500" class="nav-link active" aria-current="page" style="font-family: Poppins;" href="/treatment">Treatment</a>
-                            <a data-aos="fade-right" data-aos-offset="500" class="nav-link active" aria-current="page" style="font-family: Poppins;" href="/booking">Booking</a>
+    <div class="p-5">
+        <div style="margin-top: 10vh; margin-left: 260px;">
+            <h3 class="ms-3">before</h3>
+            <nav class="navbar navbar-expand-lg" data-aos="fade-down" id="data-background">
+                <div class="container-fluid">
+                    <a class="navbar-brand font-katibeh" href="/aboutus" data-aos="zoom-in" id="Judul"><img src="{{ asset('img/MonAAS 2.png') }}" id="icon" alt="logoMonaas" width="40px" class="imgLogo"></a>
+                    <button class="navbar-toggler" type="button" data-aos="fade-left" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLightNavbar" aria-controls="offcanvasLightNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end text-bg-Light w-40" tabindex="-1" id="offcanvasLightNavbar" aria-labelledby="offcanvasLightNavbarLabel">
+                        <div class="offcanvas-header">
+                            <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                         </div>
-                        {{-- Tampilan untuk perangkat tablet --}}
-                        <div class="navbar-nav text-center col-12 col-md-12 d-none d-md-block d-xl-none">
-                            <div class="row">
-                                <div class="col-12">
-                                    <a data-aos="fade-right" data-aos-offset="500" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/product">Product</a>
-                                </div>
-                                <div class="col-12">
-                                    <a data-aos="fade-right" data-aos-offset="500" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/treatment">Treatment</a>
-                                </div>
-                                <div class="col-12">
-                                    <a data-aos="fade-right" data-aos-offset="500" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/booking">Booking</a>
+                        <div class="offcanvas-body row">
+                            {{-- Tampilan untuk perangkat mobile --}}
+                            <div class="navbar-nav text-center col-12 d-md-none d-xl-none">
+                                <a data-aos="fade-right" data-aos-offset="500" class="nav-link active" aria-current="page" style="font-family: Poppins;" href="/product">Product</a>
+                                <a data-aos="fade-right" data-aos-offset="500" class="nav-link active" aria-current="page" style="font-family: Poppins;" href="/treatment">Treatment</a>
+                                <a data-aos="fade-right" data-aos-offset="500" class="nav-link active" aria-current="page" style="font-family: Poppins;" href="/booking">Booking</a>
+                            </div>
+                            {{-- Tampilan untuk perangkat tablet --}}
+                            <div class="navbar-nav text-center col-12 col-md-12 d-none d-md-block d-xl-none">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <a data-aos="fade-right" data-aos-offset="500" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/product">Product</a>
+                                    </div>
+                                    <div class="col-12">
+                                        <a data-aos="fade-right" data-aos-offset="500" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/treatment">Treatment</a>
+                                    </div>
+                                    <div class="col-12">
+                                        <a data-aos="fade-right" data-aos-offset="500" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/booking">Booking</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-        
-                        {{-- Tampilan untuk perangkat laptop --}}
-                        <div class="navbar-nav text-center col-12 col-md-12 d-none d-md-none d-xl-block">
-                            <a data-aos="fade-right" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/product">Product</a>
-                            <a data-aos="fade-right" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/treatment">Treatment</a>
-                            <a data-aos="fade-right" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/booking">Booking</a>
-                        </div>
-                    </div>            
-                </div>
-            </div>
-        </nav>
-    </div>
-
-    <div class="d-flex justify-content-center" style="margin-left: 260px;">
-        <img src="{{ asset('img/arrow-down.png') }}" alt="logoMonaas" width="40px" class="m-3">
-    </div>
-
-    <div style="margin-top: none; margin-left: 260px;">
-        <h3 class="ms-3">after</h3>
-        <nav class="navbar navbar-expand-lg gantiWarnaBG" data-aos="fade-down">
-            <div class="container-fluid">
-                <img src="" id="file-preview" width="40px" class="imgLogo">
-                <a class="navbar-brand font-katibeh" id="preview-judul" href="/aboutus" data-aos="zoom-in"></a>
-                <button class="navbar-toggler" type="button" data-aos="fade-left" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLightNavbar" aria-controls="offcanvasLightNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="offcanvas offcanvas-end text-bg-Light w-40" tabindex="-1" id="offcanvasLightNavbar" aria-labelledby="offcanvasLightNavbarLabel">
-                    <div class="offcanvas-header">
-                        <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body row">
-                        {{-- Tampilan untuk perangkat mobile --}}
-                        <div class="navbar-nav text-center col-12 d-md-none d-xl-none">
-                            <a data-aos="fade-right" data-aos-offset="500" class="nav-link active" aria-current="page" style="font-family: Poppins;" href="/product">Product</a>
-                            <a data-aos="fade-right" data-aos-offset="500" class="nav-link active" aria-current="page" style="font-family: Poppins;" href="/treatment">Treatment</a>
-                            <a data-aos="fade-right" data-aos-offset="500" class="nav-link active" aria-current="page" style="font-family: Poppins;" href="/booking">Booking</a>
-                        </div>
-                        {{-- Tampilan untuk perangkat tablet --}}
-                        <div class="navbar-nav text-center col-12 col-md-12 d-none d-md-block d-xl-none">
-                            <div class="row">
-                                <div class="col-12">
-                                    <a data-aos="fade-right" data-aos-offset="500" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/product">Product</a>
-                                </div>
-                                <div class="col-12">
-                                    <a data-aos="fade-right" data-aos-offset="500" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/treatment">Treatment</a>
-                                </div>
-                                <div class="col-12">
-                                    <a data-aos="fade-right" data-aos-offset="500" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/booking">Booking</a>
-                                </div>
+            
+                            {{-- Tampilan untuk perangkat laptop --}}
+                            <div class="navbar-nav text-center col-12 col-md-12 d-none d-md-none d-xl-block">
+                                <a data-aos="fade-right" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/product">Product</a>
+                                <a data-aos="fade-right" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/treatment">Treatment</a>
+                                <a data-aos="fade-right" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/booking">Booking</a>
                             </div>
-                        </div>
-        
-                        {{-- Tampilan untuk perangkat laptop --}}
-                        <div class="navbar-nav text-center col-12 col-md-12 d-none d-md-none d-xl-block">
-                            <a data-aos="fade-right" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/product">Product</a>
-                            <a data-aos="fade-right" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/treatment">Treatment</a>
-                            <a data-aos="fade-right" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/booking">Booking</a>
-                        </div>
-                    </div>            
-                </div>
-            </div>
-        </nav>
-    </div>
-
-    <form action="{{ route('navbarAdmin.store') }}" method="POST" enctype="multipart/form-data" style="margin-left: 260px;">
-        @csrf
-        <div class="border p-4" id="div-form">
-            <div class="row g-3">
-                <h5 style="text-align: center;">Edit Navbar</h5>
-                <div class="row">
-                    <div class="col-sm-5">
-                        <label for="file-input" class="w-100 text-md-end text-sm-start">Logo : </label>
-                    </div>
-                    <div class="col-sm-6">
-                        <input type="file" name="image" id="file-input" class="form-control" placeholder="Gambar" aria-label="Gambar">
+                        </div>            
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col-sm-5">
-                        <label for="judul" class="w-100 text-md-end text-sm-start">Judul : </label>
-                    </div>
-                    <div class="col-sm-6">
-                        <input type="text" name="judul" class="form-control" id="judul" placeholder="Judul" aria-label="Judul">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-5">
-                        <label for="background" class="w-100 text-md-end text-sm-start">Background : </label>
-                    </div>
-                    <div class="col-sm-6">
-                        <input type="color" name="background_color" class="form-control" id="background" placeholder="Background" aria-label="Background">
-                    </div>
-                </div>
-                <button type="submit" class="btn btn-primary">Simpan</button>
-            </div>
+            </nav>
         </div>
-    </form>
+    
+        <div class="d-flex justify-content-center" style="margin-left: 260px;">
+            <img src="{{ asset('img/arrow-down.png') }}" alt="logoMonaas" width="40px" class="m-3">
+        </div>
+    
+        <div style="margin-top: none; margin-left: 260px;">
+            <h3 class="ms-3">after</h3>
+            <nav class="navbar navbar-expand-lg gantiWarnaBG" data-aos="fade-down">
+                <div class="container-fluid">
+                    <img src="" id="file-preview" width="40px" class="imgLogo">
+                    <a class="navbar-brand font-katibeh" id="preview-judul" href="/aboutus" data-aos="zoom-in"></a>
+                    <button class="navbar-toggler" type="button" data-aos="fade-left" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLightNavbar" aria-controls="offcanvasLightNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="offcanvas offcanvas-end text-bg-Light w-40" tabindex="-1" id="offcanvasLightNavbar" aria-labelledby="offcanvasLightNavbarLabel">
+                        <div class="offcanvas-header">
+                            <button type="button" class="btn-close btn-close-dark" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body row">
+                            {{-- Tampilan untuk perangkat mobile --}}
+                            <div class="navbar-nav text-center col-12 d-md-none d-xl-none">
+                                <a data-aos="fade-right" data-aos-offset="500" class="nav-link active" aria-current="page" style="font-family: Poppins;" href="/product">Product</a>
+                                <a data-aos="fade-right" data-aos-offset="500" class="nav-link active" aria-current="page" style="font-family: Poppins;" href="/treatment">Treatment</a>
+                                <a data-aos="fade-right" data-aos-offset="500" class="nav-link active" aria-current="page" style="font-family: Poppins;" href="/booking">Booking</a>
+                            </div>
+                            {{-- Tampilan untuk perangkat tablet --}}
+                            <div class="navbar-nav text-center col-12 col-md-12 d-none d-md-block d-xl-none">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <a data-aos="fade-right" data-aos-offset="500" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/product">Product</a>
+                                    </div>
+                                    <div class="col-12">
+                                        <a data-aos="fade-right" data-aos-offset="500" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/treatment">Treatment</a>
+                                    </div>
+                                    <div class="col-12">
+                                        <a data-aos="fade-right" data-aos-offset="500" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/booking">Booking</a>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            {{-- Tampilan untuk perangkat laptop --}}
+                            <div class="navbar-nav text-center col-12 col-md-12 d-none d-md-none d-xl-block">
+                                <a data-aos="fade-right" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/product">Product</a>
+                                <a data-aos="fade-right" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/treatment">Treatment</a>
+                                <a data-aos="fade-right" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins;" href="/booking">Booking</a>
+                            </div>
+                        </div>            
+                    </div>
+                </div>
+            </nav>
+        </div>
+    
+        <form action="{{ route('navbarAdmin.store') }}" method="POST" enctype="multipart/form-data" style="margin-left: 260px;">
+            @csrf
+            <div class="border p-4" id="div-form">
+                <div class="row g-3">
+                    <h5 style="text-align: center;">Edit Navbar</h5>
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <label for="file-input" class="w-100 text-md-end text-sm-start">Logo : </label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="file" name="image" id="file-input" class="form-control" placeholder="Gambar" aria-label="Gambar">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <label for="judul" class="w-100 text-md-end text-sm-start">Judul : </label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="text" name="judul" class="form-control" id="judul" placeholder="Judul" aria-label="Judul">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <label for="background" class="w-100 text-md-end text-sm-start">Background : </label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input type="color" name="background_color" class="form-control" id="background" placeholder="Background" aria-label="Background">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Simpan</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
     
 
     {{-- <x-menu-admin/> --}}
@@ -193,6 +196,7 @@
     <script>AOS.init();</script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    @endsection
 </body>
+
 </html>
+@endsection

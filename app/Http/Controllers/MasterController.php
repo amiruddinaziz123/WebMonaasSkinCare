@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use Illuminate\View\View;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Hash;
 
 class MasterController extends Controller
 {
@@ -16,7 +17,9 @@ class MasterController extends Controller
 
     public function indexCustomer(): View
     {
+        // Ambil data pelanggan yang statusnya aktif
         $customers = User::where('status_aktif', '=', 'Aktif')->get();
+
         return view('customerAdmin.index', compact('customers'));
     }
 
