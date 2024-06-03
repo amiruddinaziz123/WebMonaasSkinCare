@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}" />
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
 </head>
 <body>
     <x-navbar/>
@@ -151,13 +153,17 @@
         </div>
     </section>
     <x-footer/>
-    @if(session('success'))
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <script>
+        @if(session('success'))
         Swal.fire({
             icon: 'success',
             title: 'Login Sukses',
             text: '{{ session('success') }}',
         });
     @endif
+    </script>
+    
     <script>
         const dataNavbar = @json($navbars);
 
