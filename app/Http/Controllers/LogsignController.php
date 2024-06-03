@@ -31,19 +31,19 @@ class LogsignController extends Controller
     }
 
     public function prosesLogin(Request $request)
-    {
-        $request->validate([
-            'email' => 'required',
-            'password' => 'required'
-        ]);
+{
+    $request->validate([
+        'email' => 'required',
+        'password' => 'required'
+    ]);
 
-        $credentials = $request->only('email', 'password');
+    $credentials = $request->only('email', 'password');
 
-        if(Auth::attempt($credentials)){
-            return redirect()->intended('/')->withSuccess('Signed In');
-        }
-            return redirect()->route('login.index')->withSuccess('Email atau Password salah!');
+    if(Auth::attempt($credentials)){
+        return redirect()->intended('/')->with('success', 'Anda Berhasil Login');
     }
+    return redirect()->route('login.index')->with('error', 'Email atau Password salah!');
+}
 
     public function indexSignup(): View
     {

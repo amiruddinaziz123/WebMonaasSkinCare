@@ -26,11 +26,14 @@
               <img src="\img\Rectangle.png" alt="">
             </div>
             <div class="user-card-info">
-              <h2>{{ $accounts->username }}</h2>
-              <p><span>Email:</span>{{ $accounts->email }}</p>
-              <p><span>No. Telp:</span>{{ $accounts->no_telp }}</p>        
+              <h2>{{ $user->username }}</h2>
+              <p><span>Email:</span>{{ $user->email }}</p>
+              <p><span>No. Telp:</span>{{ $user->no_telp }}</p>        
               <p><span>Password:</span><span id="password" class="fst-normal">********</span> <i class="bi bi-eye-fill" id="togglePassword"></i></p>
               <p><span>____________________________________________________</span></p>
+              <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link text-danger">Logout</a>
+      </li>
             </div>
         </div>
     </div>
@@ -42,7 +45,7 @@
         document.getElementById('togglePassword').addEventListener('click', function () {
             const passwordField = document.getElementById('password');
             if (passwordField.textContent === '********') {
-                passwordField.textContent = '{{ $accounts->password }}';
+                passwordField.textContent = '{{ $user->password }}';
             } else {
                 passwordField.textContent = '********';
             }

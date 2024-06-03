@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Models\User;
 use App\Models\navbar;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 
 class ProfilController extends Controller
@@ -14,7 +14,7 @@ class ProfilController extends Controller
     public function index(): View
     {
         $navbars = navbar::all();
-        $accounts = User::latest()->first();
-        return view('profil.index', compact('accounts', 'navbars'));
+        $user = Auth::user();
+        return view('profil.index', compact('user', 'navbars'));
     }
 }

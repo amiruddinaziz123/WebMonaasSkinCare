@@ -7,11 +7,11 @@
     <link rel="icon" href="/img/logoMonaas.png" type="image/gif" sizes="16x16">
     <link rel="stylesheet" href="{{ asset('css/signup.css') }}">
     <!-- SweetAlert2 -->
-   <link rel="stylesheet" href="{{ asset('template/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css') }}">
-   <!-- SweetAlert2 CSS -->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
-   <!-- SweetAlert2 JS -->
-   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="{{ asset('template/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css') }}">
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
@@ -19,13 +19,13 @@
         <div class="row border rounded-5 p-3 shadow box">
             <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left">
                 <div class="image">
-                  @if($logsigns && $logsigns->image)
-                  <img src="/img/{{ $logsigns->image }}" alt="" class="img-fluid mb-3 ms-5" style="width: 300px">
-                @else
-                  <img src="/img/default-image.jpg" alt="Default Image" class="img-fluid mb-3 ms-5" style="width: 300px">
-                @endif
-              </div>
-              <p class="text-white text ms-5">{{ $logsigns->text ?? 'Default text' }}</p>
+                    @if($logsigns && $logsigns->image)
+                        <img src="/img/{{ $logsigns->image }}" alt="" class="img-fluid mb-3 ms-5" style="width: 300px">
+                    @else
+                        <img src="/img/default-image.jpg" alt="Default Image" class="img-fluid mb-3 ms-5" style="width: 300px">
+                    @endif
+                </div>
+                <p class="text-white text ms-5">{{ $logsigns->text ?? 'Default text' }}</p>
             </div>
             <div class="col-md-6">
                 <div class="header-text">
@@ -74,7 +74,8 @@
                 this.value = this.value.slice(0, 15);
             }
         });
-
+    </script>
+    <script>
         document.addEventListener('DOMContentLoaded', function() {
             const userName = document.getElementById('username');
             const email = document.getElementById('email');

@@ -26,6 +26,12 @@ Route::controller(BookingController::class)->group(function () {
     Route::get('/', 'landingPage')->name('landingPage');
 });
 
+// Route::middleware('auth')->group(function () {
+//     Route::controller(BookingController::class)->group(function () {
+//         Route::get('/', 'landingPage')->name('landingPage');
+//     });
+// });
+
 Route::get('/landingcobaumar', function () {
     return view('landingTry');
 });
@@ -45,10 +51,11 @@ Route::resource('/navbarAdmin', \App\Http\Controllers\navbarAdminController::cla
 Route::controller(LogsignController::class)->group(function () {
     Route::get('/logsignAdmin', 'index')->name('logsignAdmin.index');
     Route::get('/login', 'indexLogin')->name('login.index');
-    Route::post('/prosesLogin', 'prosesLogin')->name('login.store');
+    Route::post('/prosesLogin', 'prosesLogin')->name('login.user');
     Route::get('/register', 'indexSignup')->name('signupAdmin.index');
     Route::post('/logsignAdmin/edit', 'store')->name('logsignAdmin.store');
     Route::post('/register/add', 'storeSignup')->name('signup.store');
+    Route::post('/prosesLogout', 'prosesLogout')->name('logout.user');
 });
 
 // ROUTE UNTUK BOOKING DAN ADMINNYA

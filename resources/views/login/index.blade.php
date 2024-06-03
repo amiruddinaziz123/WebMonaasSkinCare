@@ -65,8 +65,28 @@
     <script>
         Swal.fire({
             icon: 'success',
-            title: 'Regsiter Sukses',
+            title: 'Regisiter Sukses',
             text: '{{ session('success') }}',
+        });
+    </script>
+    @endif
+
+    <script>
+        @if(session('error'))
+            Swal.fire({
+                icon: 'error',
+                title: 'Login Gagal',
+                text: '{{ session('error') }}',
+            });
+        @endif
+    </script>
+
+    @if ($errors->any())
+    <script>
+        Swal.fire({
+            icon: 'error',
+            title: 'Error!',
+            html: '<ul class="text-decoration-none list-unstyled">{!! implode("", $errors->all("<li>:message</li>")) !!}</ul>',
         });
     </script>
     @endif
