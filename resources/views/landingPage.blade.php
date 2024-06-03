@@ -27,7 +27,7 @@
                         <h1 class="fw-bold">Rawat <span>kulitmu</span>,</h1>
                         <h1 class="fw-bold">rawat <span>kecantikanmu</span></h1>
                     </div>
-                    <p class="mb-4">Kami memberikan layanan dan produk yang berkualitas serta bermanfaat bagi semua orang.</p>
+                    <p class="mb-4 layanan">Kami memberikan layanan dan produk yang berkualitas serta bermanfaat bagi semua orang.</p>
                     {{-- image --}}
 
                     <div id="hero-carousel" class="carousel slide mb-5 diskon" data-bs-ride="carousel">
@@ -109,11 +109,11 @@
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-1">
-                            <i class="fa-solid fa-location-dot text-center mt-3" style="font-size: 50px;"></i>
+                            <i class="fa-solid fa-location-dot text-center mt-3" style="font-size: 45px;"></i>
                         </div>
                         <div class="col-11">
-                            <h5>Alamat Toko</h5>
-                            <p>Jl. Sapen Raya, RT.7/RW.3, Penggaron Kidul, Kec. Pedurungan, Kota Semarang, Jawa Tengah 50192.</p>
+                            <h5 class="hubungi">Alamat Toko</h5>
+                            <p class="hubungi-text">Jl. Sapen Raya, RT.7/RW.3, Penggaron Kidul, Kec. Pedurungan, Kota Semarang, Jawa Tengah 50192.</p>
                         </div>
                     </div>
                     <div class="row">
@@ -121,8 +121,8 @@
                             <i class="fa-solid fa-phone-volume text-center mt-2" style="font-size: 35px;"></i>
                         </div>
                         <div class="col-11">
-                            <h5>Nomor Telepon</h5>
-                            <p>085779205421</p>
+                            <h5 class="hubungi">Nomor Telepon</h5>
+                            <p class="hubungi-text">085779205421</p>
                         </div>
                     </div>
                     <div class="row">
@@ -130,8 +130,8 @@
                             <i class="fa-solid fa-calendar-days text-center mt-4" style="font-size: 45px;"></i>
                         </div>
                         <div class="col-11">
-                            <h5>Jam Operasional</h5>
-                            <div class="row">
+                            <h5 class="hubungi">Jam Operasional</h5>
+                            <div class="row hubungi-text">
                                 <div class="col-4 mb-0">Senin : 08.30 - 17.00</div>
                                 <div class="col-4 mb-0">Selasa : 08.30 - 17.00</div>
                                 <div class="col-4 mb-0">Rabu : 08.30 - 17.00</div>
