@@ -135,11 +135,12 @@ class TreatmentController extends Controller
     // SEARCH
     public function search(Request $request) {
         $query = $request->input('query');
+        $navbars = navbar::all();
         $treatments = Treatment::where('nama_treatment', 'LIKE', "%{$query}%")
                      ->orWhere('description_treatment', 'LIKE', "%{$query}%")
                      ->get();
 
-        return view('treatment/index', compact('treatments'));
+        return view('treatment/index', compact('treatments','navbars'));
     }
 
 }
