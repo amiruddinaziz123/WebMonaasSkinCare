@@ -18,7 +18,7 @@
     <!-- Hero Section -->
     <section id="about-us" class="hero-section text-center py-5">
         <div class="container">
-            <div class="row">
+            <div class="row atas">
                 <div class="col-lg-6 col-sm-12 text-lg-start text-sm-center jarum">
                     <a class="div btn btn-light fw-bold p-3 ps-5 pe-5 rounded-5 aboutus" href="/aboutus">
                         <div class="div-2">About Us <i class="fa-solid fa-syringe"></i></div>
@@ -107,38 +107,38 @@
             <h2 class="section-title font-katibeh"><hr>Hubungi Kami</h2>
             <div class="row">
                 <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-1">
+                    <div class="row kami">
+                        <div class="col-lg-1 col-sm-12">
                             <i class="fa-solid fa-location-dot text-center mt-3" style="font-size: 50px;"></i>
                         </div>
-                        <div class="col-11">
+                        <div class="col-lg-11 col-sm-12">
                             <h5>Alamat Toko</h5>
                             <p>Jl. Sapen Raya, RT.7/RW.3, Penggaron Kidul, Kec. Pedurungan, Kota Semarang, Jawa Tengah 50192.</p>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-1">
+                    <div class="row kami">
+                        <div class="col-lg-1 col-sm-12">
                             <i class="fa-solid fa-phone-volume text-center mt-2" style="font-size: 35px;"></i>
                         </div>
-                        <div class="col-11">
+                        <div class="col-lg-11 col-sm-12">
                             <h5>Nomor Telepon</h5>
                             <p>085779205421</p>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-1">
+                    <div class="row kami">
+                        <div class="col-lg-1 col-sm-12">
                             <i class="fa-solid fa-calendar-days text-center mt-4" style="font-size: 45px;"></i>
                         </div>
-                        <div class="col-11">
+                        <div class="col-lg-11 col-sm-12">
                             <h5>Jam Operasional</h5>
                             <div class="row">
-                                <div class="col-4 mb-0">Senin : 08.30 - 17.00</div>
-                                <div class="col-4 mb-0">Selasa : 08.30 - 17.00</div>
-                                <div class="col-4 mb-0">Rabu : 08.30 - 17.00</div>
-                                <div class="col-4 mb-0">Kamis : 08.30 - 17.00</div>
-                                <div class="col-4 mb-0">Jumat : 08.30 - 17.00</div>
-                                <div class="col-4 mb-0">Sabtu : 08.30 - 01.00</div>
-                                <div class="col-4 mb-0">Minggu : 08.30 - 17.00</div>
+                                <div class="col-lg-4 col-sm-12 mb-0">Senin : 08.30 - 17.00</div>
+                                <div class="col-lg-4 col-sm-12 mb-0">Selasa : 08.30 - 17.00</div>
+                                <div class="col-lg-4 col-sm-12 mb-0">Rabu : 08.30 - 17.00</div>
+                                <div class="col-lg-4 col-sm-12 mb-0">Kamis : 08.30 - 17.00</div>
+                                <div class="col-lg-4 col-sm-12 mb-0">Jumat : 08.30 - 17.00</div>
+                                <div class="col-lg-4 col-sm-12 mb-0">Sabtu : 08.30 - 01.00</div>
+                                <div class="col-lg-4 col-sm-12 mb-0">Minggu : 08.30 - 17.00</div>
                             </div>
                         </div>
                     </div>
