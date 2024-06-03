@@ -22,3 +22,34 @@ a{
     margin-top: 5px;
     margin-left: 5px;
 }
+#logo{
+    justify-content: right;
+    margin-left: 16px;
+    margin-top: 16px;
+    margin-right: 0px;
+}
+
+@media only screen and (max-width: 900px) {
+    .footer{
+        flex-direction: column-reverse;
+    }
+    .garis{
+        display: none;
+    }
+    .element{
+        text-align: center;
+    }
+    #logo{
+        justify-content: center;
+        margin: 0px;
+        margin-top: 16px;
+    }
+    .pembungkus{
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .center{
+        padding-left: 20px;
+        padding-right: auto;
+    }
+}
