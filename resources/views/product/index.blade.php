@@ -25,6 +25,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Katibeh&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}" />
   </head>
 <body>
   <x-navbar/>  
@@ -78,26 +79,27 @@
     <h1 style="font-size: 70px;">OUR PRODUCT</h1>
     <div class="row row-cols-1 row-cols-md-3 g-4 py-5">
         
-        @foreach ($products as $pro)
-            <div class="col">
-        <div class="card rounded-5" style="box-shadow: 0px 193px 54px 0px rgba(120, 120, 120, 0.01), 0px 124px 49px 0px rgba(120, 120, 120, 0.04), 0px 69px 42px 0px rgba(120, 120, 120, 0.15), 0px 31px 31px 0px rgba(120, 120, 120, 0.26), 0px 8px 17px 0px rgba(120, 120, 120, 0.29);">
+      @foreach ($products as $index => $pro)
+        <div class="col">
+          <div class="card rounded-5" style="box-shadow: 0px 193px 54px 0px rgba(120, 120, 120, 0.01), 0px 124px 49px 0px rgba(120, 120, 120, 0.04), 0px 69px 42px 0px rgba(120, 120, 120, 0.15), 0px 31px 31px 0px rgba(120, 120, 120, 0.26), 0px 8px 17px 0px rgba(120, 120, 120, 0.29);">
             <img src="/img/{{ $pro->foto_product }}" class="card-img-top rounded-top-5" alt="...">
             <div class="card-body">
-                <h5 class="card-title mt-3">{{ $pro->nama_product }}</h5>
-                <p class="card-text">{{ $pro->description_product }}</p>
+              <h5 class="card-title mt-3">{{ $pro->nama_product }}</h5>
+              <p class="card-text">{{ $pro->description_product }}</p>
             </div>
             <div class="mb-5 d-flex justify-content-around">
-                <h3>Rp. {{ $pro->harga_product }}</h3>
-                {{-- <a onclick="sendwhatsapp();"><button class="btn btn-primary" style="border-radius: 20px">Buy Now</button></a> --}}
-                <a href="https://wa.me/0882003366832?text=pesan product pada nomor 0882003366832"><button class="btn btn-primary" style="border-radius: 20px; border-color: #ED1E78; background-color: #D9005B;">Buy Now</button></a>
+              <h3>Rp. {{ $pro->harga_product }}</h3>
+              <a onclick="sendwhatsapp({{ $index }})"><button class="btn btn-primary" style="border-radius: 20px">Buy Now</button></a>
             </div>
+          </div>
         </div>
-        </div>
-        @endforeach
+      @endforeach
+    
       
 
     </div>
   </div>
+  <x-footer/>
 
   {{-- end of card --}}
 
@@ -153,16 +155,14 @@
 </script>
 
 <script>
-  function sendwhatsapp(){
-   var phonenumber = "+6285101556689";
+  function sendwhatsapp(index){
+   var phonenumber = "6281229589745";
+   const products = @json($products);
 
    var url = "https://wa.me/" + phonenumber + "?text="
-   +"*Name :* "+name+"%0a"
-   +"*Email :* "+email+"%0a"
-   +"*Country:* "+country+"%0a"
-   +"*Message :* "+message
-   +"%0a%0a"
-   +"This is an example of send HTML form data to WhatsApp";
+   +"*Nama :* "+products[index].nama_product+"%0a"
+   +"*Harga :* "+products[index].harga_product+"%0a"
+   +"Pesanan";
 
    window.open(url, '_blank').focus();
  }
