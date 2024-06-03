@@ -23,9 +23,9 @@
                     <a class="div btn btn-light fw-bold p-3 ps-5 pe-5 rounded-5 aboutus" href="/aboutus">
                         <div class="div-2">About Us <i class="fa-solid fa-syringe"></i></div>
                     </a>
-                    <div class="mt-2 mb-4 font-poppins">
-                        <h1 class="fw-bold">Rawat <span class="highlight">kulitmu</span>,</h1>
-                        <h1 class="fw-bold">rawat <span class="highlight">kecantikanmu</span></h1>
+                    <div class="mt-2 mb-4 slogan">
+                        <h1 class="fw-bold">Rawat <span>kulitmu</span>,</h1>
+                        <h1 class="fw-bold">rawat <span>kecantikanmu</span></h1>
                     </div>
                     <p class="mb-4">Kami memberikan layanan dan produk yang berkualitas serta bermanfaat bagi semua orang.</p>
                     {{-- image --}}
@@ -105,7 +105,7 @@
     <section id="contact" class="contact-section py-5">
         <div class="container">
             <h2 class="section-title font-katibeh"><hr>Hubungi Kami</h2>
-            <div class="row">
+            <div class="row mt-5">
                 <div class="col-md-6">
                     <div class="row">
                         <div class="col-1">
