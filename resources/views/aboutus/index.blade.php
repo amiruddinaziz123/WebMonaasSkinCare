@@ -25,7 +25,7 @@
           <hr style="margin-top: 70px"> 
 
           <div class="col-md-6 mt-5 mb-5 text-center text-md-start">
-            <h2>Mengapa Harus <span class="pink">Monaas</span></h2>
+            <h2>Mengapa Harus <span class="pink">Monaas</span>?</h2>
             <p class="abouts-text">
               {{ $abouts->reason ?? 'Default reason text' }}  
             </p>
@@ -36,19 +36,19 @@
           </div>
 
           <div class="col-md-4 mt-5 mb-5 text-center align-items-center">
-            <img src="{{ $abouts && $abouts->icon1 ? '/img/' . $abouts->icon1 : '/img/default-icon1.jpg' }}" alt="">
+            <img class="img-fluid" src="{{ $abouts && $abouts->icon1 ? '/img/' . $abouts->icon1 : '/img/default-icon1.jpg' }}" alt="" style="width: 50px" >
             <h5>{{ $abouts->tittle_icon1 ?? 'Default Title 1' }}</h5>
             <P class="abouts-icon">{{ $abouts->isi_icon1 ?? 'Default content for icon 1' }}</P>
           </div>
 
           <div class="col-md-4 mt-5 mb-5 text-center align-items-center">
-            <img src="{{ $abouts && $abouts->icon2 ? '/img/' . $abouts->icon2 : '/img/default-icon2.jpg' }}" alt="">
+            <img class="img-fluid" src="{{ $abouts && $abouts->icon2 ? '/img/' . $abouts->icon2 : '/img/default-icon2.jpg' }}" alt="" style="width: 50px" >
             <H5>{{ $abouts->tittle_icon2 ?? 'Default Title 2' }}</H5>
             <p class="abouts-icon">{{ $abouts->isi_icon2 ?? 'Default content for icon 2' }}</p>
           </div>
 
           <div class="col-md-4 mt-5 mb-5 text-center align-items-center">
-            <img src="{{ $abouts && $abouts->icon3 ? '/img/' . $abouts->icon3 : '/img/default-icon3.jpg' }}" alt="">
+            <img class="img-fluid" src="{{ $abouts && $abouts->icon3 ? '/img/' . $abouts->icon3 : '/img/default-icon3.jpg' }}" alt="" style="width: 50px" >
             <h5>{{ $abouts->tittle_icon3 ?? 'Default Title 3' }}</h5>
             <P class="abouts-icon">{{ $abouts->isi_icon3 ?? 'Default content for icon 3' }}</P>
           </div>
