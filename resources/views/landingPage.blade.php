@@ -107,8 +107,8 @@
             <h2 class="section-title font-katibeh"><hr>Hubungi Kami</h2>
             <div class="row mt-5">
                 <div class="col-md-6">
-                    <div class="row">
-                        <div class="col-1">
+                    <div class="row kami">
+                        <div class="col-lg-1 col-sm-12">
                             <i class="fa-solid fa-location-dot text-center mt-3" style="font-size: 45px;"></i>
                         </div>
                         <div class="col-11">
@@ -116,8 +116,8 @@
                             <p class="hubungi-text">Jl. Sapen Raya, RT.7/RW.3, Penggaron Kidul, Kec. Pedurungan, Kota Semarang, Jawa Tengah 50192.</p>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-1">
+                    <div class="row kami">
+                        <div class="col-lg-1 col-sm-12">
                             <i class="fa-solid fa-phone-volume text-center mt-2" style="font-size: 35px;"></i>
                         </div>
                         <div class="col-11">
@@ -125,20 +125,20 @@
                             <p class="hubungi-text">085779205421</p>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-1">
+                    <div class="row kami">
+                        <div class="col-lg-1 col-sm-12">
                             <i class="fa-solid fa-calendar-days text-center mt-4" style="font-size: 45px;"></i>
                         </div>
-                        <div class="col-11">
+                        <div class="col-lg-11 col-sm-12">
                             <h5 class="hubungi">Jam Operasional</h5>
                             <div class="row hubungi-text">
-                                <div class="col-4 mb-0">Senin : 08.30 - 17.00</div>
-                                <div class="col-4 mb-0">Selasa : 08.30 - 17.00</div>
-                                <div class="col-4 mb-0">Rabu : 08.30 - 17.00</div>
-                                <div class="col-4 mb-0">Kamis : 08.30 - 17.00</div>
-                                <div class="col-4 mb-0">Jumat : 08.30 - 17.00</div>
-                                <div class="col-4 mb-0">Sabtu : 08.30 - 01.00</div>
-                                <div class="col-4 mb-0">Minggu : 08.30 - 17.00</div>
+                                <div class="col-lg-4 col-sm-12 mb-0">Senin : 08.30 - 17.00</div>
+                                <div class="col-lg-4 col-sm-12 mb-0">Selasa : 08.30 - 17.00</div>
+                                <div class="col-lg-4 col-sm-12 mb-0">Rabu : 08.30 - 17.00</div>
+                                <div class="col-lg-4 col-sm-12 mb-0">Kamis : 08.30 - 17.00</div>
+                                <div class="col-lg-4 col-sm-12 mb-0">Jumat : 08.30 - 17.00</div>
+                                <div class="col-lg-4 col-sm-12 mb-0">Sabtu : 08.30 - 01.00</div>
+                                <div class="col-lg-4 col-sm-12 mb-0">Minggu : 08.30 - 17.00</div>
                             </div>
                         </div>
                     </div>

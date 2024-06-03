@@ -154,18 +154,18 @@ letter-spacing: 1.1px;
     }
     .slogan h1{
         color: #000;
-    font-family: Poppins;
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 700;
+        font-family: Poppins;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
     }
     
     .slogan span{
         color: #D9005B;
-font-family: Poppins;
-font-size: 30px;
-font-style: normal;
-font-weight: 700;
+        font-family: Poppins;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
     }
 
     .layanan{
@@ -185,6 +185,14 @@ font-weight: 700;
     .hubungi-text{
         text-align: center;
         font-size: 14px;
+    }
+
+    .kami{
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 }
