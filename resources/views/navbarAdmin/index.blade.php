@@ -24,8 +24,8 @@
 </head>
 
 <body class="antialiased">
-    <div class="p-5">
-        <div style="margin-top: 10vh; margin-left: 260px;">
+    <div class="p-4">
+        <div style="margin-left: 260px;">
             <h3 class="ms-3">before</h3>
             <nav class="navbar navbar-expand-lg" data-aos="fade-down" id="data-background">
                 <div class="container-fluid">
