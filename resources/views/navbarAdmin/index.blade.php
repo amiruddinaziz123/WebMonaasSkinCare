@@ -140,7 +140,7 @@
                             <label for="judul" class="w-100 text-md-end text-sm-start">Judul : </label>
                         </div>
                         <div class="col-sm-6">
-                            <input type="text" name="judul" class="form-control" id="judul" placeholder="Judul" aria-label="Judul">
+                            <input type="text" name="judul" class="form-control text-light" id="judul" placeholder="Judul" aria-label="Judul">
                         </div>
                     </div>
                     <div class="row">
