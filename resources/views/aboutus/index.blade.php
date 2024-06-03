@@ -18,15 +18,15 @@
         <div class="row" style="margin-top: 90px">
           <div class="text-center align-items-center justify-content-center">
             <h2>Hasil <span class="pink">Maksimal</span>, Harga <span class="pink">Minimal</span></h2>
-            <p class="mt-4">
+            <p class="mt-4 abouts-text">
               {{ $abouts->intro ?? 'Default intro text' }}
             </p>
           </div>
           <hr style="margin-top: 70px"> 
 
-          <div class="col-md-6 mt-5 mb-5">
+          <div class="col-md-6 mt-5 mb-5 text-center text-md-start">
             <h2>Mengapa Harus <span class="pink">Monaas</span></h2>
-            <p>
+            <p class="abouts-text">
               {{ $abouts->reason ?? 'Default reason text' }}  
             </p>
           </div>
@@ -38,19 +38,19 @@
           <div class="col-md-4 mt-5 mb-5 text-center align-items-center">
             <img src="{{ $abouts && $abouts->icon1 ? '/img/' . $abouts->icon1 : '/img/default-icon1.jpg' }}" alt="">
             <h5>{{ $abouts->tittle_icon1 ?? 'Default Title 1' }}</h5>
-            <P>{{ $abouts->isi_icon1 ?? 'Default content for icon 1' }}</P>
+            <P class="abouts-icon">{{ $abouts->isi_icon1 ?? 'Default content for icon 1' }}</P>
           </div>
 
           <div class="col-md-4 mt-5 mb-5 text-center align-items-center">
             <img src="{{ $abouts && $abouts->icon2 ? '/img/' . $abouts->icon2 : '/img/default-icon2.jpg' }}" alt="">
             <H5>{{ $abouts->tittle_icon2 ?? 'Default Title 2' }}</H5>
-            <p>{{ $abouts->isi_icon2 ?? 'Default content for icon 2' }}</p>
+            <p class="abouts-icon">{{ $abouts->isi_icon2 ?? 'Default content for icon 2' }}</p>
           </div>
 
           <div class="col-md-4 mt-5 mb-5 text-center align-items-center">
             <img src="{{ $abouts && $abouts->icon3 ? '/img/' . $abouts->icon3 : '/img/default-icon3.jpg' }}" alt="">
             <h5>{{ $abouts->tittle_icon3 ?? 'Default Title 3' }}</h5>
-            <P>{{ $abouts->isi_icon3 ?? 'Default content for icon 3' }}</P>
+            <P class="abouts-icon">{{ $abouts->isi_icon3 ?? 'Default content for icon 3' }}</P>
           </div>
         </div>
       </div>

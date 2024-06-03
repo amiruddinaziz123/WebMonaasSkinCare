@@ -32,6 +32,24 @@ h2{
     line-height: normal;
 }
 
+.abouts-text{
+    color: #757575;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 188.5%; /* 18.85px */
+    letter-spacing: 1px;
+}
+
+.abouts-icon{
+    color: #757575;
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1.6px;
+}
+
 p{
     font-family: poppins; 
 }
@@ -44,5 +62,35 @@ hr{
 
 .pink{
     color: rgba(237, 30, 120, 1); ;
+}
+
+h5{
+    color: #000;
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+/* handphone */
+@media (max-width:576px) {
+    .header{
+        height: 100px;
+    }
+    .header h1{
+        font-size: 70px;
+    }
+    h2{
+        color: #000;
+        font-family: Poppins;
+        font-size: 30px;
+        font-weight: 700;
+    }
+    .abouts-text{
+        font-size: 17px;
+    }
+    .abouts-icon{
+        font-size: 13px;
+    }
 }
 

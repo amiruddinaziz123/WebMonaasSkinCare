@@ -9,13 +9,15 @@ use Illuminate\View\View;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
 use App\Models\Treatment;
+use App\Models\navbar;
 use Illuminate\Http\RedirectResponse;
 
 class TreatmentController extends Controller
 {
     public function index() {
         $treatments = Treatment::all();
-        return view('treatment/index', compact('treatments'));
+        $navbars = navbar::all();
+        return view('treatment/index', compact('treatments', 'navbars'));
     }
     public function admin() {
         $treatments = Treatment::all();
