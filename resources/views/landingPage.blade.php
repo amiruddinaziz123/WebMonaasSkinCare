@@ -18,7 +18,7 @@
     <!-- Hero Section -->
     <section id="about-us" class="hero-section text-center py-5">
         <div class="container">
-            <div class="row atas">
+            <div class="row">
                 <div class="col-lg-6 col-sm-12 text-lg-start text-sm-center jarum">
                     <a class="div btn btn-light fw-bold p-3 ps-5 pe-5 rounded-5 aboutus" href="/aboutus">
                         <div class="div-2">About Us <i class="fa-solid fa-syringe"></i></div>
@@ -107,7 +107,6 @@
             <h2 class="section-title font-katibeh"><hr>Hubungi Kami</h2>
             <div class="row mt-5">
                 <div class="col-md-6">
-
                     <div class="row">
                         <div class="col-1">
                             <i class="fa-solid fa-location-dot text-center mt-3" style="font-size: 45px;"></i>
@@ -117,8 +116,8 @@
                             <p class="hubungi-text">Jl. Sapen Raya, RT.7/RW.3, Penggaron Kidul, Kec. Pedurungan, Kota Semarang, Jawa Tengah 50192.</p>
                         </div>
                     </div>
-                    <div class="row kami">
-                        <div class="col-lg-1 col-sm-12">
+                    <div class="row">
+                        <div class="col-1">
                             <i class="fa-solid fa-phone-volume text-center mt-2" style="font-size: 35px;"></i>
                         </div>
                         <div class="col-11">
@@ -126,11 +125,10 @@
                             <p class="hubungi-text">085779205421</p>
                         </div>
                     </div>
-                    <div class="row kami">
-                        <div class="col-lg-1 col-sm-12">
+                    <div class="row">
+                        <div class="col-1">
                             <i class="fa-solid fa-calendar-days text-center mt-4" style="font-size: 45px;"></i>
                         </div>
-
                         <div class="col-11">
                             <h5 class="hubungi">Jam Operasional</h5>
                             <div class="row hubungi-text">

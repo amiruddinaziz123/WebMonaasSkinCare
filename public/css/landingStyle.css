@@ -146,10 +146,45 @@ letter-spacing: 1.1px;
 }
 
 @media only screen and (max-width: 900px) {
-    .atas{
+    .row{
         flex-direction: column-reverse;
     }
     .jarum{
         margin-top: 35px;
     }
+    .slogan h1{
+        color: #000;
+    font-family: Poppins;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    }
+    
+    .slogan span{
+        color: #D9005B;
+font-family: Poppins;
+font-size: 30px;
+font-style: normal;
+font-weight: 700;
+    }
+
+    .layanan{
+        color: #757575;
+text-align: center;
+font-family: Poppins;
+font-size: 15px;
+font-style: normal;
+font-weight: 500;
+line-height: 188.5%; /* 18.85px */
+letter-spacing: 1px;
+    }
+
+    .hubungi{
+        text-align: center;
+    }
+    .hubungi-text{
+        text-align: center;
+        font-size: 14px;
+    }
+
 }
