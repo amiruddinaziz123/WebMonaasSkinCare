@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}" />
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}" />
 </head>
 <body>
     <x-navbar/>
@@ -109,7 +110,7 @@
                 <div class="col-md-6">
                     <div class="row kami">
                         <div class="col-lg-1 col-sm-12">
-                            <i class="fa-solid fa-location-dot text-center mt-3" style="font-size: 45px;"></i>
+                            <i class="fa-solid fa-location-dot text-center mt-3" style="font-size: 45px; color:#D9005B;"></i>
                         </div>
                         <div class="col-11">
                             <h5 class="hubungi">Alamat Toko</h5>
@@ -118,7 +119,7 @@
                     </div>
                     <div class="row kami">
                         <div class="col-lg-1 col-sm-12">
-                            <i class="fa-solid fa-phone-volume text-center mt-2" style="font-size: 35px;"></i>
+                            <i class="fa-solid fa-phone-volume text-center mt-2" style="font-size: 35px; color:#D9005B;"></i>
                         </div>
                         <div class="col-11">
                             <h5 class="hubungi">Nomor Telepon</h5>
@@ -127,7 +128,7 @@
                     </div>
                     <div class="row kami">
                         <div class="col-lg-1 col-sm-12">
-                            <i class="fa-solid fa-calendar-days text-center mt-4" style="font-size: 45px;"></i>
+                            <i class="fa-solid fa-calendar-days text-center mt-4" style="font-size: 45px; color:#D9005B;"></i>
                         </div>
                         <div class="col-lg-11 col-sm-12">
                             <h5 class="hubungi">Jam Operasional</h5>
@@ -150,7 +151,13 @@
         </div>
     </section>
     <x-footer/>
-
+    @if(session('success'))
+        Swal.fire({
+            icon: 'success',
+            title: 'Login Sukses',
+            text: '{{ session('success') }}',
+        });
+    @endif
     <script>
         const dataNavbar = @json($navbars);
 
