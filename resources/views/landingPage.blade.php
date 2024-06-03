@@ -23,11 +23,11 @@
                     <a class="div btn btn-light fw-bold p-3 ps-5 pe-5 rounded-5 aboutus" href="/aboutus">
                         <div class="div-2">About Us <i class="fa-solid fa-syringe"></i></div>
                     </a>
-                    <div class="mt-2 mb-4 font-poppins">
-                        <h1 class="fw-bold">Rawat <span class="highlight">kulitmu</span>,</h1>
-                        <h1 class="fw-bold">rawat <span class="highlight">kecantikanmu</span></h1>
+                    <div class="mt-2 mb-4 slogan">
+                        <h1 class="fw-bold">Rawat <span>kulitmu</span>,</h1>
+                        <h1 class="fw-bold">rawat <span>kecantikanmu</span></h1>
                     </div>
-                    <p class="mb-4">Kami memberikan layanan dan produk yang berkualitas serta bermanfaat bagi semua orang.</p>
+                    <p class="mb-4 layanan">Kami memberikan layanan dan produk yang berkualitas serta bermanfaat bagi semua orang.</p>
                     {{-- image --}}
 
                     <div id="hero-carousel" class="carousel slide mb-5 diskon" data-bs-ride="carousel">
@@ -105,40 +105,42 @@
     <section id="contact" class="contact-section py-5">
         <div class="container">
             <h2 class="section-title font-katibeh"><hr>Hubungi Kami</h2>
-            <div class="row">
+            <div class="row mt-5">
                 <div class="col-md-6">
-                    <div class="row kami">
-                        <div class="col-lg-1 col-sm-12">
-                            <i class="fa-solid fa-location-dot text-center mt-3" style="font-size: 50px;"></i>
+
+                    <div class="row">
+                        <div class="col-1">
+                            <i class="fa-solid fa-location-dot text-center mt-3" style="font-size: 45px;"></i>
                         </div>
-                        <div class="col-lg-11 col-sm-12">
-                            <h5>Alamat Toko</h5>
-                            <p>Jl. Sapen Raya, RT.7/RW.3, Penggaron Kidul, Kec. Pedurungan, Kota Semarang, Jawa Tengah 50192.</p>
+                        <div class="col-11">
+                            <h5 class="hubungi">Alamat Toko</h5>
+                            <p class="hubungi-text">Jl. Sapen Raya, RT.7/RW.3, Penggaron Kidul, Kec. Pedurungan, Kota Semarang, Jawa Tengah 50192.</p>
                         </div>
                     </div>
                     <div class="row kami">
                         <div class="col-lg-1 col-sm-12">
                             <i class="fa-solid fa-phone-volume text-center mt-2" style="font-size: 35px;"></i>
                         </div>
-                        <div class="col-lg-11 col-sm-12">
-                            <h5>Nomor Telepon</h5>
-                            <p>085779205421</p>
+                        <div class="col-11">
+                            <h5 class="hubungi">Nomor Telepon</h5>
+                            <p class="hubungi-text">085779205421</p>
                         </div>
                     </div>
                     <div class="row kami">
                         <div class="col-lg-1 col-sm-12">
                             <i class="fa-solid fa-calendar-days text-center mt-4" style="font-size: 45px;"></i>
                         </div>
-                        <div class="col-lg-11 col-sm-12">
-                            <h5>Jam Operasional</h5>
-                            <div class="row">
-                                <div class="col-lg-4 col-sm-12 mb-0">Senin : 08.30 - 17.00</div>
-                                <div class="col-lg-4 col-sm-12 mb-0">Selasa : 08.30 - 17.00</div>
-                                <div class="col-lg-4 col-sm-12 mb-0">Rabu : 08.30 - 17.00</div>
-                                <div class="col-lg-4 col-sm-12 mb-0">Kamis : 08.30 - 17.00</div>
-                                <div class="col-lg-4 col-sm-12 mb-0">Jumat : 08.30 - 17.00</div>
-                                <div class="col-lg-4 col-sm-12 mb-0">Sabtu : 08.30 - 01.00</div>
-                                <div class="col-lg-4 col-sm-12 mb-0">Minggu : 08.30 - 17.00</div>
+
+                        <div class="col-11">
+                            <h5 class="hubungi">Jam Operasional</h5>
+                            <div class="row hubungi-text">
+                                <div class="col-4 mb-0">Senin : 08.30 - 17.00</div>
+                                <div class="col-4 mb-0">Selasa : 08.30 - 17.00</div>
+                                <div class="col-4 mb-0">Rabu : 08.30 - 17.00</div>
+                                <div class="col-4 mb-0">Kamis : 08.30 - 17.00</div>
+                                <div class="col-4 mb-0">Jumat : 08.30 - 17.00</div>
+                                <div class="col-4 mb-0">Sabtu : 08.30 - 01.00</div>
+                                <div class="col-4 mb-0">Minggu : 08.30 - 17.00</div>
                             </div>
                         </div>
                     </div>
