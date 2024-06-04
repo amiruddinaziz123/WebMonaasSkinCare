@@ -32,7 +32,7 @@
                     <h1>Login</h1>
                     {{-- <p class="ms-3 mt-4">Please enter your details</p> --}}
                 </div>
-                <form action="{{ route('login.store') }}" method="POST" autocomplete="off">
+                <form action="{{ route('login.user') }}" method="POST" autocomplete="off">
                     @csrf
                     <div class="input-group mb-3">
                         <input type="email" name="email" id="" class="form-control form-control-lg bg-light fs-6" placeholder="Email">
