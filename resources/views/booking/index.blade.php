@@ -84,7 +84,6 @@
     </div>
 
 
-
     <div class="hasil p-1 border border-2">
       <div class="form-group col-12 mt-2 nav justify-content-center">
         <button class="btn col-4" type="submit" style="background-color: #DF6F9E; color: white;" id="btnBuatJadwalTreatment">Buat jadwal</button>
@@ -139,8 +138,17 @@
           title: 'Login Sukses',
           text: '{{ session('success') }}',
       });
-  @endif
-  </script>
+      @endif
+    </script>
+
+    <script>
+      const user = @json($user);
+      const login = document.getElementById('login');
+      if (user !== null) {
+          login.innerHTML = "Hi " + user.username;
+          login.href = "/profil";
+      }
+    </script>
 
     <script>
       // mempasing data dokter ke file booking.js

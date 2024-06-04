@@ -29,7 +29,7 @@ class BookingController extends Controller
             $jamBooking->jam_ke = substr($jamBooking->jam_ke, 0, 5);
         }
     
-        return view('booking.index', compact('user','dokters', 'jamBookings', 'navbars', 'accounts'));
+        return view('booking.index', compact('user', 'dokters', 'jamBookings', 'navbars', 'accounts'));
     }
     
     public function landingPage()
@@ -38,7 +38,7 @@ class BookingController extends Controller
         $products = product::where('status_aktif', '=', 'aktif')->get();
         $user = Auth::user();
     
-        return view('landingPage', compact('user','navbars', 'products'));
+        return view('landingPage', compact('user', 'navbars', 'products'));
     }
 
     public function bookingAdmin()
