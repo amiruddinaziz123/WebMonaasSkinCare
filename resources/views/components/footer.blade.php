@@ -15,13 +15,13 @@
                         <div class="col-lg-1 col-sm-12 center">
                             <img src="{{ asset('img/fb_logo.png') }}" width="30px"/>
                         </div>
-                        <div class="text-white col-lg-11 col-sm-12 mt-2" style="display: contents;"><a href="#">monaasskincare</a></div>
+                        <div class="text-white col-lg-11 col-sm-12 mt-2" style="display: contents;"><a href="#" style="text-decoration: none; color: white;">monaasskincare</a></div>
                     </div>
                     <div class="row mt-2 center">
                         <div class="col-lg-1 col-sm-12 center">
                             <img src="{{ asset('img/ig_logo.png') }}" width="30px"/>
                         </div>
-                        <div class="text-white col-lg-11 col-sm-12 mt-2" style="display: contents;"><a href="#">monaasskincare</a></div>
+                        <div class="text-white col-lg-11 col-sm-12 mt-2" style="display: contents;"><a href="#" style="text-decoration: none; color: white;">monaasskincare</a></div>
                     </div>
                 </div>
                 
@@ -29,13 +29,13 @@
             <div class="element col-sm-12 col-lg-6 col-lg-6 pembungkus" data-aos="fade-down" data-aos-anchor-placement="bottom-bottom">
                 <div class="d-flex flex-column">
                     <div class="d-flex justify-content-between text-light row-sm">
-                        <a href="/aboutus" class="nav-link active" style="font-family: Poppins;">About Us</a>
+                        <a href="/aboutus" class="nav-link active" style="font-family: Poppins; text-decoration: none; color: white; ">About Us</a>
                         <div class="garis">|</div>
-                        <a href="/product" class="nav-link active" style="font-family: Poppins;">Product</a>
+                        <a href="/product" class="nav-link active" style="font-family: Poppins; text-decoration: none; color: white; ">Product</a>
                         <div class="garis">|</div>
-                        <a href="/treatment" class="nav-link active" style="font-family: Poppins;">Treatment</a>
+                        <a href="/treatment" class="nav-link active" style="font-family: Poppins; text-decoration: none; color: white; ">Treatment</a>
                         <div class="garis">|</div>
-                        <a href="/booking" class="nav-link active" style="font-family: Poppins;">Booking</a>
+                        <a href="/booking" class="nav-link active" style="font-family: Poppins; text-decoration: none; color: white; ">Booking</a>
                     </div>
                 </div>
             </div>
