@@ -12,17 +12,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Katibeh&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}" />
-    <link rel="stylesheet" href="{{ asset('css/footer.css') }}" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    {{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"> --}}
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="{{ asset('template/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css') }}">
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
     <link rel="stylesheet" href="/css/treatment.css">
-     <!-- SweetAlert2 -->
-   <link rel="stylesheet" href="{{ asset('template/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css') }}">
-   <!-- SweetAlert2 CSS -->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
-   <!-- SweetAlert2 JS -->
-   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="/css/navbar.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
 </head>
 
 <x-navbar/>
@@ -80,9 +80,9 @@
 <h3 class="subjudul" style="font-size: 70px;">Monaas Treatment</h3>
 
 <div class="row col-12">
-    @foreach ($treatments as $treat)
-        <div class="col-4">
-            <div class="card my-3 jarak" id="jarakslice">
+  @foreach ($treatments as $treat)
+  <div class="col-4">
+    <div class="card my-3 jarak" id="jarakslice">
                 <img src="{{ asset('storage/images/' . $treat->foto_treatment)}}" class="card-img-top" alt="..." >
                 <div class="card-body">
                     <h5 class="card-title" style="font-size: 25px;">{{ $treat->nama_treatment }}</h5>
@@ -94,13 +94,13 @@
                     </div>
                 </div>
             </div>
-        </div>
+          </div>
         @endforeach
+        
 </div>
-
-<br><br>
-
 <x-footer/>
+<div style="background-color: #DF6F9E" class="m-1">
+
 <style>
     #content {
         width: 100%;
