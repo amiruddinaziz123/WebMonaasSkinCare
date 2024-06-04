@@ -12,6 +12,7 @@ use App\Models\Booking;
 use App\Models\dokters;
 use App\Models\navbar;
 use App\Models\account;
+use App\Models\product;
 
 class BookingController extends Controller
 {
@@ -32,8 +33,9 @@ class BookingController extends Controller
     public function landingPage()
     {
         $navbars = navbar::all();
+        $products = product::where('status_aktif', '=', 'aktif')->get();
     
-        return view('landingPage', compact('navbars'));
+        return view('landingPage', compact('navbars', 'products'));
     }
 
     public function bookingAdmin()
