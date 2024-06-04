@@ -24,7 +24,7 @@ class ProductController extends Controller
         $products = product::where('status_aktif', '=', 'aktif')->get();
         $navbars = navbar::all();
 
-        return view('productAdmin.index', compact('products', 'navbars'));
+        return view('product.index', compact('products', 'navbars'));
     }
 
     public function indexAdmin(): View
