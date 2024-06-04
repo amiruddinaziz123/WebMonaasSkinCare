@@ -20,12 +20,12 @@
             <div class="col-md-6 rounded-4 d-flex justify-content-center align-items-center flex-column left">
                 <div class="image">
                     @if($logsigns && $logsigns->image)
-                        <img src="/img/{{ $logsigns->image }}" alt="" class="img-fluid mb-3 ms-5" style="width: 300px">
+                        <img src="/img/{{ $logsigns->image }}" alt="" class="img-fluid img-hero mb-3">
                     @else
-                        <img src="/img/default-image.jpg" alt="Default Image" class="img-fluid mb-3 ms-5" style="width: 300px">
+                        <img src="/img/default-image.jpg" alt="Default Image" class="img-fluid img-hero mb-3">
                     @endif
                 </div>
-                <p class="text-white text ms-5">{{ $logsigns->text ?? 'Default text' }}</p>
+                <p class="text-white text">{{ $logsigns->text ?? 'Default text' }}</p>
             </div>
             <div class="col-md-6">
                 <div class="header-text">
