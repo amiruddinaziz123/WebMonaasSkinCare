@@ -30,13 +30,17 @@ class ProductController extends Controller
     public function indexAdmin(): View
     {
         $products = product::where('status_aktif', '=', 'aktif')->get();
-        return view('productAdmin.index', compact('products'));
+        $navbars = navbar::all();
+
+        return view('product.index', compact('products', 'navbars'));
     }
 
     public function indexHistori(): View
     {
-        $products = product::where('status_aktif', '=', 'hapus')->get();
-        return view('productAdmin.histori', compact('products'));
+        $products = product::where('status_aktif', '=', 'aktif')->get();
+        $navbars = navbar::all();
+
+        return view('product.index', compact('products', 'navbars'));
     }
 
     public function tambah(request $request)
