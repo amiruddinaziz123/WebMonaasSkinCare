@@ -37,8 +37,8 @@
             </p>
           </div>
 
-          <div class="col-md-6 mt-5 mb-5">
-            <img src="{{ $abouts && $abouts->image ? '/img/' . $abouts->image : '/img/default-image.jpg' }}" alt="" class="w-100"> 
+          <div class="col-md-6 m-auto">
+            <img src="{{ $abouts && $abouts->image ? '/img/' . $abouts->image : '/img/default-image.jpg' }}" alt="" class="w-100" style="box-shadow: 0px 199px 56px 0px rgba(217, 109, 161, 0.00), 0px 127px 51px 0px rgba(217, 109, 161, 0.04), 0px 72px 43px 0px rgba(217, 109, 161, 0.12), 0px 32px 32px 0px rgba(217, 109, 161, 0.20), 0px 8px 17px 0px rgba(217, 109, 161, 0.24);"> 
           </div>
 
           <div class="col-md-4 mt-5 mb-5 text-center align-items-center">

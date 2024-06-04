@@ -89,7 +89,7 @@
             </div>
             <div class="mb-5 d-flex justify-content-around">
               <h3>Rp. {{ $pro->harga_product }}</h3>
-              <a onclick="sendwhatsapp({{ $index }})"><button class="btn btn-primary" style="border-radius: 20px">Buy Now</button></a>
+              <a onclick="sendwhatsapp({{ $index }})"><button class="btn btn-primary text-white font-poppins fs-6" style="border-radius: 20px; background: #D9005B; border-color:#D9005B;">Buy Now</button></a>
             </div>
           </div>
         </div>
