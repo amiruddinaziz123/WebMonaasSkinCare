@@ -22,10 +22,14 @@
   <x-navbar/>
     <div class="wrapper">
         <div class="user-card">
+            
             <div class="user-card-img">
+        
+
               <img src="\img\Rectangle.png" alt="">
             </div>
             <div class="user-card-info">
+                <a href="" class="btn btn-secondary position-absolute top-0 end-0 m-3" role="button"><i class="bi bi-pencil"></i></a>
               <h2>{{ $user->username }}</h2>
               <p><span>Email:</span>{{ $user->email }}</p>
               <p><span>No. Telp:</span>{{ $user->no_telp }}</p>        
@@ -33,9 +37,6 @@
               <p><span>____________________________________________________</span></p>
               <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link text-danger">Logout</a>
-        <a href="{{ route('bookingAdmin.edit', $dataBooking->id) }}" class="btn btn-success btn-sm" role="button">
-                                        <i class="bi bi-pencil"></i>
-                                    </a>
       </li>
             </div>
         </div>
