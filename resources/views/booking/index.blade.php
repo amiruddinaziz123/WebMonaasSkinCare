@@ -92,17 +92,9 @@
         <hr>
         <form action="{{ route('booking.store') }}" method="POST" class="row">
           @csrf
-          {{-- <div class="form-floating col-12">
+          <div class="form-floating col-12">
             <input type="text" name="nama_user" id="nama_user" class="form-control" placeholder="Nama" required>
             <label for="nama_user" class="ms-3">Nama:</label>
-          </div> --}}
-          <div class="form-floating col-12">
-            <select name="nama_dokter" id="nama_dokter" class="form-control" required>
-              @foreach ($accounts as $account)
-                <option value="{{ $account->username_user }}" data-no-telp="{{ $account->no_telp_user }}">{{ $account->username_user }}</option>
-              @endforeach
-            </select>
-            <label for="nama_dokter" class="ms-3">Nama:</label>
           </div>
           <div class="form-floating col-12">
             <input type="text" name="no_telp" id="no_telp" minlength="12" maxlength="14" class="form-control" placeholder="No Telp" required>
@@ -166,19 +158,7 @@
       dataBackground.style.backgroundColor = dataNavbar[dataTerakir].background_color;
     </script>
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-    const namaDokterSelect = document.getElementById('nama_dokter');
-    const noTelpInput = document.getElementById('no_telp');
-
-    namaDokterSelect.addEventListener('change', function() {
-        const selectedOption = namaDokterSelect.options[namaDokterSelect.selectedIndex];
-        const noTelp = selectedOption.getAttribute('data-no-telp');
-        noTelpInput.value = noTelp;
-    });
-
-    // Trigger change event to set default value
-    namaDokterSelect.dispatchEvent(new Event('change'));
-    });
+      
     </script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
     <script src="{{ asset('js/booking.js') }}"></script>

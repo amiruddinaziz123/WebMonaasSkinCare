@@ -88,7 +88,7 @@
               <p class="card-text">{{ $pro->description_product }}</p>
             </div>
             <div class="mb-5 d-flex justify-content-around">
-              <h3>Rp. {{ $pro->harga_product }}</h3>
+              <h3>IDR {{ $pro->harga_product }}</h3>
               <a onclick="sendwhatsapp({{ $index }})"><button class="btn btn-primary" style="border-radius: 20px">Buy Now</button></a>
             </div>
           </div>
