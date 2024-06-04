@@ -62,7 +62,7 @@ H1.navbar-brand{
     height: 280px;
 }
 .card-img-top{
-    /* height: 300px; */
+    height: 300px;
     object-fit: cover;
 }
 
