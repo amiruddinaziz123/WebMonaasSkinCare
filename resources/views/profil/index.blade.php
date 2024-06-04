@@ -33,10 +33,15 @@
               <p><span>____________________________________________________</span></p>
               <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link text-danger">Logout</a>
+        <a href="{{ route('bookingAdmin.edit', $dataBooking->id) }}" class="btn btn-success btn-sm" role="button">
+                                        <i class="bi bi-pencil"></i>
+                                    </a>
       </li>
             </div>
         </div>
     </div>
+
+    
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
