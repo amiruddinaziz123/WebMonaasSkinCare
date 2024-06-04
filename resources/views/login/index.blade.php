@@ -71,7 +71,7 @@
     </script>
     @endif
     <script>
-        @if(session('success'))
+        @if(session('successOut'))
         Swal.fire({
             icon: 'success',
             title: 'Logout Berhasil',

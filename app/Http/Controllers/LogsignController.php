@@ -39,8 +39,16 @@ class LogsignController extends Controller
 
     $credentials = $request->only('email', 'password');
 
-    if(Auth::attempt($credentials)){
-        return redirect()->intended('/')->with('success', 'Anda Berhasil Login');
+    if (Auth::attempt($credentials)) {
+        if ($user = Auth::user()) {
+            if ($user->email == 'admin@admin.com' && $user->password == 'adminbos') {
+                return view('customerAdmin.index');
+            }
+            else {
+                return redirect()->intended('/')->with('success', 'Anda Berhasil Login');
+            }
+        }
+        
     }
     return redirect()->route('login.index')->with('error', 'Email atau Password salah!');
 }
@@ -117,7 +125,7 @@ public function prosesLogout()
 {
     $user = Auth::user();
     Auth::logout();
-    session()->flash('success', 'Anda Berhasil Logout');
+    session()->flash('successOut', 'Anda Berhasil Logout');
     return redirect('/login');
 }
 
