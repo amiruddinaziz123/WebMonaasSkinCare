@@ -174,12 +174,13 @@
   function sendwhatsapp(index){
    var phonenumber = "6281229589745";
    const products = @json($products);
-
+   const user =@json($user);
    var url = "https://wa.me/" + phonenumber + "?text="
-   
+   +"Nama Pembeli :" + user.username + "%0a"
+   +"Nomor Telepon :" + user.no_telp + "%0a"
    +"Nama Produk : " + products[index].nama_product + "%0a"
    +"Harga : " + products[index].harga_product + "%0a"
-   +"Pesanan";
+   +"Halo min, saya ingin membeli produk ini";
 
    window.open(url, '_blank').focus();
  }
