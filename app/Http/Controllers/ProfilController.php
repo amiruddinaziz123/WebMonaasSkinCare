@@ -35,12 +35,14 @@ class ProfilController extends Controller
 
         //get post by ID
         $user = user::findOrFail($id);
+        $slug_link = strtolower(str_replace(' ', '-', $request->username));
 
         //update post without image
         $user->update([
             'username'     => $request->username,
             'email'   => $request->email,
             'no_telp'   => $request->no_telp,
+            "slug_link" => $slug_link,
         ]);
 
         //redirect to index

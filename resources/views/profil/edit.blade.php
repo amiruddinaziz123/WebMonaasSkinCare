@@ -39,7 +39,7 @@
                   <p><span>____________________________________________________</span></p>
                   <li class="nav-item d-none d-sm-inline-block">
                             
-                <button type="submit">Simpan</button>
+                <button class="btn btn-light" type="submit">Simpan</button>
           </li>
                 </div>
             </div>
