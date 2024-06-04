@@ -164,7 +164,14 @@
   });
 @endif
 </script>
-
+<script>
+  const user = @json($user);
+  const login = document.getElementById('login');
+  if (user !== null) {
+      login.innerHTML = "Hi " + user.username;
+      login.href = "/profil";
+  }
+</script>
 <script>
   document.addEventListener("DOMContentLoaded", function() {
       var cardTexts = document.querySelectorAll(".card-text");
