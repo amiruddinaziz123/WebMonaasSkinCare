@@ -169,7 +169,14 @@
 
   dataBackground.style.backgroundColor = dataNavbar[dataTerakir].background_color;
 </script>
-
+<script>
+  const user = @json($user);
+  const login = document.getElementById('login');
+  if (user !== null) {
+      login.innerHTML = "Hi " + user.username;
+      login.href = "/profil";
+  }
+</script>
 <script>
   function sendwhatsapp(index){
    var phonenumber = "6281229589745";
