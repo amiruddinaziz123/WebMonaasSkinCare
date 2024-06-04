@@ -82,7 +82,7 @@
   {{-- card --}}
 
   <div class="container py-5">
-    <h1 style="font-size: 70px;">OUR PRODUCT</h1>
+    <h1 style="font-size: 70px;">Monaas Product</h1>
     <div class="row row-cols-1 row-cols-md-3 g-4 py-5">
         
       @foreach ($products as $index => $pro)
