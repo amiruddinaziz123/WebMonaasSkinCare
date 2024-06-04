@@ -15,13 +15,13 @@
                         <div class="col-lg-1 col-sm-12 center">
                             <img src="{{ asset('img/fb_logo.png') }}" width="30px"/>
                         </div>
-                        <div class="text-white col-lg-11 col-sm-12 mt-2" style="display: contents;"><a href="#" style="text-decoration: none; color: white;">monaasskincare</a></div>
+                        <div class="text-white col-lg-11 col-sm-12 mt-2" style="display: contents;"><a href="https://www.facebook.com/monaasskincare?mibextid=ZbWKwL" style="text-decoration: none; color: white;">Monaas Skincare</a></div>
                     </div>
                     <div class="row mt-2 center">
                         <div class="col-lg-1 col-sm-12 center">
                             <img src="{{ asset('img/ig_logo.png') }}" width="30px"/>
                         </div>
-                        <div class="text-white col-lg-11 col-sm-12 mt-2" style="display: contents;"><a href="#" style="text-decoration: none; color: white;">monaasskincare</a></div>
+                        <div class="text-white col-lg-11 col-sm-12 mt-2" style="display: contents;"><a href="https://www.instagram.com/monaasskincare?igsh=ZHlhN21udnViNGli" style="text-decoration: none; color: white;">monaasskincare</a></div>
                     </div>
                 </div>
                 

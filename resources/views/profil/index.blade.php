@@ -15,6 +15,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+     <!-- SweetAlert2 -->
+   <link rel="stylesheet" href="{{ asset('template/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css') }}">
+   <!-- SweetAlert2 CSS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+   <!-- SweetAlert2 JS -->
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
     
 </head>
 <body>
@@ -41,8 +47,8 @@
               <p><span>Password:</span><span id="password" class="fst-normal">********</span> <i class="bi bi-eye-fill" id="togglePassword"></i></p>
               <p><span>____________________________________________________</span></p>
               <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link text-danger">Logout</a>
-      </li>
+                <a href="#" class="nav-link text-danger" style="font-weight: bold">Logout</a>
+            </li>
             </div>
         </div>
     </div>
@@ -51,6 +57,15 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        @if(session('success'))
+        Swal.fire({
+            icon: 'success',
+            title: 'Login Sukses',
+            text: '{{ session('success') }}',
+        });
+    @endif
+    </script>
     <script>
         document.getElementById('togglePassword').addEventListener('click', function () {
             const passwordField = document.getElementById('password');
