@@ -39,10 +39,12 @@ class LogsignController extends Controller
 
     $credentials = $request->only('email', 'password');
 
+    $user = Auth::user();
+
     if (Auth::attempt($credentials)) {
         if ($user = Auth::user()) {
-            if ($user->email == 'admin@admin.com' && $user->password == 'adminbos') {
-                return view('customerAdmin.index');
+            if ($user->email == 'admin@admin.com' && $user->password == '$2y$12$AGB3unWgzq3h0hAgZxeejOAzv2I6XtAPQVfgVyw9wWC15hgbuRxni') {
+                return redirect()->intended('/customerAdmin');
             }
             else {
                 return redirect()->intended('/')->with('success', 'Anda Berhasil Login');
