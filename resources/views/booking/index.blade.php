@@ -19,7 +19,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Katibeh&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-
+     <!-- SweetAlert2 -->
+   <link rel="stylesheet" href="{{ asset('template/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css') }}">
+   <!-- SweetAlert2 CSS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+   <!-- SweetAlert2 JS -->
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
 
   </head>
   <body class="antialiased">
@@ -127,6 +132,15 @@
 
     <x-footer/>
     
+    <script>
+      @if(session('success'))
+      Swal.fire({
+          icon: 'success',
+          title: 'Login Sukses',
+          text: '{{ session('success') }}',
+      });
+  @endif
+  </script>
 
     <script>
       // mempasing data dokter ke file booking.js

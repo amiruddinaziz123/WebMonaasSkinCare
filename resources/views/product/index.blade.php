@@ -26,6 +26,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}" />
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}" />
+     <!-- SweetAlert2 -->
+   <link rel="stylesheet" href="{{ asset('template/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css') }}">
+   <!-- SweetAlert2 CSS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+   <!-- SweetAlert2 JS -->
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
   </head>
 <body>
   <x-navbar/>  
@@ -88,8 +94,8 @@
               <p class="card-text">{{ $pro->description_product }}</p>
             </div>
             <div class="mb-5 d-flex justify-content-around">
-              <h3>IDR {{ $pro->harga_product }}</h3>
-              <a onclick="sendwhatsapp({{ $index }})"><button class="btn btn-primary" style="border-radius: 20px">Buy Now</button></a>
+              <h3>Rp. {{ $pro->harga_product }}</h3>
+              <a onclick="sendwhatsapp({{ $index }})"><button class="btn btn-primary text-white font-poppins fs-6" style="border-radius: 20px; background: #D9005B; border-color:#D9005B;">Buy Now</button></a>
             </div>
           </div>
         </div>
@@ -126,6 +132,16 @@
             });
         });
     });
+</script>
+
+<script>
+  @if(session('success'))
+  Swal.fire({
+      icon: 'success',
+      title: 'Login Sukses',
+      text: '{{ session('success') }}',
+  });
+@endif
 </script>
 
 {{-- untuk navbar --}}
