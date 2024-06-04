@@ -70,7 +70,15 @@
         });
     </script>
     @endif
-
+    <script>
+        @if(session('success'))
+        Swal.fire({
+            icon: 'success',
+            title: 'Logout Berhasil',
+            text: '{{ session('success') }}',
+        });
+    @endif
+    </script>
     <script>
         @if(session('error'))
             Swal.fire({

@@ -47,7 +47,7 @@
               <p><span>Password:</span>*********</p>
               <p><span>____________________________________________________</span></p>
               <li class="nav-item d-none d-sm-inline-block">
-                <a href="#" class="nav-link text-danger" style="font-weight: bold">Logout</a>
+                <a href="/prosesLogout" id="logout" class="nav-link text-danger" style="font-weight: bold">Logout</a>
             </li>
             </div>
         </div>
@@ -65,6 +65,25 @@
             text: '{{ session('success') }}',
         });
     @endif
+    </script>
+    <script>
+        document.getElementById('logout').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default anchor action
+            
+            Swal.fire({
+                title: "Yakin ingin logout?",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, logout!"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Redirect to the logout URL
+                    window.location.href = "/prosesLogout";
+                }
+            });
+        });
     </script>
     <script>
         // mempasing data 

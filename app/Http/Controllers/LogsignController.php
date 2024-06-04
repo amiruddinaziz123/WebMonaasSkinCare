@@ -113,10 +113,11 @@ class LogsignController extends Controller
     return redirect('/login')->with(['success' => 'Silahkan Login dengan Email dan Password yang sudah didaftarkan!!!']);
 }
 
-public function prosesLogout(Request $request)
+public function prosesLogout()
 {
     $user = Auth::user();
     Auth::logout();
+    session()->flash('success', 'Anda Berhasil Logout');
     return redirect('/login');
 }
 

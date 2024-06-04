@@ -60,7 +60,7 @@ Route::controller(LogsignController::class)->group(function () {
     Route::get('/register', 'indexSignup')->name('signupAdmin.index');
     Route::post('/logsignAdmin/edit', 'store')->name('logsignAdmin.store');
     Route::post('/register/add', 'storeSignup')->name('signup.store');
-    Route::post('/prosesLogout', 'prosesLogout')->name('logout.user');
+    Route::get('/prosesLogout', 'prosesLogout')->name('logout.user');
 });
 
 // Rute yang dilindungi oleh middleware 'auth'
