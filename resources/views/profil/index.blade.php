@@ -22,10 +22,14 @@
   <x-navbar/>
     <div class="wrapper">
         <div class="user-card">
+            
             <div class="user-card-img">
+        
+
               <img src="\img\Rectangle.png" alt="">
             </div>
             <div class="user-card-info">
+                <a href="" class="btn btn-secondary position-absolute top-0 end-0 m-3" role="button"><i class="bi bi-pencil"></i></a>
               <h2>{{ $user->username }}</h2>
               <p><span>Email:</span>{{ $user->email }}</p>
               <p><span>No. Telp:</span>{{ $user->no_telp }}</p>        
@@ -37,6 +41,8 @@
             </div>
         </div>
     </div>
+
+    
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
