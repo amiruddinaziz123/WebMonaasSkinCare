@@ -77,14 +77,14 @@
     @foreach ($treatments as $treat)
         <div class="col-4">
             <div class="card my-3 jarak" id="jarakslice">
-                <img src="{{ asset('storage/images/' . $treat->foto_treatment)}}" class="card-img-top" alt="...">
+                <img src="{{ asset('storage/images/' . $treat->foto_treatment)}}" class="card-img-top" alt="..." >
                 <div class="card-body">
                     <h5 class="card-title" style="font-size: 25px;">{{ $treat->nama_treatment }}</h5>
                     <p class="card-text">{{ $treat->description_treatment }} </p>
 
                     <div class="mb-5 d-flex justify-content-around">
                     <h3 class="card-harga"><span>Rp. {{ $treat->harga_treatment}}</span></h3>
-                    <a href="/booking" class="btnn">Booking</a>
+                    <a href="/booking" class="btnn" style="margin: 15px">Booking</a>
                     </div>
                 </div>
             </div>
