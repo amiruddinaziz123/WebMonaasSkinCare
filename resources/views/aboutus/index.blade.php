@@ -12,6 +12,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Katibeh&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/navbar.css') }}" />
+     <!-- SweetAlert2 -->
+   <link rel="stylesheet" href="{{ asset('template/plugins/sweetalert2-theme-bootstrap-4/bootstrap-4.min.css') }}">
+   <!-- SweetAlert2 CSS -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+   <!-- SweetAlert2 JS -->
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
   </head>
   <body>
     <div>
@@ -37,8 +43,8 @@
             </p>
           </div>
 
-          <div class="col-md-6 mt-5 mb-5">
-            <img src="{{ $abouts && $abouts->image ? '/img/' . $abouts->image : '/img/default-image.jpg' }}" alt="" class="w-100"> 
+          <div class="col-md-6 m-auto">
+            <img src="{{ $abouts && $abouts->image ? '/img/' . $abouts->image : '/img/default-image.jpg' }}" alt="" class="w-100" style="box-shadow: 0px 199px 56px 0px rgba(217, 109, 161, 0.00), 0px 127px 51px 0px rgba(217, 109, 161, 0.04), 0px 72px 43px 0px rgba(217, 109, 161, 0.12), 0px 32px 32px 0px rgba(217, 109, 161, 0.20), 0px 8px 17px 0px rgba(217, 109, 161, 0.24);"> 
           </div>
 
           <div class="col-md-4 mt-5 mb-5 text-center align-items-center">
@@ -62,6 +68,17 @@
       </div>
     </div>
     <x-footer/>
+
+    <script>
+      @if(session('success'))
+      Swal.fire({
+          icon: 'success',
+          title: 'Login Sukses',
+          text: '{{ session('success') }}',
+      });
+      @endif
+  </script>
+
     <script>
       // mempasing data 
       const dataNavbar = @json($navbars);
