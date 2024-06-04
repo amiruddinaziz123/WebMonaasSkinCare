@@ -28,7 +28,7 @@
                 </div>
                 <div class="carousel-inner">
                   <div class="carousel-item active">
-                    <img src="{{ asset('img/monaas.jpg') }}" class="d-block" alt="...">
+                    <img src="{{ asset('img/ruangtunggu.jpeg') }}" class="d-block" alt="...">
                   </div>
                   <div class="carousel-item">
                     <img src="{{ asset('img/ruang.jpeg') }}" class="d-block" alt="...">
@@ -71,7 +71,7 @@
 
 <!-- CARD -->
 
-<h3 class="subjudul">Monaas Treatment</h3>
+<h3 class="subjudul" style="font-size: 70px;">Monaas Treatment</h3>
 
 <div class="row col-12">
     @foreach ($treatments as $treat)
@@ -81,8 +81,11 @@
                 <div class="card-body">
                     <h5 class="card-title" style="font-size: 25px;">{{ $treat->nama_treatment }}</h5>
                     <p class="card-text">{{ $treat->description_treatment }} </p>
-                    <p class="card-harga"><b>Rp.  </b>{{ $treat->harga_treatment}}</p>
+
+                    <div class="mb-5 d-flex justify-content-around">
+                    <h3 class="card-harga"><span>Rp. {{ $treat->harga_treatment}}</span></h3>
                     <a href="/booking" class="btnn">Booking</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -110,7 +113,7 @@
     }
 
     .card-img-top{
-        height: 300px;
+        height: 280px;
         object-fit: cover;
     }
 
@@ -138,6 +141,12 @@
     .pinggir{
         text-align: right;
     }
+
+    span{
+    color:#ED1E78;
+    }
+
+
 </style>
 
 <script>
@@ -166,7 +175,7 @@
 </script>
 <script>
   const dataNavbar = @json($navbars);
-    
+
   const beforeJudul = document.getElementById('Judul');
   let dataTerakir = 0;
   for (let item = 0; item < dataNavbar.length; item++) {
