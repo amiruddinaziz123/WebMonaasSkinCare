@@ -32,7 +32,7 @@ class ProductController extends Controller
         $products = product::where('status_aktif', '=', 'aktif')->get();
         $navbars = navbar::all();
 
-        return view('product.index', compact('products', 'navbars'));
+        return view('productAdmin.index', compact('products', 'navbars'));
     }
 
     public function indexHistori(): View
@@ -40,7 +40,7 @@ class ProductController extends Controller
         $products = product::where('status_aktif', '=', 'aktif')->get();
         $navbars = navbar::all();
 
-        return view('product.index', compact('products', 'navbars'));
+        return view('productAdmin.histori', compact('products', 'navbars'));
     }
 
     public function tambah(request $request)
