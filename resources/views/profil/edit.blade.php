@@ -21,31 +21,31 @@
 
   <x-navbar/>
     <div class="wrapper">
-        <div class="user-card">
+        <form action="{{ route('profil.update', $user->id) }}" method="POST" autocomplete="off">
+            @csrf
+            @method('PUT')
+            <div class="user-card">
             
-            <div class="user-card-img">
-        
-
-              <img src="\img\Rectangle.png" alt="">
-            </div>
-            <div class="user-card-info">
-                
-                <a href="{{ route('profil.edit', $user->id) }}" class="btn btn-secondary position-absolute top-0 end-0 m-3" role="button">
-                    <i class="bi bi-pencil"></i>
-                </a>
-                
-
-              <h2>{{ $user->username }}</h2>
-              <p><span>Email:</span>{{ $user->email }}</p>
-              <p><span>No. Telp:</span>{{ $user->no_telp }}</p>        
-              <p><span>Password:</span><span id="password" class="fst-normal">********</span> <i class="bi bi-eye-fill" id="togglePassword"></i></p>
-              <p><span>____________________________________________________</span></p>
-              <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link text-danger">Logout</a>
-      </li>
+                <div class="user-card-img">
+            
+    
+                  <img src="\img\Rectangle.png" alt="">
+                </div>
+                <div class="user-card-info">
+                  <h2><input type="text" class="form-control" name="username" value="{{ $user->username }}" required></h2>
+                  <p><span>Email:</span><input type="text" class="form-control" name="email" value="{{ $user->email }}" required</p>
+                  <p><span>No. Telp:</span><input type="text" class="form-control" name="no_telp" value="{{ $user->no_telp }}" required</p>        
+                  <p><span>Password:</span><span id="password" class="fst-normal">********</span> <i class="bi bi-eye-fill" id="togglePassword"></i></p>
+                  <p><span>____________________________________________________</span></p>
+                  <li class="nav-item d-none d-sm-inline-block">
+                            
+                <button type="submit">Simpan</button>
+          </li>
+                </div>
             </div>
         </div>
-    </div>
+        </form>
+        
 
     
 
