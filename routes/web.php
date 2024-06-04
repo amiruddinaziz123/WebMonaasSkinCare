@@ -92,8 +92,11 @@ Route::middleware('auth')->group(function () {
         Route::post('/aboutusAdmin/edit', 'store')->name('aboutusAdmin.store');
     });
 
+    // ROUTE UNTUK PROFIL DAN ADMINNYA
     Route::controller(ProfilController::class)->group(function () {
         Route::get('/profil', 'index')->name('profil.index');
+        Route::get('/profil/edit/{slug_link}', 'indexEdit')->name('profil.edit');
+        Route::put('/profil/edit/{slug_link}', 'update')->name('profil.update');
     });
 
     Route::controller(TreatmentController::class)->group(function () {
