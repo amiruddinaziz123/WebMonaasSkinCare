@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\View\View;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 use Illuminate\Support\Str;
 use App\Models\Treatment;
 use App\Models\navbar;
@@ -17,7 +19,8 @@ class TreatmentController extends Controller
     public function index() {
         $treatments = Treatment::all();
         $navbars = navbar::all();
-        return view('treatment/index', compact('treatments', 'navbars'));
+        $user = Auth::user();
+        return view('treatment/index', compact('user','treatments', 'navbars'));
     }
     public function admin() {
         $treatments = Treatment::all();

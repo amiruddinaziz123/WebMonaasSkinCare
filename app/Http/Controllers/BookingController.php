@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\View\View;
-
+use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 use App\Models\JamBooking;
 use App\Models\Booking;
 use App\Models\dokters;
@@ -22,20 +23,22 @@ class BookingController extends Controller
         $jamBookings = JamBooking::all();
         $navbars = navbar::all();
         $accounts = account::all();
-    
+        $user = Auth::user();
+        
         foreach ($jamBookings as $jamBooking) {
             $jamBooking->jam_ke = substr($jamBooking->jam_ke, 0, 5);
         }
     
-        return view('booking.index', compact('dokters', 'jamBookings', 'navbars', 'accounts'));
+        return view('booking.index', compact('user','dokters', 'jamBookings', 'navbars', 'accounts'));
     }
     
     public function landingPage()
     {
         $navbars = navbar::all();
         $products = product::where('status_aktif', '=', 'aktif')->get();
+        $user = Auth::user();
     
-        return view('landingPage', compact('navbars', 'products'));
+        return view('landingPage', compact('user','navbars', 'products'));
     }
 
     public function bookingAdmin()

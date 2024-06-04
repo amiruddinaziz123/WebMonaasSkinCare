@@ -59,7 +59,8 @@
                     <a data-aos="fade-right" class="nav-link active d-inline-block mx-auto" aria-current="page" style="font-family: Poppins; font-weight:600;" href="/booking">Booking</a>
                 </div>
                 <div class="navbar-nav text-end col-2 col-md-2 d-none d-md-none d-xl-block mt-lg-3">
-                    <a href="/login" class="text-dark" style="font-family: Poppins; font-weight:600;">Login</a>
+                    <a href="/login" class="text-dark text-decoration-none" style="font-family: Poppins; font-weight:600;">Login</a>
+                    <a href="/profil" class="text-dark text-decoration-none" style="font-family: Poppins; font-weight:600;">Hi {{ $user->username }}</a>
                     <a href="/profil"><img src="\img\Rectangle.png" width="20%" class="rounded-circle" alt=""></a>
                 </div>
             </div>     

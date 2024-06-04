@@ -7,7 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\product;
 
 use Illuminate\View\View;
-
+use Illuminate\Support\Facades\Auth;
+use App\Models\User;
 use Illuminate\Support\Str;
 use App\Models\navbar;
 
@@ -23,8 +24,9 @@ class ProductController extends Controller
     {
         $products = product::where('status_aktif', '=', 'aktif')->get();
         $navbars = navbar::all();
+        $user = Auth::user();
 
-        return view('product.index', compact('products', 'navbars'));
+        return view('product.index', compact('user','products', 'navbars'));
     }
 
     public function indexAdmin(): View

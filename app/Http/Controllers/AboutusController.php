@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Models\about;
 use App\Models\navbar;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 
 class AboutusController extends Controller
@@ -15,7 +15,8 @@ class AboutusController extends Controller
     {
         $abouts = about::latest()->first();
         $navbars = navbar::all();
-        return view('aboutus.index', compact('abouts', 'navbars'));
+        $user = Auth::user();
+        return view('aboutus.index', compact('user','abouts', 'navbars'));
     }
 
     public function indexAdmin(): View
