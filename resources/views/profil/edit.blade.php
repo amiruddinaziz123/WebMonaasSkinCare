@@ -25,61 +25,42 @@
             @csrf
             @method('PUT')
             <div class="user-card">
-            
                 <div class="user-card-img">
-            
-    
                     <img src="\img\Rectangle.png" alt="">
                 </div>
                 <div class="user-card-info">
-
-                    {{-- <p><input type="text" class="form-control" name="username" value="{{ $user->username }}" required></p>
-                    <p><span>Email:</span><input type="text" class="form-control" name="email" value="{{ $user->email }}" required/></p>
-                    <p><span>No. Telp:</span><input type="text" class="form-control" name="no_telp" value="{{ $user->no_telp }}" required/></p>        
-                    <p><span>Password:</span>*********</p> --}}
-
-                    <div class="row align-items-center justify-content-around">
-                        <div class="col-auto">
-                            <p><span><label for="username" class="col-form-label">Username:</label></span></p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="username" class="col-form-label"><strong>Username:</strong></label>
                         </div>
-                        <div class="col-auto">
-                            <input type="text" id="username" class="form-control" value="{{ $user->username }}">
+                        <div class="col-md-8">
+                            <input type="text" id="username" name="username" class="form-control" value="{{ $user->username }}">
                         </div>
                     </div>
-                    <div class="row align-items-center justify-content-around">
-                        <div class="col-auto">
-                            <p><span><label for="email" class="col-form-label">Email:</label></span></p>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="email" class="col-form-label"><strong>Email:</strong></label>
                         </div>
-                        <div class="col-auto">
-                            <input type="text" id="email" class="form-control" value="{{ $user->email }}">
-                        </div>
-                    </div>
-                    <div class="row align-items-center justify-content-around">
-                        <div class="col-auto">
-                            <p><span><label for="no-telp" class="col-form-label">No Telp:</label></span></p>
-                        </div>
-                        <div class="col-auto">
-                            <input type="text" id="no-telp" class="form-control" value="{{ $user->no_telp }}">
+                        <div class="col-md-8">
+                            <input type="text" id="email" name="email" class="form-control" value="{{ $user->email }}">
                         </div>
                     </div>
-
-
-
-
-
-
-
-
-
-
-
-                    <p><span>____________________________________________________</span></p>
-                    <li class="nav-item d-none d-sm-inline-block">
-                        <button class="btn btn-light" type="submit">Simpan</button>
-                    </li>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <label for="no-telp" class="col-form-label"><strong>No Telp:</strong></label>
+                        </div>
+                        <div class="col-md-8">
+                            <input type="text" id="no-telp" name="no_telp" class="form-control" value="{{ $user->no_telp }}">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <button class="btn btn-light" type="submit">Simpan</button>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
         </form>
         
 

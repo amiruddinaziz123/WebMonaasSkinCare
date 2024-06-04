@@ -176,8 +176,9 @@
    const products = @json($products);
 
    var url = "https://wa.me/" + phonenumber + "?text="
-   +"*Nama :* "+products[index].nama_product+"%0a"
-   +"*Harga :* "+products[index].harga_product+"%0a"
+   
+   +"Nama Produk : " + products[index].nama_product + "%0a"
+   +"Harga : " + products[index].harga_product + "%0a"
    +"Pesanan";
 
    window.open(url, '_blank').focus();
