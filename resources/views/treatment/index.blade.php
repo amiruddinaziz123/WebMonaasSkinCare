@@ -72,7 +72,7 @@
     <form action="{{ route('search') }} " class="d-flex" role="search" method="GET">
         <input class="form-control me-2" type="text" name="query" placeholder="Search" aria-label="Search" value="{{ request('query') }}">
         <button class="btn btn-outline-dark" type="submit"><i class="bi bi-search"></i></button>
-  </form>
+    </form>
   </div>
 
 <!-- CARD -->

@@ -23,4 +23,11 @@ class product extends Model
         'slug_link',
         'status_aktif'
     ];
+
+    public function scopeSearch($q, $term)
+    {
+        return $q->where('nama_product', 'LIKE', "%{$term}%")
+                ->orWhere('status_aktif', '=', 'aktif');
+    }
+
 }
