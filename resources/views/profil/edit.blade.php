@@ -32,10 +32,10 @@
                   <img src="\img\Rectangle.png" alt="">
                 </div>
                 <div class="user-card-info">
-                  <h2><input type="text" class="form-control" name="username" value="{{ $user->username }}" required></h2>
+                  <p><input type="text" class="form-control" name="username" value="{{ $user->username }}" required></p>
                   <p><span>Email:</span><input type="text" class="form-control" name="email" value="{{ $user->email }}" required</p>
                   <p><span>No. Telp:</span><input type="text" class="form-control" name="no_telp" value="{{ $user->no_telp }}" required</p>        
-                  <p><span>Password:</span><span id="password" class="fst-normal">********</span> <i class="bi bi-eye-fill" id="togglePassword"></i></p>
+                  <p><span>Password:</span>*********</p>
                   <p><span>____________________________________________________</span></p>
                   <li class="nav-item d-none d-sm-inline-block">
                             
@@ -52,16 +52,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        document.getElementById('togglePassword').addEventListener('click', function () {
-            const passwordField = document.getElementById('password');
-            if (passwordField.textContent === '********') {
-                passwordField.textContent = '{{ $user->password }}';
-            } else {
-                passwordField.textContent = '********';
-            }
-        });
-    </script>
     <script>
         // mempasing data 
         const dataNavbar = @json($navbars);

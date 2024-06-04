@@ -44,7 +44,7 @@
               <h2>{{ $user->username }}</h2>
               <p><span>Email:</span>{{ $user->email }}</p>
               <p><span>No. Telp:</span>{{ $user->no_telp }}</p>        
-              <p><span>Password:</span><span id="password" class="fst-normal">********</span></p>
+              <p><span>Password:</span>*********</p>
               <p><span>____________________________________________________</span></p>
               <li class="nav-item d-none d-sm-inline-block">
                 <a href="#" class="nav-link text-danger" style="font-weight: bold">Logout</a>
@@ -65,16 +65,6 @@
             text: '{{ session('success') }}',
         });
     @endif
-    </script>
-    <script>
-        document.getElementById('togglePassword').addEventListener('click', function () {
-            const passwordField = document.getElementById('password');
-            if (passwordField.textContent === '********') {
-                passwordField.textContent = '{{ $user->password }}';
-            } else {
-                passwordField.textContent = '********';
-            }
-        });
     </script>
     <script>
         // mempasing data 
