@@ -70,6 +70,14 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script>
+        const user = @json($user);
+        const login = document.getElementById('login');
+        if (user !== null) {
+            login.innerHTML = "Hi " + user.username;
+            login.href = "/profil";
+        }
+      </script>
+    <script>
         // mempasing data 
         const dataNavbar = @json($navbars);
         console.log(dataNavbar);
