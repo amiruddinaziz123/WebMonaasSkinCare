@@ -105,6 +105,14 @@
 
       dataBackground.style.backgroundColor = dataNavbar[dataTerakir].background_color;
     </script>
+    <script>
+      const user = @json($user);
+      const login = document.getElementById('login');
+      if (user !== null) {
+          login.innerHTML = "Hi " + user.username;
+          login.href = "/profil";
+      }
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
